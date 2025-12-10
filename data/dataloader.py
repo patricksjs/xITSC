@@ -9,23 +9,75 @@ import matplotlib.pyplot as plt
 import argparse
 import os
 import shap
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.cluster import DBSCAN
-from scipy.signal import find_peaks
-from scipy.ndimage import gaussian_filter, label, binary_dilation
-from itertools import combinations
-import math
+from scipy.spatial.distance import euclidean
+from sklearn.cluster import KMeans
+from fastdtw import fastdtw
+import warnings
 
 from models.models import TransformerModel
-
+"""
+增加保存热力图数据
+"""
 # 设置随机种子
 random.seed(42)
 torch.set_num_threads(32)
 torch.manual_seed(911)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+warnings.filterwarnings("ignore", category=UserWarning)
 
+def load_data1(data_name):
+    print(f"Dataset is {data_name}")
+    # 这里保留您原来的数据加载代码
+    # ... (您原来的数据加载代码)
 
-def load_data(data_name, args):
+    if data_name == "computer":
+        file_path = r"C:\Users\34517\Desktop\zuhui\论文\Computers\Computers_TRAIN.txt"
+        file_path2 = r"C:\Users\34517\Desktop\zuhui\论文\Computers\Computers_TEST.txt"
+        df = pd.read_csv(file_path, header=None, delim_whitespace=True)
+        df2 = pd.read_csv(file_path2, header=None, delim_whitespace=True)
+
+        # Separate labels and data
+        labels = df.iloc[:, 0].values
+        data = df.iloc[:, 1:].values
+        labels2 = df2.iloc[:, 0].values
+        data2 = df2.iloc[:, 1:].values
+        # Convert to PyTorch tensors
+        labels_tensor = torch.tensor(labels, dtype=torch.float32) - 1
+        data_tensor = torch.tensor(data, dtype=torch.float32)
+        labels_tensor2 = torch.tensor(labels2, dtype=torch.float32) - 1
+        data_tensor2 = torch.tensor(data2, dtype=torch.float32)
+
+        data = torch.cat([data_tensor, data_tensor2], dim=0)
+        labels = torch.cat((labels_tensor, labels_tensor2), dim=0)
+
+    elif data_name == "cincecgtorso":
+        file_path = r"C:\Users\34517\Desktop\zuhui\论文\CinCECGTorso\CinCECGTorso_TRAIN.txt"
+
+        file_path2 = r"C:\Users\34517\Desktop\zuhui\论文\CinCECGTorso\CinCECGTorso_TEST.txt"
+        df2 = pd.read_csv(file_path2, header=None, delim_whitespace=True)
+        df = pd.read_csv(file_path, header=None, delim_whitespace=True)
+        labels = df.iloc[:, 0].values
+        data = df.iloc[:, 1:].values
+        labels2 = df2.iloc[:, 0].values
+        data2 = df2.iloc[:, 1:].values
+        # Convert to PyTorch tensors
+
+        labels_tensor = torch.tensor(labels, dtype=torch.float32) - 1
+        data_tensor = torch.tensor(data, dtype=torch.float32)
+        labels_tensor2 = torch.tensor(labels2, dtype=torch.float32) - 1
+        data_tensor2 = torch.tensor(data2, dtype=torch.float32)
+
+        data = torch.cat([data_tensor, data_tensor2], dim=0)
+        labels = torch.cat((labels_tensor, labels_tensor2), dim=0)
+
+        print("labels min:", labels.min().item())
+        print("labels max:", labels.max().item())
+        print("unique labels:", torch.unique(labels).tolist())
+    # 其他数据集的加载代码...
+
+    return data, labels
+
+def load_data(data_name):
     print(f"Dataset is {data_name}")
     # 这里保留您原来的数据加载代码
     # ... (您原来的数据加载代码)
@@ -42,6 +94,20 @@ def load_data(data_name, args):
 
         print(f"computer数据集标签类型：{labels.dtype}")
         print(f"computer数据集标签范围：{labels.min().item()} ~ {labels.max().item()}")
+        # 打印前两个样本的数值范围
+        if len(data) >= 2:
+            print("\n前两个样本的数值范围：")
+            for i in range(2):
+                sample_min = data[i].min().item()
+                sample_max = data[i].max().item()
+                print(f"样本{i + 1}：{sample_min:.6f} ~ {sample_max:.6f}")
+        elif len(data) == 1:
+            print("\n只有1个样本，其数值范围：")
+            sample_min = data[0].min().item()
+            sample_max = data[0].max().item()
+            print(f"样本1：{sample_min:.6f} ~ {sample_max:.6f}")
+        else:
+            print("\n没有数据样本")
     elif data_name == "cincecgtorso":
         file_path2 = r"C:\Users\34517\Desktop\zuhui\论文\CinCECGTorso\CinCECGTorso_TEST.txt"
         df2 = pd.read_csv(file_path2, header=None, delim_whitespace=True)
@@ -61,62 +127,42 @@ def load_data(data_name, args):
     return data, labels
 
 
-def sample_backgroundIdentification(f, t, original_spectrogram, original_signal, args):
-    """按照您提供的背景识别方法计算背景值"""
-    frequency_composition_abs = np.abs(original_spectrogram)
-    measures = []
-    for freq, freq_composition in zip(f, frequency_composition_abs):
-        measures.append(np.mean(freq_composition) / np.std(freq_composition))
-    max_value = max(measures)
-    selected_frequency = measures.index(max_value)
-    dummymatrix = np.zeros((len(f), len(t)))
-    dummymatrix[selected_frequency, :] = 1
-
-    background_frequency = original_spectrogram * dummymatrix
-    background_frequency = torch.tensor(background_frequency)
-    _, xrec = istft(background_frequency.numpy(), args.fs, nperseg=args.nperseg, noverlap=args.noverlap,
-                    boundary='zeros')
-    xrec = xrec[:original_signal.shape[0]]
-    xrec = xrec.reshape(original_signal.shape)
-    return xrec, background_frequency
-
-
 def normalize_data(data):
-    """将数据归一化到0-1范围 (使用整个数据集的全局最大/最小值)"""
+    """样本内单独归一化：对每个样本单独进行均值方差归一化"""
     if isinstance(data, torch.Tensor):
         data_np = data.numpy()
     else:
         data_np = data
 
-    # 计算整个数据集的全局最小值和最大值
-    global_min = np.min(data_np)
-    global_max = np.max(data_np)
+    normalized_data_np = np.zeros_like(data_np)
+    sample_means = []
+    sample_stds = []
 
-    print(f"全局最小值: {global_min:.4f}, 全局最大值: {global_max:.4f}")
-
-    # 避免除零错误
-    if global_max - global_min == 0:
-        print("警告: 数据集所有值相同，返回原数据")
-        return data
-
-    # 使用全局参数进行归一化
-    normalized_data_np = (data_np - global_min) / (global_max - global_min)
-
-    # 验证常数序列是否保持常数
-    for i in range(min(5, len(data_np))):  # 检查前5个样本
+    for i in range(len(data_np)):
         sample = data_np[i]
-        if np.all(sample == sample[0]):  # 如果是常数序列
-            normalized_sample = normalized_data_np[i]
-            if not np.all(normalized_sample == normalized_sample[0]):
-                print(f"警告: 样本 {i} 是常数序列但归一化后出现波动")
-                print(
-                    f"原始值: {sample[0]:.4f}, 归一化后范围: {normalized_sample.min():.4f} ~ {normalized_sample.max():.4f}")
+        sample_mean = np.mean(sample)
+        sample_std = np.std(sample)
 
-    return torch.tensor(normalized_data_np, dtype=torch.float32)
+        # 避免除零错误
+        if sample_std == 0:
+            normalized_sample = np.zeros_like(sample)
+        else:
+            normalized_sample = sample/ sample_std
+
+        normalized_data_np[i] = normalized_sample
+        sample_means.append(sample_mean)
+        sample_stds.append(sample_std)
+
+    print(f"样本内归一化完成，共处理 {len(data_np)} 个样本")
+    print(f"单个样本归一化后范围示例: [{np.min(normalized_data_np[0]):.4f}, {np.max(normalized_data_np[0]):.4f}]")
+
+    return (torch.tensor(normalized_data_np, dtype=torch.float32),
+            torch.tensor(sample_means, dtype=torch.float32),
+            torch.tensor(sample_stds, dtype=torch.float32))
 
 
 def plot_time_series(data, labels, sample_idx, output_path, dataset_name):
-    """绘制时间序列图"""
+    """绘制时间序列图 - y轴自适应"""
     plt.figure(figsize=(12, 6))
     sample = data[sample_idx].numpy()
     time_steps = np.arange(len(sample))
@@ -126,26 +172,45 @@ def plot_time_series(data, labels, sample_idx, output_path, dataset_name):
     tick_labels = [f"{i}" for i in tick_indices]
 
     plt.plot(time_steps, sample, linewidth=2)
+
+    # 添加y=0横线（如果数据跨越0）
+    sample_min, sample_max = np.min(sample), np.max(sample)
+    if sample_min <= 0 <= sample_max:
+        plt.axhline(y=0, color='black', linewidth=3, linestyle='-', alpha=0.8)
+
     plt.xlabel('Time Steps', fontsize=12)
     plt.ylabel('Normalized Value', fontsize=12)
-    plt.title(f'Time Series Plot - {dataset_name}\nSample {sample_idx}, Label: {labels[sample_idx].item()}',
+    plt.title(f'Plot - {dataset_name}, Sample {sample_idx}, Label: {labels[sample_idx].item()}',
               fontsize=14)
     plt.grid(True, alpha=0.3)
     plt.xticks(tick_indices, tick_labels)
-    plt.ylim(0, 1)
+
+    # 自适应y轴范围，基于当前样本的数据范围
+    margin = (sample_max - sample_min) * 0.1  # 添加10%的边距
+    plt.ylim(sample_min - margin, sample_max + margin)
 
     plt.tight_layout()
 
     label_dir = f"{output_path}/{dataset_name}_{labels[sample_idx].item()}"
+    label_dir1 = f"{output_path}_test/{dataset_name}_{labels[sample_idx].item()}"
+
     os.makedirs(label_dir, exist_ok=True)
+
     plt.savefig(f"{label_dir}/plot_sample{sample_idx}.png", dpi=300, bbox_inches='tight')
+    # 保存第二份图片（修改标题，删除label信息）
+    plt.title(f'Plot - {dataset_name}, Sample {sample_idx}', fontsize=14)
+    os.makedirs(label_dir1, exist_ok=True)
+
+    plt.savefig(f"{label_dir1}/plot_sample{sample_idx}.png", dpi=300, bbox_inches='tight')
+
     plt.close()
 
 
-def plot_time_frequency(data, sample_idx, labels, output_path, dataset_name, nperseg=64):
-    """绘制时频图"""
-    plt.figure(figsize=(12, 8))
+def plot_time_frequency(data, sample_idx, labels, output_path, dataset_name, nperseg=64, freq_ratio=0.66):
+    """绘制时频图（使用归一化后的数据，只显示前N比例的低频分量，横坐标与时序图一致）"""
+    plt.figure(figsize=(12, 6))
     sample = data[sample_idx].numpy()
+    total_timesteps = len(sample)  # 获取原始时序的总时间步（与plot一致）
 
     fs = 1.0
     noverlap = nperseg // 2
@@ -160,116 +225,42 @@ def plot_time_frequency(data, sample_idx, labels, output_path, dataset_name, npe
     )
     spec_magnitude = np.abs(Zxx)
 
+    num_freq_total = len(f)
+    num_freq_keep = int(num_freq_total * freq_ratio)
+    if num_freq_keep < 1:
+        num_freq_keep = 1
+    spec_magnitude = spec_magnitude[:num_freq_keep, :]
+    f = f[:num_freq_keep]
+
     n_ticks = 12
-    tick_indices = np.linspace(0, len(t) - 1, n_ticks, dtype=int)
-    tick_positions = t[tick_indices]
-    tick_labels = [f"{pos:.1f}" for pos in tick_positions]
+    tick_indices = np.linspace(0, total_timesteps - 1, n_ticks, dtype=int)
+    tick_positions = tick_indices / total_timesteps * t[-1]
+    tick_labels = [f"{idx}" for idx in tick_indices]
 
     plt.pcolormesh(t, f, spec_magnitude, shading='auto', cmap='viridis')
     plt.colorbar(label='Signal Magnitude')
-    plt.xlabel('Time (Normalized)', fontsize=12)
-    plt.ylabel('Frequency (Normalized)', fontsize=12)
-    plt.title(f'Time-Frequency Image - {dataset_name}\nSample {sample_idx}, Label: {labels[sample_idx].item()}',
+    plt.xlabel('Time Steps', fontsize=12)
+    plt.ylabel('Frequency', fontsize=12)
+    plt.title(f'STFT - {dataset_name}, Sample {sample_idx}, Label: {labels[sample_idx].item()}',
               fontsize=14)
-    plt.xticks(tick_positions, tick_labels, rotation=45, ha='right')
+    plt.xticks(tick_positions, tick_labels)
     plt.tight_layout()
 
     label_dir = f"{output_path}/{dataset_name}_{labels[sample_idx].item()}"
+    label_dir1 = f"{output_path}_test/{dataset_name}_{labels[sample_idx].item()}"
+
     os.makedirs(label_dir, exist_ok=True)
     plt.savefig(f"{label_dir}/STFT_sample{sample_idx}.png", dpi=300, bbox_inches='tight')
+
+    # 保存第二份图片（修改标题，删除label信息）
+    plt.title(f'STFT - {dataset_name}, Sample {sample_idx}', fontsize=14)
+    os.makedirs(label_dir1, exist_ok=True)
+
+    plt.savefig(f"{label_dir1}/STFT_sample{sample_idx}.png", dpi=300, bbox_inches='tight')
+
     plt.close()
 
-    return f, t, Zxx
-
-
-def detect_high_energy_regions_correct(Zxx, f, t, min_region_size=4):
-    """
-    正确的高能量区域检测方法
-    检测大于均值的区域，然后合并相邻像素
-    """
-    magnitude = np.abs(Zxx)
-    power = magnitude ** 2
-
-    # 计算全局均值
-    global_mean = np.mean(power)
-
-    # 创建二值掩码：大于均值的区域
-    binary_mask = power > global_mean
-
-    # 标记连通区域
-    labeled_array, num_features = label(binary_mask)
-
-    regions = []
-    for i in range(1, num_features + 1):
-        # 获取当前区域的坐标
-        region_coords = np.where(labeled_array == i)
-
-        if len(region_coords[0]) < min_region_size:
-            continue  # 跳过太小的区域
-
-        time_indices = region_coords[1]
-        freq_indices = region_coords[0]
-
-        min_time_idx, max_time_idx = np.min(time_indices), np.max(time_indices)
-        min_freq_idx, max_freq_idx = np.min(freq_indices), np.max(freq_indices)
-
-        # 计算区域平均能量
-        region_power = power[freq_indices, time_indices]
-        avg_power = np.mean(region_power)
-        total_power = np.sum(region_power)
-
-        region_info = {
-            'time_range': (min_time_idx, max_time_idx),
-            'freq_range': (min_freq_idx, max_freq_idx),
-            'avg_power': avg_power,
-            'total_power': total_power,
-            'size': len(region_coords[0]),
-            'coords': (freq_indices, time_indices)
-        }
-        regions.append(region_info)
-
-    # 按总能量排序
-    regions.sort(key=lambda x: x['total_power'], reverse=True)
-
-    print(f"检测到 {len(regions)} 个高能量区域")
-
-    return regions
-
-
-def create_low_energy_features(Zxx, high_energy_regions):
-    """
-    创建低能量像素块特征
-    每个低能量像素作为一个单独的特征
-    """
-    magnitude = np.abs(Zxx)
-    power = magnitude ** 2
-
-    # 创建高能量区域掩码
-    high_energy_mask = np.zeros(Zxx.shape, dtype=bool)
-    for region in high_energy_regions:
-        t_min, t_max = region['time_range']
-        f_min, f_max = region['freq_range']
-        high_energy_mask[f_min:f_max + 1, t_min:t_max + 1] = True
-
-    # 低能量像素坐标
-    low_energy_coords = np.where(~high_energy_mask)
-    low_energy_features = []
-
-    for i in range(len(low_energy_coords[0])):
-        f_idx = low_energy_coords[0][i]
-        t_idx = low_energy_coords[1][i]
-
-        feature_info = {
-            'type': 'low_energy_pixel',
-            'coords': ([f_idx], [t_idx]),
-            'time_range': (t_idx, t_idx),
-            'freq_range': (f_idx, f_idx),
-            'power': power[f_idx, t_idx]
-        }
-        low_energy_features.append(feature_info)
-
-    print(f"创建了 {len(low_energy_features)} 个低能量像素特征")
-    return low_energy_features
+    return f, t, Zxx[:num_freq_keep, :]
 
 
 def load_transformer_model(args):
@@ -291,333 +282,399 @@ def load_transformer_model(args):
     return model
 
 
-def _get_prediction_probability(model, sample, true_label):
-    """获取模型对指定样本的预测概率"""
-    with torch.no_grad():
-        sample_tensor = torch.tensor(sample, dtype=torch.float32).unsqueeze(0).to(device)
-        if sample_tensor.ndim == 2:
-            sample_tensor = sample_tensor.unsqueeze(-1)
-        pred = torch.softmax(model(sample_tensor), dim=1)
-        return pred[0, true_label].item()
+class STFTSHAPExplainer:
+    def __init__(self, args, model, data, labels):
+        self.args = args
+        self.model = model.eval()
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.data = data  # 原始数据
+        self.labels = labels
+        self.background_stfts = []  # 保存完整的STFT结果
+        self.fs = args.fs
+        self.nperseg = args.nperseg
+        self.noverlap = args.noverlap
+        print(f"设备: {self.device} | STFT参数: fs={self.fs}, nperseg={self.nperseg}, noverlap={self.noverlap}")
 
+    def _get_stft(self, ts):
+        """计算单个时域信号的STFT（返回完整的复数STFT）"""
+        if ts.ndim > 1:
+            ts = ts.mean(axis=1)  # 多变量→单通道
+        f, t, Zxx = stft(
+            ts,
+            fs=self.fs,
+            nperseg=self.nperseg,
+            noverlap=self.noverlap,
+            boundary='zeros'
+        )
+        return f, t, Zxx  # 返回完整的复数STFT
 
-def _replace_all_features_with_background(sample, all_features, background_Zxx, Zxx_shape, nperseg, fs):
-    """将所有特征替换为背景值"""
-    return _replace_specific_features_with_background(sample, all_features, [], background_Zxx, Zxx_shape, nperseg, fs)
+    def _model_predict(self, spec_flat_batch):
+        """KernelExplainer专用预测函数：输入展平的复数时频图→直接ISTFT→时域→模型预测概率"""
+        batch_size = spec_flat_batch.shape[0]
+        probs_batch = []
 
+        # 获取2D时频图的形状
+        num_freq = self.args.nperseg // 2 + 1
+        num_time = spec_flat_batch.shape[1] // num_freq
 
-def _replace_specific_features_with_background(sample, all_features, features_to_keep, background_Zxx, Zxx_shape,
-                                               nperseg, fs):
-    """
-    只保留指定的特征，其他特征替换为背景值
-    features_to_keep: 要保留的特征索引列表
-    """
-    # 计算样本的STFT
-    f, t, Zxx_sample = stft(
-        sample,
-        fs=fs,
-        nperseg=nperseg,
-        noverlap=nperseg // 2,
-        window='hann',
-        boundary='zeros'
-    )
+        for i in range(batch_size):
+            # 1. 展平的复数时频图 → 恢复为2D复数时频图
+            spec_flat = spec_flat_batch[i]
+            Zxx = spec_flat.reshape((num_freq, num_time)).astype(np.complex128)
 
-    # 创建掩蔽矩阵（初始化为背景值）
-    Zxx_masked = background_Zxx.copy()
+            # 2. 直接ISTFT转回时域信号
+            _, xrec = istft(
+                Zxx,
+                fs=self.fs,
+                nperseg=self.nperseg,
+                noverlap=self.noverlap,
+                boundary='zeros'
+            )
 
-    # 只保留指定的特征
-    for feature_idx in features_to_keep:
-        feature = all_features[feature_idx]
-        freq_indices, time_indices = feature['coords']
+            # 3. 调整时域长度（匹配Transformer输入的timesteps）
+            if xrec.shape[0] > self.args.timesteps:
+                xrec = xrec[:self.args.timesteps]
+            elif xrec.shape[0] < self.args.timesteps:
+                xrec = np.pad(xrec, (0, self.args.timesteps - xrec.shape[0]), mode='constant')
 
-        # 确保索引在有效范围内
-        valid_freq = [f for f in freq_indices if f < Zxx_sample.shape[0]]
-        valid_time = [t for t in time_indices if t < Zxx_sample.shape[1]]
+            # 4. 适配Transformer输入格式
+            x_tensor = torch.tensor(xrec, dtype=torch.float32).unsqueeze(0).unsqueeze(2)
+            x_tensor = x_tensor.to(self.device)
 
-        if valid_freq and valid_time:
-            # 创建网格索引
-            freq_grid, time_grid = np.meshgrid(valid_freq, valid_time, indexing='ij')
-            Zxx_masked[freq_grid, time_grid] = Zxx_sample[freq_grid, time_grid]
+            # 5. 模型预测（输出概率）
+            with torch.no_grad():
+                logits = self.model(x_tensor)
+                probs = torch.softmax(logits, dim=1).cpu().numpy()[0]
+            probs_batch.append(probs)
 
-    # 重构时域信号
-    _, sample_reconstructed = istft(
-        Zxx_masked,
-        fs=fs,
-        nperseg=nperseg,
-        noverlap=nperseg // 2,
-        boundary='zeros'
-    )
+        return np.array(probs_batch)
 
-    # 调整长度匹配原始样本
-    if len(sample_reconstructed) > len(sample):
-        sample_reconstructed = sample_reconstructed[:len(sample)]
-    elif len(sample_reconstructed) < len(sample):
-        sample_reconstructed = np.pad(
-            sample_reconstructed,
-            (0, len(sample) - len(sample_reconstructed)),
-            mode='constant',
-            constant_values=0
+    def select_representative_samples_by_clustering(self, num_clusters_per_class=7, num_samples_per_class=25):
+        """
+        使用KMeans聚类选择每个类别最具代表性的样本
+        Args:
+            num_clusters_per_class: 每个类别聚类的簇数（默认7）
+            num_samples_per_class: 每个类别最终选择的样本总数（默认25）
+        """
+        print(f"使用KMeans聚类选择每个类别最具代表性的样本：")
+        print(f"  - 每个类别聚类数：{num_clusters_per_class}")
+        print(f"  - 每个类别选择样本数：{num_samples_per_class}")
+
+        unique_labels = torch.unique(self.labels).tolist()
+        print(f"数据集中包含的类别: {unique_labels}")
+
+        representative_indices = []
+
+        for label in unique_labels:
+            # 获取当前类别的所有样本索引
+            class_indices = [i for i in range(len(self.labels)) if int(self.labels[i].item()) == label]
+            class_data = self.data[class_indices].numpy()
+            num_class_samples = len(class_data)
+
+            print(f"\n类别 {label} 有 {num_class_samples} 个样本")
+
+            if num_class_samples <= num_samples_per_class:
+                # 如果样本数不足，使用所有样本
+                representative_indices.extend(class_indices)
+                print(f"类别 {label}: 样本数不足({num_class_samples}), 使用所有样本")
+                continue
+
+            # 计算每个簇需要选择的样本数
+            samples_per_cluster = num_samples_per_class // num_clusters_per_class
+            remaining_samples = num_samples_per_class % num_clusters_per_class  # 余数（分配给前N个簇）
+
+            # 对当前类别的样本进行KMeans聚类（固定7个簇）
+            n_clusters = min(num_clusters_per_class, num_class_samples)  # 防止簇数超过样本数
+            kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
+            cluster_labels = kmeans.fit_predict(class_data)
+
+            # 选择每个聚类中距离聚类中心最近的样本
+            cluster_centers = kmeans.cluster_centers_
+            selected_indices_in_class = []
+
+            for cluster_id in range(n_clusters):
+                # 找到属于当前聚类的样本索引
+                cluster_mask = (cluster_labels == cluster_id)
+                cluster_samples = class_data[cluster_mask]
+                cluster_original_indices = [class_indices[i] for i in range(len(class_indices)) if
+                                            cluster_labels[i] == cluster_id]
+
+                if len(cluster_samples) == 0:
+                    continue
+
+                # 计算每个样本到聚类中心的距离
+                distances = np.linalg.norm(cluster_samples - cluster_centers[cluster_id], axis=1)
+
+                # 确定当前簇要选的样本数（前remaining_samples个簇多选1个）
+                current_cluster_samples = samples_per_cluster
+                if cluster_id < remaining_samples:
+                    current_cluster_samples += 1
+
+                # 选择距离最近的N个样本
+                current_cluster_samples = min(current_cluster_samples, len(cluster_samples))  # 防止超过簇内样本数
+                closest_indices = np.argsort(distances)[:current_cluster_samples]
+
+                # 添加原始索引
+                selected_cluster_indices = [cluster_original_indices[idx] for idx in closest_indices]
+                selected_indices_in_class.extend(selected_cluster_indices)
+
+                print(f"  类别 {label} - 簇 {cluster_id}: 选择 {len(selected_cluster_indices)} 个样本")
+
+            # 确保最终选择的样本数不超过设定值
+            selected_indices_in_class = selected_indices_in_class[:num_samples_per_class]
+            representative_indices.extend(selected_indices_in_class)
+            print(f"类别 {label}: 最终选择了 {len(selected_indices_in_class)} 个代表性样本")
+
+        print(f"\n总共选择了 {len(representative_indices)} 个代表性样本作为背景数据")
+        return representative_indices
+
+    def prepare_background_data(self, target_label=None, num_clusters_per_class=7, num_samples_per_class=25):
+        """
+        准备背景数据用于SHAP计算 - 使用聚类选择的代表性样本
+        Args:
+            num_clusters_per_class: 每个类别聚类数（默认7）
+            num_samples_per_class: 每个类别选择的样本数（默认25）
+        """
+        bg_specs = []
+
+        # 使用聚类算法选择代表性样本（传入簇数和每类样本数参数）
+        representative_indices = self.select_representative_samples_by_clustering(
+            num_clusters_per_class=num_clusters_per_class,
+            num_samples_per_class=num_samples_per_class
         )
 
-    return sample_reconstructed
+        # 计算代表性样本的STFT并展平
+        for idx in representative_indices:
+            data = self.data[idx].numpy()  # 使用原始数据
+            ts = data
+            if ts.ndim > 1:
+                ts = ts.mean(axis=1)
+            f, t, Zxx = stft(
+                ts,
+                fs=self.fs,
+                nperseg=self.nperseg,
+                noverlap=self.noverlap,
+                boundary='zeros'
+            )
+            bg_specs.append(Zxx)
+
+        self.background_stfts = bg_specs
+
+        print(f"背景数据准备完成，共 {len(bg_specs)} 个样本")
+        return np.array([Zxx.flatten() for Zxx in bg_specs]), f, t
+
+    def compute_shap_for_sample(self, sample_idx, true_label):
+        """计算单个样本的SHAP值"""
+        # 准备测试样本（使用原始数据）
+        sample_data = self.data[sample_idx]
+        f, t, test_spec = self._get_stft(sample_data.numpy())
+        test_spec_flat = test_spec.flatten()
+
+        # 准备背景数据（传入命令行参数）
+        background_data, _, _ = self.prepare_background_data(
+            num_clusters_per_class=self.args.num_clusters_per_class,
+            num_samples_per_class=self.args.num_samples_per_class
+        )
+
+        # 初始化KernelExplainer
+        explainer = shap.KernelExplainer(
+            model=self._model_predict,
+            data=background_data,
+            link="logit"
+        )
+
+        # 计算SHAP值
+        shap_values = explainer.shap_values(
+            X=test_spec_flat.reshape(1, -1),
+            nsamples="auto",
+            l1_reg="auto"
+        )
+
+        num_freq, num_time = test_spec.shape
+        shap_2d = shap_values[0][:, true_label].reshape((num_freq, num_time))
+
+        return f, t, test_spec, shap_2d
+
+    def validate_stft_reconstruction(self, sample_idx=0):
+        """验证STFT重构的准确性"""
+        # 原始信号
+        original_data = self.data[sample_idx].numpy()
+        if original_data.ndim > 1:
+            original_data = original_data.mean(axis=1)
+
+        # STFT → ISTFT 重构
+        f, t, Zxx = self._get_stft(original_data)
+        _, reconstructed = istft(
+            Zxx,
+            fs=self.fs,
+            nperseg=self.nperseg,
+            noverlap=self.noverlap,
+            boundary='zeros'
+        )
+
+        # 裁剪到相同长度
+        min_len = min(len(original_data), len(reconstructed))
+        original_data = original_data[:min_len]
+        reconstructed = reconstructed[:min_len]
+
+        # 计算重构误差
+        mse = np.mean((original_data - reconstructed) ** 2)
+        correlation = np.corrcoef(original_data, reconstructed)[0, 1]
+
+        print(f"STFT重构验证 - 样本 {sample_idx}:")
+        print(f"  MSE: {mse:.6f}")
+        print(f"  相关系数: {correlation:.6f}")
+
+        return mse < 0.01 and correlation > 0.95  # 返回是否通过验证
 
 
-def compute_shap_values_correct(model, sample, true_label, all_features, background_Zxx, f, t, Zxx_shape, nperseg, fs):
-    """
-    正确计算SHAP值，严格按照SHAP定义
-    """
-    # 特征总数
-    n_features = len(all_features)
-    print(f"开始计算 {n_features} 个特征的SHAP值...")
+def plot_shap_heatmap(f, t, shap_2d, sample_idx, label, output_path, dataset_name, freq_ratio=0.66):
+    """绘制SHAP热力图（只显示前N比例的低频分量，横坐标与时序图一致）"""
+    plt.figure(figsize=(12, 6))
+    # 获取原始时序的总时间步（需从数据中推导，与plot一致）
+    nperseg = (len(f) - 1) * 2  # 从频率点数反推STFT窗口长度（f的长度= nperseg//2 +1）
+    total_timesteps = len(t) * (nperseg - nperseg // 2) - (nperseg - nperseg // 2)  # 反推原始时序总时间步
 
-    # 计算原始预测概率（所有特征都存在）
-    original_prob = _get_prediction_probability(model, sample, true_label)
-    print(f"原始预测概率 (所有特征): {original_prob:.4f}")
+    # 同步切片SHAP值（原有逻辑保留）
+    num_freq_total = len(f)
+    num_freq_keep = int(num_freq_total * freq_ratio)
+    if num_freq_keep < 1:
+        num_freq_keep = 1
+    shap_2d_sliced = shap_2d[:num_freq_keep, :]
+    f_sliced = f[:num_freq_keep]
 
-    # 计算基准预测概率（所有特征都替换为背景值）
-    baseline_sample = _replace_all_features_with_background(
-        sample, all_features, background_Zxx, Zxx_shape, nperseg, fs
-    )
-    baseline_prob = _get_prediction_probability(model, baseline_sample, true_label)
-    print(f"基准预测概率 (无特征): {baseline_prob:.4f}")
+    # 新增：保存完整的SHAP矩阵（切片前和切片后的都保存）
+    # 创建保存SHAP矩阵的目录
+    shap_matrix_dir = f"{output_path}/shap_matrices/{dataset_name}_{label}"
+    os.makedirs(shap_matrix_dir, exist_ok=True)
 
-    # 初始化SHAP值
-    shap_values = np.zeros(n_features)
+    # 保存切片前的完整SHAP矩阵
+    shap_full_path = f"{shap_matrix_dir}/shap_matrix_full_sample{sample_idx}.npy"
+    np.save(shap_full_path, shap_2d)
+    print(f"完整SHAP矩阵已保存: {shap_full_path} (形状: {shap_2d.shape})")
 
-    # 对于每个特征，计算其SHAP值
-    for target_feature_idx in range(n_features):
-        print(f"计算特征 {target_feature_idx + 1}/{n_features} 的SHAP值...")
+    # 保存切片后的SHAP矩阵（与热力图显示一致）
+    shap_sliced_path = f"{shap_matrix_dir}/shap_matrix_sliced_sample{sample_idx}.npy"
+    np.save(shap_sliced_path, shap_2d_sliced)
+    print(f"切片SHAP矩阵已保存: {shap_sliced_path} (形状: {shap_2d_sliced.shape})")
 
-        total_weighted_contribution = 0.0
+    # 可选：同时保存为CSV文件以便查看
+    shap_csv_path = f"{shap_matrix_dir}/shap_matrix_sliced_sample{sample_idx}.csv"
+    pd.DataFrame(shap_2d_sliced).to_csv(shap_csv_path, index=False, header=False)
+    print(f"SHAP矩阵CSV已保存: {shap_csv_path}")
 
-        # 获取不包含目标特征的所有特征索引
-        other_features = [i for i in range(n_features) if i != target_feature_idx]
+    # 横坐标刻度与时序图（plot）完全一致
+    n_ticks = 12
+    # 生成与原始时序时间步对应的均匀刻度索引（0到total_timesteps-1）
+    tick_indices = np.linspace(0, total_timesteps - 1, n_ticks, dtype=int)
+    # 将STFT的时间轴（t）从"归一化时间"映射到"原始时间步"
+    tick_positions = tick_indices / total_timesteps * t[-1]
+    tick_labels = [f"{idx}" for idx in tick_indices]  # 刻度标签与plot完全相同
 
-        # 遍历所有可能的子集大小
-        for subset_size in range(len(other_features) + 1):
-            # 获取所有大小为subset_size的子集
-            for subset_indices in combinations(other_features, subset_size):
-                # 子集S（不包含目标特征i）
-                subset_S = list(subset_indices)
+    vmax = np.max(np.abs(shap_2d_sliced))
+    im = plt.pcolormesh(t, f_sliced, shap_2d_sliced, cmap='bwr', shading='auto',
+                        vmin=-vmax, vmax=vmax)
 
-                # 子集S ∪ {i}（包含目标特征i）
-                subset_S_with_i = subset_S + [target_feature_idx]
-
-                # 计算f(S) - 子集S的预测
-                sample_S = _replace_specific_features_with_background(
-                    sample, all_features, subset_S, background_Zxx, Zxx_shape, nperseg, fs
-                )
-                prob_S = _get_prediction_probability(model, sample_S, true_label)
-
-                # 计算f(S ∪ {i}) - 子集S加上特征i的预测
-                sample_S_with_i = _replace_specific_features_with_background(
-                    sample, all_features, subset_S_with_i, background_Zxx, Zxx_shape, nperseg, fs
-                )
-                prob_S_with_i = _get_prediction_probability(model, sample_S_with_i, true_label)
-
-                # 边际贡献 = f(S ∪ {i}) - f(S)
-                marginal_contribution = prob_S_with_i - prob_S
-
-                # 计算权重：|S|! * (n - |S| - 1)! / n!
-                weight = math.factorial(len(subset_S)) * math.factorial(
-                    n_features - len(subset_S) - 1) / math.factorial(n_features)
-
-                total_weighted_contribution += weight * marginal_contribution
-
-        shap_values[target_feature_idx] = total_weighted_contribution
-        print(f"  特征 {target_feature_idx + 1}: SHAP值 = {shap_values[target_feature_idx]:.4f}")
-
-    # 验证SHAP值性质
-    sum_shap = np.sum(shap_values)
-    expected_sum = original_prob - baseline_prob
-    print(f"SHAP值总和: {sum_shap:.4f}")
-    print(f"期望总和 (原始-基准): {expected_sum:.4f}")
-    print(f"差异: {abs(sum_shap - expected_sum):.4f}")
-
-    return shap_values, original_prob, baseline_prob
-
-
-def _create_detailed_shap_heatmap(shap_values, all_features, Zxx_shape):
-    """创建详细的SHAP热力图"""
-    shap_heatmap = np.zeros(Zxx_shape, dtype=float)
-
-    for i, feature in enumerate(all_features):
-        freq_indices, time_indices = feature['coords']
-
-        # 确保索引在有效范围内
-        valid_freq = [f for f in freq_indices if f < Zxx_shape[0]]
-        valid_time = [t for t in time_indices if t < Zxx_shape[1]]
-
-        if valid_freq and valid_time:
-            # 创建网格索引
-            freq_grid, time_grid = np.meshgrid(valid_freq, valid_time, indexing='ij')
-            shap_heatmap[freq_grid, time_grid] = shap_values[i]
-
-    return shap_heatmap
-
-
-def _plot_correct_shap_heatmap(shap_heatmap, f, t, sample_idx, label, output_path, dataset_name,
-                               high_energy_regions, low_energy_features, shap_values,
-                               original_prob, baseline_prob):
-    """绘制正确的SHAP热力图"""
-    plt.figure(figsize=(15, 10))
-
-    # 计算颜色范围
-    shap_min = np.min(shap_values)
-    shap_max = np.max(shap_values)
-    vmax = max(abs(shap_min), abs(shap_max))
-    vmin = -vmax
-
-    # 绘制热力图
-    im = plt.pcolormesh(t, f, shap_heatmap, cmap='bwr', shading='gouraud',
-                        vmin=vmin, vmax=vmax)
-
-    plt.colorbar(im, label='SHAP Value (Feature Importance)')
-    plt.xlabel('Time Steps', fontsize=12)
+    plt.colorbar(im, label='SHAP Value')
+    plt.xlabel('Time Steps', fontsize=12)  # 与plot的xlabel一致
     plt.ylabel('Frequency [Hz]', fontsize=12)
-
-    # 添加统计信息
-    total_positive = np.sum([v for v in shap_values if v > 0])
-    total_negative = np.sum([v for v in shap_values if v < 0])
-    n_high_energy = len(high_energy_regions)
-    n_low_energy = len(low_energy_features)
-
-    plt.title(f'Correct SHAP Heatmap - {dataset_name}\n'
-              f'Sample {sample_idx}, Label: {label}\n'
-              f'Baseline: {baseline_prob:.4f}, Original: {original_prob:.4f}\n'
-              f'High-energy regions: {n_high_energy}, Low-energy pixels: {n_low_energy}\n'
-              f'Total +SHAP: {total_positive:.4f}, Total -SHAP: {total_negative:.4f}',
+    plt.title(f'SHAP Heatmap - {dataset_name}, Sample {sample_idx}, Label: {label}',
               fontsize=12)
-
-    # 设置横坐标刻度
-    n_ticks = min(12, len(t))
-    tick_indices = np.linspace(0, len(t) - 1, n_ticks, dtype=int)
-    tick_positions = t[tick_indices]
-    tick_labels = [f"{pos:.1f}" for pos in tick_positions]
-    plt.xticks(tick_positions, tick_labels)
-
-    # 添加高能量区域边界
-    for region_idx, region in enumerate(high_energy_regions):
-        t_min, t_max = region['time_range']
-        f_min, f_max = region['freq_range']
-
-        # 绘制矩形边界
-        rect = plt.Rectangle(
-            (t[t_min], f[f_min]),
-            t[t_max] - t[t_min],
-            f[f_max] - f[f_min],
-            fill=False,
-            edgecolor='green',
-            linewidth=2,
-            linestyle='-'
-        )
-        plt.gca().add_patch(rect)
-
-        # 在区域中心添加SHAP值
-        center_x = t[t_min] + (t[t_max] - t[t_min]) / 2
-        center_y = f[f_min] + (f[f_max] - f[f_min]) / 2
-        shap_val = shap_values[region_idx]
-
-        plt.text(center_x, center_y, f'R{region_idx + 1}: {shap_val:.3f}',
-                 ha='center', va='center', fontsize=8,
-                 fontweight='bold', color='green',
-                 bbox=dict(boxstyle="round,pad=0.2",
-                           facecolor='white', alpha=0.8))
-
+    plt.xticks(tick_positions, tick_labels)  # 应用统一刻度
     plt.tight_layout()
 
-    # 保存图像
     label_dir = f"{output_path}/{dataset_name}_{label}"
+    label_dir1 = f"{output_path}_test/{dataset_name}_{label}"
+
     os.makedirs(label_dir, exist_ok=True)
-    plt.savefig(f"{label_dir}/correct_shap_sample{sample_idx}.png",
+    plt.savefig(f"{label_dir}/shap_sample{sample_idx}.png",
+                dpi=300, bbox_inches='tight')
+    plt.title(f'SHAP Heatmap - {dataset_name}, Sample {sample_idx}', fontsize=14)
+    os.makedirs(label_dir1, exist_ok=True)
+
+    plt.savefig(f"{label_dir1}/shap_sample{sample_idx}.png",
                 dpi=300, bbox_inches='tight')
     plt.close()
 
-    # 打印详细统计
-    print(f"\n样本 {sample_idx} 详细SHAP统计:")
-    print(f"基准概率: {baseline_prob:.4f}")
-    print(f"原始概率: {original_prob:.4f}")
-    print(f"SHAP值总和: {np.sum(shap_values):.4f}")
-    print(f"验证: 基准 + SHAP总和 = {baseline_prob + np.sum(shap_values):.4f}")
+    print(f"SHAP热力图已保存: {label_dir}/shap_sample{sample_idx}.png")
 
-    # 高能量区域SHAP值
-    print("\n高能量区域SHAP值:")
-    for i in range(len(high_energy_regions)):
-        print(f"  区域 {i + 1}: SHAP = {shap_values[i]:.4f}")
-
-    # 低能量像素统计（由于数量多，只统计前10个）
-    print(f"\n低能量像素SHAP值 (前10个):")
-    for i in range(len(high_energy_regions), min(len(high_energy_regions) + 10, len(shap_values))):
-        print(f"  像素 {i - len(high_energy_regions) + 1}: SHAP = {shap_values[i]:.4f}")
+    # 新增：返回保存的文件路径，便于后续使用
+    return {
+        'shap_full_path': shap_full_path,
+        'shap_sliced_path': shap_sliced_path,
+        'shap_csv_path': shap_csv_path
+    }
 
 
-def compute_shap_heatmap_correct(model, data, labels, sample_idx, f, t, Zxx, output_path, dataset_name, nperseg=64,
-                                 fs=1.0):
-    """正确计算SHAP热力图"""
-    print(f"开始计算样本 {sample_idx} 的正确SHAP值...")
+def compute_shap_heatmap_new(model, data, labels, means, stds, sample_idx, output_path, dataset_name, nperseg=64,
+                             fs=1.0, freq_ratio=0.66, num_samples_per_class=25, num_clusters_per_class=7):
+    """使用新方法计算SHAP热力图"""
+    print(f"开始计算样本 {sample_idx} 的SHAP值...")
 
-    sample = data[sample_idx].numpy()
-    true_label = labels[sample_idx].item()
-
-    # 1. 检测高能量区域
-    high_energy_regions = detect_high_energy_regions_correct(Zxx, f, t)
-
-    # 2. 创建低能量像素特征
-    low_energy_features = create_low_energy_features(Zxx, high_energy_regions)
-
-    # 3. 组合所有特征
-    all_features = high_energy_regions + low_energy_features
-
-    # 4. 计算背景值
-    background_signal, background_Zxx = sample_backgroundIdentification(f, t, Zxx, sample,
-                                                                        type('args', (), {'fs': fs, 'nperseg': nperseg,
-                                                                                          'noverlap': nperseg // 2}))
-
-    # 5. 计算SHAP值
-    shap_values, original_prob, baseline_prob = compute_shap_values_correct(
-        model, sample, true_label, all_features, background_Zxx.numpy(),
-        f, t, Zxx.shape, nperseg, fs
+    # 创建解释器，传入原始数据和均值和标准差
+    explainer = STFTSHAPExplainer(
+        args=type('args', (), {
+            'fs': fs,
+            'nperseg': nperseg,
+            'noverlap': nperseg // 2,  # 统一使用nperseg//2
+            'timesteps': data.shape[1],
+            'num_bg_samples': 20,
+            'device': device,
+            'num_samples_per_class': num_samples_per_class,
+            'num_clusters_per_class': num_clusters_per_class
+        }),
+        model=model,
+        data=data,
+        labels=labels
     )
 
-    # 6. 创建SHAP热力图
-    shap_heatmap = _create_detailed_shap_heatmap(shap_values, all_features, Zxx.shape)
+    # 验证STFT重构质量
+    print("验证STFT重构质量...")
+    if explainer.validate_stft_reconstruction(sample_idx):
+        print("STFT重构验证通过！")
+    else:
+        print("警告：STFT重构可能存在误差")
 
-    # 7. 绘制SHAP热力图
-    _plot_correct_shap_heatmap(shap_heatmap, f, t, sample_idx, true_label, output_path,
-                               dataset_name, high_energy_regions, low_energy_features,
-                               shap_values, original_prob, baseline_prob)
+    true_label = labels[sample_idx].item()
 
-    return shap_heatmap
+    # 计算SHAP值
+    f, t, test_spec, shap_2d = explainer.compute_shap_for_sample(sample_idx, true_label)
+
+    # 绘制SHAP热力图（添加 freq_ratio 参数）
+    plot_shap_heatmap(f, t, shap_2d, sample_idx, true_label, output_path, dataset_name, freq_ratio=freq_ratio)
+
+    return shap_2d
 
 
-# 在main函数中替换原来的SHAP计算调用
 def main():
     # 参数解析
     parser = argparse.ArgumentParser(description='时间序列数据分析')
-    parser.add_argument('--dataset', type=str, default='cincecgtorso',
+    parser.add_argument('--dataset', type=str, default='computer',
                         choices=['toydata_final', 'mixedshapes', 'ACSF', 'Lightning',
                                  'computer', 'yoga', 'RFD', 'midair', 'UMD', 'forda',
                                  'fordb', 'strawberry', 'ECG200', 'cincecgtorso',
                                  'gunpointmalefemale', 'Freezer', 'blink', 'arrowhead',
                                  'EPG', 'EPG1', 'LKA', 'Blink', 'ShapeletSim', 'twopatterns'],
                         help='数据集名称')
-    parser.add_argument('--output_path', type=str, default='./image',
+    parser.add_argument('--output_path', type=str, default='./t',
                         help='输出文件路径')
-    parser.add_argument('--sample_idx', type=int, default=-1,  # 修改默认值为0，处理第一个样本
+    parser.add_argument('--sample_idx', type=int, default=-1,
                         help='要分析的样本索引 (-1表示处理所有样本)')
-    parser.add_argument('--nperseg', type=int, default=16,
+    parser.add_argument('--nperseg', type=int, default=60,
                         help='STFT窗口长度')
     parser.add_argument('--model_path', type=str,
-                        default=r'C:\Users\34517\Desktop\zuhui\Time_is_not_Enough-main\classification_models\cincecgtorso\transformer\transformer.pt',
+                        default=r'C:\Users\34517\Desktop\zuhui\xITSC\classification_models\computer\transformer\transformer.pt',
                         help='训练好的模型路径')
     parser.add_argument('--max_samples', type=int, default=-1,
                         help='最大处理样本数 (-1表示处理所有样本)')
-
-    parser.add_argument('--num_classes', type=int, default=4,
+    parser.add_argument('--num_clusters_per_class', type=int, default=7,
+                        help='每个类别进行K-means聚类的簇数')
+    parser.add_argument('--num_samples_per_class', type=int, default=7,
+                        help='每个类别选择的背景样本数量')
+    parser.add_argument('--num_classes', type=int, default=2,
                         help='分类类别数')
-    parser.add_argument('--num_bg_samples', type=int, default=20,
-                        help='SHAP背景样本数量')
-    parser.add_argument('--timesteps', type=int, default=1639,
+
+    parser.add_argument('--timesteps', type=int, default=720,
                         help='时间序列长度')
     parser.add_argument('--num_layers', type=int, default=2,
                         help='Transformer层数')
@@ -629,6 +686,10 @@ def main():
                         help='前馈网络维度')
     parser.add_argument('--dropout', type=float, default=0.2,
                         help='Dropout率')
+    parser.add_argument('--fs', type=float, default=1.0,
+                        help='采样频率')
+    parser.add_argument('--freq_ratio', type=float, default=1,
+                        help='保留的频率分量比例（0-1，如0.66表示保留前2/3低频分量）')
     args = parser.parse_args()
 
     # 创建输出目录
@@ -637,11 +698,11 @@ def main():
 
     # 加载数据
     print(f"加载数据集: {args.dataset}")
-    data, labels = load_data(args.dataset, args)
+    data_original, labels = load_data(args.dataset)  # 保存原始数据
 
-    # 数据归一化
+    # 数据归一化 - 用于绘图
     print("数据归一化...")
-    data_normalized = normalize_data(data)
+    data_normalized, means, stds = normalize_data(data_original)
 
     # 加载模型
     print("加载训练好的模型...")
@@ -652,44 +713,62 @@ def main():
         # 处理单个样本
         print(f"处理单个样本 {args.sample_idx}...")
 
-        # 绘制时间序列图
+        # 绘制时间序列图（使用归一化数据）
         plot_time_series(data_normalized, labels, args.sample_idx, args.output_path, args.dataset)
 
-        # 绘制时频图
+        # 绘制时频图（使用归一化数据）
         f, t, Zxx = plot_time_frequency(data_normalized, args.sample_idx, labels, args.output_path, args.dataset,
-                                        args.nperseg)
+                                        args.nperseg, freq_ratio=args.freq_ratio)
 
-        # 计算SHAP热力图
-        shap_heatmap = compute_shap_heatmap_correct(model, data_normalized, labels, args.sample_idx, f, t, Zxx,
-                                                    args.output_path, args.dataset, args.nperseg, fs=1.0)
+        # 调用SHAP计算时传入原始数据
+        shap_heatmap = compute_shap_heatmap_new(model, data_original, labels, means, stds, args.sample_idx,
+                                                args.output_path, args.dataset, args.nperseg, args.fs,
+                                                freq_ratio=args.freq_ratio,
+                                                num_samples_per_class=args.num_samples_per_class,
+                                                num_clusters_per_class=args.num_clusters_per_class)
         print(f"SHAP计算完成，热力图已保存")
     else:
         # 处理所有样本
         print("处理所有样本...")
         if args.max_samples > 0:
+            data_original = data_original[:args.max_samples]
             data_normalized = data_normalized[:args.max_samples]
             labels = labels[:args.max_samples]
+            means = means[:args.max_samples]
+            stds = stds[:args.max_samples]
             print(f"限制处理前 {args.max_samples} 个样本")
+        target_indices = [i for i in range(len(labels)) if labels[i].item() != 0]
+        exclude_sample_list=[74,248,242,247]
+        # 处理所有样本的循环
+        # for sample_idx in target_indices:
+        for sample_idx in range(len(data_original)):
+            if sample_idx not in exclude_sample_list:
+                print(f"\n跳过排除的样本 {sample_idx}")
+                continue
 
-        # 这里添加处理所有样本的循环
-        for sample_idx in range(len(data_normalized)):
-            print(f"\n处理样本 {sample_idx + 1}/{len(data_normalized)}...")
+            print(f"\n处理样本 {sample_idx + 1}/{len(data_original)}...")
 
             try:
-                # 绘制时间序列图
+                # 绘制时间序列图（使用归一化数据）
                 plot_time_series(data_normalized, labels, sample_idx, args.output_path, args.dataset)
 
-                # 绘制时频图
+                # 绘制时频图（使用归一化数据）
                 f, t, Zxx = plot_time_frequency(data_normalized, sample_idx, labels, args.output_path, args.dataset,
-                                                args.nperseg)
+                                                args.nperseg, freq_ratio=args.freq_ratio)
 
-                # 计算SHAP热力图
-                shap_heatmap = compute_shap_heatmap_correct(model, data_normalized, labels, sample_idx, f, t, Zxx,
-                                                            args.output_path, args.dataset, args.nperseg, fs=1.0)
+                # 计算SHAP热力图（使用原始数据）
+                shap_heatmap = compute_shap_heatmap_new(model, data_original, labels, means, stds, sample_idx,
+                                                        args.output_path, args.dataset, args.nperseg, args.fs,
+                                                        freq_ratio=args.freq_ratio,
+                                                        num_samples_per_class=args.num_samples_per_class,
+                                                        num_clusters_per_class=args.num_clusters_per_class)
+
                 print(f"样本 {sample_idx} 处理完成")
 
             except Exception as e:
                 print(f"处理样本 {sample_idx} 时出错: {e}")
+                import traceback
+                traceback.print_exc()
                 continue
 
     print(f"所有结果已保存到: {args.output_path}")

@@ -15,7 +15,9 @@ from fastdtw import fastdtw
 import warnings
 
 from models.models import TransformerModel
-
+"""
+没有保存热力图数据
+"""
 # 设置随机种子
 random.seed(42)
 torch.set_num_threads(32)
@@ -23,6 +25,155 @@ torch.manual_seed(911)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 warnings.filterwarnings("ignore", category=UserWarning)
 
+
+def load_data_for_sample(sample_id, dataset_name):
+    """根据样本ID和数据集名称加载单个样本的数据"""
+    try:
+        # 根据您的数据加载代码，这里需要实现具体的加载逻辑
+        # 由于我不知道您的具体数据存储格式，这里提供一个框架
+
+        if dataset_name == "computer":
+            # 加载computer数据集
+            file_path = r"C:\Users\34517\Desktop\zuhui\论文\Computers\Computers_TEST.txt"
+            df = pd.read_csv(file_path, header=None, sep='\s+')
+
+            # 假设sample_id是行索引
+            if sample_id < len(df):
+                row = df.iloc[sample_id]
+                label = int(row[0]) - 1  # 根据您的代码，标签减1
+                data = row[1:].values.astype(np.float32)
+                return data, label
+
+        elif dataset_name == "cincecgtorso":
+            # 加载cincecgtorso数据集
+            file_path = r"C:\Users\34517\Desktop\zuhui\论文\CinCECGTorso\CinCECGTorso_TEST.txt"
+            df = pd.read_csv(file_path, header=None, delim_whitespace=True)
+
+            if sample_id < len(df):
+                row = df.iloc[sample_id]
+                label = int(row[0]) - 1  # 根据您的代码，标签减1
+                data = row[1:].values.astype(np.float32)
+                return data, label
+
+        # 添加其他数据集的加载逻辑...
+
+    except Exception as e:
+        print(f"加载样本 {sample_id} 数据失败: {e}")
+
+    return None, None
+
+
+def load_all_train_data(dataset_name):
+    """加载所有训练数据"""
+    try:
+        if dataset_name == "computer":
+            # 加载训练数据
+            train_path = r"C:\Users\34517\Desktop\zuhui\论文\Computers\Computers_TRAIN.txt"
+            df_train = pd.read_csv(train_path, header=None, sep='\s+')
+
+            train_data = []
+            train_labels = []
+            train_indices = []
+
+            for idx in range(len(df_train)):
+                row = df_train.iloc[idx]
+                label = int(row[0]) - 1
+                data = row[1:].values.astype(np.float32)
+
+                train_data.append(data)
+                train_labels.append(label)
+                train_indices.append(idx)  # 使用行索引作为ID
+
+            return np.array(train_data), np.array(train_labels), train_indices
+
+        elif dataset_name == "cincecgtorso":
+            # 加载训练数据
+            train_path = r"C:\Users\34517\Desktop\zuhui\论文\CinCECGTorso\CinCECGTorso_TRAIN.txt"
+            df_train = pd.read_csv(train_path, header=None, delim_whitespace=True)
+
+            train_data = []
+            train_labels = []
+            train_indices = []
+
+            for idx in range(len(df_train)):
+                row = df_train.iloc[idx]
+                label = int(row[0]) - 1
+                data = row[1:].values.astype(np.float32)
+
+                train_data.append(data)
+                train_labels.append(label)
+                train_indices.append(idx)  # 使用行索引作为ID
+
+            return np.array(train_data), np.array(train_labels), train_indices
+
+        # 添加其他数据集的加载逻辑...
+
+    except Exception as e:
+        print(f"加载训练数据失败: {e}")
+
+    return None, None, []
+
+
+def get_label_for_sample(sample_id, dataset_name):
+    """获取样本的标签"""
+    try:
+        # 加载数据并获取标签
+        _, label = load_data_for_sample(sample_id, dataset_name)
+        return label
+    except:
+        return None
+
+def load_data1(data_name):
+    print(f"Dataset is {data_name}")
+    # 这里保留您原来的数据加载代码
+    # ... (您原来的数据加载代码)
+
+    if data_name == "computer":
+        file_path = r"C:\Users\34517\Desktop\zuhui\论文\Computers\Computers_TRAIN.txt"
+        file_path2 = r"C:\Users\34517\Desktop\zuhui\论文\Computers\Computers_TEST.txt"
+        df = pd.read_csv(file_path, header=None, delim_whitespace=True)
+        df2 = pd.read_csv(file_path2, header=None, delim_whitespace=True)
+
+        # Separate labels and data
+        labels = df.iloc[:, 0].values
+        data = df.iloc[:, 1:].values
+        labels2 = df2.iloc[:, 0].values
+        data2 = df2.iloc[:, 1:].values
+        # Convert to PyTorch tensors
+        labels_tensor = torch.tensor(labels, dtype=torch.float32) - 1
+        data_tensor = torch.tensor(data, dtype=torch.float32)
+        labels_tensor2 = torch.tensor(labels2, dtype=torch.float32) - 1
+        data_tensor2 = torch.tensor(data2, dtype=torch.float32)
+
+        data = torch.cat([data_tensor, data_tensor2], dim=0)
+        labels = torch.cat((labels_tensor, labels_tensor2), dim=0)
+
+    elif data_name == "cincecgtorso":
+        file_path = r"C:\Users\34517\Desktop\zuhui\论文\CinCECGTorso\CinCECGTorso_TRAIN.txt"
+
+        file_path2 = r"C:\Users\34517\Desktop\zuhui\论文\CinCECGTorso\CinCECGTorso_TEST.txt"
+        df2 = pd.read_csv(file_path2, header=None, delim_whitespace=True)
+        df = pd.read_csv(file_path, header=None, delim_whitespace=True)
+        labels = df.iloc[:, 0].values
+        data = df.iloc[:, 1:].values
+        labels2 = df2.iloc[:, 0].values
+        data2 = df2.iloc[:, 1:].values
+        # Convert to PyTorch tensors
+
+        labels_tensor = torch.tensor(labels, dtype=torch.float32) - 1
+        data_tensor = torch.tensor(data, dtype=torch.float32)
+        labels_tensor2 = torch.tensor(labels2, dtype=torch.float32) - 1
+        data_tensor2 = torch.tensor(data2, dtype=torch.float32)
+
+        data = torch.cat([data_tensor, data_tensor2], dim=0)
+        labels = torch.cat((labels_tensor, labels_tensor2), dim=0)
+
+        print("labels min:", labels.min().item())
+        print("labels max:", labels.max().item())
+        print("unique labels:", torch.unique(labels).tolist())
+    # 其他数据集的加载代码...
+
+    return data, labels
 
 def load_data(data_name):
     print(f"Dataset is {data_name}")
@@ -237,7 +388,6 @@ class STFTSHAPExplainer:
         self.data = data  # 原始数据
         self.labels = labels
         self.background_stfts = []  # 保存完整的STFT结果
-
         self.fs = args.fs
         self.nperseg = args.nperseg
         self.noverlap = args.noverlap
@@ -297,9 +447,16 @@ class STFTSHAPExplainer:
 
         return np.array(probs_batch)
 
-    def select_representative_samples_by_clustering(self, num_samples_per_class=10):
-        """使用聚类算法选择每个类别最具代表性的样本"""
-        print(f"使用KMeans聚类选择每个类别最具代表性的{num_samples_per_class}个样本...")
+    def select_representative_samples_by_clustering(self, num_clusters_per_class=7, num_samples_per_class=25):
+        """
+        使用KMeans聚类选择每个类别最具代表性的样本
+        Args:
+            num_clusters_per_class: 每个类别聚类的簇数（默认7）
+            num_samples_per_class: 每个类别最终选择的样本总数（默认25）
+        """
+        print(f"使用KMeans聚类选择每个类别最具代表性的样本：")
+        print(f"  - 每个类别聚类数：{num_clusters_per_class}")
+        print(f"  - 每个类别选择样本数：{num_samples_per_class}")
 
         unique_labels = torch.unique(self.labels).tolist()
         print(f"数据集中包含的类别: {unique_labels}")
@@ -310,19 +467,22 @@ class STFTSHAPExplainer:
             # 获取当前类别的所有样本索引
             class_indices = [i for i in range(len(self.labels)) if int(self.labels[i].item()) == label]
             class_data = self.data[class_indices].numpy()
+            num_class_samples = len(class_data)
 
-            print(f"类别 {label} 有 {len(class_data)} 个样本")
+            print(f"\n类别 {label} 有 {num_class_samples} 个样本")
 
-            if len(class_data) <= num_samples_per_class:
+            if num_class_samples <= num_samples_per_class:
                 # 如果样本数不足，使用所有样本
                 representative_indices.extend(class_indices)
-                print(f"类别 {label}: 样本数不足，使用所有 {len(class_data)} 个样本")
+                print(f"类别 {label}: 样本数不足({num_class_samples}), 使用所有样本")
                 continue
 
-            # 对当前类别的样本进行KMeans聚类
-            n_clusters = min(num_samples_per_class, len(class_data))
+            # 计算每个簇需要选择的样本数
+            samples_per_cluster = num_samples_per_class // num_clusters_per_class
+            remaining_samples = num_samples_per_class % num_clusters_per_class  # 余数（分配给前N个簇）
 
-            # 使用KMeans聚类
+            # 对当前类别的样本进行KMeans聚类（固定7个簇）
+            n_clusters = min(num_clusters_per_class, num_class_samples)  # 防止簇数超过样本数
             kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
             cluster_labels = kmeans.fit_predict(class_data)
 
@@ -343,22 +503,43 @@ class STFTSHAPExplainer:
                 # 计算每个样本到聚类中心的距离
                 distances = np.linalg.norm(cluster_samples - cluster_centers[cluster_id], axis=1)
 
-                # 选择距离最近的样本
-                closest_idx = np.argmin(distances)
-                selected_indices_in_class.append(cluster_original_indices[closest_idx])
+                # 确定当前簇要选的样本数（前remaining_samples个簇多选1个）
+                current_cluster_samples = samples_per_cluster
+                if cluster_id < remaining_samples:
+                    current_cluster_samples += 1
 
+                # 选择距离最近的N个样本
+                current_cluster_samples = min(current_cluster_samples, len(cluster_samples))  # 防止超过簇内样本数
+                closest_indices = np.argsort(distances)[:current_cluster_samples]
+
+                # 添加原始索引
+                selected_cluster_indices = [cluster_original_indices[idx] for idx in closest_indices]
+                selected_indices_in_class.extend(selected_cluster_indices)
+
+                print(f"  类别 {label} - 簇 {cluster_id}: 选择 {len(selected_cluster_indices)} 个样本")
+
+            # 确保最终选择的样本数不超过设定值
+            selected_indices_in_class = selected_indices_in_class[:num_samples_per_class]
             representative_indices.extend(selected_indices_in_class)
-            print(f"类别 {label}: 选择了 {len(selected_indices_in_class)} 个代表性样本")
+            print(f"类别 {label}: 最终选择了 {len(selected_indices_in_class)} 个代表性样本")
 
-        print(f"总共选择了 {len(representative_indices)} 个代表性样本作为背景数据")
+        print(f"\n总共选择了 {len(representative_indices)} 个代表性样本作为背景数据")
         return representative_indices
 
-    def prepare_background_data(self, target_label=None, num_samples_per_class=10):
-        """准备背景数据用于SHAP计算 - 使用聚类选择的代表性样本"""
+    def prepare_background_data(self, target_label=None, num_clusters_per_class=7, num_samples_per_class=25):
+        """
+        准备背景数据用于SHAP计算 - 使用聚类选择的代表性样本
+        Args:
+            num_clusters_per_class: 每个类别聚类数（默认7）
+            num_samples_per_class: 每个类别选择的样本数（默认25）
+        """
         bg_specs = []
 
-        # 使用聚类算法选择代表性样本
-        representative_indices = self.select_representative_samples_by_clustering(num_samples_per_class)
+        # 使用聚类算法选择代表性样本（传入簇数和每类样本数参数）
+        representative_indices = self.select_representative_samples_by_clustering(
+            num_clusters_per_class=num_clusters_per_class,
+            num_samples_per_class=num_samples_per_class
+        )
 
         # 计算代表性样本的STFT并展平
         for idx in representative_indices:
@@ -387,8 +568,11 @@ class STFTSHAPExplainer:
         f, t, test_spec = self._get_stft(sample_data.numpy())
         test_spec_flat = test_spec.flatten()
 
-        # 准备背景数据（使用聚类选择的代表性样本）
-        background_data, _, _ = self.prepare_background_data(num_samples_per_class=25)
+        # 准备背景数据（传入命令行参数）
+        background_data, _, _ = self.prepare_background_data(
+            num_clusters_per_class=self.args.num_clusters_per_class,
+            num_samples_per_class=self.args.num_samples_per_class
+        )
 
         # 初始化KernelExplainer
         explainer = shap.KernelExplainer(
@@ -494,7 +678,7 @@ def plot_shap_heatmap(f, t, shap_2d, sample_idx, label, output_path, dataset_nam
 
 
 def compute_shap_heatmap_new(model, data, labels, means, stds, sample_idx, output_path, dataset_name, nperseg=64,
-                             fs=1.0, freq_ratio=0.66):
+                             fs=1.0, freq_ratio=0.66, num_samples_per_class=25, num_clusters_per_class=7):
     """使用新方法计算SHAP热力图"""
     print(f"开始计算样本 {sample_idx} 的SHAP值...")
 
@@ -506,7 +690,9 @@ def compute_shap_heatmap_new(model, data, labels, means, stds, sample_idx, outpu
             'noverlap': nperseg // 2,  # 统一使用nperseg//2
             'timesteps': data.shape[1],
             'num_bg_samples': 20,
-            'device': device
+            'device': device,
+            'num_samples_per_class': num_samples_per_class,
+            'num_clusters_per_class': num_clusters_per_class
         }),
         model=model,
         data=data,
@@ -541,7 +727,7 @@ def main():
                                  'gunpointmalefemale', 'Freezer', 'blink', 'arrowhead',
                                  'EPG', 'EPG1', 'LKA', 'Blink', 'ShapeletSim', 'twopatterns'],
                         help='数据集名称')
-    parser.add_argument('--output_path', type=str, default='./image1',
+    parser.add_argument('--output_path', type=str, default='./t',
                         help='输出文件路径')
     parser.add_argument('--sample_idx', type=int, default=-1,
                         help='要分析的样本索引 (-1表示处理所有样本)')
@@ -552,7 +738,10 @@ def main():
                         help='训练好的模型路径')
     parser.add_argument('--max_samples', type=int, default=-1,
                         help='最大处理样本数 (-1表示处理所有样本)')
-
+    parser.add_argument('--num_clusters_per_class', type=int, default=7,
+                        help='每个类别进行K-means聚类的簇数')
+    parser.add_argument('--num_samples_per_class', type=int, default=7,
+                        help='每个类别选择的背景样本数量')
     parser.add_argument('--num_classes', type=int, default=2,
                         help='分类类别数')
 
@@ -605,7 +794,9 @@ def main():
         # 调用SHAP计算时传入原始数据
         shap_heatmap = compute_shap_heatmap_new(model, data_original, labels, means, stds, args.sample_idx,
                                                 args.output_path, args.dataset, args.nperseg, args.fs,
-                                                freq_ratio=args.freq_ratio)
+                                                freq_ratio=args.freq_ratio,
+                                                num_samples_per_class=args.num_samples_per_class,
+                                                num_clusters_per_class=args.num_clusters_per_class)
         print(f"SHAP计算完成，热力图已保存")
     else:
         # 处理所有样本
@@ -620,7 +811,7 @@ def main():
         target_indices = [i for i in range(len(labels)) if labels[i].item() != 0]
 
         # 处理所有样本的循环
-        #for sample_idx in target_indices:
+        # for sample_idx in target_indices:
         for sample_idx in range(len(data_original)):
             print(f"\n处理样本 {sample_idx + 1}/{len(data_original)}...")
 
@@ -635,7 +826,9 @@ def main():
                 # 计算SHAP热力图（使用原始数据）
                 shap_heatmap = compute_shap_heatmap_new(model, data_original, labels, means, stds, sample_idx,
                                                         args.output_path, args.dataset, args.nperseg, args.fs,
-                                                        freq_ratio=args.freq_ratio)
+                                                        freq_ratio=args.freq_ratio,
+                                                        num_samples_per_class=args.num_samples_per_class,
+                                                        num_clusters_per_class=args.num_clusters_per_class)
 
                 print(f"样本 {sample_idx} 处理完成")
 

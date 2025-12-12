@@ -16,6 +16,38 @@ from utils import (
 import numpy as np
 import torch
 import pandas as pd
+# TODO :继续添加模型权重文件路径
+def get_model_path_for_dataset(dataset_name):
+    """根据数据集名称获取模型路径"""
+    model_paths = {
+        "computer": r"C:\Users\34517\Desktop\zuhui\xITSC\classification_models\computer\transformer\transformer.pt",
+        "cincecgtorso": r"C:\Users\34517\Desktop\zuhui\xITSC\classification_models\cincecgtorso\transformer\transformer.pt",
+        # 添加其他数据集的模型路径
+    }
+    return model_paths.get(dataset_name)
+
+
+def get_model_args_for_dataset(dataset_name):
+    """根据数据集名称获取模型参数"""
+
+    class ModelArgs:
+        def __init__(self, timesteps, num_classes):
+            self.d_model = 64
+            self.nhead = 8
+            self.num_layers = 2
+            self.dim_feedforward = 256
+            self.dropout = 0.2
+            self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            self.timesteps = timesteps
+            self.num_classes = num_classes
+
+    if dataset_name == "computer":
+        return ModelArgs(720, 2)
+    elif dataset_name == "cincecgtorso":
+        return ModelArgs(1639, 2)
+    else:
+        # 默认参数
+        return ModelArgs(720, 2)
 
 
 def load_stage1_output2_summaries():
@@ -50,6 +82,8 @@ def extract_label_from_response(response_text):
     return None
 
 
+
+# TODO :提示词要修改
 def get_round2_5_prompt(label_summaries, test_images_data):
     """生成第2.5轮提示词 - 使用STAGE1_OUTPUT_FILE2的label特征进行分类"""
 
@@ -87,33 +121,27 @@ rationale: [your reasoning]
 
 
 def load_model_and_get_prediction(sample_id, dataset_name="computer"):
-    """加载模型并获取测试样本的分类结果和特征"""
+    """
+    加载模型并获取
+    测试样本的分类结果和特征
+    """
     try:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-        # 根据您提供的代码，设置模型参数
-        args = type('Args', (), {
-            'd_model': 64,
-            'nhead': 8,
-            'num_layers': 2,
-            'dim_feedforward': 256,
-            'dropout': 0.2,
-            'device': device,
-            'timesteps': 720 if dataset_name == "computer" else 1639,
-            'num_classes': 2 if dataset_name in ["computer", "cincecgtorso"] else 3
-        })()
+        # 根据数据集获取模型参数
+        args = get_model_args_for_dataset(dataset_name)
 
-        # 使用您提供的TransformerModel
+        # TODO: 检查这里的模型导入路径
         from models.feat import TransformerModel
         model = TransformerModel(args=args, num_classes=args.num_classes).to(device)
 
         # 加载预训练权重
         model_path = get_model_path_for_dataset(dataset_name)
-        if model_path and os.path.exists(model_path):
-            checkpoint = torch.load(model_path, map_location=device, weights_only=True)
-        else:
-            checkpoint = torch.load(model_path, map_location=device, weights_only=False)
+        if not model_path or not os.path.exists(model_path):
+            print(f"模型路径不存在: {model_path}")
+            return None
 
+        checkpoint = torch.load(model_path, map_location=device)
         if "model_state_dict" in checkpoint:
             model.load_state_dict(checkpoint["model_state_dict"])
         else:
@@ -124,36 +152,28 @@ def load_model_and_get_prediction(sample_id, dataset_name="computer"):
         # 加载测试样本数据
         test_data = load_sample_data(sample_id, dataset_name, is_test=True)
         if test_data is None:
-            return None, None
+            return None
 
         # 转换为tensor并调整形状
         if test_data.dim() == 1:
             test_data = test_data.unsqueeze(0).unsqueeze(-1)  # [1, seq_len, 1]
 
-        # 获取模型预测和特征
+        # 获取模型预测
         with torch.no_grad():
-            logits, features = model(test_data.to(device))
+            logits, _ = model(test_data.to(device))
             predicted = torch.argmax(logits, dim=1).item()
 
-        return predicted, features.cpu()
+        return predicted
 
     except Exception as e:
         print(f"加载模型获取预测失败: {e}")
-        return None, None
-
-
-def get_model_path_for_dataset(dataset_name):
-    """根据数据集名称获取模型路径"""
-    model_paths = {
-        "computer": r"C:\Users\34517\Desktop\zuhui\xITSC\classification_models\computer\transformer\transformer.pt",
-        "cincecgtorso": r"C:\Users\34517\Desktop\zuhui\xITSC\classification_models\cincecgtorso\transformer\transformer.pt",
-        # 添加其他数据集的模型路径
-    }
-    return model_paths.get(dataset_name)
+        return None
 
 
 def load_sample_data(sample_id, dataset_name, is_test=True):
-    """加载样本数据（根据您提供的代码）"""
+    """
+    加载样本数据
+    """
     try:
         # 根据您提供的load_data函数加载数据
         if dataset_name == "computer":
@@ -183,7 +203,7 @@ def load_sample_data(sample_id, dataset_name, is_test=True):
                 data = row[1:].values.astype(np.float32)
 
                 return torch.tensor(data, dtype=torch.float32)
-
+        # TODO: 继续加数据集，不需要加载train
     except Exception as e:
         print(f"加载样本 {sample_id} 数据失败: {e}")
 
@@ -191,7 +211,9 @@ def load_sample_data(sample_id, dataset_name, is_test=True):
 
 
 def get_sample_label(sample_id, dataset_name, is_test=True):
-    """获取样本的标签"""
+    """
+    获取样本的标签
+    """
     try:
         if dataset_name == "computer":
             if is_test:
@@ -216,132 +238,12 @@ def get_sample_label(sample_id, dataset_name, is_test=True):
             if sample_id < len(df):
                 label = int(df.iloc[sample_id, 0]) - 1  # 根据您的代码，标签减1
                 return label
+        # TODO: 继续加数据集，不需要加载train
 
     except Exception as e:
         print(f"获取样本 {sample_id} 标签失败: {e}")
 
     return None
-
-
-def compute_cosine_similarity(feature1, feature2):
-    """计算两个特征向量的余弦相似度"""
-    # 展平特征向量
-    feat1_flat = feature1.flatten()
-    feat2_flat = feature2.flatten()
-
-    # 计算点积
-    dot_product = torch.dot(feat1_flat, feat2_flat).item()
-
-    # 计算范数
-    norm1 = torch.norm(feat1_flat).item()
-    norm2 = torch.norm(feat2_flat).item()
-
-    if norm1 > 0 and norm2 > 0:
-        similarity = dot_product / (norm1 * norm2)
-        return similarity
-    return 0.0
-
-
-def compute_all_train_features(dataset_name):
-    """计算所有训练样本的特征"""
-    try:
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-        # 加载模型
-        args = type('Args', (), {
-            'd_model': 64,
-            'nhead': 8,
-            'num_layers': 2,
-            'dim_feedforward': 256,
-            'dropout': 0.2,
-            'device': device,
-            'timesteps': 720 if dataset_name == "computer" else 1639,
-            'num_classes': 2 if dataset_name in ["computer", "cincecgtorso"] else 3
-        })()
-
-        from models.models import TransformerModel
-        model = TransformerModel(args=args, num_classes=args.num_classes).to(device)
-
-        # 加载预训练权重
-        model_path = get_model_path_for_dataset(dataset_name)
-        if model_path and os.path.exists(model_path):
-            checkpoint = torch.load(model_path, map_location=device)
-            if "model_state_dict" in checkpoint:
-                model.load_state_dict(checkpoint["model_state_dict"])
-            else:
-                model.load_state_dict(checkpoint)
-
-        model.eval()
-
-        # 加载所有训练数据
-        if dataset_name == "computer":
-            file_path = r"C:\Users\34517\Desktop\zuhui\论文\Computers\Computers_TRAIN.txt"
-            df = pd.read_csv(file_path, header=None, sep='\s+')
-        elif dataset_name == "cincecgtorso":
-            file_path = r"C:\Users\34517\Desktop\zuhui\论文\CinCECGTorso\CinCECGTorso_TRAIN.txt"
-            df = pd.read_csv(file_path, header=None, delim_whitespace=True)
-        else:
-            return [], [], []
-
-        all_features = []
-        train_labels = []
-        train_indices = []
-
-        # 批量处理训练数据
-        batch_size = 32
-
-        for i in range(0, len(df), batch_size):
-            batch_data = []
-            batch_indices = []
-
-            for j in range(i, min(i + batch_size, len(df))):
-                row = df.iloc[j]
-                data = row[1:].values.astype(np.float32)
-
-
-                batch_data.append(data)
-                batch_indices.append(j)
-                train_labels.append(int(row[0]) - 1)
-
-            if batch_data:
-                batch_tensor = torch.tensor(np.array(batch_data), dtype=torch.float32).unsqueeze(
-                    -1)  # [batch, seq_len, 1]
-
-                with torch.no_grad():
-                    _, features = model(batch_tensor.to(device))
-                    all_features.append(features.cpu())
-                    train_indices.extend(batch_indices)
-
-        # 合并所有特征
-        if all_features:
-            all_features = torch.cat(all_features, dim=0)
-        else:
-            all_features = torch.tensor([])
-
-        return all_features, train_labels, train_indices
-
-    except Exception as e:
-        print(f"计算训练特征失败: {e}")
-        return [], [], []
-
-
-def find_top_k_similar_samples(test_features, all_train_features, train_indices, k=5):
-    """找到与测试样本最相似的前k个训练样本"""
-    if test_features is None or len(all_train_features) == 0:
-        return []
-
-    similarities = []
-
-    for idx, train_feature in enumerate(all_train_features):
-        similarity = compute_cosine_similarity(test_features, train_feature)
-        similarities.append((train_indices[idx], similarity))
-
-    # 按相似度降序排序
-    similarities.sort(key=lambda x: x[1], reverse=True)
-
-    # 返回前k个样本的ID
-    top_k_ids = [sim[0] for sim in similarities[:k]]
-    return top_k_ids
 
 
 def load_similar_sample_images(similar_sample_ids, dataset_name):
@@ -560,16 +462,89 @@ def process_round2_5(label_summaries, test_images_data):
         return None, None
 
 
-def get_similar_samples_by_similarity_module(test_sample_id, test_features, all_train_features, train_indices, k=5):
-    """根据相似度获取相似样本"""
+def get_similar_samples_by_feature_module(test_sample_id, dataset_name, model_path, model_args, k=5):
+    """
+    使用feature模块获取相似样本
+    参数:
+    - test_sample_id: 测试样本ID
+    - dataset_name: 数据集名称
+    - model_path: 模型路径
+    - model_args: 模型参数
+    - k: 返回的最相似样本数量
+    """
     try:
-        # 计算相似度并获取前k个
-        similar_ids = find_top_k_similar_samples(test_features, all_train_features, train_indices, k=k)
-        return similar_ids
+        # 导入feature模块
+        import feature
+
+        # 使用缓存查找（更快）
+        cache_file = f"feature_cache/{dataset_name}_features.pkl"
+        if os.path.exists(cache_file):
+            print("使用缓存查找相似样本...")
+            top_k_indices, top_k_similarities = feature.find_top_k_with_cache(
+                test_sample_id, k, dataset_name, cache_file, model_path, model_args
+            )
+        else:
+            print("无缓存，实时计算相似样本...")
+            top_k_indices, top_k_similarities = feature.find_top_k_similar_samples(
+                test_sample_id, k, dataset_name, model_path, model_args
+            )
+
+        print(f"找到 {len(top_k_indices)} 个相似样本")
+        return top_k_indices
 
     except Exception as e:
-        print(f"获取相似样本失败: {e}")
-        return []
+        # 尝试使用简化版本
+        try:
+            top_k_indices, _ = feature.main_simple(test_sample_id, k, dataset_name)
+            return top_k_indices
+        except Exception as e2:
+            print(f"使用简化版本也失败: {e2}")
+            return []
+
+
+def generate_thinking_chains_with_similar_samples(all_label_summaries, test_images_data, similar_images_data):
+    """Round3: 生成三条分类思维链（包含相似样本）"""
+    print("执行第3轮：生成三条分类思维链（包含相似样本）...")
+
+    thinking_chains = {}
+
+    for i in range(3):
+        print(f"  生成第 {i + 1} 条思维链...")
+
+        # 构建消息（包含相似样本）
+        messages = get_round3_prompt_with_similar_samples(
+            all_label_summaries,
+            test_images_data,
+            similar_images_data
+        )
+        chain_result = gpt_chat(messages, [])
+
+        if chain_result:
+            thinking_chains[f"chain_{i + 1}"] = chain_result
+            print(f"    第 {i + 1} 条思维链生成成功")
+        else:
+            thinking_chains[f"chain_{i + 1}"] = {"error": "生成失败"}
+            print(f"    第 {i + 1} 条思维链生成失败")
+
+    return thinking_chains
+
+
+def process_final_classification_with_similar_samples(all_label_summaries, thinking_chains, domain_model_result,
+                                                      test_images_data, similar_images_data):
+    """Round4: 最终分类（包含相似样本）"""
+    print("执行第4轮：最终分类（包含相似样本）...")
+
+    # 构建消息（包含相似样本）
+    messages = get_round4_prompt_with_similar_samples(
+        all_label_summaries,
+        thinking_chains,
+        domain_model_result,
+        test_images_data,
+        similar_images_data
+    )
+    final_result = gpt_chat(messages, [])
+
+    return final_result
 
 
 def process_test_samples_with_new_features(all_label_summaries, dataset_name="computer"):
@@ -596,10 +571,13 @@ def process_test_samples_with_new_features(all_label_summaries, dataset_name="co
         print("无测试样本，程序退出")
         return
 
-    # 预先计算所有训练样本的特征（用于相似度计算）
-    print("计算所有训练样本的特征...")
-    all_train_features, train_labels, train_indices = compute_all_train_features(dataset_name)
-    print(f"计算完成，共 {len(all_train_features)} 个训练样本特征")
+    # 获取模型参数和路径
+    model_args = get_model_args_for_dataset(dataset_name)
+    model_path = get_model_path_for_dataset(dataset_name)
+
+    if not model_path:
+        print(f"错误：未找到数据集 {dataset_name} 的模型路径")
+        return
 
     # 确保输出目录存在
     os.makedirs(os.path.dirname(config.STAGE2_OUTPUT_FILE), exist_ok=True)
@@ -657,8 +635,8 @@ def process_test_samples_with_new_features(all_label_summaries, dataset_name="co
             test_images_data
         )
 
-        # 获取模型分类结果和特征
-        model_result, test_features = load_model_and_get_prediction(sample_id, dataset_name)
+        # 获取模型分类结果
+        model_result = load_model_and_get_prediction(sample_id, dataset_name)
 
         sample_results = {
             "sample_id": sample_id,
@@ -675,37 +653,14 @@ def process_test_samples_with_new_features(all_label_summaries, dataset_name="co
         classification_equal = (label_summary_result == model_result)
         sample_results["classification_equal"] = classification_equal
 
-        # 获取相似样本
-        similar_sample_ids = []
-        if test_features is not None and len(all_train_features) > 0 and classification_equal:
-            # 分类结果相等时，使用模型特征计算相似度
-            similar_sample_ids = get_similar_samples_by_similarity_module(
-                sample_id,
-                test_features,
-                all_train_features,
-                train_indices,
-                k=config.SIMILAR_SAMPLE_NUM
-            )
-        elif not classification_equal:
-            # 分类结果不相等时，调用similarity模块
-            try:
-                from similarity import get_similar_samples
-                similar_sample_ids = get_similar_samples(
-                    sample_id,
-                    label_summary_result,
-                    model_result,
-                    k=config.SIMILAR_SAMPLE_NUM
-                )
-            except ImportError:
-                print("未找到similarity模块，将使用模型特征计算相似度")
-                if test_features is not None and len(all_train_features) > 0:
-                    similar_sample_ids = get_similar_samples_by_similarity_module(
-                        sample_id,
-                        test_features,
-                        all_train_features,
-                        train_indices,
-                        k=config.SIMILAR_SAMPLE_NUM
-                    )
+        # 获取相似样本（使用feature模块）
+        similar_sample_ids = get_similar_samples_by_feature_module(
+            sample_id,
+            dataset_name,
+            model_path,
+            model_args,
+            k=config.SIMILAR_SAMPLE_NUM
+        )
 
         # 加载相似样本图像
         similar_images_data = []
@@ -750,51 +705,6 @@ def process_test_samples_with_new_features(all_label_summaries, dataset_name="co
             sleep(1)
 
     print(f"\n第二阶段完成！所有样本结果已保存至: {config.STAGE2_OUTPUT_FILE}")
-
-
-def generate_thinking_chains_with_similar_samples(all_label_summaries, test_images_data, similar_images_data):
-    """Round3: 生成三条分类思维链（包含相似样本）"""
-    print("执行第3轮：生成三条分类思维链（包含相似样本）...")
-
-    thinking_chains = {}
-
-    for i in range(3):
-        print(f"  生成第 {i + 1} 条思维链...")
-
-        # 构建消息（包含相似样本）
-        messages = get_round3_prompt_with_similar_samples(
-            all_label_summaries,
-            test_images_data,
-            similar_images_data
-        )
-        chain_result = gpt_chat(messages, [])
-
-        if chain_result:
-            thinking_chains[f"chain_{i + 1}"] = chain_result
-            print(f"    第 {i + 1} 条思维链生成成功")
-        else:
-            thinking_chains[f"chain_{i + 1}"] = {"error": "生成失败"}
-            print(f"    第 {i + 1} 条思维链生成失败")
-
-    return thinking_chains
-
-
-def process_final_classification_with_similar_samples(all_label_summaries, thinking_chains, domain_model_result,
-                                                      test_images_data, similar_images_data):
-    """Round4: 最终分类（包含相似样本）"""
-    print("执行第4轮：最终分类（包含相似样本）...")
-
-    # 构建消息（包含相似样本）
-    messages = get_round4_prompt_with_similar_samples(
-        all_label_summaries,
-        thinking_chains,
-        domain_model_result,
-        test_images_data,
-        similar_images_data
-    )
-    final_result = gpt_chat(messages, [])
-
-    return final_result
 
 
 def main():

@@ -15,8 +15,7 @@ def extract_features_from_model(model, data_tensor, device):
     with torch.no_grad():
         # 调整数据格式以适应Transformer模型
         # 假设输入形状需要是 [batch_size, timesteps, features]
-        if len(data_tensor.shape) == 2:
-            data_tensor = data_tensor.unsqueeze(-1)  # 添加特征维度
+
 
         data_tensor = data_tensor.to(device)
         _, features = model(data_tensor)
@@ -319,8 +318,8 @@ def main_simple(test_id: int, k: int = 5, dataset_name: str = "computer"):
 # 使用示例
 if __name__ == "__main__":
     # 示例1：查找测试样本ID=0的最相似的5个训练样本
-    test_id = 200
-    k = 5
+    test_id = 2
+    k = 6
     dataset_name = "computer"
 
     print(f"查找测试样本 {test_id} 的最相似 {k} 个训练样本...")

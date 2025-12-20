@@ -141,6 +141,8 @@ class ClassifierTrainer():
                 data = data.unsqueeze(1).float()
                 labels = labels.type(torch.LongTensor)
                 data, labels = data.to(device), labels.to(device)
+                print(f"Data shape: {data.shape}")
+
                 output = self.model(data)
 
                 _, predicted = torch.max(output, 1)
@@ -161,19 +163,22 @@ class ClassifierTrainer():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--classification_model', type=str, default=r"C:\Users\34517\Desktop\zuhui\xITSC\classification_models\Lightning\transformer\transformer.pt", help='trained classifier model for testing')
+    parser.add_argument('--classification_model', type=str, default=r"C:\Users\34517\Desktop\zuhui\xITSC\classification_models\computer\transformer\transformer.pt", help='trained classifier model for testing')
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--lr', type=float, default=2e-4)
     parser.add_argument('--n_epochs', type=int, default=200)
     parser.add_argument('--mode', type=str, default='test', choices=['test', 'train'])
-    parser.add_argument('--dataset', type=str, default='Lightning', help="Dataset to train on")
+    parser.add_argument('--dataset', type=str, default='computer', help="Dataset to train on")
     parser.add_argument('--model_type', type=str, default="transformer", choices=['resnet', 'transformer', 'bilstm'])
     parser.add_argument('--savedir', type=str, default="classification_models")
     parser.add_argument('--inplanes', type=int, default=64)
-    parser.add_argument('--num_classes', type=int, default=4)
+    parser.add_argument('--num_classes', type=int, default=2)
     parser.add_argument('--task', type=str, default='classification', choices=['spectralx', 'classification'])
     parser.add_argument('--topk', type=int, default=10)
-
+    #spectrogram
+    parser.add_argument('--fs', type=int, default=1)
+    parser.add_argument('--noverlap', type=int, default=8)
+    parser.add_argument('--nperseg', type=int, default=16)
     # transformer and bi-lstm
     parser.add_argument('--use_transformer', type=bool, default=False)
     parser.add_argument('--num_layers', type=int, default=2)
@@ -181,7 +186,7 @@ if __name__ == '__main__':
     parser.add_argument('--nhead', type=int, default=8)
     parser.add_argument('--dim_feedforward', type=int, default=256)
     parser.add_argument('--dropout', type=int, default=0.2)
-    parser.add_argument('--timesteps', type=int, default=1639)  # 128 140 1639
+    parser.add_argument('--timesteps', type=int, default=720)  # 128 140 1639
 
     args = parser.parse_args()
 

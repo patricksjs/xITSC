@@ -19,9 +19,7 @@ CLASSIFICATION_RESULTS_FILE = r"C:\Users\34517\Desktop\zuhui\xITSC\result\classi
 # 模型配置
 GPT_MODEL = "gpt-5-mini"
 #gpt-5-mini
-OPENAI_API_KEY = "sk-Aqjpx18VnGq62P86z94ZM6EiIWbaiiFWy3o3dyEUXN2LaAJU"
-#sk-f7PfGtDHBvCtCYCXJWA8MZVtxh8KK8p6HF3vjwUnXLSNtuxc
-#sk-Aqjpx18VnGq62P86z94ZM6EiIWbaiiFWy3o3dyEUXN2LaAJU
+OPENAI_API_KEY = 
 
 OPENAI_BASE_URL = "https://api.chatanywhere.tech/v1"
 #OPENAI_BASE_URL ="https://api.agicto.cn/v1"
@@ -49,4 +47,5 @@ RESULT_PATTERNS = {
 
     # round4_model: 找到"model"和"rationale"之间的第一个数字
     'round4_model': re.compile(r'model(.*?)rationale', re.IGNORECASE),
+
 }

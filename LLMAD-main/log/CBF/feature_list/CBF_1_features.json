@@ -1,0 +1,6 @@
+{
+  "Contour is asymmetric: a gradual ascent to the peak followed by a relatively abrupt post-peak drop, creating skewed shape.": "common feature",
+  "After the peak, all series show an abrupt decline and settle into a lower, noisier baseline in the tail (time steps ~90–120).": "common feature",
+  "Peak timing varies across traces, with the main hump occurring at different time steps (roughly 60–70 in some, 85–95 in others).": "delete feature",
+  "Post-peak tail displays intensified high-frequency fluctuations with weaker autocorrelation than the pre-peak region.": "partial-sample feature"
+}

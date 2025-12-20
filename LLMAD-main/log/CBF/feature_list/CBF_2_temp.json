@@ -1,0 +1,10 @@
+{
+  "Early transient: A sharp, abrupt rise to a high mean region (typically reaching up to +3) starting around t≈25-40, followed by a plateau phase exhibiting damped, irregular multi-peak activity.": "common feature",
+  "Plateau dynamics: During the plateau phase (spanning approximately t≈25-70), the signal shows a damped decline with non-uniformly spaced local maxima of variable amplitude, forming a quasi-step pattern distinct from flat plateaus or regular staircases.": "common feature",
+  "Tail transition: A gradual shift occurs around t≈70-85 leading to a tail region with reduced amplitude and lower-frequency fluctuations.": "common feature",
+  "Late-time transients: Sporadic small spikes emerge beyond t≈90 after the main damping period.": "common feature",
+  "Noise characteristics: Pre-peak region (before t≈25) exhibits higher-frequency fluctuations with greater variance, while post-peak regions become smoother with lower-frequency drift and reduced high-frequency content, though occasional spikes persist.": "common feature",
+  "Distinguishing dynamics: Dominant features include a high-amplitude transient peak followed by damped irregular oscillations, contrasting with sustained near-constant plateaus and crisp transitions seen in other classes.": "common feature",
+  "Progressive reduction in amplitude variance over time (variance compression) leading to consistently tighter oscillation around the baseline in the tail region (beyond t≈70-85).": "partial-sample feature",
+  "Increased irregularity in plateau decay patterns where local maxima show inconsistent periodicity and amplitude variation compared to strict stair-step profiles.": "partial-sample feature"
+}

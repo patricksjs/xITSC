@@ -1,0 +1,10 @@
+{
+  "**Inter-peak ridge within the trough**: A subtle local maximum between the two major peaks creates a shallow bump, disrupting a monotonically dipping valley.": "common feature",
+  "**Zigzag-like valley structure**: Multiple small inflection points between the two major peaks result in a subtly wavy trough, contrasting with smooth or flat-bottom dips.": "common feature",
+  "**Prolonged plateau-like trough**: A sustained segment between the two major peaks remains near the baseline level, differing from brief/intra-trough plateaus or deep V-shaped valleys.": "common feature",
+  "Left peak is noticeably narrower and sharper than the right peak, creating an asymmetric dual-peak shape.": "partial-sample feature",
+  "Longer right-tail: the decay after the right peak is more extended and smoother, producing a longer tail than the left-side decay.": "partial-sample feature",
+  "Two-stage post-peak decay: after the second peak, an initial steep drop followed by a slower, extended tail across later time steps.": "partial-sample feature",
+  "Slow baseline drift within the trough: a gradual, monotonic downward envelope during the inter-peak region, not a flat baseline.": "partial-sample feature",
+  "Multiple shallow sub-peaks inside the trough: 2–4 small local maxima embedded in the trough between the two main peaks, indicating richer substructure.": "partial-sample feature"
+}

@@ -1,0 +1,8 @@
+{
+  "Cross-series synchronized inflection: all series transition from negative baseline to positive plateau around the same time (roughly 90–110 steps), indicating a common regime change point.": "common feature",
+  "Brief synchronized perturbation near 190–200 steps: all series show a transient deviation from the plateau before returning to the baseline level.": "common feature",
+  "Synchronized secondary peak during the plateau: all series exhibit a brief rise around 160–170 steps before the later perturbation.": "delete feature",
+  "Consistent post-perturbation valley: a shallow dip around 210–215 steps occurs across all curves, followed by a quick return to the plateau.": "delete feature",
+  "Persistent micro-oscillations on the plateau: frequent small fluctuations throughout 120–210 steps, not a perfectly flat region.": "common feature",
+  "Small cross-series timing jitter: inflection and peak times show slight offsets (a few steps) across curves, not perfectly synchronized.": "delete feature"
+}

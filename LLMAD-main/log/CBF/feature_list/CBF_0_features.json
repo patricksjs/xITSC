@@ -1,0 +1,6 @@
+{
+  "Two abrupt mean-shifts create three quasi-stationary segments (low, high, low) with a middle plateau around +1; transitions occur near steps 25–30 and 80–85 across all images.": "common feature",
+  "Within each segment, the noise variance remains roughly constant, producing stable plateaus without intra-segment trends.": "common feature",
+  "Middle plateau duration: The high plateau consistently spans about 55 time steps (roughly 30 to 85) across images, indicating a uniform segment length before the final transition.": "common feature",
+  "Middle high plateau shows persistent small-amplitude oscillations around +1, indicating a mild periodic-like component on the plateau.": "common feature"
+}

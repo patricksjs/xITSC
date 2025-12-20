@@ -1,0 +1,13 @@
+{
+  "Dense, jagged waveform with many closely spaced peaks and troughs, indicating strong high-frequency components common to all plots.": "delete feature",
+  "No consistent cycle or rhythm; inter-peak intervals vary widely, showing irregular, non-periodic fluctuations across the sequence.": "partial-sample feature",
+  "Narrow, low-amplitude range: all traces stay within roughly -0.5 to 1.0 units, indicating low-energy accelerometer signals across the window.": "partial-sample feature",
+  "Bursty clusters of activity: intermittent short-lived bursts create brief high-variance pockets rather than uniform noise.": "partial-sample feature",
+  "Slow envelope modulation: a gradual drift in overall energy from early to late samples, showing non-stationary baseline behavior.": "common feature",
+  "Occasional sharp, isolated spikes reaching around 1 unit, separated by relatively flat regions—these high-amplitude transients appear sporadically in all three plots.": "delete feature",
+  "Frequent short plateaus where the signal briefly flattens to a narrow range before resuming rapid, jagged fluctuations.": "common feature",
+  "Pronounced shared mid-window trough: around steps 110–125, all three traces dip to about -1.0, forming a common deep valley across the plots.": "partial-sample feature",
+  "Regime-change baseline: early portion near zero/positive values transitions to a sustained negative offset (-0.8 to -1.0) in the middle-to-late window, indicating a two-phase amplitude shift.": "common feature",
+  "Clear mid-window regime shift: curves display two distinct linear-like segments with an inflection around the middle, switching from flatter early behavior to a pronounced downward slope later.": "partial-sample feature",
+  "Extended mid-window plateau: all traces show a relatively stable, narrow-value plateau lasting ~20–30 samples before fluctuations resume.": "common feature"
+}

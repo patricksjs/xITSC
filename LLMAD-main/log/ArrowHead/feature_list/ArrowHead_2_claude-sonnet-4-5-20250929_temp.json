@@ -1,0 +1,10 @@
+{
+  "The series exhibits a distinctive three-phase structure: a sharp initial rise to a sustained plateau (steps 25-75), followed by an irregular oscillating middle section with small amplitude fluctuations (steps 75-175), and ending with a second major peak before sharp decline.": "common feature",
+  "Two prominent peaks appear asymmetrically positioned, with the first peak (amplitude ~1.5) occurring early around step 40 and the second peak (amplitude ~1.3) occurring late around step 210, creating an unbalanced bimodal distribution.": "common feature",
+  "The middle segment (steps 100-175) shows persistent low-amplitude serrated oscillations around baseline with values fluctuating between -0.8 and 0.4, creating a compressed irregular pattern distinct from the smoother outer segments.": "delete feature",
+  "The series begins and ends at nearly identical extreme negative values (approximately -1.7 to -2.0), creating a closed-loop characteristic where the starting and ending amplitudes are symmetrically anchored at the lower boundary.": "common feature",
+  "A deep trough consistently appears in the range of steps 100-140 with values dropping to approximately -1.0 to -1.2, forming a valley segment that separates the two major peak regions and creates a distinctive W-shaped or double-hump global contour.": "common feature",
+  "The transitions between peaks and troughs follow smooth, gradual curves rather than abrupt changes, with consistent ascending slopes (steps 0-50 and 140-180) and descending slopes (steps 50-100 and 200-250) maintaining similar rates of change throughout.": "common feature",
+  "The first peak exhibits a flatter, broader plateau structure (steps 40-70) with extended duration at maximum amplitude, contrasting with the second peak which shows a sharper, more pointed apex around step 160-170.": "common feature",
+  "A consistent intermediate rise occurs around steps 50-60 forming a shoulder or secondary hump on the descending slope of the first peak, creating a subtle multi-modal structure within the first major peak region.": "delete feature"
+}

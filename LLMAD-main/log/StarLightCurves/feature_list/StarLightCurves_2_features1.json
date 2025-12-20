@@ -1,0 +1,9 @@
+{
+  "A consistent large-scale biphasic contour: a broad positive hump peaking ~200–300, a rapid descent into a deep negative trough around 400–520, then a slow recovery back toward small positive values at the series end.": "common feature",
+  "Superimposed low-amplitude, quasi-regular ripples (minor peaks/valleys) throughout, becoming more evident after the trough with a roughly constant spacing and modest amplitude.": "common feature",
+  "Within the broad positive hump the primary sub‑peak is visibly taller than the secondary shoulder (primary consistently ~10–25% larger), creating a dominant peak plus smaller shoulder.": "partial-sample feature",
+  "A consistent trough magnitude: the deep negative troughs repeatedly reach about −1.2 to −1.8 across examples, making the trough amplitude notably larger than the superimposed ripples.": "common feature",
+  "Consistent rise–fall asymmetry: approach to the main hump is prolonged and smooth (~0–250), while the decline into the negative region is noticeably shorter and steeper, giving a left‑skewed hump profile.": "common feature",
+  "A small, consistent transient peak or bump appears early (roughly 20–60 steps) before the main broad hump, distinct from the elevated baseline.": "partial-sample feature",
+  "During the late recovery the superimposed oscillations gain amplitude (and slightly lengthen period), producing progressively larger undulations en route to the terminal bump.": "partial-sample feature"
+}

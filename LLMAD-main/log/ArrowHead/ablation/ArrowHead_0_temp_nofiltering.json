@@ -1,0 +1,11 @@
+{
+  "Two dominant broad maxima appear near ~40–60 and ~180–200 time steps in both series, producing a clear bimodal pattern with comparable peak heights (~1.3–1.7).": "common feature",
+  "Peaks are wide and rounded with gradual rises and falls spanning roughly 40–60 steps, showing small local inflections rather than sharp, narrow spikes.": "common feature",
+  "The inter-peak segment forms a depressed plateau (≈-0.5 to -1.0) containing several low-amplitude oscillatory bumps and shallow valleys centered in the middle of the sequence.": "common feature",
+  "Deep symmetric endpoint troughs: both series fall to pronounced minima near the sequence ends (~-2.0), substantially lower than the central plateau, forming sharp boundary lows at t≈0 and t≈1024/ends.": "common feature",
+  "Approximate mirror symmetry about the midpoint: the left and right halves show similar contour and timing (major peak positions, slopes, and trough depths) reflecting a near-reflectional symmetry.": "common feature",
+  "Persistent fine-scale jitter: low-amplitude, high-frequency wiggles are superimposed on the broad waves throughout, visible as consistent thin ripples along rising and falling flanks.": "common feature",
+  "A consistent brief shoulder/notch immediately follows each main maximum (≈t=60–80 and ≈t=170–190), creating a two‑stage descent: brief flattening or small dip, then continued fall toward the central troughs.": "common feature",
+  "A clear medium‑frequency quasi‑periodic oscillation (~10–20 time steps) overlays the plateau and flanks, producing regularly spaced small bumps rather than purely random noise.": "common feature",
+  "The fine‑scale ripples are amplitude‑modulated: micro‑wiggle magnitude increases on the steep rising/falling flanks and near peak summits, and is reduced across the central depressed plateau.": "common feature"
+}

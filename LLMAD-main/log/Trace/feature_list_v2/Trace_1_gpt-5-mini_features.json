@@ -1,0 +1,7 @@
+{
+  "Pre- and post-event plateau: series show a stable high baseline (~0.6–0.8) before the event and a similar stable level after recovery.": "common feature",
+  "Sudden negative step: a very sharp, near-vertical drop occurs around time step ~80–90.": "common feature",
+  "Deep sustained trough: the signal reaches a prolonged low (~-2.0) that persists for many time steps.": "common feature",
+  "Asymmetric recovery: return to baseline is smooth and gradual, much slower than the initial drop.": "common feature",
+  "Low-amplitude high-frequency noise: small, consistent jitter overlays all segments (baseline, trough, and recovery).": "common feature"
+}

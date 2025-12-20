@@ -1,0 +1,14 @@
+{
+  "A consistent large-scale biphasic contour: a broad positive hump peaking ~200–300, a rapid descent into a deep negative trough around 400–520, then a slow recovery back toward small positive values at the series end.": "common feature",
+  "Superimposed low-amplitude, quasi-regular ripples (minor peaks/valleys) throughout, becoming more evident after the trough with a roughly constant spacing and modest amplitude.": "common feature",
+  "The broad positive hump often shows two distinct sub-peaks (a primary and a secondary shoulder) around ~150–270, creating a double-peaked/shoulder morphology before the rapid descent.": "common feature",
+  "The deep negative trough commonly contains a brief mid-trough rebound/notch — a small upward inflection or secondary local maximum near the trough minimum (~440–520).": "common feature",
+  "A consistent elevated positive starting offset: series begin around 0.5–0.9 for the first ~40–80 steps before the main hump, producing a reproducible early baseline elevation.": "common feature",
+  "Within the broad positive hump the primary sub‑peak is visibly taller than the secondary shoulder (primary consistently ~10–25% larger), creating a dominant peak plus smaller shoulder.": "common feature",
+  "A consistent trough magnitude: the deep negative troughs repeatedly reach about −1.2 to −1.8 across examples, making the trough amplitude notably larger than the superimposed ripples.": "common feature",
+  "Accelerating late recovery: a convex, accelerating upward trend begins ~800–900 steps, producing a small terminal positive bump just before the series end.": "common feature",
+  "Consistent rise–fall asymmetry: approach to the main hump is prolonged and smooth (~0–250), while the decline into the negative region is noticeably shorter and steeper, giving a left‑skewed hump profile.": "common feature",
+  "Broad trough plateau: the deep negative section is extended (roughly 400–750) and relatively flat, showing gentle low‑frequency undulations instead of a sharp, narrow minimum.": "common feature",
+  "A small, consistent transient peak or bump appears early (roughly 20–60 steps) before the main broad hump, distinct from the elevated baseline.": "partial-sample feature",
+  "During the late recovery the superimposed oscillations gain amplitude (and slightly lengthen period), producing progressively larger undulations en route to the terminal positive bump.": "partial-sample feature"
+}

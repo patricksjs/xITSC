@@ -1,0 +1,14 @@
+{
+  "Predominant slightly negative baseline (~-0.3 to -0.6) with long quiescent stretches; baseline is stable and stationary.": "common feature",
+  "Abrupt, rectangular on/off pulses with steep edges reaching ~2–3 units; pulse durations are short relative to baseline segments.": "common feature",
+  "Activity clusters in a late window (~4.7–5.2 on the time axis), appearing as spikes/bursts across samples; outside this window, minimal activity.": "common feature",
+  "High-frequency quasi-periodic ripple within the active window: near-uniform peak–valley spacing (~0.05 time units) yields a serrated texture.": "common feature",
+  "Positive-biased oscillations during activity: upward excursions dominate; troughs seldom approach the pre-activation negative baseline.": "common feature",
+  "Discrete amplitude states inside the active window: frequent switching between two nearby levels, with sporadic brief transitions to a higher tier.": "common feature",
+  "Single contiguous activation episode consistently spans ~5.5–6.6–6.8, yielding a ~1.1–1.3 time-unit duration across samples.": "common feature",
+  "Onset transient overshoot: right after activation, brief narrow peaks exceed the subsequent steady pedestal before settling.": "common feature",
+  "Clean shutdown: activity ends with a direct step to baseline, showing minimal/no rebound or post-offset ringing.": "common feature",
+  "Front-loaded activation: pulses start near the series beginning, then a single abrupt downstep to a long negative baseline; no later reactivation.": "common feature",
+  "Flat positive floor during activity: troughs sit on a stable pedestal (~0.6–1.2) with negligible drift until shutdown.": "common feature",
+  "Highly consistent spike magnitudes within the active window, showing minimal inter-peak variability and low noise.": "common feature"
+}

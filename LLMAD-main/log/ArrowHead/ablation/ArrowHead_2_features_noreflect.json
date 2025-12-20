@@ -1,0 +1,11 @@
+{
+  "Two dominant broad peaks at ~t=40 and ~t=205 with similar heights (~1.2–1.5), separated by a prolonged lower-amplitude trough between ~t=80–160.": "common feature",
+  "Middle segment exhibits low-amplitude, irregular oscillations around a negative baseline (valleys ≈ -0.5 to -0.8) while peak regions show larger amplitude with small surface ripples.": "delete feature",
+  "Nonstationary long-period morphology: smooth, gradual rises and falls spanning tens–hundreds of steps, with broad peaks/troughs rather than sharp, transient spikes.": "common feature",
+  "Start and end amplitudes sit at similar deep negative values (near -1.7 to -1.9), suggesting phase-aligned continuity across the series rather than drifting endpoints.": "common feature",
+  "Consistent left/right asymmetry of main peaks: the earlier peak is typically narrower/sharper, while the later peak is broader and often shows a flattened/plateaued top.": "common feature",
+  "Recurrent secondary shoulders or mid-slope local bumps appear on the up/down slopes and in the trough-to-peak transitions (small auxiliary peaks around t≈90–160).": "partial-sample feature",
+  "All series cross the zero baseline during the initial ramp to the first peak and again during the fall after the second peak, placing zero-crossings consistently in the outer thirds of the cycle rather than near the central trough.": "common feature",
+  "The central trough is consistently left-skewed — its minimum occurs slightly before the exact midpoint (≈100–130), producing a shorter descent and longer recovery to the second peak.": "common feature",
+  "Both start and end segments show steeper, more linear terminal slopes into the deep negative endpoints compared with the smoother, lower-curvature ramps between internal extrema.": "common feature"
+}

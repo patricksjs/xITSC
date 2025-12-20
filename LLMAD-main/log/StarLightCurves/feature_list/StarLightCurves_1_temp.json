@@ -1,0 +1,7 @@
+{
+  "Consistent twin-pulse pattern: two narrow, high-amplitude peaks occur in every series, the first (around 240–300) noticeably larger than the second (around 740–800), with an inter-peak distance ≈480–520 timesteps.": "common feature",
+  "Long negative baseline plateau between and outside pulses, showing low-amplitude, smooth oscillations and shallow troughs rather than high-frequency noise or abrupt baseline shifts.": "common feature",
+  "Each pulse shows a brief post-peak negative undershoot (short-duration trough immediately following both peaks) before returning to the negative plateau.": "partial-sample feature",
+  "A wider post-second-peak positive shoulder (broad, low-amplitude hump around ~800–900) precedes final return to the negative plateau, different from the brief high-frequency micro-ripples.": "partial-sample feature",
+  "Small, regular pre-first-peak undulations: a low-amplitude, sinusoid-like ripple pattern consistently appears before the main first pulse (roughly 0–200), distinct from the narrow pulses and baseline noise.": "common feature"
+}

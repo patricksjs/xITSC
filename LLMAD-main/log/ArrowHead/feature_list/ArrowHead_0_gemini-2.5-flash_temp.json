@@ -1,0 +1,8 @@
+{
+  "The time series consistently presents a \"double-hump\" pattern, characterized by two high-amplitude peaks separated by a significant central dip.": "common feature",
+  "The time series exhibits strong approximate bilateral symmetry around its midpoint.": "delete feature",
+  "The central dip consistently contains multiple minor oscillations, presenting a wavy substructure rather than a smooth, single trough.": "common feature",
+  "The time series consistently begins and ends with an amplitude close to zero, showing a steep initial rise and final fall.": "delete feature",
+  "The two main peaks consistently exhibit a broad, rounded contour, indicating a sustained period of high amplitude rather than a sharp spike.": "common feature",
+  "The maximum amplitude of the two main peaks consistently exceeds 1.5, while the minimum amplitude within the central dip consistently falls below -0.5.": "common feature"
+}

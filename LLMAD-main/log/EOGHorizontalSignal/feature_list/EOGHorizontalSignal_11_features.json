@@ -1,0 +1,10 @@
+{
+  "Common sharp transient spike around 340–380 time steps, narrow width, peak ~40–50 units, returning to baseline quickly in all three series.": "common feature",
+  "Late-sequence slow upward drift: baseline gradually rises after ~600 time steps by ~20–40 units, with small fluctuations.": "common feature",
+  "Twin-peak structure around the transient: a smaller pre-spike bump forming a double-peak near 320–360 time steps before the main spike, visible in all three series.": "common feature",
+  "Post-spike elevated jitter: after the transient, the baseline becomes noisier with higher-frequency fluctuations in the latter part of the series across all three plots.": "common feature",
+  "Variable spike decay profiles: one series returns to baseline quickly, others exhibit a long, shoulder-like tail after the spike, indicating differing relaxation dynamics.": "common feature",
+  "Post-spike downward drift: baseline continues to decrease after the transient, producing a sustained negative trend through the remainder of the series.": "common feature",
+  "Post-spike tail shows variance contraction; fluctuations become smoother and high-frequency noise diminishes across all three series.": "common feature",
+  "Synchronized pre-spike low-frequency oscillations appear in the baseline before the transient, aligning temporally across the three series.": "common feature"
+}

@@ -1,0 +1,11 @@
+{
+  "Two-time-scale pattern: rapid oscillations embedded in a slow-varying envelope, producing a visible beat-like modulation across the sequence.": "common feature",
+  "Brief quiescent intervals: short, transient flattenings where oscillations nearly cease for a few samples before resuming.": "common feature",
+  "Baseline drift: a slow, gradual shift of the signal mean across the 13 s window, indicating non-stationary offset.": "delete feature",
+  "Time-varying amplitude envelope: oscillation peak amplitudes grow or decay over time, showing nonuniform energy distribution beyond the fast beat pattern.": "common feature",
+  "Phase jitter: irregular peak-to-peak intervals across the window, indicating a non-strictly periodic rhythm.": "common feature",
+  "Asymmetric cycles: crest shapes with steeper rise than fall, producing skewed, non-symmetric waveforms.": "partial-sample feature",
+  "Embedded micro-bursts: small sharp spikes riding on the main oscillation within individual cycles.": "delete feature",
+  "Gradual chirp-like frequency drift across the 13 s window, with cycle spacing slowly tightening (or loosening) over time in all RUNNING traces.": "common feature",
+  "Blockwise energy modulation: alternating segments of higher and lower peak amplitudes, creating a coarse, secondary rhythm atop the fast oscillations.": "common feature"
+}

@@ -1,0 +1,547 @@
+[
+{
+    "idx": 0,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series begins on a negative plateau (\u2248 \u22121.3), shows a smooth, mid-sequence rise to a positive plateau (\u2248 +0.6\u20130.9) around t\u2248100\u2013140, and then exhibits a small late positive bump followed by a short dip near t\u2248200\u2013220. This combination \u2014 negative early baseline + mid rise to positive + a late bump/dip transient \u2014 matches the defining pattern of class 2 from the provided examples and distinguishes it from class 3 (which lacks the late transient) and from classes 0/1 (which start positive and show a deep negative dip instead)."
+},
+{
+    "idx": 2,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- **True Label**: 2\n- **Confidence**: 0.92\n- **Reason**: The series begins at a low baseline (~\u22122), shows a clear mid-series step-up into a positive plateau (the main event is a rise, not a dip), and exhibits a small narrow positive bump followed by a brief notch around time steps ~150\u2013175 before returning to the plateau. That pattern (low \u2192 mid rise \u2192 late bump/notch) matches the class\u20112 motif from the examples; it differs from classes 0/1 (which show a deep negative dip) and from class\u20113 (which lacks the late bump)."
+},
+{
+    "idx": 5,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- **True Label**: 2\n- **Confidence**: 0.92\n- **Reason**: The series starts on a negative baseline (~\u22121.8), undergoes a smooth low\u2192high step-up in the middle (rising to ~+0.6), and then exhibits a distinct late small positive bump followed by a short dip (~170\u2013205) before returning to the plateau. This pattern (step-up + late bump/dip) matches the Class 2 examples; Classes 0/1 show an early/late sharp spike + deep negative eclipse (not present here) and Class 3 lacks the late bump."
+},
+{
+    "idx": 10,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series begins on a low baseline, shows a smooth sigmoidal rise in the middle toward a modest positive plateau, and then exhibits a narrow late positive spike followed by a small dip before returning to the plateau. This combination (low\u2192smooth rise + a late short-lived bump/dip) matches the distinctive pattern seen in class 2 and differs from class 3 (which has a smoother rise without the late spike) and from classes 0/1 (which start high and show deep negative eclipses)."
+},
+{
+    "idx": 12,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.88\n- Reason: The series begins on a negative baseline, shows a clear mid\u2011series upward transition to a positive plateau (rise rather than an eclipse/dip), and contains a small sharp positive bump followed by a minor dip in the mid\u2011late segment. That combination (negative early baseline + mid rise + late small bump/dip) matches the pattern seen in class 2. It differs from classes 0/1 (which show a sharp negative trough / dip event) and from class 3 (which has a smoother rise without the late secondary bump)."
+},
+{
+    "idx": 13,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series begins on a negative baseline, shows a smooth mid-series rise to a positive plateau (rising polarity), and then displays a distinct late small positive peak followed by a sharp dip before settling back to the plateau. This combination (negative early baseline \u2192 mid rise \u2192 late bump-and-dip) is the hallmark of class 2 and distinguishes it from class 3 (which lacks the late bump/dip) and from classes 0/1 (which show a sharp downward trough rather than an upward transit)."
+},
+{
+    "idx": 14,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series starts on a negative baseline (~\u22121.8 to \u22122.0), undergoes a smooth, middle\u2011domain rise (roughly t\u224850\u2013100) to a positive plateau (~0.5\u20130.7), and then shows a small late transient: a modest positive bump followed by a short dip around t\u2248170\u2013200. This pattern matches class 2 (negative \u2192 smooth mid rise \u2192 plateau with a late bump+dip). It does not match classes 0/1 (which show an early sharp positive spike immediately followed by a deep trough) or class 3 (which has the smooth rise but lacks the late transient), so class 2 is the best match."
+},
+{
+    "idx": 17,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.91\n- Reason: The series has a negative early baseline (\u2248 -1.2 to -1.4), a smooth sigmoid\u2011like rise in the middle (transition to a positive plateau around time \u2248100\u2013120) and a small late secondary perturbation (a positive bump near \u2248200 followed by a dip). This pattern matches the class\u20112 examples (negative\u2192positive step + late bump). It does not show the very sharp early positive spike and immediate deep trough that distinguish classes 0 and 1, nor does it lack the late perturbation as in class 3 \u2014 so class 2 is the best match."
+},
+{
+    "idx": 20,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series begins on a negative baseline (~\u22121.8), shows a smooth, extended rise in the middle segment to a positive plateau (~+0.6), and then exhibits a small, localized late transient (a modest positive bump followed by a small dip around t\u2248170\u2013200). These three characteristics (negative early baseline \u2192 smooth mid rise \u2192 positive late plateau plus a late bump/dip) match the class\u20112 examples. It lacks the early high positive spike + immediate deep dip of class 0, and it lacks the single mid sharp negative dip of class 1; it also differs from class 3 by the presence of the late small bump/dip."
+},
+{
+    "idx": 25,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series begins at a negative baseline (~\u22122), shows a smooth sigmoidal rise in the middle to a positive plateau (~+0.5), and then exhibits a small, localized late positive bump immediately followed by a small dip around t\u2248150\u2013180. This combination (negative start + smooth rise to plateau + late spike+dip) matches the class\u20112 pattern. It differs from class\u20113 (which also starts negative and rises but lacks the late spike/dip) and from classes 0/1 (which start positive and show a deep negative trough rather than a smooth rise)."
+},
+{
+    "idx": 26,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series begins on a negative baseline, undergoes a mid-series, sigmoidal/step-like rise into a positive plateau (rise timing \u224870\u2013110) and then shows a small late positive spike followed by a short dip around \u2248180\u2013210. This combination (negative start \u2192 mid rise to plateau + a late small bump/dip) matches the class\u20112 examples. It lacks the early sharp positive spike + immediate trough of class\u20110 and the mid-time deep negative trough of class\u20111, and it has the late perturbation that differentiates it from class\u20113 \u2014 hence a high confidence."
+},
+{
+    "idx": 28,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: class 2\n- Confidence: 0.92\n- Reason: The series begins at a negative baseline (\u2248 \u22121.5 to \u22122), shows a clear mid-series upward step to a positive plateau (rise centered roughly t\u224860\u2013110), and exhibits a small late short-lived positive peak followed by a dip around t\u2248170\u2013200. This pattern (negative early level + mid rise to positive plateau + occasional late bump/dip) matches the examples for class 2. It does not match class 0/1 (those start positive and show a deep trough) nor class 3 (which lacks the late transient)."
+},
+{
+    "idx": 30,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.95\n- Reason: The series starts on a negative baseline, undergoes a smooth, mid-series rise to a positive plateau (negative\u2192positive step), and shows a distinct late small positive spike followed by a brief dip (~t\u2248170\u2013200) before settling \u2014 the exact pattern that distinguished class 2 in the examples. It does not match classes 0/1 (those begin positive and show a deep trough) nor class 3 (which has the negative\u2192positive rise but lacks the late bump/dip)."
+},
+{
+    "idx": 36,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series begins on a negative baseline (~-2), shows a clear sigmoid-like rise in the middle segment up to the common plateau (~0.5\u20130.8), and then exhibits a small localized positive bump followed by a brief dip before settling \u2014 exactly the pattern that distinguished class 2 in the provided examples. This differs from classes 0/1 (which show a sharp negative trough as the main event, often with/without a precursor spike) and from class 3 (which also rises from negative to the plateau but typically lacks the late bump/dip)."
+},
+{
+    "idx": 40,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.95\n- Reason: The series begins on a negative baseline, shows a smooth mid-series rise into a positive plateau (transition around time steps ~80\u2013110), and then exhibits a brief late positive bump followed by a small negative dip (~170\u2013205) before settling back to the plateau. This pattern (low \u2192 mid rise \u2192 later short bump/dip) matches the class\u20112 examples; it differs from classes 0/1 (which start positive and show sharp spike/dip events) and from class\u20113 (which rises similarly but lacks the late transient)."
+},
+{
+    "idx": 49,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series starts at a negative baseline, shows a smooth mid-sequence rise to a positive plateau, and contains a clear secondary late transient \u2014 a narrow positive bump followed by a small dip \u2014 before settling. That combination (negative start \u2192 mid rise to positive + a late bump/dip) matches the distinctive pattern of class 2 and differs from class 3 (which has the rise but no late bump) and from classes 0/1 (which start positive and exhibit a deep trough)."
+},
+{
+    "idx": 54,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series begins on a negative baseline, shows a smooth negative\u2192positive step in the middle, and then exhibits a distinct small late positive bump immediately followed by a brief dip before returning to the plateau. This pattern (negative early baseline + mid rise + late bump\u2013dip transient) matches the class\u20112 examples. Classes 0/1 start positive and show a deep trough (with class 0 having a pre\u2011dip spike), and class 3 lacks the late bump\u2013dip, so those do not fit."
+},
+{
+    "idx": 56,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series begins on a negative baseline (~\u22122), exhibits a smooth upward (sigmoid\u2011like) transition to a positive plateau in the middle, and shows a small localized positive bump followed by a trough in the late\u2011middle/early\u2011late part of the record. This combination \u2014 negative early baseline + rising main event + a late small spike+dip \u2014 matches the pattern seen in class 2 and differs from class 3 (which lacks the late bump) and from classes 0/1 (which show an early/late sharp downward transient from a positive baseline)."
+},
+{
+    "idx": 58,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series starts on a negative baseline (~\u22121.2 to \u22121.5), undergoes a smooth sigmoidal rise in the middle to a positive plateau (around time 90\u2013120), and then shows a distinct small late-time positive bump followed by a brief dip (~190\u2013210) before returning to the plateau. This combination \u2014 negative early baseline + mid rise (not a downward dip) + a late bump\u2011then\u2011dip perturbation \u2014 matches the pattern I identified for class 2 and differs from class 3 (which lacks the late perturbation) and from classes 0/1 (which show downward transits and/or an early sharp pre-spike). Hence class 2 with high confidence."
+},
+{
+    "idx": 59,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series starts from a negative baseline and shows a smooth low\u2192high (sigmoid\u2011like) transition in the middle of the record \u2014 this rules out classes 0 and 1 (those have a sharp negative plunge from a positive early baseline). After reaching the plateau there is a small late positive spike followed quickly by a short negative excursion (around time ~180\u2013210) before settling back to the plateau. That late bump+dip is a signature seen in class 2 (class 3 has the same low\u2192high transition but typically lacks the late positive\u2192negative transient), so the pattern best matches class 2."
+},
+{
+    "idx": 60,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series starts on a negative baseline (~\u22121.2), shows a smooth mid\u2011series rise (\u2248100\u2013130) up to a positive plateau (~0.7\u20130.9), and then exhibits a small late short-lived positive bump followed by a dip before returning to the plateau. This pattern (negative \u2192 mid rise to plateau + a late bump/dip) matches the class\u20112 examples. It does not match classes 0/1 (which feature sharp deep negative transits/dips) or class 3 (which shows the rise but lacks the distinct late bump/dip)."
+},
+{
+    "idx": 62,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series starts from a low negative baseline, shows a clear mid-segment rise to a positive plateau (low \u2192 high), and exhibits a small mid/late positive bump followed by a short dip before settling back to the plateau. That exact combination (low\u2192rise to plateau plus a secondary bump\u2011dip around the 170\u2013200 region) matches the patterns I associated with class 2. Class 3 would be a smooth low\u2192high transition without the secondary bump/dip; classes 0 and 1 are dominated by a large negative transit/dip (often with a preceding positive spike in class 0), which this sample does not show."
+},
+{
+    "idx": 72,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series starts on a low baseline (~\u22121.2 to \u22121.6), shows a smooth, monotonic rise in the middle (~70\u2013110) up to a positive plateau (~0.6\u20130.8), and exhibits a small late bipolar perturbation (a brief positive spike followed by a dip around ~190\u2013205) before settling back to the plateau. This combination \u2014 low early baseline, mid-sequence rise, and a late small spike+dip \u2014 matches class 2. It does not match class 0 (early large positive spike then deep negative trough) or class 1 (single later negative trough), and differs from class 3 only by the presence of the late small bipolar transient. Hence high confidence."
+},
+{
+    "idx": 78,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series starts on a negative baseline (~\u22121.5 to \u22122), shows a smooth mid-series rise to a positive plateau (not a deep trough), and exhibits a small late-time positive spike followed by a short dip (~170\u2013200) before settling. This pattern matches class 2 (negative early baseline + rise, plus the late spike/dip). It does not match classes 0/1 (those have an early sharp deep trough from a positive baseline) or class 3 (which lacks the late spike/dip)."
+},
+{
+    "idx": 1,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series begins on a positive baseline, shows a very sharp positive peak immediately followed by a deep, narrow negative plunge and then a slow, monotonic recovery back to the positive baseline. That exact spike-then-early-dip-then-recovery pattern is the defining signature of class 0 in the reference samples (the pre-dip positive spike distinguishes class 0 from class 1, which has a later dip but no pre-spike; classes 2/3 start negative and rise mid-series). The timing here is shifted slightly later than some class-0 examples, but the structural shape matches class 0 most closely."
+},
+{
+    "idx": 4,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.95\n- Reason: The series shows the distinctive early behavior that defines class 0: a small positive baseline, a very sharp large positive spike around t\u224850\u201365 (peak \u2248+3.5\u20134.0), followed immediately by a deep negative trough (\u2248\u22122) and then a slow monotonic recovery back to a positive plateau by the late segment. This timing and the presence of the large pre-dip positive spike distinguish it from class 1 (which has a later trough without the spike) and from classes 2/3 (which start negative and exhibit a mid-series rise rather than an early spike+trough)."
+},
+{
+    "idx": 18,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0  \n- Confidence: 0.84  \n- Reason: The series shows a positive early baseline (~+0.6), a very short high positive spike (~+3.8) immediately followed by a deep narrow dip (~\u22121.8) and then a slow monotonic recovery to a small positive plateau. That combination \u2014 a brief large pre\u2011spike right before an eclipse\u2011like dip with subsequent slow recovery \u2014 matches the distinctive pattern of class 0 (pre\u2011spike + early deep dip) rather than class 1 (late dip without a pre\u2011spike) or classes 2/3 (which show a mid\u2011time rise from a negative baseline)."
+},
+{
+    "idx": 19,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.80\n- Reason: The series has a positive early baseline (~+0.5\u20130.8), then a very narrow high precursor spike immediately followed by a very sharp deep downward dip to \u2248 \u22122 around the mid phase (~95\u2013100), and a slow, smooth recovery to a positive plateau in the late segment. That combination \u2014 positive early baseline and a sharp mid\u2011phase eclipse\u2011like dip (with subsequent slow recovery) \u2014 matches the patterns seen in class 1. The precursor spike is larger than in most class 1 examples (making the call slightly less certain), but the event timing and polarity are most consistent with class 1."
+},
+{
+    "idx": 23,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows the same signature I identified for class 0: a positive early baseline (~+0.6), a very sharp large positive spike (~+3.5\u20134.0) immediately followed by a very steep negative trough (~-1.8) occurring early in the middle segment (~50\u201390), and then a long, smooth recovery back to the positive plateau. This timing and the pronounced pre-spike (large amplitude and very fast onset) match class 0 examples and distinguish it from class 1 (similar trough but occurring later with a weaker pre-spike) and from classes 2/3 (which start negative and show a smooth rise rather than an abrupt spike+drop)."
+},
+{
+    "idx": 34,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the characteristic sharp, narrow positive spike immediately followed by a deep negative trough and then a slow recovery to a positive plateau. The main event occurs early (around time step ~50\u201370) and includes the distinct pre-dip spike \u2014 this matches class 0 (earlier, spike+deep dip). It does not match classes 2/3 (which start low and smoothly rise) or class 1 (similar dip but occurring later and typically without as pronounced a pre-spike)."
+},
+{
+    "idx": 37,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the hallmarks of class 0: an initially high baseline (~+0.5\u20130.7), a very narrow large positive precursor spike immediately followed by a very sharp deep negative transit down to about \u22122, and then a slow, monotonic recovery back to a plateau by the late segment. The presence of the pronounced pre-spike directly before the early/ mid negative dip (timing earlier than the class\u20111 dips and unlike classes 2/3 which are low\u2192high rises) matches the class\u20110 pattern observed in the examples."
+},
+{
+    "idx": 46,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.95\n- Reason: The series starts on a small positive baseline, shows a very large, sharp positive spike around time step ~50 immediately followed (within a few steps) by a deep trough (~\u22122), then a long smooth recovery back toward the positive baseline. That spike\u2011then\u2011dip occurring early is the defining signature of Class 0 (distinct from Class 1 which has a later dip without the preceding spike, and from Classes 2/3 which start negative and show a negative\u2192positive ramp)."
+},
+{
+    "idx": 53,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.80\n- Reason: The series shows a positive baseline, a sudden deep negative \u201ceclipse\u201d (~\u22122) in the middle of the record (around time step \u2248100\u2013115) followed by a slow monotonic recovery to a positive plateau. That polarity (downward dip then recovery) and the mid-segment timing of the dip match the class\u20111 examples (class\u20110 has a similar dip but consistently occurs much earlier and is characterized by the narrow pre-dip spike at earlier times). Although this sample contains a very sharp positive spike immediately before the dip, the timing and the long negative trough/recovery pattern align better with class 1 than with class 0, 2 or 3."
+},
+{
+    "idx": 55,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series has a positive early baseline (~+0.5), a very sharp positive precursor spike immediately followed by a deep negative dip (~\u22122) and then a monotonic recovery back to a positive plateau. That pattern and the early timing of the spike/dip match class 0 (class 1\u2019s dip is similar in shape but occurs later; classes 2 and 3 start from a negative baseline and show rises, not a sharp early spike+dip)."
+},
+{
+    "idx": 57,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series begins on a modest positive baseline, shows a very narrow high-amplitude positive spike immediately followed by a deep negative trough, then a slow monotonic recovery to a positive plateau. That morphology (sharp spike + deep trough + slow recovery) matches the patterns seen in classes 0/1. The distinguishing feature between 0 and 1 is the phase/timing of the abrupt event: class 0\u2019s event is early (~t\u224850\u201360) while class 1\u2019s occurs later (~t\u2248100). The event in this sample happens around t\u224890\u2013100, so it best matches class 1."
+},
+{
+    "idx": 61,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.91\n- Reason: The series starts from a high early baseline (~0.5\u20130.8), shows a very large, brief positive spike (~+3.5\u20134) immediately followed by a deep trough (~\u20132), and then a slow monotonic recovery back toward the baseline. That precise spike-then-deep-drop morphology (large positive spike preceding the trough) is the defining feature of Class 0 in the reference examples. Class 1 also has a deep trough but lacks the preceding large positive spike; Classes 2 and 3 begin from a low early baseline and show a rising transition (not a spike+drop), so they do not match. These cues make Class 0 the best match."
+},
+{
+    "idx": 65,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series starts at a positive baseline (~+0.6), shows a very sharp positive spike just before a rapid, deep negative plunge (~-2) early in the sequence (around t\u224855\u201375), then a slow, smooth recovery to a positive plateau. This exact combination \u2014 positive starting baseline, an immediate sharp pre-spike followed by an early trough and slow recovery \u2014 matches the canonical pattern for class 0. It differs from class 1 (which has the trough later and typically no sharp pre-spike) and from classes 2/3 (which begin at a negative baseline and show a rising event rather than a sharp early drop)."
+},
+{
+    "idx": 67,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series shows a high/flat early plateau, a very sharp positive pre-spike to \u2248+4 immediately followed by a deep negative trough (\u2248\u22122), then a slow monotonic recovery back to the plateau. That precise spike-then-deep-dip-then-recover pattern (especially the pronounced positive spike immediately preceding the deep trough) matches the distinguishing signature of class 0. The event timing is slightly shifted compared with some examples, but the shape, polarity and amplitudes strongly point to class 0."
+},
+{
+    "idx": 69,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.95\n- Reason: The series shows a positive baseline early (~+0.6), a very sharp large positive precursor spike around index ~50\u201360 followed immediately by a deep, narrow negative trough (~-2) and then a slow recovery back to the baseline. That pattern (early-time dip with a pronounced precursor spike and slow recovery) matches the Class 0 examples exactly. It differs from Class 1 mainly by the earlier event timing and stronger precursor, and it is clearly not Classes 2/3 (those begin negative and show a mid-series rise, not a deep dip)."
+},
+{
+    "idx": 70,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series begins on a positive baseline (~+0.5\u20130.7), shows a very sharp, large-amplitude positive spike (~+3.5\u20134) in the early segment, followed immediately by a deep, narrow plunge to ~\u22122 and a slow monotonic recovery back to a positive plateau. This combination \u2014 positive early baseline, an early sharp upward spike then an immediate deep trough, and a large peak\u2011to\u2011trough amplitude \u2014 matches the class 0 examples. It differs from class 1 only by timing (class 1\u2019s sharp dip occurs later), and from classes 2/3 which start negative and show smooth upward (sigmoid) transitions rather than a spike+plunge."
+},
+{
+    "idx": 74,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows the distinctive \"very narrow large positive spike immediately followed by a deep negative trough and then a slow recovery to a modest positive plateau\" family of shapes (this separates it from the smooth low\u2192high classes 2/3). The event occurs very early (spike around time step ~50\u201360), which matches class 0 (class 1 has the same spike\u2192dip morphology but shifted later in phase). Amplitudes (spike ~+3.5\u2013+4 and trough \u2248\u22122) and the lack of a late secondary bump also fit class 0 examples, so I assign high confidence."
+},
+{
+    "idx": 81,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.80\n- Reason: The series begins on a positive baseline (~+0.6), then shows a very sharp positive blip immediately followed by a steep, deep negative excursion (to \u2248 \u22122) and a slow recovery back to a modest positive plateau. The polarity (positive baseline \u2192 large negative dip \u2192 recovery) and the timing of the main dip in the middle of the record (~100\u2013120) match the class\u20111 pattern from the reference examples. (The brief pre\u2011spike is more typical of class\u20110 examples, but in this sample the event timing is in the class\u20111 range, so the overall signature is most consistent with class 1.)"
+},
+{
+    "idx": 83,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.88\n- Reason: The series starts on a near\u2011zero positive baseline, then shows a very sharp, narrow positive spike immediately followed by a large negative plunge whose minimum is located in the middle segment (around time \u2248100\u2013110) and then a slow monotonic recovery back to the baseline. This matches the pattern of class 1 (the deep trough occurs later / in the middle segment). It does not match classes 2 or 3 (which start low and rise) nor class 0 (where the deep dip occurs much earlier). The presence of the precursor spike is a secondary variation but the timing and polarity of the main trough are the primary discriminators, so class 1 is the best match."
+},
+{
+    "idx": 87,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.86\n- Reason: The series starts on a positive baseline, shows a very sharp positive spike immediately followed by a steep, narrow plunge to \u2248\u22122 and then a slow, sigmoid-like recovery back to the positive plateau. That exact pattern (positive baseline + narrow precursor spike + abrupt deep eclipse + slow recovery) matches the examples for class 0. It differs from class 1 (which has a late dip but no preceding spike) and from classes 2/3 (which start negative and show a broad smooth low\u2192high transition)."
+},
+{
+    "idx": 88,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.94\n- Reason: The series shows a positive flat baseline (~+0.6), a very sharp, large positive overshoot (to \u2248 +4) immediately followed by a narrow, deep plunge to \u2248 -2 and then a slow, smooth recovery back to the baseline. That pre-dip spike + early sharp dip pattern is the defining signature I associated with class 0 (class 1 has a deep dip but no preceding spike; classes 2/3 are rises, not dips). The timing, amplitude and shape match class 0 examples closely."
+},
+{
+    "idx": 89,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series has a positive, flat early baseline (~+0.6), a very sharp positive precursor spike around t\u224855\u201365 immediately followed by a deep, narrow negative trough (to \u2248\u22122) occurring early, then a slow recovery to a positive late plateau. This pattern (early spike then early deep dip) matches class 0 exactly. It differs from class 1 because the trough is earlier and has a precursor spike, and from classes 2/3 because those start negative and show a rising transition rather than a sharp early dip."
+},
+{
+    "idx": 91,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.95\n- Reason: The series shows the distinctive early positive spike (~index 50\u201360) immediately followed by a deep negative trough (~\u22122) and then a slow S-shaped recovery back to a positive baseline. It also starts above zero and returns to a similar positive plateau \u2014 exactly the pattern observed for class 0. This differs from class 1 (a middle trough without the early positive spike) and from classes 2/3 (which start negative and exhibit a mid rising transition rather than an early spike\u2192trough). The timing, polarity and amplitude of the transient are highly consistent with the class 0 examples, so the classification is made with high confidence."
+},
+{
+    "idx": 92,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: 0\n- **Confidence**: 0.92\n- **Reason**: The series shows the hallmark of class 0: a short early positive baseline (~+0.6) followed by a very sharp positive spike (~+3.5\u20134) at ~t=50\u201360 immediately followed by a deep negative trough (~-2), then a slow monotonic recovery to a slightly positive plateau. This timing (early spike + immediate early trough) and amplitude pattern distinguish it from class 1 (trough occurs later, no preceding large spike) and from classes 2/3 (they start negative and rise mid-series, and lack the large early positive spike)."
+},
+{
+    "idx": 3,
+    "label": 1,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series starts on a positive baseline, shows a very abrupt deep trough (~\u22122) occurring early (around time step ~55\u201365) and then a slow monotonic recovery back to the baseline by the late segment. This pattern (early deep dip with recovery) matches the class-0 examples (class-1 dips occur later; classes 2/3 show low\u2192rise transitions rather than an early downward trough). The timing and polarity of the main event are the decisive features."
+},
+{
+    "idx": 6,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.86\n- Reason: The series starts on a positive baseline (~+0.6\u2013+0.8), then shows a fairly narrow, deep negative excursion down to about \u22122 in the middle of the record, followed by a slow monotonic recovery back to a positive plateau \u2014 exactly the pattern seen in the class\u20111 examples. It lacks the very large, sharp positive spike immediately preceding the dip that is the hallmark of class 0, and it is not a smooth negative\u2192positive sigmoid (classes 2/3). Hence it best matches class 1."
+},
+{
+    "idx": 7,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: Breaking the series into early (0\u201360), middle (60\u2013150) and late (150\u2013275) segments shows the following pattern:\n  - Early: a flat, small positive baseline (~+0.6\u20130.8) \u2014 matches classes 0 or 1 (not classes 2/3 which start negative).\n  - Middle: a sudden, deep negative trough (~\u22122) occurs around t\u224870\u201390 and the signal then slowly recovers. Crucially there is no sharp positive spike immediately preceding the trough (class 0 shows that pre\u2011trough spike).\n  - Late: monotonic recovery back to the positive plateau with no secondary bump/dip (class 2 often has a later small bump/dip).\n  These characteristics (positive early baseline, deep trough without a preceding spike, trough timing and smooth recovery) best match class 1."
+},
+{
+    "idx": 8,
+    "label": 1,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.78\n- Reason: The series has a positive early baseline (~+0.6\u20130.8), a very sudden deep negative excursion down to \u2248\u22122 in the middle, and then a slow recovery to a positive late plateau. That polarity (positive\u2192sharp negative dip\u2192recovery) matches the class-0 / class-1 family, but the main dip occurs early in the sequence (around time step \u224860\u201375) rather than later as in class 1. This early-timed deep transit is the defining feature of the class\u20110 examples shown, so I assign class 0 with moderate-high confidence."
+},
+{
+    "idx": 11,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The series shows a positive early baseline (~+0.6\u20130.8), a very sharp deep negative dip down to ~\u22122 around t\u224855\u201365, and then a long, smooth recovery back to the original baseline \u2014 the exact polarity and event shape match the \u201cpositive baseline \u2192 deep dip \u2192 gradual recovery\u201d pattern seen in classes 0 and 1 (not the negative-to-positive step in classes 2/3). Crucially, the new trace lacks the distinct narrow positive spike immediately preceding the dip that characterizes class 0 examples, so it aligns with the class that has the deep dip but no pre-spike (class 1). Hence class 1 is the best match."
+},
+{
+    "idx": 16,
+    "label": 1,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series starts on a positive baseline (~+0.6), then shows a very sharp, deep negative plunge to about \u22122 around time step ~55\u201370 followed by a slow, monotonic recovery back to a positive plateau. This pattern matches the \"early deep dip\" family (classes 0/1) but the timing of the main trough is early (\u224850\u201370) which is characteristic of class 0 (class 1 dips later). The polarity (deep trough) also rules out the rise classes (2/3). The overall shape (early positive baseline, early deep trough, gradual recovery) therefore best matches class 0."
+},
+{
+    "idx": 24,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series begins on a positive baseline (~+0.6\u2013+0.8), shows a single deep negative eclipse/dip (~\u22122) in the middle portion (~t\u224880\u2013100) and then slowly recovers to a positive plateau. There is no large early positive spike (which would indicate class 0) and the trace does not start negative and rise (classes 2/3). The timing (mid/late dip) and absence of a preceding spike match the patterns seen in class 1."
+},
+{
+    "idx": 31,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.83\n- Reason: The series begins on a positive early baseline (~+0.7\u20130.8), then exhibits a very steep drop to a deep trough (~\u22122) followed by a smooth S\u2011shaped recovery back to the positive late baseline. There is no narrow, high positive spike before the trough (which is a hallmark of class 0), and the event occurs later than class 0\u2019s early spike/trough window. The positive early baseline rules out classes 2 and 3 (those start negative and rise). The morphology and timing match the class 1 examples (deep trough with later timing, no early pre\u2011spike). Hence class 1 with high confidence."
+},
+{
+    "idx": 32,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: 1  \n- **Confidence**: 0.88  \n- **Reason**: The series has a positive early baseline (~+0.6), a sudden deep downward excursion to \u2248\u22122 in the middle, and a slow recovery back to a positive plateau. It lacks the very large positive spike immediately preceding the drop that characterizes class 0, and it does not start negative or show a smooth S\u2011shaped rise (classes 2/3). Those characteristics match class 1 (middle negative dip, positive early baseline, no preceding spike)."
+},
+{
+    "idx": 33,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.88\n- Reason: The series begins on a positive baseline (~+0.6\u2013+0.8), shows no pronounced early positive precursor spike, then exhibits a sudden deep negative excursion (~\u22122) in the middle portion (~time steps ~80\u2013100) followed by a slow recovery toward the positive plateau. That timing and shape (middle-located dip, no early spike) match the class\u20111 examples and contrast with class\u20110 (early dip with a strong pre-spike) and classes 2/3 (which start negative and show an up-step rather than a deep dip)."
+},
+{
+    "idx": 38,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series has a positive flat early baseline (~+0.6\u2013+0.8), then a sudden deep negative trough (~\u22122.0) centred around time step \u2248110 followed by a slow recovery back to the positive plateau. This matches the class\u20111 pattern: a mid/late deep dip without the narrow preceding positive spike that characterizes class\u20110. The polarity (dip), timing (around 90\u2013120), and shape (sharp drop then gradual recovery) strongly point to class 1."
+},
+{
+    "idx": 42,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows a positive early baseline (~+0.6\u20130.8), a single sharp narrow deep negative dip (to \u2248 \u22122) occurring around t\u224890\u2013100, then a slow recovery to a positive plateau. This matches the class\u20111 pattern (positive early baseline + lone deep dip) and differs from class\u20110 (which has a large precursor positive spike before the dip) and from classes 2/3 (which start negative and show a smooth low\u2192high transition rather than a sudden dip)."
+},
+{
+    "idx": 43,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows a stable positive baseline in the early segment, then a sudden deep negative dip in the middle followed by a slow recovery to the positive plateau. There is no preceding large positive spike (which would indicate class 0), and it does not start from a negative baseline and ramp up (which would indicate classes 2 or 3). Those characteristics match the class-1 pattern."
+},
+{
+    "idx": 45,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series begins on a positive plateau (\u2248+0.6\u20130.8), shows a single sharp deep downward transit (to \u2248\u22122) occurring in the middle portion of the sequence (well after the very early region but before the final plateau), then gradually recovers to the same late-time plateau with no secondary late spike. That timing and polarity (mid-series deep dip from a positive baseline) match the patterns seen for class 1 and differ from class 0 (much earlier dip often preceded by a brief spike) and classes 2/3 (which start low and rise)."
+},
+{
+    "idx": 50,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.87\n- Reason: The series shows a steady positive baseline (~+0.7\u20130.9) in the early segment, then a very sharp, deep negative excursion (~\u22122) in the middle, followed by a slow monotonic recovery to a positive plateau in the late segment. That pattern (positive early baseline \u2192 sharp mid-series dip \u2192 slow recovery) matches the class-1 examples. It differs from class-0 because there is no clear short precursor positive spike immediately before the drop, and it differs from classes 2/3 because those start from a negative baseline and show a negative\u2192positive rise rather than a pronounced mid-series drop."
+},
+{
+    "idx": 52,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows a positive early baseline (~+0.7\u20130.8), then a sharp deep negative eclipse (~\u22122) centered around ~110\u2013125 with a smooth recovery to a positive plateau in the late segment. It lacks the early positive precursor spike seen in class 0 and does not start from a negative baseline or show the step-rise behavior of classes 2/3. These timing, polarity and transient-shape features match the class\u20111 examples."
+},
+{
+    "idx": 63,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows a positive, near-constant early baseline (~+0.7\u20130.9) until about t\u2248100\u2013110, then a very sharp drop to a deep trough (\u2248-2) followed by a gradual, monotonic recovery to a small positive plateau. This pattern matches the examples I labeled class 1 (same positive early plateau and a later-occurring sharp trough + slow recovery). It differs from class 0 (which has the trough much earlier, around t\u224850\u201370 and often a preceding sharp positive spike) and from classes 2/3 (which start from a negative baseline and display a smooth negative\u2192positive sigmoid without the abrupt trough). The timing and shape strongly point to class 1."
+},
+{
+    "idx": 66,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series begins on a positive baseline (~+0.6\u20130.8) then shows a very steep, deep negative eclipse (to \u2248 \u22122) centered at about t\u2248100, followed by a gradual S-shaped recovery to a positive plateau. This pattern matches the class-1 examples (positive early baseline, deep dip occurring later ~100, no strong precursor positive spike). It differs from class-0 (which has the deep dip much earlier and a sharp precursor spike) and from classes 2/3 (which start negative and show a rise rather than a deep mid-series dip)."
+},
+{
+    "idx": 68,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.88\n- Reason: The series shows a positive flat early baseline (~+0.6\u20130.8), then a very sharp, deep negative dip (~\u22122) occurring in the middle/late-middle (around time steps ~80\u2013100), followed by a slow monotonic recovery back toward the baseline. This matches the key features of class 1: positive early baseline, a deep trough that occurs later than class 0, and no large preceding positive spike (which would indicate class 0). It also differs from classes 2/3 which start negative and show a mid-series rise rather than a drop. Hence class 1 is the best match."
+},
+{
+    "idx": 71,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series has a positive early baseline (~+0.6\u20130.8), then a sudden, deep negative excursion down to about \u22122 followed by a long, monotonic recovery back to a small positive plateau. Crucially there is no narrow positive spike immediately preceding the dip (which is the hallmark of class 0). It also does not match classes 2 or 3 because those start from a negative baseline and show a smooth upward step rather than a sudden downward dip. The pattern (positive baseline + abrupt dip without pre-spike + slow recovery) matches the class-1 examples."
+},
+{
+    "idx": 75,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.88\n- Reason: The series begins on a positive steady baseline (~+0.7\u20130.8), then shows a sudden, deep trough down near \u22122 that starts late in the middle segment (around time step ~110\u2013125) followed by a slow monotonic recovery back to a positive plateau. This matches the Class 1 pattern (positive early baseline, deep trough occurring later, no large positive pre-spike). It does not show the early spike-then-trough of Class 0, nor the negative early baseline and upward transition of Classes 2/3."
+},
+{
+    "idx": 76,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows a positive early baseline (~+0.6\u20130.8), then a sharp, deep trough (\u2248\u22122) beginning around time step ~95\u2013105, followed by a slow recovery back to the common positive plateau. It lacks the large early positive spike that characterizes class 0 and does not start from a negative baseline (so it is not class 2 or 3). These features match the class\u20111 pattern (late sharp dip without a preceding spike)."
+},
+{
+    "idx": 79,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The trace shows a steady positive early baseline (~0.6\u20130.8), then a single sharp downward event to about \u22122 followed by a slow, monotonic recovery back to the baseline. Crucially there is no large pre-dip positive spike (which is the hallmark of class 0). The overall polarity (downward trough) and single-step recovery match the class 1 examples (same trough amplitude and recovery shape), so the series best matches class 1."
+},
+{
+    "idx": 80,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series begins on a positive baseline (~+0.6\u20130.8) and shows a single, steep drop to a deep trough (~\u22122) in the middle of the record, followed by a slow recovery back to the same positive plateau. Crucially there is no large early positive spike before the dip (which would indicate class 0). The early positive baseline + absence of a pre-dip spike and the mid\u2011record dip/recovery pattern match class 1 examples."
+},
+{
+    "idx": 9,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series begins on a negative baseline (~\u22121.3), shows a smooth, sigmoid-like rise in the middle (around time steps ~90\u2013110) to a positive plateau (~+0.6\u20130.8), and then remains steady with only low-amplitude noise. This matches the class-3 pattern (clean low\u2192high transition with no large pre-spike and no late bump/dip). It does not show the sharp negative eclipse after a positive baseline seen in classes 0/1, nor the small late perturbation that often appears in class 2."
+},
+{
+    "idx": 15,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series shows a negative early baseline (~-1.5 to -2.0), followed by a smooth, S-shaped upward transition in the middle segment that reaches a positive plateau (~+0.6) in the late segment. It lacks any early sharp positive spike + deep trough (rules out classes 0 and 1) and also lacks the late narrow positive bump/dip seen in class 2. Those pattern matches correspond best to class 3 (negative early baseline + single smooth rise to plateau)."
+},
+{
+    "idx": 21,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.92\n- Reason: The series shows a negative early baseline (\u2248 \u22121.5 to \u22121.2), a smooth mid-segment rise (around t\u224870\u2013110) up to a positive plateau (~+0.6\u20130.8), and then a stable late plateau with no early spike/dip or any late bump/dip. This matches the rising-family morphology without the secondary late perturb that characterizes class 2 and differs from the spike+deep-dip pattern of classes 0/1."
+},
+{
+    "idx": 22,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.93\n- Reason: The series begins on a negative baseline (~\u22121.5 to \u22121.2), undergoes a clear, smooth upward step in the middle (rise begins around t\u224885\u2013100) and then settles to a positive plateau around +0.6\u20130.8 for the remainder of the sequence. There is no preceding sharp positive spike (rules out class 0) and no deep narrow eclipse/dip at any phase (rules out classes 0 and 1). Also there is no noticeable secondary bump/notch after the main rise (which was characteristic of many class 2 examples). These features match the clean rise-to-plateau pattern seen in class 3."
+},
+{
+    "idx": 27,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- **True Label**: 3\n- **Confidence**: 0.90\n- **Reason**: The series shows a negative early baseline (\u2248 -1.5), a smooth sigmoid\u2011like rise in the middle to a steady positive plateau (~0.6\u20130.7), and no sharp brief positive spike followed by a deep trough (which would indicate classes 0/1). It also lacks the small late positive bump/dip that characterizes class 2. The timing and smooth low\u2192rise\u2192plateau shape match the class\u20113 examples."
+},
+{
+    "idx": 29,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series has a negative early baseline (~-1.8 to -2) followed by a smooth mid\u2011sequence rise into a positive plateau by ~t=90\u2013110 and then a stable late segment. This matches the \u201crise from negative baseline to positive plateau\u201d pattern seen in classes 2 and 3. It lacks the small late bump/dip that characterizes class 2 and also lacks the early positive baseline / trough patterns of classes 0 or 1, so class 3 is the best match."
+},
+{
+    "idx": 35,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series has a negative early baseline (~\u22121.3), a smooth sigmoidal rise centered around t\u224895\u2013110 up to a positive plateau (~+0.7\u20130.8), and then a stable late plateau with no sharp early spike/dip and no late localized bump. This pattern matches the class-3 examples (negative early level + smooth midrise + no late bump) and differs from: class-0 (early sharp positive spike then immediate deep dip), class-1 (positive early baseline with a middle abrupt dip), and class-2 (similar midrise but with a distinct late bump)."
+},
+{
+    "idx": 39,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series begins at a negative baseline (~\u22121.2 to \u22121.4), undergoes a smooth, monotonic rise in the middle (~t\u224890\u2013110) to a positive plateau (~+0.6\u20130.8) and then remains steady; there is no early positive spike followed by a deep trough (rules out classes 0/1) and there is no obvious late short-lived bump/dip after the rise (distinguishes it from class 2). These features match the class-3 pattern (clean low\u2192high step with no secondary structure)."
+},
+{
+    "idx": 41,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series begins on a negative baseline (~-1.1 to -1.3), then shows a smooth, sigmoid-like rise in the middle (around t\u2248100\u2013130) to a stable positive plateau near ~0.8\u20130.9 for the late segment. There are no sharp impulsive spikes or abrupt deep troughs (which characterize classes 0 and 1), and there is no clear secondary bump in the late-middle region (a feature occasionally seen in class 2). The timing and smooth transition match the class-3 examples."
+},
+{
+    "idx": 44,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series starts on a negative baseline (early segment), undergoes a smooth, sigmoidal low\u2192high transition in the middle (~90\u2013110) and then settles to a stable positive plateau (late segment). This matches the \u201crise, clean plateau, no late perturbation\u201d pattern of class 3. It lacks the sharp negative transit (classes 0/1) and also lacks the small late bump/trough that characterizes class 2, so class 3 is the best match."
+},
+{
+    "idx": 47,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.92\n- Reason: The series begins on a negative baseline (\u2248 \u22121.8), shows a smooth, monotonic rise between roughly time steps 50\u2013100 up to a modest positive plateau (~+0.5\u20130.7), and then remains steady for the remainder of the record. It lacks the early sharp positive spike + immediate deep dip signature of class 0, and it does not show the later-timed deep eclipse/dip of class 1. It also does not display the small late bump/dip pair that is characteristic of many class 2 examples. These characteristics match the class-3 pattern (negative early baseline \u2192 smooth rise \u2192 steady positive late plateau) with high confidence."
+},
+{
+    "idx": 48,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- **True Label**: 3\n- **Confidence**: 0.90\n- **Reason**: The series starts at a low baseline (~\u22122), undergoes a smooth rising transition in the middle (around indices ~40\u201380) up to a positive plateau (~+0.5), and then remains stable for the remainder. This low\u2192rise\u2192plateau pattern matches classes 2/3, and the key distinguisher \u2014 a small localized late bump/dip around ~180\u2013210 that marks class 2 \u2014 is not present. The absence of an early sharp positive spike or an early/late deep negative dip also rules out classes 0 and 1. Minor noise is present but does not affect the overall pattern."
+},
+{
+    "idx": 51,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series starts on a negative baseline (~\u20132), undergoes a smooth, monotonic rise in the middle segment to a small positive plateau (~+0.4\u2013+0.6), and then remains flat for the late segment. This matches the class-3 pattern (negative early baseline + single smooth rise + no late transient). It lacks the early high positive spike + deep early drop of class-0, the later sharp deep drop of class-1, and the additional late flare/dip characteristic of class-2 \u2014 so class 3 is the best match."
+},
+{
+    "idx": 64,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.92\n- Reason: The series begins on a negative baseline (~\u22121.3 to \u22121.6), then shows a smooth, relatively rapid rise (step) up through zero to a stable positive plateau (~+0.6\u20130.8) around t\u224890\u2013110, and remains flat thereafter. It lacks (a) any large downward eclipse from a positive baseline (the hallmark of classes 0/1) and (b) the small late bump/dip near t\u2248180\u2013200 that appears in class 2. Those features \u2014 negative\u2192positive step with no late perturbation \u2014 match the class 3 pattern."
+},
+{
+    "idx": 73,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series starts at a negative baseline (~ \u22121.8), shows a smooth, pronounced upward transition in the middle (\u224850\u2013100) to a positive plateau (~+0.6), and then remains stable for the late segment. This matches the rise-to-plateau pattern shared by classes 2 and 3. It lacks the small late bump/overshoot and subsequent negative excursion that was characteristic of class 2, and there is no early positive spike or large downward eclipse (which would indicate class 0 or 1). Therefore the waveform best matches class 3."
+},
+{
+    "idx": 77,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.90\n- Reason: The series starts at a negative baseline (~\u22121.5 to \u22122), then shows a smooth upward transition to a positive baseline between ~60\u2013100 and remains flat thereafter. This matches the class-3 pattern (negative early segment + rise in the middle, with no pronounced late narrow bump/dip). Class-2 is similar but typically shows a small late bump/dip after recovery (not present here); classes 0/1 begin positive and show a deep negative trough (not seen)."
+},
+{
+    "idx": 82,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.91\n- Reason: The series starts from a negative baseline (~\u22121.2 to \u22121.5), shows a smooth, mid-series rise centered near t\u224895\u2013110 to a positive plateau (~+0.6\u20130.8), and then remains steady with only small noise. This matches the class-3 pattern (negative-to-positive transition, smooth ingress, no early precursor spike and no late bump/notch). It differs from class-2 only in the absence of the small late-time bump/notch, and from classes 0/1 which show deep negative dips (and class-0 has a distinctive short high precursor spike)."
+},
+{
+    "idx": 86,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.88\n- Reason: The series shows a negative early baseline (~\u22122), a clear mid-sequence upward transition (roughly t\u224845\u201380) up to a positive plateau (~+0.5\u20130.6), and then a stable late segment with no pronounced late transient. This matches the Class 3 pattern (negative early baseline + smooth mid rise to steady positive level) and lacks the late short-lived spike/dip typical of Class 2 or the early large spike + deep early dip of Classes 0/1."
+},
+{
+    "idx": 99,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- **True Label**: 3\n- **Confidence**: 0.90\n- **Reason**: The series begins at a negative baseline (~\u22121.3), shows a smooth, pronounced rise in the middle of the record (around t\u224890\u2013110) to a positive plateau (~+0.6\u20130.8), and then remains stable for the late segment. This matches the class\u20113 pattern identified earlier (negative start + smooth mid\u2011series rise to a stable positive plateau) and lacks the late localized positive\u2011then\u2011negative bump that characterizes class\u20112, and also lacks the early positive spike / deep negative trough patterns seen in classes 0 and 1."
+},

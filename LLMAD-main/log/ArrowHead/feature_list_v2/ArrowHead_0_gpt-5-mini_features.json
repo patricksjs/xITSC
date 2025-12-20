@@ -1,0 +1,8 @@
+{
+  "Bimodal large-scale pattern: two dominant, similar-amplitude broad peaks near ~40–60 and ~180–200 time steps, separated by roughly 120–130 steps (consistent inter-peak spacing).": "common feature",
+  "Mid-segment nested ripples: the central trough (~90–160) contains smaller, higher-frequency oscillations/multi-peaked serrations superimposed on the main valley.": "common feature",
+  "Smooth, wide extrema: both peaks and valleys are broad with gradual slopes and rounded tops/bottoms, lacking sharp instantaneous spikes.": "common feature",
+  "Start and end values are consistently low (around -2), producing mirrored boundary minima that frame the waveform into a U-shaped envelope.": "common feature",
+  "Each main peak shows small adjacent shoulder sub-peaks (minor bumps just before/after the primary crests), creating dual-crest profiles on the flanks.": "partial-sample feature",
+  "Regular zero-crossings occur at consistent midpoints (near ~100 and ~160), segmenting the series into alternating sign regions with reproducible crossing locations.": "common feature"
+}

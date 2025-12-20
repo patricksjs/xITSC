@@ -1,0 +1,13 @@
+{
+  "Dominant near-1 Hz rhythm with approximately constant cycle length (~14–16 samples) is evident in most series throughout the window, though its visibility can be modulated by an early low-variance plateau and a sharp mean shift around sample ~70.": "common feature",
+  "Early plateau phase: in most series, the first ~60 samples show a near-constant value with very low variance before oscillatory activity becomes prominent.": "common feature",
+  "Two-regime non-stationarity: a sharp mean shift around sample 70 partitions the window into two distinct baseline levels in most series, yet the rhythm remains coherent and continues across both segments.": "common feature",
+  "Subtle cycle-level asymmetry: in most series, rises are slightly steeper than falls, yielding a skewed waveform across cycles.": "common feature",
+  "Increasing high-frequency jitter toward the end of the window: in most series, micro-variations become more pronounced in the last ~40 samples, superimposed on the 1 Hz rhythm.": "common feature",
+  "Frequent zero-crossings occur within the window in most series, indicating sign changes and not a strictly negative signal across all cycles.": "common feature",
+  "Intermittent plateau segments appear within cycles in most series, producing near-flat tops or flat-lift regions for 2–4 samples before resuming the main oscillation.": "common feature",
+  "In some series, within each cycle, the rise and fall appear roughly symmetric, producing balanced waveform halves.": "partial-sample feature",
+  "In some series, nearly fixed phase of peaks: cycle maxima occur at almost the same phase in each cycle, showing minimal phase drift over the 13-second window.": "partial-sample feature",
+  "In some series, the amplitude envelope remains relatively flat, with the main oscillation’s peak-to-trough amplitude staying in a tight band and no slow modulation.": "partial-sample feature",
+  "In some series, post-transition variance spike: after the mean shift, the signal exhibits higher variance and more irregular cycle shapes than the pre-transition portion.": "partial-sample feature"
+}

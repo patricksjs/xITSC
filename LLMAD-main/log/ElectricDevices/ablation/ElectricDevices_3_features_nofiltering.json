@@ -1,0 +1,14 @@
+{
+  "Persistent slight negative baseline: all series sit just below zero (~-0.1 to -0.3) for most timesteps rather than centered at zero, with only brief excursions upward.": "common feature",
+  "Extremely short, sharp pulses: peaks rise and fall within 1–3 timesteps (very narrow duration), producing large positive outliers against the flat baseline.": "common feature",
+  "Later-event amplitudes vary widely between series (roughly 3 to 9 units), creating distinct high- and moderate-magnitude subgroups rather than a single uniform peak magnitude.": "common feature",
+  "Some series show a multi-step or double-peaked morphology for the large event (a brief shoulder or two adjacent maxima spanning 2–4 timesteps) instead of a single isolated sample.": "common feature",
+  "The large pulses are temporally asymmetric in many series: rapid onset followed by a slower decay (rise faster than fall), producing skewed peak shapes rather than symmetric spikes.": "common feature",
+  "Many series show a tiny high-frequency alternating jitter on the negative baseline (regular even–odd zigzag of small magnitude) rather than perfectly flat noise.": "common feature",
+  "A short precursor ramp or gradual rise 1–4 timesteps immediately precedes the large event in many series, distinct from the earlier localized event.": "common feature",
+  "A brief negative rebound (undershoot) 1–2 timesteps below baseline commonly follows the large spike before settling back.": "common feature",
+  "Outside the pulses, over ~90% of timesteps are visually flat with baseline variance negligible compared to spike amplitude, yielding an extremely high signal‑to‑noise ratio.": "common feature",
+  "Several series show a 1–2 timestep flat‑top at the spike maximum (a brief plateau at peak value) rather than a single-sample apex or clear double peak.": "common feature",
+  "A distinct single-sample \"pre‑spike plateau\" often appears one timestep before the steep jump: a value near zero (less negative than baseline) creates a discrete two-step onset (baseline → near‑zero → large spike).": "common feature",
+  "The post‑spike recovery frequently shows a short-lived damped alternating oscillation (pronounced even–odd zigzag) whose amplitude decays over ~5–10 timesteps, not just broadband elevated variance.": "common feature"
+}

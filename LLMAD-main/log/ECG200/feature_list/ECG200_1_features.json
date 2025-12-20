@@ -1,0 +1,11 @@
+{
+  "Early, narrow, high‑amplitude positive spike around time steps 3–6 (very sharp onset, short duration, peak ~3–4).": "common feature",
+  "Prolonged deep negative valley spanning roughly time steps 10–35 (minimum near −2) that rises into a broad mid‑segment positive plateau around 40–50 before slowly returning toward baseline.": "common feature",
+  "The late segment (roughly time steps 60–95) shows low‑amplitude, higher‑frequency oscillations around a mildly declining baseline, producing small irregular ripples before stabilization.": "common feature",
+  "A pronounced, isolated late positive spike near time steps ~88–92 appears in all traces, with very sharp rise and abrupt fall not described previously.": "delete feature",
+  "The deep negative trough (≈10–35) is asymmetric: a rapid, steep onset into negativity followed by a slower, more gradual recovery back toward baseline.": "common feature",
+  "A small positive lead‑in at time steps ~0–2: a modest elevation or shoulder appears before the main early spike, producing an initial elevated baseline that precedes the sharp onset.": "partial-sample feature",
+  "A modest secondary positive hump consistently appears around time steps ~68–76 (amplitude ~0.4–0.9), between the mid‑plateau and the final pronounced spike, distinct from the sharp late spike near 88–92.": "common feature",
+  "A two‑stage amplitude regime: large early transients (peaks ≈+3, troughs ≈−2 to −2.5) transition to a sustained lower‑amplitude segment (roughly ±1).": "common feature",
+  "A reproducible slope-change (kink) around ~36–42: the recovery from the deep trough abruptly accelerates then transitions to a noticeably flatter plateau, forming a consistent local inflection before the mid positive segment.": "common feature"
+}

@@ -1,0 +1,13 @@
+{
+  "Two major peaks: a primary peak typically around 200–260 time steps and a secondary peak typically around 720–790 time steps.": "common feature",
+  "Baseline exhibits small, quasi-periodic oscillations throughout, not a flat level.": "common feature",
+  "Non-flat, wavy trough between peaks with multiple inflection points and a subtle inner ridge, creating a zigzag-like valley rather than a smooth dip.": "common feature",
+  "Primary (left) peak typically narrower and sharper than secondary (right) peak, forming an asymmetric dual-peak profile.": "common feature",
+  "Post-secondary-peak decay often shows slower tail with mild fluctuations rather than strict monotonic decline.": "common feature",
+  "Distinguished from class 0 by prominent secondary peak and non-flat trough with inflections, unlike class 0's gradual drift or flat-bottom features.": "common feature",
+  "Longer right-tail decay after secondary peak, more extended/smoother than left-side decay.": "partial-sample feature",
+  "Two-stage post-peak decay: steep initial drop after secondary peak followed by slower extended tail.": "partial-sample feature",
+  "Slow baseline drift within trough: gradual downward envelope during inter-peak region.": "partial-sample feature",
+  "Multiple shallow sub-peaks (2–4 local maxima) embedded in trough between main peaks.": "partial-sample feature",
+  "Pre-trough local peak around 180–260 time steps forming mild double-hill before valley.": "partial-sample feature"
+}

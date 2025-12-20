@@ -1,0 +1,11 @@
+{
+  "Distinct positive peak appearing at the beginning, approximately between the 5th and 20th time steps.": "common feature",
+  "Sustained low plateau following the initial peak, occurring from the 40th to 100th time steps.": "common feature",
+  "Slight oscillations occur frequently between the 20th and 40th time steps.": "common feature",
+  "A subtle increase in fluctuations is seen around the 110th to 130th time steps.": "common feature",
+  "Rapid decline after the initial peak, sharply decreasing around the 20th time step.": "common feature",
+  "Small, frequent oscillations are consistently seen between the 0th and 5th time steps.": "common feature",
+  "Gradual plateau decline phase observed from approximately the 100th to 140th time steps.": "common feature",
+  "Gradual initial increase leading into the peak, occurring around the 0th to 10th time steps.": "common feature",
+  "Extended stable plateau phase observed between the 40th and 80th time steps.": "common feature"
+}

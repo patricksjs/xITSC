@@ -1,0 +1,13 @@
+{
+  "Extended initial flat baseline around -1.4 with very low-amplitude random noise lasting roughly from t=0 to t≈90.": "common feature",
+  "Clear smooth, sigmoid-like monotonic step-up between about t≈90–110 that raises the series to a higher, stable plateau near 0.6–0.8.": "common feature",
+  "Short, sharp bipolar transient near t≈195–205: a narrow positive spike (peak ≈1.0–1.2) immediately followed by a brief deeper valley (≈0.2–0.4) before returning to plateau.": "common feature",
+  "Subtle positive precursor: a small upward ramp and local hump beginning around t≈175–190 immediately precedes the sharp spike, forming a distinct pre-spike bump.": "common feature",
+  "Quasi-periodic ripple on plateau: the post-step plateau shows persistent low-amplitude, higher-frequency oscillations (roughly 5–15 timesteps wavelength) absent in the initial baseline.": "common feature",
+  "Slow negative drift before transient: the plateau between the step (≈110–120) and the transient (≈180–195) exhibits a slight downward trend (small decay in mean).": "common feature",
+  "Consistent timing: the step-up and the later sharp bipolar transient occur at nearly identical timesteps across all plots, showing synchronized event locations between series.": "common feature",
+  "Spike asymmetry: the positive spike rises much faster than it falls, producing a sharp leading edge and a slightly broader trailing descent into the valley.": "common feature",
+  "Pre-transient amplitude modulation: the high-frequency ripples on the plateau noticeably grow in amplitude as they approach the precursor/spike, peaking near transient onset.": "common feature",
+  "Small damped ringing immediately after the sigmoid step: a brief overshoot and decaying oscillations around the new plateau (roughly t≈95–130) before steadying.": "common feature",
+  "Short post-valley rebound: after the bipolar valley the series briefly overshoots slightly above the plateau for ~5–15 timesteps before final settling.": "common feature"
+}

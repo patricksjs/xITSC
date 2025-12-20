@@ -1,0 +1,841 @@
+[
+{
+    "idx": 0,
+    "label": 0,
+    "predicted": 4,
+    "conversation": "- True Label: 4\n- Confidence: 0.78\n- Reason: The series is flat for most of the timeline and shows two sharp, high-amplitude spikes in the late segment (around time steps 75\u201385), with little to no activity earlier. This late-impulse pattern matches the characteristic of class 4 (late impulses dominate, sometimes with brief secondary excursions)."
+},
+{
+    "idx": 1,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.78\n- Reason: The new time series exhibits two sharp spikes in the late region (approximately time steps 70\u201380) with baseline near zero before and after. This pattern matches the late-event characteristics of Class 0, which are dominated by spikes occurring in the final portion of the series. It differs from Class 4, which tends to have a single dominant late spike, and from other classes that show early spikes, noisy baselines, or multiple mid-series peaks."
+},
+{
+    "idx": 2,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.68\n- Reason: The time series is mostly flat (baseline near zero) with a single pronounced late spike (around time steps 72\u201378) reaching ~4, then returning to baseline. This aligns with Class 0 patterns, which are characterized by a late isolated transient spike, unlike classes with multiple mid-series spikes (2, 3, 5), early/late spike clusters (4), or persistent low-variance/noise (1) or mid-series activity (6)."
+},
+{
+    "idx": 3,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.65\n- Reason: The new time series shows a single, isolated, late spike (around time steps 70\u201375) on an otherwise flat baseline near zero, with no multiple spikes or sustained oscillations. This pattern matches the characteristic class 0 pattern (a lone late impulse) and differs from other classes that exhibit multiple spikes, early spikes, or continuous oscillations."
+},
+{
+    "idx": 4,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.78\n  - Reason: The new time series is essentially flat (near zero) for most of the sequence and exhibits a prominent high-amplitude spike in the late portion (around time steps 75\u201385) followed by a quick return to baseline. This late-spike pattern with large peak magnitude matches the characteristic pattern of class 0, and differs from other classes which show early spikes (classes 2/3), multiple late spikes (class 5), sustained middle fluctuations (class 6), or smaller late spikes (class 1/4)."
+},
+{
+    "idx": 5,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.65\n- Reason: The new time series shows a baseline (near 0) throughout most of the sequence with a single sharp spike occurring in the late stage (around time step 85) and then returning to baseline. This late-burst pattern matches Class 0, which is characterized by late spikes after a long baseline. It differs from Class 4 (which often shows extra spikes and occurs slightly earlier in the sequence) and from other classes that exhibit multiple bursts or sustained fluctuations."
+},
+{
+    "idx": 6,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.65\n- Reason: The new time series shows a long baseline near zero with a single, late, high-amplitude spike near the end (time steps ~85\u201395) and no earlier bursts or sustained fluctuations. This matches the late-spike archetype observed for Class 0 (single late spike with large amplitude), and differs from other classes that exhibit multiple bursts (2, 3, 5), noisy middle segments (6), or late spikes with secondary events (4)."
+},
+{
+    "idx": 7,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.60\n- Reason: The new time series shows a single abrupt spike at the very beginning (time step 0) followed by a flat baseline for the rest of the series. This pattern matches the class-0 type behavior (one sharp event with minimal/no subsequent activity and otherwise flat signal). Other classes in the set typically exhibit multiple bursts, bursts in the middle/late segments, or sustained fluctuations, which are not present here."
+},
+{
+    "idx": 8,
+    "label": 0,
+    "predicted": 4,
+    "conversation": "- True Label: 4\n- Confidence: 0.78\n - Reason: The new time series is essentially flat near zero for the early and middle portions, followed by a single pronounced sharp spike around time steps 70\u201375 and then returning to baseline. This late-day, single-peak pattern aligns with class 4 (dominant late-day spike), and does not exhibit multiple spikes, oscillations, or mid-day activity typical of other classes."
+},
+{
+    "idx": 9,
+    "label": 0,
+    "predicted": 4,
+    "conversation": "- True Label: 4\n- Confidence: 0.55\n- Reason: The new series exhibits a single, sharp spike early in the sequence followed by baseline. Among the seven classes, only Class 4 is characterized by a single prominent spike (with no sustained or multiple spikes), whereas other classes show multiple spikes or transient mid/late activity. Although the spike timing differs (early vs. late in Class 4\u2019s typical pattern), the overall shape matches best with a single-peak pattern."
+},
+{
+    "idx": 10,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0\n- Confidence: 0.78\n- Reason: The series is flat in the early and middle segments with a single late, sharp impulse (around the end) reaching a high value and then returning to baseline. This matches the late isolated-impulse pattern characteristic of class 0, with no sustained oscillations or multiple spikes."
+},
+{
+    "idx": 11,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.75\n - Reason: The new time series shows a single, late spike (around the final time steps) with the baseline remaining essentially at zero before the event. There are no sustained oscillations or multiple bursts, which aligns with the characteristic pattern of Class 0 (a late, isolated burst). Other classes typically exhibit multiple bursts or continuous mid-day activity, which are not present here."
+},
+{
+    "idx": 12,
+    "label": 0,
+    "predicted": 2,
+    "conversation": "True Label: 2\nConfidence: 0.40\nReason: The new time series shows a single, sharp, high-amplitude spike at the very beginning (time step ~0) followed by a long flat baseline around zero. This early-spike pattern is most reminiscent of the patterns seen in Class 2 (which features a prominent early spike, often followed by a later spike in other samples). Although Class 2 samples typically show two spikes, the dominant characteristic of an early, large spike with a flat remainder aligns best with Class 2 among the seven classes."
+},
+{
+    "idx": 13,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.86\n- Reason: The series is essentially flat near zero for most of the sequence and exhibits a single sharp, late spike (around time step ~80\u201385) with the rest returning to zero. This matches the Class 0 pattern (one isolated late burst) observed in the provided samples, whereas other classes show multiple bursts or sustained high-frequency fluctuations."
+},
+{
+    "idx": 14,
+    "label": 0,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.42\n- Reason: The new sequence shows a single sharp early spike (around time step 2\u20133) with the signal returning to baseline thereafter. This early-spike pattern aligns with the characteristic motif seen in classes that exhibit an early transient, distinguishing it from the other classes which typically feature two spikes (early and late) or predominantly late-only spikes. The absence of a clear second spike reduces confidence slightly, hence a moderate probability."
+},
+{
+    "idx": 15,
+    "label": 0,
+    "predicted": 6,
+    "conversation": "- **True Label**: 6\n- **Confidence**: 0.60\n - **Reason**: The time series shows multiple spikes across the timeline: early spikes around time steps 5\u20139 and a pronounced late spike near the end. This multi-peak pattern matches the characteristic of class 6, which exhibits several peaks and more complex fluctuations. Other classes tend to have a single late spike (class 0/4), two spikes in middle and late (classes 2/3/5), or mostly baseline with noise (class 1). The presence of several distinct spikes across early and late regions makes class 6 the most consistent match."
+},
+{
+    "idx": 16,
+    "label": 0,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.60\n- Reason: The time series shows two distinct, high-amplitude spikes separated by a long baseline of near-zero values (one early spike cluster and another near the end). This two\u2011spike pattern matches the characteristic of Class 2 (two isolated spikes), whereas other classes are either continuous/noisy (Class 1), have only late single spikes (Classes 0/4), or show middle-peak/multi-peak patterns (Classes 3/5/6)."
+},
+{
+    "idx": 17,
+    "label": 0,
+    "predicted": 4,
+    "conversation": "- True Label: 4\n- Confidence: 0.62\n- Reason: The new time series shows a clear pair of sharp spikes occurring in the middle of the sequence (roughly time steps 30\u201340) with peak values around 4, and otherwise remains at baseline (near zero). This mid-region dual-spike pattern, followed by a return to baseline, matches the characteristic pattern of class 4 (two spikes in the middle region with baseline elsewhere) more closely than the other classes, which tend to have late spikes, mid-and-late spikes, or more complex multi-peak dynamics."
+},
+{
+    "idx": 18,
+    "label": 0,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.58\n- Reason: The new time series shows two distinct high-amplitude spikes within the middle portion of the sequence, with the signal otherwise at baseline (near zero). This \"two mid-day bursts\" pattern aligns best with Class 5 in the training examples, where two bursts occur in the middle region. Other classes tend to have either a single late spike (0, 4), persistent oscillations (1), or bursts that include a late event or broader fluctuation (2, 3, 6). The middle-focused, double-spike signature is the distinguishing feature supporting Class 5."
+},
+{
+    "idx": 19,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.78\n- Reason: The series is baseline around zero for most of the timeline with two sharp, high-amplitude spikes in the late segment, followed by a quick return to baseline. This pattern matches the Class 0 characteristic (late, high-amplitude bursts with little activity earlier)."
+},
+{
+    "idx": 60,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.72\n - Reason: The time series shows continuous, irregular oscillations centered around zero with amplitudes around \u00b11 and without the large, isolated spikes or multi-window bursts seen in other classes. This aligns with the class 1 pattern (noisy, oscillatory baseline with occasional bursts)."
+},
+{
+    "idx": 61,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.80\n- Reason: The new time series shows a continuous, noise-like oscillation around zero with no pronounced spikes or abrupt events. This matches Class 1, which is characterized by a flat baseline with small, high-frequency fluctuations throughout the series. Other classes exhibit clear spikes (single or multiple) at specific times or more irregular multi-peak patterns, which are not present here."
+},
+{
+    "idx": 62,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.65\n- Reason: The new series shows multiple sharp spikes distributed across the entire sequence with negative baseline values between spikes, i.e., a noisy, oscillatory pattern rather than a single late burst or a two-burst (early and late) pattern seen in other classes. This makes it closest to the irregular/multi-peak behavior characteristic of class 6 rather than the more discrete, late-only or two-spike patterns of the other classes."
+},
+{
+    "idx": 63,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.40\n- Reason: The new time series shows frequent, irregular spikes spread across the sequence with ongoing fluctuations in the middle portion and no single dominant impulse. This pattern resembles the more complex, mid-sequence variability seen in class 6, rather than the isolated spikes of other classes (0, 2, 3, 4, 5) or the persistent oscillations of class 1. The repeated spikes create a mid-range, non-stationary behavior characteristic of class 6."
+},
+{
+    "idx": 64,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.65\n- Reason: The new time series exhibits frequent, regular spikes with amplitude around 2 and brief high-activity bursts separated by short quiescent intervals (roughly alternating between positive peaks and small dips). This persistent, oscillatory-like pattern throughout the series aligns with the characteristics described for class 1 (continuous high-frequency fluctuations around zero) more than with isolated bursts, dual-peak patterns, or noisy mid-sequence activity seen in other classes."
+},
+{
+    "idx": 65,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.62\n- Reason: The new time series exhibits numerous sharp spikes scattered throughout the sequence, with a near-zero baseline between spikes. This pattern aligns with Class 6, which is characterized by multiple bursts/spikes across the series (more irregular and frequent bursts) rather than a single late spike (Class 0), two mid-sequence spikes (Classes 2/3/5), or a continuous oscillatory pattern (Class 1)."
+},
+{
+    "idx": 66,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.63\n- Reason: The new time series shows a regular train of sharp spikes occurring at fairly uniform intervals throughout the sequence, with a low baseline between spikes and no sustained oscillation in a single middle region. This pattern of periodic, multi-burst activity is most consistent with the oscillatory/multi-burst behavior described for class 6, rather than the sparse or isolated spikes seen in other classes."
+},
+{
+    "idx": 67,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: Class 3\n- Confidence: 0.40\n- Reason: The new time series exhibits multiple sharp spikes distributed across the sequence with jagged, irregular shapes around the peaks and a baseline around -0.5 to -0.7 between spikes. This multi-peak, noisy-spike pattern is most consistent with Class 3 in the earlier analysis (which showed several spikes in the middle-to-late portions with more jaggedness), and it differs from the single late spike (Class 0/1), two spikes (Class 4/5), or smoother/more continuous patterns (Class 6)."
+},
+{
+    "idx": 68,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.60\n - Reason: The new time series shows frequent, prominent spikes scattered across nearly the entire sequence with a baseline around zero, i.e., high-frequency, event-driven fluctuations rather than a single or few isolated events. This pattern best matches the characteristics described for Class 1 (high-frequency fluctuations around zero), rather than the other classes which show one/two spikes, irregular multi-peaks, or late/early isolated events."
+},
+{
+    "idx": 69,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.63\n- Reason: The new time series shows multiple sharp spikes occurring at fairly regular intervals across the sequence, with low baseline between spikes. This multi-peak, highly variable pattern aligns best with Class 6, which is characterized by several fluctuations and spikes (more complex than the single or dual-spike patterns seen in other classes). Other classes either show no spikes, only one or two spikes, or predominantly noisy but non-spike patterns."
+},
+{
+    "idx": 70,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.60\n- Reason: The new time series exhibits repeated, well-defined positive spikes interleaved with a negative baseline, creating a periodic burst-like pattern throughout the sequence. This continuous bursting behavior\u2014rather than a single or a few isolated spikes (classes 0\u20135) or persistent small oscillations around zero (class 1)\u2014best matches the pattern described for class 6."
+},
+{
+    "idx": 71,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.62\n- Reason: The new time series exhibits multiple discrete spikes distributed across the entire sequence, with spikes of similar amplitude and no extended baseline oscillation. This pattern resembles multi-peak activity (several mid-time peaks) rather than a single late spike (classes 0/4), two isolated spikes (classes 2/3), or continuous high-frequency oscillations (class 1). The density of spikes across early to late segments aligns best with the multi-peak/multi-event pattern characteristic of class 6."
+},
+{
+    "idx": 72,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: Class 6\n- Confidence: 0.62\n- Reason: The series shows repeated sharp pulses distributed across the entire sequence with a near-flat baseline between spikes. There is no single late spike or a pair of spikes; instead, there is mid-series, ongoing pulsatile activity. This pattern aligns best with the \u201csustained mid-series activity\u201d profile (class 6) rather than isolated spikes (classes 0/1/4) or multiple distinct early/late events (classes 2/3/5)."
+},
+{
+    "idx": 73,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.85\n- Reason: The new time series exhibits multiple spikes scattered throughout the entire 96-step sequence with varying amplitudes (roughly up to 2\u20133). The pattern is not confined to an early or late segment, nor does it show just one or two distinct events. This multi-peak, irregular spike pattern aligns with Class 6 in the prior analysis, which was characterized by numerous spikes across the series rather than a single burst or a two-event pattern."
+},
+{
+    "idx": 74,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.60\n- Reason: The new time series exhibits numerous sharp spikes occurring regularly throughout the entire sequence, with a roughly constant negative baseline and peak amplitudes around 1.5\u20132.0. This multi-event, high-frequency pattern aligns with a more complex, irregular middle-activity class (class 6) and differs from the isolated, late bursts (class 0/4), two-burst patterns (class 2/3/5), or steady/noisy patterns (class 1)."
+},
+{
+    "idx": 75,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.62\n- Reason: The new time series exhibits repeated, sharp positive peaks throughout the sequence with a baseline around -0.8, rather than isolated single events or a small number of spikes. This multi-peak, somewhat irregular pattern aligns with Class 6 (multi-peak, complex activity) rather than the largely single-event patterns seen in other classes (e.g., two spikes in Class 2/3, late single spike in Class 0/4, or continuous/noisy patterns in Class 1)."
+},
+{
+    "idx": 76,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: Class 6\n- Confidence: 0.62\n- Reason: The new time series shows a sequence of repeated sharp spikes at quasi-regular intervals with a non-zero (negative) baseline between spikes. This pattern is clearly different from the other classes (which exhibit either a single late spike, two isolated spikes, persistent zero-centered oscillations, or highly irregular/mid-series fluctuations). The periodic spike trains with varying amplitude match the more complex, mid-series activity characteristic of Class 6."
+},
+{
+    "idx": 77,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.62\n- Reason: The series exhibits multiple bursts/spikes spread across the time axis with regular intervals and varying peak shapes, rather than a single burst, two discrete bursts, or a continuous high-frequency osciallatory pattern. This multi-burst, moderately irregular but recurring structure best matches the pattern described for class 6."
+},
+{
+    "idx": 78,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.70\n- Reason: The new time series shows many spikes occurring at regular intervals throughout the sequence, with peak amplitudes around 2 and brief recoveries to baseline. This pattern is best matched to a multi-spike, irregular/mixed pattern (class 6) rather than the few isolated spikes (classes 2, 3, 5) or the late-only spikes (classes 0, 4) or the persistent noisy baseline (class 1)."
+},
+{
+    "idx": 79,
+    "label": 1,
+    "predicted": 6,
+    "conversation": "- True Label: Class 6\n- Confidence: 0.60\n- Reason: The new time series exhibits a regular train of sharp spikes at fairly uniform intervals throughout most of the sequence, with values returning near baseline between spikes (approximately -0.6 to -0.8 between bursts). This periodic burst pattern is distinct from the other classes (which show single/dual bursts, late bursts, or continuous oscillations) and best matches the pattern category described for Class 6 (moderate irregular/multi-burst activity concentrated in the middle but present across the series)."
+},
+{
+    "idx": 120,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.68\n- Reason: The time series shows two distinct sharp spikes: an early spike around time step ~30 and a second spike around time step ~70, with the baseline near zero in between. This two-event pattern (early and late spikes with high amplitudes) matches the characteristic pattern of class 2 (and is distinct from single late spikes, noise-only, or more complex/multiple-event classes)."
+},
+{
+    "idx": 121,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.68\n- Reason: The series shows two distinct, sharp spikes at mid (\u224830) and late (\u224870) time steps with baseline near zero in between. This two-burst pattern matches the characteristic class 2 pattern (middle and late spikes) and differs from single-burst (classes 0/1/4) or more irregular/noisy patterns (class 6) or other two-burst variants with more noise (classes 3/5)."
+},
+{
+    "idx": 122,
+    "label": 2,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.72\n- Reason: The new time series shows multiple high-amplitude spikes clustered in the middle region (approximately time steps 25\u201345) with baseline values elsewhere, and no single late spike or dual early/late spikes. This pattern matches Class 5\u2019s signature of middle-region, repeated spike events with high amplitude, distinguishing it from the other classes that exhibit single late spikes (Class 0/1/4), two spikes (Class 2/3), or more irregular/continuous fluctuations (Class 6)."
+},
+{
+    "idx": 123,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.70\n- Reason: The series shows dense, irregular spike activity in the middle time region (roughly 25\u201370), with frequent peaks up to around 3 units and high variance, while the early and late segments remain near baseline. This pattern aligns with class 6, which is characterized by middle-range high-variance, spike-like fluctuations rather than a few isolated spikes or clear early/late spike events."
+},
+{
+    "idx": 124,
+    "label": 2,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.68\n- Reason: The new sample shows sustained high-frequency fluctuations with many rapid spikes in the early part (roughly time steps 25\u201340), plus an additional prominent spike later (around 60). This oscillatory, multi-peak pattern is characteristic of Class 1, unlike other classes that mainly exhibit one or two isolated spikes against a flat baseline."
+},
+{
+    "idx": 125,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.62\n - Reason: The series exhibits multiple spikes scattered across the timeline (early ~25, several tall peaks around the middle ~60, and another at ~75) with irregular shapes and varying amplitudes. This multi-peaked, non-periodic pattern does not fit the single-event (classes 0/4), two-event (classes 2/3/5), or continuous-oscillation (class 1) patterns, and is most consistent with the complex, multi-peak behavior characteristic of class 6."
+},
+{
+    "idx": 126,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.62\n- Reason: The series exhibits irregular, multi-peak bursts in the early/middle region with an additional spike in the late region. It does not show the sustained high-frequency oscillations of class 1, nor the clean single/multi isolated spikes typical for classes 0\u20135. The pattern is most consistent with the complex, non-regular fluctuations characteristic of class 6."
+},
+{
+    "idx": 127,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.78\n- Reason: The series exhibits multiple spikes scattered across the timeline with varying amplitudes and irregular intervals, returning to near-zero baselines between spikes. This multi-peak, irregular pattern aligns with Class 6 in the prior analysis, which is characterized by several spikes across different time windows rather than a single or two well-separated events."
+},
+{
+    "idx": 128,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.80\n- Reason: The new time series exhibits multiple abrupt spikes clustered in the middle region (roughly time steps 20\u201360) with varying amplitudes and irregular spacing. The baseline is near zero outside this middle region, and there is no continuous oscillation or only two isolated bursts. This multi-burst, irregular middle-pattern matches the characteristic pattern of Class 6 from the prior analysis."
+},
+{
+    "idx": 129,
+    "label": 2,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.83\n- Reason: The provided time series shows persistent, high-frequency fluctuations with multiple irregular spikes scattered throughout the entire sequence, rather than a single or two distinct spike events. This pattern matches the characteristic of Class 1 (continuous noise-like activity across time), whereas other classes typically exhibit few spikes or clearly segmented event windows."
+},
+{
+    "idx": 130,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.60\n- Reason: The new time series exhibits two dominant high-amplitude spikes in the mid and late regions (approximately around time steps 22 and 60) with notable but not excessive variability around those spikes. There are additional smaller fluctuations between spikes, but the pattern is dominated by the two main peaks, which aligns with the typical pattern described for class 3 (two prominent mid/late spikes with some jitter). Other classes either show a single late spike (0/4), continuous noise (1), or two clear spikes with a cleaner separation (2/5) or more distributed fluctuations (6)."
+},
+{
+    "idx": 131,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.62\n- Reason: The new time series shows multiple high-amplitude spikes clustered in two regions (early-middle ~25\u201340 and late-middle ~65\u201375), creating a complex multi-peak pattern. This contrasts with other classes that exhibit either single or two spikes or sustained oscillations. The overall structure aligns best with class 6, which is characterized by a richer, multi-step event in the middle rather than simple isolated spikes or purely oscillatory behavior."
+},
+{
+    "idx": 132,
+    "label": 2,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The new time series shows multiple sharp spikes concentrated in the middle region (roughly time steps 20\u201360) with a near-zero baseline in the early and late parts. This multi-peak, irregular pattern in the mid-range matches the characteristic patterns of Class 5 from the provided examples, and differs from the single or late-spike patterns seen in other classes (e.g., Class 0/1/4) and from the oscillatory/middle-wide behavior of Class 6."
+},
+{
+    "idx": 133,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.65\n- Reason: The new time series shows persistent, multi-peak activity rather than a flat baseline with only a couple of isolated spikes. There are numerous sharp spikes spread mainly across the middle-to-late portion (roughly 40\u201375), with a prominent late peak around 75, and baseline near zero in between. This pattern matches the broader, more dynamic class 6 behavior (continuous variability with a notable late spike), rather than isolated spike patterns seen in other classes."
+},
+{
+    "idx": 134,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.72\n- Reason: The new time series shows baseline values in the early segment, followed by a dense cluster of prominent spikes/peaks across the middle portion (roughly time steps 18\u201375), with amplitudes reaching up to about 3\u20134 and varying shapes. After about time step 75, it returns toward baseline. This pattern \u2014 multi-peak, mid-sequence fluctuations rather than a single spike or persistent small oscillations \u2014 aligns with the characteristics described for Class 6 in the prior analysis (complex mid-sequence activity with several local peaks). It does not match the spike-only patterns of classes 0, 2, 3, 4, 5, nor the continuous small-oscillation pattern of class 1."
+},
+{
+    "idx": 135,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.72\n- Reason: The new time series shows multiple spikes concentrated in the middle time window (roughly time steps 30\u201370) with varying heights and a jagged, noisier background. This middle-region dynamism matches the pattern described for class 6, distinguishing it from other classes that exhibit single, dual, or late-time spikes, or a flatter background."
+},
+{
+    "idx": 136,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: Class 6\n- Confidence: 0.72\n- Reason: The series shows multiple abrupt spikes concentrated in the middle portion (roughly time steps 30\u201360) with additional notable activity later around time 75\u201380. This multi-spike mid-to-late pattern, including a subsequent spike, aligns with the characteristic pattern of Class 6, unlike the single-late-spike (Class 0/4), sparse/noise (Class 1), or two-peak patterns (Classes 2/3/5)."
+},
+{
+    "idx": 137,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.72\n- Reason: The time series shows multiple spikes with varying amplitudes concentrated in the middle time window (roughly 20\u201370), with a near-zero baseline outside this region. This irregular, multi-spike middle pattern matches the Class 6 pattern (contrasting with single late spikes in Classes 0/1/4 or the two-spike patterns in Classes 2/3/5)."
+},
+{
+    "idx": 138,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2\n- Confidence: 0.60\n- Reason: The series exhibits two prominent high-amplitude spikes separated in time: one in the mid-region (approximately time steps 30\u201340) and a second in the late region (approximately time steps 65\u201375). The baseline remains near zero between spikes and after the second spike, which matches the characteristic two-pulse pattern of Class 2. It does not resemble a single late spike (Class 0/4), not the many end-spikes (Class 1), and not the irregular multi-peaked pattern (Class 6). While Class 3 also shows two spikes, the two-strong-pulse structure in this sample aligns more closely with Class 2."
+},
+{
+    "idx": 139,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.72\n- Reason: The series exhibits multiple transient spikes scattered across the timeline (not just a single event), with clusters of spikes in the early-to-middle region and again in the mid-to-late region. There is sustained, irregular fluctuation rather than a smooth baseline or a pair of isolated spikes. This multi-peak, non-sinusoidal pattern matches the complex, multi-event dynamics characteristic of Class 6."
+},
+{
+    "idx": 180,
+    "label": 3,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.72\n- Reason: The new time series exhibits two distinct, sharp spikes separated by a long flat baseline (approximately around time steps 28\u201332 and 70\u201375). The baseline remains near zero between spikes, and the spike amplitudes reach about \u00b14. This two-spike, well-separated pattern matches the characteristic pattern of class 2."
+},
+{
+    "idx": 181,
+    "label": 3,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0\n- Confidence: 0.82\n- Reason: The series shows a single sharp spike in the late segment (around time steps 70\u201380) with baseline near zero otherwise. This matches the characteristic late single-event pattern of Class 0. Other classes typically exhibit two spikes (early and late), multiple fluctuations in the middle, or no distinct late spike, which are not observed here."
+},
+{
+    "idx": 182,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.70\n- Reason: The new time series shows two spikes in the mid-to-late window (roughly around steps 50\u201355) followed by another spike in the late window (around steps 78\u201382). Baseline remains near zero outside these events. This spike pattern (mid-spike then late-spike) with variability across samples aligns with class 5, which is characterized by mid/late spikes and non-uniform timing across samples. Other classes tend to have early spikes (classes 2/3) or single late spikes (classes 0/1/4) or sustained mid-series fluctuations (class 6)."
+},
+{
+    "idx": 183,
+    "label": 3,
+    "predicted": 4,
+    "conversation": "- True Label: 4\n- Confidence: 0.80\n- Reason: The time series shows a single, late sharp spike (around time steps 75\u201380) reaching about 4, with the rest of the series staying at baseline near zero. This pattern matches class 4, which is characterized by a late single burst. Other classes would show either persistent oscillations (class 1), multiple spikes (classes 2, 3, 5), irregular mid-period activity (class 6), or two or more late spikes (class 0)."
+},
+{
+    "idx": 184,
+    "label": 3,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.60\n- Reason: The series is baseline near zero most of the time and exhibits multiple tall spikes in the late time window (around 55\u201385). This late-spike pattern aligns best with Class 1, which is characterized by two tall spikes in the late segment (and a mostly flat early/middle portion). Although there are three spikes here, the late-segment spike-dominant structure provides the closest match among the seven classes."
+},
+{
+    "idx": 185,
+    "label": 3,
+    "predicted": 4,
+    "conversation": "- True Label: 4\n- Confidence: 0.72\n- Reason: The new time series shows a near-zero baseline in the early segment, followed by multiple sharp spikes clustered in the middle to late region (roughly time steps 60\u201375). The spikes are high in amplitude and occur in succession, with the series returning to baseline afterward. This pattern matches Class 4, which is characterized by multiple transient spikes in the middle and late portions of the series, unlike other classes that have either a single late spike (Class 0), two isolated spikes (Classes 2/3/5), or more continuous/quasi-flat behavior (Classes 1/6)."
+},
+{
+    "idx": 186,
+    "label": 3,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.68\n- Reason: The series shows multiple sharp spikes in the middle to late portion (around steps 60\u201380), including more than two bursts and some intermediate fluctuations, with a baseline near zero most of the time. This irregular, multi-peak pattern is characteristic of class 6, unlike the single or dual, well-separated bursts seen in other classes."
+},
+{
+    "idx": 187,
+    "label": 3,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.58\n- Reason: The time series shows two distinct high-amplitude bursts (peaks near 4) at two separate time intervals with baseline near zero in between. This pattern matches the characteristic two-burst pattern of Class 2 (two isolated spikes), whereas other classes show either a single burst, persistent oscillations, or more irregular mid-series activity."
+},
+{
+    "idx": 188,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.60\n- Reason: The new sample shows pronounced mid-sequence spikes with high amplitude, particularly around time steps ~50\u201360 and ~60\u201370, with a possible smaller bump later. This two-peak mid-series pattern resembles Class 3, which is characterized by strong spikes in the middle of the series. Other classes tend to have late spikes (Class 0, Class 1, Class 4) or two mid spikes with different timing (Class 2, Class 5) or no pronounced spikes (Class 6). The observed pattern aligns best with the mid-series spike structure of Class 3."
+},
+{
+    "idx": 189,
+    "label": 3,
+    "predicted": 4,
+    "conversation": "- True Label: Class 4\n- Confidence: 0.55\n- Reason: The new time series shows a single, prominent spike centered around the middle of the sequence with baseline values near zero before and after. This isolated high-amplitude event is most consistent with Class 4 patterns among the provided samples (single sharp spike with rapid return to baseline), whereas other classes typically exhibit multiple spikes, persistent noise, or spikes located in different regions of the series."
+},
+{
+    "idx": 190,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.55\n- Reason: The series is dominated by multiple sharp impulsive events in the middle to late portion (roughly time steps 60\u201380), with the baseline near zero elsewhere. This mid-to-late spike pattern aligns most closely with the archetype observed for class 5 (clustered mid-series spikes with occasional fluctuations). Some minor earlier activity around time 20 may be considered noise, but it does not change the overall mid-late spike pattern that differentiates this from the other classes (which show late-only spikes, two-spike patterns at different windows, or persistent oscillations)."
+},
+{
+    "idx": 191,
+    "label": 3,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.60\n- Reason: The new time series shows two sharp, high-magnitude spikes (one near the start and one near the end) with baseline values around zero in between. This \u201ctwo discrete spikes\u201d pattern matches the pattern family observed for classes 2, 3, and 5. Among these, class 2 is the closest match in spike separation and amplitude, making it the most plausible single-class assignment."
+},
+{
+    "idx": 192,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.63\n- Reason: The new time series exhibits a two-spike pattern: a noticeable early spike and a prominent late spike, with the signal returning to baseline in between. This pattern aligns with the characteristic two-peak pattern of class 3 observed in the prior examples (early spike around the first third and a second spike in the later segment), whereas single-spike (classes 0, 1, 4) or multi/irregular spike patterns (class 6) are less consistent with this sample."
+},
+{
+    "idx": 193,
+    "label": 3,
+    "predicted": 4,
+    "conversation": "- True Label: 4\n- Confidence: 0.62\n- Reason: The time series shows a single, large spike occurring in the late region (around time steps 75\u201380) with baseline values near zero otherwise. This pattern matches the characteristic late, prominent spike pattern seen in class 4 samples, whereas other classes typically show multiple spikes or earlier events."
+},
+{
+    "idx": 194,
+    "label": 3,
+    "predicted": 4,
+    "conversation": "- True Label: 4\n- Confidence: 0.60\n\n- Reason: The series exhibits a clear early spike around time step ~10 followed by a pronounced cluster of spikes in the late region (~70\u201380). The late region shows multiple high-amplitude events in close succession, with the baseline returning to near zero between spikes. This pattern matches the late-spike cluster characteristic of class 4, whereas other classes tend to show either isolated early/late spikes or more pervasive mid-series fluctuations."
+},
+{
+    "idx": 195,
+    "label": 3,
+    "predicted": 6,
+    "conversation": "- True Label: Class 6\n- Confidence: 0.72\n- Reason: The series shows multiple sharp spikes clustered in the middle to late portion of the sequence with irregular timing and varying amplitudes, rather than a single late spike or a fixed two-spike pattern. This multi-peak, variable-timing behavior aligns with Class 6, which exhibits high variability in spike timing and waveform shape across samples."
+},
+{
+    "idx": 196,
+    "label": 3,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.60\n- Reason: The series is essentially baseline (near zero) with a single abrupt transient spike at the very beginning, followed by no significant activity. This sparse, early spike pattern aligns with Class 0 (which is characterized by rare spikes and baseline behavior), whereas other classes exhibit multiple spikes or sustained fluctuations."
+},
+{
+    "idx": 197,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.60\n- Reason: The new time series shows multiple high-amplitude spikes scattered across the sequence (approximately at time steps ~10, ~60\u201365, and ~70\u201375) with the rest of the signal staying near zero. This multi-spike pattern in the mid-to-late portions, with no sustained oscillations, matches the typical pattern observed for class 5 (multiple spikes in the middle to late segments) better than the other classes (which show single spikes, continuous oscillations, or different spike arrangements)."
+},
+{
+    "idx": 198,
+    "label": 3,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.68\n- Reason: The new time series shows two prominent spikes in the late portion of the sequence (roughly time steps 50\u201380) with a flat baseline around zero otherwise. This late-spike pattern (two nearby peaks with amplitude near 4) matches the characteristic signature of Class 0 observed in the provided examples, where the defining feature is clustering of spikes in the late segment. Other classes tend to show continuous fluctuations (Class 1), mid-series or non-synchronized spikes (Classes 3, 6), or spikes in different segments (Classes 2, 5, 4), which are not aligned with this pattern."
+},
+{
+    "idx": 199,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n - Reason: The new time series shows multiple sharp spikes clustered in the middle to late time steps (roughly 40\u201390) with a generally flat baseline otherwise. This multi-peak, jagged pattern matches the characteristic of Class 5 (multiple spikes in the middle to late region), whereas other classes tend to show either a single late spike (Class 0/4), two distinct spikes (Classes 2/3), persistent oscillations (Class 1), or moderate mid-section activity (Class 6)."
+},
+{
+    "idx": 240,
+    "label": 4,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.63\n- Reason: The new time series shows a single, prominent spike in the late portion of the sequence (around time steps 75\u201385) with amplitude near 4, while the baseline remains near zero before and after the event. This late, isolated spike pattern matches the characteristic behavior seen in Class 0 (late spikes with minimal activity in early/middle segments). The data does not exhibit the persistent high-frequency fluctuations of Class 1 or the multi-peak middle patterns seen in other classes (e.g., Class 6, Class 2/3)."
+},
+{
+    "idx": 241,
+    "label": 4,
+    "predicted": 0,
+    "conversation": "- **True Label**: 0\n- **Confidence**: 0.72\n- **Reason**: The time series shows a long baseline around zero with a single prominent late burst near the end (around time step 75\u201380) reaching about 3\u20134 units, followed by a quick return to baseline. There is no sustained oscillation or multiple mid-series spikes, which matches the characteristic pattern of class 0 (late impulsive burst). A small earlier fluctuation may exist but is not a distinct, persistent event."
+},
+{
+    "idx": 242,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.60\n- Reason: The new time series exhibits multiple transient spikes sprinkled across the timeline (early to mid) and a pronounced mid-to-late elevation forming a sustained plateau around time steps 65\u201375, before returning to baseline. This pattern is characteristic of Class 6, which is described as a more complex, less spike-dominated pattern with notable mid-range fluctuations and a mid-late elevation, unlike the more discrete spike patterns seen in other classes (e.g., single late spike in Class 0/4 or two isolated spikes in Classes 2/3/5) or the sustained oscillations around zero in Class 1."
+},
+{
+    "idx": 243,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.64\n- Reason: The series exhibits multiple events and irregular fluctuations rather than a single isolated spike or a fixed two-spike pattern. There are small early spikes, several intermediate fluctuations, and a prominent, multi-peaked high-activity block in the middle-to-late region (roughly 65\u201390). This combination of multi-event activity and non-uniform shapes aligns with the complex, mid-to-late region patterns characteristic of Class 6, rather than the simpler patterns seen in other classes."
+},
+{
+    "idx": 244,
+    "label": 4,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.72\n- Reason: The new time series exhibits multiple spikes clustered in the middle region (roughly 30\u201370) with high amplitudes (up to ~3\u20134) and a jagged multi-peak pattern, followed by a return to baseline. This pattern aligns with the characteristic multi-peak/mid-to-late spike structure seen in class 5, unlike the isolated spikes (classes 0, 2\u20134), persistent noise (class 1), or sustained mid-sequence activity without spikes (class 6)."
+},
+{
+    "idx": 245,
+    "label": 4,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.60\n- Reason: The new time series shows multiple spikes in the middle and late portions, with an increasing and jagged pattern after about time step 60, leading to elevated values (~1.5\u20132.0) persisting toward the end. This multi-peak, mid-to-late pattern aligns best with the characteristics observed for class 3 (where spikes occur in the middle and later segments and the waveform is more jagged) compared to the other classes (which tend to have a single late spike, a flat baseline, or two isolated spikes with little sustained activity)."
+},
+{
+    "idx": 246,
+    "label": 4,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.62\n- Reason: The new time series shows two pronounced activity bursts in the middle-to-late region with relatively high amplitude (roughly around 2\u20133) and some fluctuating activity in the same late window, while the early portion remains near baseline. This mid-to-late double-burst pattern is most consistent with Class 5, which is characterized by two noticeable spikes/bursts in the middle to late part of the series. Other classes show persistent oscillations (Class 1), single late spikes (Classes 0/4), or more irregular/multiple mid-region spikes (Classes 2, 3, 6), which do not match this pattern as closely."
+},
+{
+    "idx": 247,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.58\n- Reason: The new time series starts with a negative/flat baseline (~-1) in the early part, then shows irregular, moderate fluctuations in the middle, followed by a gradual ramp and sustained elevated values (~1.5\u20132.6) in the late part with some small secondary fluctuations. There is no single sharp late spike (as in class 0) nor two well-separated spikes (as in classes 2, 3, or 5), and it does not remain flat with minor noise (class 1). The pattern is more irregular and mid-to-late active, which aligns with class 6."
+},
+{
+    "idx": 248,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.62\n- Reason: The new time series shows a flat baseline in the early segment, followed by multiple moderate spikes and irregular fluctuations primarily in the middle portion (around steps 40\u201360) with sustained activity into the late region (60\u201390). This multi-peak, non-clean pattern differs from the single- or double-peak patterns seen in other classes (0\u20135) and aligns with the irregular, multi-peak profile characteristic of class 6."
+},
+{
+    "idx": 249,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.68\n- Reason: The series shows multiple distinct spike events in the middle to late portion (roughly time 60\u201390) with varying amplitudes and shapes, after an early period of small fluctuations around baseline. This pattern is most consistent with class 6 (multi-peak, more complex dynamics) rather than the other classes which tend to have single spikes or fewer events."
+},
+{
+    "idx": 250,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.65\n- Reason: The series shows many small spikes in the early/middle region, followed by a pronounced rise with higher amplitude and irregular fluctuations in the middle-late region (around time steps 60\u201385), then a partial return toward baseline. This pattern matches the distinctive mid-section elevated activity with fluctuations typical of Class 6, rather than isolated late spikes (Class 0/4), dual spikes (Class 2/3/5), or persistent low-amplitude oscillations (Class 1)."
+},
+{
+    "idx": 251,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.72\n - Reason: The series exhibits a multi-phase pattern: long baseline around a negative level, followed by small spikes around the 38\u201350 time steps, and then a prominent, fluctuating high-amplitude activity from about 60\u201385 time steps with multiple peaks. This combination of early modest activations and a later complex, sustained activity aligns with class 6, which is characterized by multi-phase patterns with activity across several segments, rather than a single isolated burst or persistent simple oscillations."
+},
+{
+    "idx": 252,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.55\n- Reason: The new time series exhibits multiple transient spikes and irregular fluctuations across the middle to late portions (roughly 30\u201390 time steps), not a single clean late spike. There are several smaller spikes earlier (around 10\u201330) and multiple, variable peaks around 60\u201375 with varying amplitude, followed by ongoing fluctuations. This multi-peak, highly variable pattern aligns with class 6, which is characterized by complex, non-regular waveforms, rather than the simpler late-single- or two-peak patterns seen in other classes."
+},
+{
+    "idx": 253,
+    "label": 4,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.65\n- Reason: The new time series shows sustained, high-frequency oscillations around zero with no isolated large spikes or multi-peak bursts. This persistent oscillatory pattern matches the characteristic behavior of class 1, whereas other classes are distinguished by distinct spikes (two spikes, late bursts, or mid-sequence bursts) that are not present here."
+},
+{
+    "idx": 254,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.78\n- Reason: The new time series shows multiple spikes/peaks occurring across the middle to late portions of the series (roughly time steps 40\u201385) with amplitudes around 1\u20132, plus an overall non-flat baseline. This multi-spike, mid-to-late pattern matches the typical behavior observed for class 6 in the provided examples, and differs from other classes that exhibit a single late spike (classes 0/1/4) or two spikes (classes 2/3/5) or more irregular timing."
+},
+{
+    "idx": 255,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.62\n- Reason: The new series shows multiple transient events spread across the entire timeline with moderate amplitude and varying shapes, rather than a single late spike or a fixed two-spike pattern. This higher variability and multi-peak structure aligns with the characteristic patterns observed for class 6, distinguishing it from the more consistent late-spike (0,1,4) or fixed multi-spike (2,3,5) patterns in the other classes."
+},
+{
+    "idx": 256,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.58\n- Reason: The series exhibits a complex, multi-segment pattern rather than a simple baseline with a single burst or a consistent oscillation. Early, high-frequency fluctuations around 0 with amplitudes up to ~1.5, followed by a mid-section dip to negative values (around -1.5 to -2), and then a late region with small fluctuations and intermittent spikes, indicate irregular and multi-modal dynamics. This combination aligns best with Class 6 (the most complex/irregular pattern among the seven)."
+},
+{
+    "idx": 257,
+    "label": 4,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.55\n- Reason: The new series shows a non-stationary, multi-peak pattern with substantial fluctuations mainly in the middle portion (roughly 30\u201360), not matching the clean two-peak bursts seen in classes 2/3 or the distinct late/right-side spikes of classes 0/4/5. The early segment is variable but not spike-dominated, and the late segment exhibits a final sharp drop to a large negative value, which is more consistent with the complex, irregular pattern characteristic of class 6 rather than the more regular burst or oscillatory patterns of other classes."
+},
+{
+    "idx": 258,
+    "label": 4,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.72\n- Reason: The series displays continuous, high-frequency oscillations around zero with no isolated spike events or clear baseline shifts. This persistent oscillatory pattern matches Class 1, which is characterized by noise-like but ongoing activity throughout the sequence, unlike the spike-driven patterns in other classes."
+},
+{
+    "idx": 259,
+    "label": 4,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.82\n  - Reason: The new time series displays persistent, high-frequency oscillations throughout the entire sequence with no isolated spikes or abrupt transient events. This matches the characteristic pattern of Class 1 from the earlier analysis (continuous oscillatory pattern), whereas other classes show late spikes, multiple discrete events, or more complex transient behavior."
+},
+{
+    "idx": 300,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.72\n- Reason: The new time series exhibits two distinct, high-amplitude spikes in the mid-region (roughly at steps 40 and 60) with a near-zero baseline elsewhere and a return to baseline after the spikes. This two-impulse pattern in the middle of the series matches the characteristic pattern of Class 5, which is defined by two mid-region spikes of large amplitude and little activity outside them. Other classes typically show single late spikes (Class 0/4), more dispersed or multiple spikes spanning earlier to later regions (Classes 2, 3, 6), or low-variance noise (Class 1)."
+},
+{
+    "idx": 301,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2\n- Confidence: 0.55\n- Reason: The series shows a pronounced mid-series spike (around time step ~50) reaching about 4, followed by a smaller secondary fluctuation shortly after, then returning to baseline. This two-peak pattern in the middle portion is most consistent with Class 2, which is characterized by two spikes in the middle-to-late window. Other classes either show a single late spike (Class 0, Class 1, Class 4), widely separated multiple spikes (Class 3, Class 5), or pervasive oscillations throughout (Class 6)."
+},
+{
+    "idx": 302,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.60\n- Reason: The new time series shows two prominent, high-amplitude spikes in the middle portion (approximately time steps 30\u201345) with a flat baseline otherwise. This spike pattern (two discrete events in the mid-window) best matches the characteristic pattern of class 2, which exhibits two mid-to-late spikes and quiet periods in between. Other classes either show a single late spike (class 0), persistent noise (class 1), or different spike timings that do not align as well with this sample."
+},
+{
+    "idx": 303,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2\n- Confidence: 0.56\n - Reason: The provided series shows a single prominent, early spike reaching about 4, followed by a long flat baseline. This pattern aligns most closely with the early-spike category seen in Class 2 (which also features an early spike with subsequent baseline), whereas other classes either exhibit late spikes (Class 0/4), multiple spikes (Class 3/5/6), or sustained noisy fluctuations (Class 1). The absence of a second later spike makes the match imperfect, but Class 2 remains the closest overall."
+},
+{
+    "idx": 304,
+    "label": 5,
+    "predicted": 0,
+    "conversation": "- **True Label**: Class 0\n- **Confidence**: 0.60\n - **Reason**: The new time series shows a single, sharp, high-amplitude spike with baseline near zero before and after, and only minimal residual fluctuations. This aligns with Class 0\u2019s pattern of sparse activity dominated by a late-looking but singular spike, as opposed to multiple spikes (Classes 2, 3, 5), continuous oscillations (Class 1), or a single late spike with different timing (Class 4). The spike is the defining feature that most closely matches Class 0."
+},
+{
+    "idx": 305,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.58\n- Reason: The new time series exhibits two prominent bursts in the early part of the sequence (roughly around time steps 15\u201320 and 25\u201330) followed by a long flat baseline. This two-burst pattern (early/middle bursts with a later, distinct peak absent) best matches the typical two-peak structure of Class 2 among the provided categories, whereas other classes either show a single late burst (Class 0/1), later multi-peak patterns (Classes 3/4/5), or irregular fluctuations throughout (Class 6)."
+},
+{
+    "idx": 306,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2\n- Confidence: 0.60\n- Reason: The series shows two clear large spikes with a flat baseline between them (one early around 18\u201322, another around 50\u201355). The amplitude is high (up to ~4) and there is little sustained oscillation between spikes, which matches the \u201ctwo-spike\u201d pattern characteristic of Class 2 more closely than the other patterns (e.g., single late spike for Class 0/4, sustained/multi-peak for Class 6, or more widely separated spikes for Class 3/5)."
+},
+{
+    "idx": 307,
+    "label": 5,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.50\n- Reason: The new time series shows a single, sharp, high-amplitude spike occurring early (around time steps 15\u201320) followed by a long flat baseline with minimal additional fluctuations. This resembles a single-event pattern. Among the seven classes, the closest match is Class 0, which is characterized by a single prominent event, though Class 0 typically shows the spike later in the sequence. The other classes exhibit multiple spikes, or spikes in the mid/late regions, or more noise, making them poorer matches for this sample."
+},
+{
+    "idx": 308,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.60\n- Reason: The new time series shows two distinct spike events in the early/mid region (a large spike around time 38\u201340 and a smaller follow-up around 42). This two-event pattern with a prominent initial spike best matches Class 2 (two discrete spikes), and differs from other classes which show either a single late spike (Class 0/4), continuous high-frequency fluctuations (Class 1), or multiple mid-series spikes with different timing (Class 5/6)."
+},
+{
+    "idx": 309,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2\n- Confidence: 0.56\n- Reason: The time series shows two distinct bursts in the early portion of the sequence (a large initial spike around time step 15\u201320, followed by a smaller secondary peak around 22\u201325) and then returns to baseline near zero for the remainder. This dual-burst pattern in the early window is most consistent with Class 2\u2019s characteristic pattern (two bursts in the early/middle region), even though the second peak is smaller and occurs slightly earlier than typical for Class 2."
+},
+{
+    "idx": 310,
+    "label": 5,
+    "predicted": 3,
+    "conversation": "- True Label: Class 3\n- Confidence: 0.60\n- Reason: The time series shows two distinct sharp spikes with a flat baseline in between, and the spikes occur in the middle region with some variability between samples. This two-spike pattern aligns with the characteristic patterns observed for Class 3, which differentiates it from persistent oscillations (Class 1), single late spikes (Classes 0/4), or more irregular/multi-spike patterns (Classes 2/5/6). The early-mid spike followed by a mid-to-late spike matches the class 3 pattern, hence the assignment."
+},
+{
+    "idx": 311,
+    "label": 5,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.65\n  - Reason: The new time series shows a single sharp spike around time step 40 with a peak near 4, followed by a quick return to baseline and only minor transient fluctuations. This pattern is consistent with Class 0\u2019s characteristic of an isolated late spike on an otherwise flat baseline, and differs from other classes that exhibit multiple spikes (Classes 2\u20135), persistent oscillations (Class 1), or more complex/mixed patterns (Class 6)."
+},
+{
+    "idx": 312,
+    "label": 5,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.62\n- Reason: The new series shows a single dominant tall spike around time steps \u224832\u201335 with a small aftershock around 36\u201338, then returns to baseline. This early-mid spike pattern with a brief subsequent fluctuation aligns best with the characteristic pattern seen in class 3 (two spikes in the middle and late segments, with irregular shapes near the peaks), while other classes tend to show late spikes (class 0/4), two clearly separated spikes (class 2/5), more irregular/noisy patterns (class 6), or only low-amplitude/no spikes (class 1)."
+},
+{
+    "idx": 313,
+    "label": 5,
+    "predicted": 3,
+    "conversation": "- True Label: Class 3\n- Confidence: 0.60\n- Reason: The new time series shows two high-amplitude spikes (about 4 units) in the middle portion (time steps ~35\u201345) with a rapid return to baseline and small subsequent fluctuations. This \u201ctwo-spike in the middle\u201d pattern aligns with the characteristic pattern observed for Class 3 samples, which exhibit pronounced spikes in the middle region and a relatively flat baseline otherwise."
+},
+{
+    "idx": 314,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.60\n- Reason: The new time series shows two short, high-amplitude spikes early in the sequence (a large spike around time step ~18 and a smaller follow-up around ~21), then returns to baseline. This two-spike pattern with a prominent early event aligns with the characteristic pattern of class 2 (two discrete high-amplitude events separated by baseline), and differs from the primarily oscillatory pattern in class 1 or the late/multiple spike patterns seen in other classes."
+},
+{
+    "idx": 315,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.65\n- Reason: The new time series shows two distinct spikes on a near-zero baseline (one tall spike around time 50 and a second nearby spike around time 60\u201365), with little activity elsewhere. This aligns with the Class 5 pattern of two discrete spikes with some minor variability around the events, whereas other classes would show sustained oscillations (Class 1), irregular fluctuations (Class 6), or spikes at different, more separated timings (Classes 2, 3, 0, 4)."
+},
+{
+    "idx": 316,
+    "label": 5,
+    "predicted": 4,
+    "conversation": "- True Label: Class 4\n- Confidence: 0.58\n- Reason: The series exhibits two prominent spikes separated by a long baseline (early and late in the sequence) with some mild post-peak fluctuations. This two-spike pattern with distinct early and late events aligns best with the characteristic pattern of Class 4 among the provided categories. There is no sustained high-frequency baseline noise as in Class 1, and the spike timings/ shapes are more consistent with Class 4 than with the other classes."
+},
+{
+    "idx": 317,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.60\n- Reason: The new series shows a single, early, high-amplitude spike (around time step 28\u201332) with the rest of the series near zero. This pattern is most consistent with Class 2, which is characterized by an early spike (often with a second spike later in the series in other samples). The current sample lacks an obvious second spike, but the dominant early-event pattern matches Class 2 better than the other classes (which exhibit late spikes, multiple mid-series spikes, continuous oscillations, or mixed patterns)."
+},
+{
+    "idx": 318,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.60\n- Reason: The time series shows a two-spike pattern with no sustained oscillation. A large spike occurs around time steps 38\u201340 (peak near 4), followed by a smaller spike around time steps 54\u201360. This two-spike, middle-late pattern aligns with the characteristic pattern observed for class 2 (two distinct spikes in the mid-to-late region). Other classes either show continuous oscillations (class 1), a single late spike (classes 0/4/5), or more complex/multi-peaked behavior (class 6) or two spikes with different timing/shapes (class 3). Given the two-spike structure, class 2 is the best match among the options."
+},
+{
+    "idx": 319,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The new time series shows multiple abrupt spikes clustered in the middle portion (approximately steps 30\u201350) with peak amplitudes around 3\u20134, followed by a return to baseline. This mid-series, multi-peak pattern matches the characteristic pattern of class 5, differentiating it from late single spikes (classes 0, 1, 4), mid/late multi-peak patterns (classes 2, 3), or more irregular/noisy patterns (class 6)."
+},
+{
+    "idx": 360,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.62\n- Reason: The new time series shows two distinct transient events: a prominent mid-series spike around time steps 30\u201340 and a second spike around time steps 65\u201370, followed by a sustained elevated activity (0.5\u20131.0) in the 70\u201385 range before returning to baseline. Outside these events, the series remains near the baseline. This pattern\u2014two middle-to-late spikes with a subsequent plateau\u2014is characteristic of Class 5 in the provided examples."
+},
+{
+    "idx": 361,
+    "label": 6,
+    "predicted": 6,
+    "conversation": "- True Label: Class 6\n- Confidence: 0.58\n- Reason: The series shows an initial sharp spike (outlier) around time step ~28, followed by a period of elevated but fluctuating values (roughly 1.5\u20132.5) and then a gradual decay back toward baseline near the end. This mid-series elevated activity with fluctuations and eventual return to baseline aligns with the characteristic pattern observed for Class 6, unlike the multi-spike patterns (Classes 2/3/5), the single late spike patterns (Classes 0/4), or the flat/no-spike patterns (Class 1)."
+},
+{
+    "idx": 362,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.63\n- Reason: The series shows two clear high-amplitude bursts: the first around time steps ~22\u201332 and the second around ~60\u201375, with the rest of the series near baseline. This two-burst, mid-to-late pattern aligns best with Class 3 in the prior analysis (two distinct bursts at similar timings), more so than other classes which show single bursts, continuous oscillations, or more irregular multi-burst behavior."
+},
+{
+    "idx": 363,
+    "label": 6,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.68\n- Reason: The time series shows two distinct, sharp spikes of large magnitude (around time steps 20\u201325 and 60\u201365) with the signal returning to near-baseline between them. The baseline is relatively flat elsewhere. This two-spike, mid-to-late pattern matches the characteristic pattern of Class 2 observed in the examples."
+},
+{
+    "idx": 364,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.62\n- Reason: The series shows two clear spikes separated in time (approximately around 25 and 65 time steps) with a negative baseline between them and a return toward baseline after the second spike. This two-spike mid-to-late pattern with negative baseline aligns best with Class 5, whereas other two-spike patterns (Classes 2/3) tend to occur closer to zero baseline, and Class 6 would show much more complex, multi-peak fluctuations."
+},
+{
+    "idx": 365,
+    "label": 6,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.65\n- Reason: The sequence shows two prominent high-amplitude spikes occurring in the middle of the series (roughly around time steps 20\u201325 and 60\u201365) with a low, baseline-like region between them. This two-spike mid-series pattern matches the characteristic of class 2, distinguishing it from other classes (e.g., late single spikes in class 0/1/4, or continuous/noisy behavior in class 6)."
+},
+{
+    "idx": 366,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.60\n- Reason: The series exhibits two prominent spike events: one around time step 20\u201325 and a second around time step 60\u201365. Between these spikes, the signal remains close to baseline with only small fluctuations, which aligns with the typical pattern seen in class 3 (two distinct spikes in the early and middle parts of the series with a return to baseline). It does not match the single late spike pattern of classes 0/1/4, nor the more irregular/multiple fluctuation pattern of class 6."
+},
+{
+    "idx": 367,
+    "label": 6,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.65\n - Reason: The new time series shows two distinct high-amplitude spikes: an early spike around time 18\u201325 and a second spike around time 60\u201365, with the signal returning toward baseline in between and after the second spike. This two-peak pattern (early and late) matches the typical pattern seen in class 2 samples, more so than the other classes (which show single late spikes, more irregular middle activity, or no clear two-peak structure)."
+},
+{
+    "idx": 368,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.72\n- Reason: The new time series shows two clear impulse events with large spikes around time steps ~25 and ~65, separated by relatively quiet periods. Outside these spikes the signal remains near baseline with small fluctuations. This pattern matches Class 3, which is characterized by two distinct impulsive events at different times, unlike other classes that show a single impulse, continuous high-frequency activity, or multiple irregular spikes."
+},
+{
+    "idx": 369,
+    "label": 6,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.62\n- Reason: The time series exhibits two prominent spikes: an early spike around time steps 20\u201325 and a second spike around 60\u201370, with the signal returning to a near-baseline level between spikes and only small fluctuations afterward. The amplitude of the spikes is approximately 2.0\u20132.5. This two-spike pattern, with the described timing and shape, aligns best with Class 2 in the provided patterns, whereas other classes show different spike timings, counts, or more irregular/noisy tails."
+},
+{
+    "idx": 370,
+    "label": 6,
+    "predicted": 6,
+    "conversation": "- True Label: Class 6\n- Confidence: 0.60\n- Reason: The series shows multiple events in the middle and late portions (two notable spikes around t \u2248 20 and t \u2248 60) with a sustained elevated region after the second spike (approximately t \u2248 70\u201380) before returning toward baseline. This multi-peak, mid-to-late activity pattern aligns with the characteristic pattern observed for Class 6, unlike the single-spike (Class 0), two isolated spikes with baseline reset (Classes 2/3/5), or persistent oscillations (Class 1)."
+},
+{
+    "idx": 371,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.60\n- Reason: The new time series shows two clear spikes: one in the middle (roughly 20\u201325) and a second in the late middle (roughly 60\u201365), with mostly baseline activity in between. After the second spike, the series returns toward baseline. This two-peak pattern with mid- and late-segment spikes matches the characteristic pattern observed for Class 3 in the prior analysis, and is less consistent with single-peak (Class 0/1), late-only (others), or more irregular multi-peak patterns (Class 5/6)."
+},
+{
+    "idx": 372,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.60\n  - Reason: The series shows two distinct spike events around time steps ~20 and ~60 with a relatively quiet baseline in between and some jagged edges around the peaks. This pattern aligns with the characteristic pattern of class 3 (two spikes with jagged peaks), rather than the clean, isolated pulses of class 2 or the persistent oscillations of class 1."
+},
+{
+    "idx": 373,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.60\n- Reason: The new time series shows two distinct sharp bursts (roughly around time steps 20 and 60) with a relatively quiet baseline in between, which matches the two-burst pattern characteristic of class 3. Other classes either show continuous oscillations (class 1, 6), late single spikes (class 0, 4), or different spike timings and spacing (class 2, 5). The spacing and shape of the bursts in this series align most closely with class 3."
+},
+{
+    "idx": 374,
+    "label": 6,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2\n- Confidence: 0.62\n- Reason: The series shows two pronounced spikes: one in the middle (around time step 20\u201325) and another in the late region (around time step 60\u201365). Between these spikes the signal stays near a baseline with only small fluctuations, and there is no extended noisy pattern. This aligns with Class 2\u2019s characteristic pattern of spikes in the middle and late segments with relatively simple, isolated event structure."
+},
+{
+    "idx": 375,
+    "label": 6,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.62\n- Reason: The new time series shows two distinct spikes: one around time step 20 and another around time step 60, with values returning toward baseline between them. The amplitude of the spikes is moderate (roughly 2.5\u20133), and there is no dominant late spike or extended high-variance region after the second spike. This two-spike pattern is most consistent with Class 2 (early/mid spike and late spike) compared to other classes that show different spike patterns or continuous fluctuations."
+},
+{
+    "idx": 376,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: Class 3\n- Confidence: 0.60\n- Reason: The new time series shows two prominent spike events occurring in the mid and late parts of the sequence (around time steps ~20 and ~60\u201365), with baseline around -1 in between and some jagged fluctuations around the spikes. This two-spike pattern with mid/late timing and jagged shapes aligns with the characteristic pattern described for Class 3, rather than a single late spike (Class 0), continuous noise (Class 1), or other patterns."
+},
+{
+    "idx": 377,
+    "label": 6,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.65\n- Reason: The new time series exhibits two distinct event spikes: an early spike around time step ~20\u201325 reaching about 2.0, followed by a second spike around time step ~60\u201362 reaching around 3.0, with the signal largely at a baseline level (near -1) in between. This early-then-late two-peak pattern matches the characteristic pattern of Class 2 in the provided examples, more so than the single-peak (Classes 0,1,4), irregular/multi-peak (Class 6), or other two-peak variants (e.g., Class 3/5) where timing and shape differ from the observed sequence."
+},
+{
+    "idx": 378,
+    "label": 6,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.60\n- Reason: The new time series exhibits two prominent spike-events separated by a quiet interval (one around time step 18\u201322 and another around 60\u201365), with peaks reaching around 2.5\u20133.5 and a mid-to-late segment that stays moderately elevated before returning to baseline. This two-peak pattern is characteristic of class 2 in the provided samples, where two sharp spikes occur in the middle and late portions of the series. The baseline is negative in the early part, and there is some residual activity after the second spike, which aligns with the variability seen in class 2\u2019s examples."
+},
+{
+    "idx": 379,
+    "label": 6,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.62\n- Reason: The new series shows two prominent spikes with high amplitude around time steps 20\u201325 and 60\u201370, on a near-baseline level (around -1). After the second spike, the series returns toward baseline by the end. This two-burst pattern, with bursts in the early/middle and late-middle regions and similar amplitudes, matches the characteristic pattern of Class 2 observed in the earlier analysis."
+},

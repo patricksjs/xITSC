@@ -1,0 +1,10 @@
+{
+  "Broad single-hump pattern: both series exhibit a smooth rise to a broad peak around steps 1700–1900, followed by a gradual decline, forming a unimodal shape.": "partial-sample feature",
+  "Late-stage plunge to baseline: after ~2100 steps, values drop sharply toward near-zero and stay near baseline with small fluctuations.": "delete feature",
+  "Prominent mid-trajectory plateau: a long flat shoulder around steps 700–1100 with minimal slope prior to the substantial rise.": "partial-sample feature",
+  "Localized mid-sequence dip: a brief valley around steps 1300–1400 with quick recovery, interrupting the monotonic increase.": "partial-sample feature",
+  "Bimodal contour with a second prominent peak near steps 2500–2600 after a valley around 1400–1500, yielding two distinct maxima.": "delete feature",
+  "Extended low-baseline phase (roughly 1200–2400 steps) with minimal slope and small amplitude fluctuations before the late peak.": "common feature",
+  "Within the long low-baseline region (1200–2400 steps), a sharper, narrower plateau appears around 2100–2300 with almost zero slope.": "common feature",
+  "After the late major peak near 2600–2700 steps, there are small-amplitude, high-frequency oscillations rather than a monotonic decline.": "partial-sample feature"
+}

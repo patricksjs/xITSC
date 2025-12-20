@@ -1,0 +1,15 @@
+{
+  "The main activity occurs very late in the series, typically concentrated within the last ~8–12% of timesteps (e.g., t≈650–700 for 720-step series) as a burst": "common feature",
+  "Peaks form multi-sample plateaus or rounded shapes (commonly 6–8 consecutive elevated timesteps, occasionally up to 12) with similar amplitudes rather than single-sample spikes or one dominant tall peak": "common feature",
+  "Active burst windows span 6–12 timesteps with moderate peak amplitudes (≈1.5–4.0, rarely exceeding ~4.5)": "common feature",
+  "Inter-peak troughs typically remain slightly negative or near zero without exact single-timestep zero dropouts (distinguishing from class 0)": "common feature",
+  "Baseline shows consistent negative offset (often ≈ -0.2 to -0.6) before the late burst": "common feature",
+  "Burst onset frequently includes a 1–3 timestep ramp or low-amplitude wiggle preceding the main plateau, creating gradual/rounded onset": "common feature",
+  "Typically lacks exact single-sample zero dropouts between pulses and solitary extreme spikes (>~5), which indicate other classes": "common feature",
+  "Some series exhibit low-amplitude mid-series oscillations (e.g., t≈250–450) temporally separated from the late burst": "partial-sample feature",
+  "Twin peaks occasionally occur with variable spacing, no fixed height ordering, and modest amplitude differences (<~40%)": "partial-sample feature",
+  "Main event sometimes appears as a broader plateau rather than sharp spikes": "partial-sample feature",
+  "Early activity clusters may precede the primary burst in certain samples": "partial-sample feature",
+  "Baseline negative offsets can show greater variability across different series": "partial-sample feature",
+  "Burst structure may include minor early wiggles within the active window": "partial-sample feature"
+}

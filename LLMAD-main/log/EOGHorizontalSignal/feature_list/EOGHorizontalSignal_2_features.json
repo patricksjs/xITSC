@@ -1,0 +1,10 @@
+{
+  "Post-break drift: plateau around 210–230 with slow, small-amplitude drift over the remaining steps.": "common feature",
+  "Pre-break quiet baseline: low-variance values near zero with only minor fluctuations before the dip.": "common feature",
+  "Common transition window: all series show the major step-change within a tight time window around steps 380–460, indicating synchronized onset across images.": "common feature",
+  "Post-break plateau contains two-scale fluctuations: a stable high level with superimposed faster small-amplitude oscillations, implying slow drift plus high-frequency noise on the plateau.": "common feature",
+  "Consistent trough depth: all series reach a trough around -190 to -210, with narrow variance across images.": "common feature",
+  "Symmetric transition around trough: descent and ascent occur over comparable durations and magnitudes, forming a near-U shaped change.": "common feature",
+  "Regular plateau micro-oscillations: high-level plateau has quasi-regular small oscillations with similar period across images.": "common feature",
+  "Two-tier plateau: after the main rise, the high level splits into two quasi-stable sublevels (roughly 110–120 and 130–140) that persist for long blocks across all series.": "common feature"
+  }

@@ -1,0 +1,22 @@
+{
+"Consistent three-regime pattern: long negative baseline, abrupt mid-series shift to positive values with high-frequency noise, then a calmer mid-phase before final drop."                       : "common feature",
+"Transient high-magnitude bursts during the transition, with peaks reaching roughly 4–5, occurring irregularly across the series."                       : "common feature",
+"Post-transition window shows dense small fluctuations around 0–1, forming a noisy plateau distinct from baseline and initial spike."                       : "common feature",
+"Transition timing falls in the central portion of the series across all images, implying a common triggering window."                       : "partial-sample feature",
+"Two-stage post-transition pattern: a high-variance mid-level plateau (roughly 1–3) followed by a lower-variance plateau near 0–1 before returning to baseline."                       : "partial-sample feature",
+"Transition onset variability: the central triggering window is consistently present but shows slight differences in exact start index across images."                       : "common feature",
+"Late-stage residual plateau: a small, short-lived plateau near 0–0.5 just before the final drop to baseline, creating a two-step endfade."                       : "partial-sample feature",
+"Burst clustering: spikes occur in tight clusters within the transition window, not as solitary events, forming dense burst groups."                       : "partial-sample feature",
+"Post-peak undershoot: after the spike cluster, the signal briefly dips below the subsequent plateau before stabilizing."                       : "partial-sample feature",
+"Sub-burst oscillations: during bursts there is rapid, small-amplitude oscillation between adjacent high values, creating a micro-oscillatory pattern."                       : "common feature",
+"Bursts within the transition appear as multiple sub-clusters with brief inter-cluster dips, forming a nested burst pattern rather than a single block."                       : "common feature",
+"After the peak, the signal decays in two clear steps, creating distinct plateaus around 1–3 and then near 0 before final return to baseline."                       : "partial-sample feature",
+"The rise to the peak is almost vertical, while the fall is multi-step with several plateaus and dips, indicating contour asymmetry."                       : "partial-sample feature",
+"A faint pre-transition micro-oscillation exists in the baseline just before the major burst, signaling small pre-burst fluctuations."                       : "partial-sample feature",
+"Post-transition jitter persists after the main drop as low-amplitude, quasi-periodic oscillations up to near the final zero, not just random noise."                       : "partial-sample feature",
+"Late-end spike: a small, brief spike near the very end of the series just before the final return to baseline."                       : "partial-sample feature",
+"Nested burst structure: transition bursts contain secondary mini-clusters with brief inter-subcluster dips, indicating multi-scale burst organization."                       : "partial-sample feature",
+"Mid-transition dwell: there are sustained plateaus around 2–3 within the transition window, not only spikes, suggesting temporary stabilization during surge."                       : "partial-sample feature",
+"Quasi-periodic micro-oscillation: during high-value bursts, small-amplitude oscillations repeat with a roughly constant period across images."                       : "partial-sample feature",
+"Intermittent zero resets in surge: the transition window includes brief returns to exactly zero before spikes resume."                       : "partial-sample feature"
+}

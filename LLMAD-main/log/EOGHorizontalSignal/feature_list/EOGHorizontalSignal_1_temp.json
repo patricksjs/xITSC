@@ -1,0 +1,10 @@
+{
+  "Shared single transient: all series show one pronounced downward excursion centered in the middle (roughly steps 350–420) with a sharp onset and a rounded bottom.": "partial-sample feature",
+  "Residual negative baseline after the event: the signal does not revert to zero but remains at about -60 to -100, with small fluctuations indicating a lasting offset.": "common feature",
+  "Extended recovery/plateau: after the deep dip, the signal slowly returns and then stays in a narrow negative band around -60 to -70 for a long span, indicating a prolonged offset.": "partial-sample feature",
+  "Post-event micro-oscillations: during recovery, the signal exhibits small, high-frequency fluctuations with decreasing amplitude, i.e., damped oscillations around the plateau.": "partial-sample feature",
+  "Asymmetric transient shape: a sharp downward onset followed by a noticeably longer, curved recovery tail, causing skewness around the trough.": "delete feature",
+  "Intermittent near-baseline revivals during recovery: brief rebounds toward zero between the trough and final stabilization, indicating a two-stage return to baseline.": "delete feature",
+  "Polarity diversity of the central transient: across the images, the central event is downward in some series and upward in others, indicating polarity variability within the same class.": "delete feature",
+  "Two-stage post-event evolution: after the peak, there is a rapid return toward baseline within a short window, then a slower drift to a small non-zero offset (sign varying across series).": "common feature"
+}

@@ -1,0 +1,8 @@
+{
+  "Asymmetric cycle: slow, smooth rise to a broad rounded maximum early (~20–30% of cycle), then a faster drop to a sharper V-shaped trough mid-cycle (~50–55%), followed by gradual recovery.": "common feature",
+  "Prolonged negative plateau after the trough (roughly 60–85% of cycle) with minimal variation before the final ascent.": "common feature",
+  "Stable amplitude across samples: peak ~+1.5–1.7, trough ~−1.4–−1.7 (peak-to-trough ~3.0–3.4); curves are smooth with low noise and no secondary peaks.": "common feature",
+  "Post-peak decline is a long, near-linear ramp (~30–50% of cycle) with almost constant negative slope.": "common feature",
+  "Baseline crossings align across samples: downward near 0.38–0.42 cycle, upward near 0.85–0.90 cycle.": "common feature",
+  "Recovery is convex (accelerating): slope increases after the negative plateau, with a noticeably steeper rise in the final ~10–15% of the cycle.": "common feature"
+}

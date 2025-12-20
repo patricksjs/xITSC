@@ -1,0 +1,7 @@
+{
+  "The mid-segment oscillations show distinct irregularity with fluctuations around -1.5 to -0.5 amplitude values.": "common feature",
+  "A consistent sharp peak occurs near the beginning and end of the time series, exceeding amplitude values of 1.5.": "delete feature",
+  "The time series exhibits a strong symmetrical pattern around the midpoint, where peaks and troughs mirror each other.": "common feature",
+  "The time series shows a slight plateau in the amplitude near peaks before descending, creating a flat top shape.": "common feature",
+  "The time series shows a prominent U-shaped valley between time steps 100 to 150, where the amplitude stabilizes near -1.5 before returning upwards.": "common feature"
+}

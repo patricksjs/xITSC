@@ -1,0 +1,11 @@
+{
+  "The time series for Class 0 consistently exhibit a pronounced central valley between the two main peaks, located approximately between time steps 100 and 150, forming a distinct 'W' shape in the middle segment.": "common feature",
+  "Both series show a highly symmetric overall contour around the midpoint (time step ~125), where the rising and falling slopes on either side mirror each other in amplitude and duration.": "delete feature",
+  "A stable baseline oscillation with low amplitude is present in the central region (steps 100-150), contrasting sharply with the high-amplitude peaks before and after, creating a clear tripartite structure.": "common feature",
+  "The initial rising slope (time steps 0-50) is consistently steep and linear, forming a near-identical ramp-up pattern across all series before the first major peak.": "common feature",
+  "A secondary, smaller valley consistently appears around time step 75, situated between the first major peak and the central 'W' structure, acting as a transitional dip.": "common feature",
+  "The final descending slope (time steps 200-250) exhibits a uniform, smooth, and accelerating downward curve, with no intermediate fluctuations, leading to a sharp endpoint.": "common feature",
+  "The central 'W' structure contains a consistent, small secondary peak near time step 125, nestled within the valley, which is flanked by two minor troughs at approximately steps 115 and 135.": "common feature",
+  "A subtle, high-frequency oscillation is present in the rising slope (steps 25-45), appearing as a slight serration just before the first major peak, not mentioned in the initial features.": "common feature",
+  "The amplitude of the final descending slope (steps 200-250) shows a consistent, linear decrease in rate, forming a smooth, concave-down curve with no inflection points.": "common feature"
+}

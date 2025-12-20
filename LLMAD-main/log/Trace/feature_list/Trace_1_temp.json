@@ -1,0 +1,9 @@
+{
+  "Two-stage recovery with flat valley: in most series, a sharp dip to approximately -2.0 is followed by a nonlinear, sigmoidal ascent begins": "common feature",
+  "Sigmoidal recovery shape: the post-dip rise typically exhibits a curved, S-shaped pattern with an initial slow start, mid-phase acceleration, and final deceleration tapering toward a new steady level, incorporating the two-stage detail with the flat valley.": "common feature",
+  "End-phase plateau: the series commonly stabilizes around a final level of 0.6 to 0.8 with small, regular fluctuations observed in most images.": "common feature",
+  "Smooth post-dip trajectory: the recovery is generally a smooth, single-turning curve with no additional local peaks or bumps, emphasizing the clean S-shape that includes the brief holding phase.": "common feature",
+  "Pre-dip baseline drift: a subtle downward drift is often present before the sharp dip, with consistent timing and magnitude in most series.": "common feature",
+  "Synchronized dip onset: the dip begins at nearly the same time step in most images, indicating a synchronized disturbance event.": "common feature",
+  "Inflection point during recovery: in some series, a distinct curvature change around steps 110 to 130 marks the transition from accelerating to decelerating rise in the sigmoidal recovery, highlighting nuanced recovery dynamics.": "partial-sample feature"
+}

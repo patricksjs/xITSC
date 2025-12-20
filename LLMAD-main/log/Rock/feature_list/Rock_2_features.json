@@ -1,0 +1,12 @@
+{
+  "A pronounced mid-series trough around time steps 1250–1400, dipping to 5–10 and then rebounding, seen consistently in both series.": "delete feature",
+  "A sharp late spike around 2600–2700 steps with a dual-peak reaching ~28–30, followed by rapid decline, common to both plots.": "delete feature",
+  "Early pronounced local maxima around 400–700 steps, forming a distinct peak before the mid-series trough.": "common feature",
+  "Prolonged near-zero plateau roughly 2050–2350 steps, preceding the final spike.": "partial-sample feature",
+  "Dense, high-frequency oscillations in the 0–600 step rise, giving a serrated ascent rather than smooth growth.": "delete feature",
+  "Distinct bimodal contour with two elevated regions and a central deep trough, indicating two separate plateaus separated by a trough.": "delete feature",
+  "Skewed secondary peak around the later elevation, featuring a gradual rise and a sharp, abrupt fall afterward.": "partial-sample feature",
+  "A distinct late-stage broad ridge around 1650–1900 steps forms a second substantial peak, creating a three-peak (trimodal) contour beyond the previously noted bimodal pattern.": "delete feature",
+  "An abrupt plunge to near-zero around 2100–2140 steps, followed by partial rebound and persistent low-amplitude fluctuations.": "delete feature",
+  "A quasi-stationary plateau in the first half (800–1100 steps) with values stabilizing around 78–82 before the major trough.": "partial-sample feature"
+}

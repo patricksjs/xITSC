@@ -1,0 +1,433 @@
+[
+{
+    "idx": 0,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.95\n- Reason: The series shows a smooth, low\u2011frequency shape: a broad positive hump in the early segment (peak ~+1\u2013+1.5 around ~200\u2013300), a gradual decline into a broad negative trough in the middle (\u2248\u22121 to \u22121.5), and a slow recovery in the late segment. There are no narrow, high\u2011amplitude transients (so it does not match class 1), and it lacks the higher\u2011frequency jitter / multiple small bumps characteristic of class 2. The overall pattern therefore matches the smooth, slowly varying profile of class 0."
+},
+{
+    "idx": 1,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a single broad, low\u2011frequency shape: a smooth rise to a rounded maximum in the early segment (~150\u2013300), a gradual decline into a wide negative trough in the middle (~400\u2013700) and a slow recovery toward the end. There are no narrow, high\u2011amplitude spikes (ruling out class 1) and there are minimal superposed high\u2011frequency ripples (ruling out class 2). These smooth, slowly varying features match the class\u20110 examples."
+},
+{
+    "idx": 2,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows a smooth, slowly rising early segment (peak ~t\u2248200\u2013300, amplitude ~+1\u20131.5), a broad gradual decline through the middle into a wide trough (~t\u2248600\u2013800, amplitude ~\u22121 to \u22121.5), and a slow late recovery. There are no narrow, high-amplitude spikes (so it is not class 1) and there is very little short\u2011scale/high\u2011frequency ripple (so it is not class 2). The overall broad hump\u2192trough\u2192recovery pattern and very low high\u2011frequency content match the class 0 examples."
+},
+{
+    "idx": 3,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a smooth, low\u2011frequency shape: a gentle rise to a broad moderate peak in the early segment (~0\u2013300), a gradual descent into a broad trough in the middle (~300\u2013700), and a smooth recovery in the late segment (~700\u20131024). It lacks the narrow, very high amplitude spikes that define class 1 and does not exhibit the pronounced high\u2011frequency/irregular ripples seen in class 2. These characteristics match the class\u20110 examples (smooth hump \u2192 trough \u2192 recovery with little small\u2011scale noise)."
+},
+{
+    "idx": 4,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The test series shows a single broad, low\u2011frequency cycle: a gradual rise to a modest positive hump in the early segment (~0\u2013300), a slow decline into a broad negative trough through the middle (~300\u2013700), and a smooth recovery in the late segment (~700\u20131024). There are no short, high\u2011amplitude, spike\u2011like transients (ruling out class 1) and it lacks the persistent higher\u2011frequency irregular wiggles and multiple small bumps seen in class 2. These characteristics match the smooth, single\u2011hump pattern typical of class 0."
+},
+{
+    "idx": 5,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series exhibits a smooth, low\u2011frequency morphology: a slow rise to a broad early peak (~+1\u20131.7 around t\u2248200\u2013300), a gradual, smooth decline into a pronounced trough (~\u22121 to \u22121.3 around t\u2248500\u2013700), and a slow recovery toward zero at the end. There are no narrow, high\u2011amplitude positive spikes (ruling out class 1) and there are no persistent small, high\u2011frequency wiggles or multiple bumps that would indicate class 2. These features match the class 0 pattern (broad peak \u2192 smooth deep trough \u2192 recovery)."
+},
+{
+    "idx": 6,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series shows a smooth, low\u2011frequency shape: a gradual rise to a broad early peak (\u2248t\u2248200\u2013300), then a smooth decline into a wide negative trough (mid segment) and a slow recovery toward zero at the end. It lacks the very narrow, high\u2011amplitude transient pulses that define class 1, and it does not exhibit the pronounced small, higher\u2011frequency wiggles that consistently appear in class 2. The overall single broad hump \u2192 broad trough \u2192 gradual recovery pattern matches the class 0 examples."
+},
+{
+    "idx": 7,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series is a single smooth, low\u2011frequency cycle: early gradual rise to a broad rounded peak (~1.1\u20131.3 around t\u2248200\u2013300), a smooth decline into a broad trough (\u2248\u22121.5 to \u22121.8 in the middle), then a slow recovery toward zero by the end. It lacks the narrow, high\u2011amplitude spikes that define class 1 and shows far less short\u2011timescale rippling/noise than the class 2 examples. The shape and amplitude closely match the class 0 examples (smooth broad peak/trough, low local variability), so class 0 is the best match."
+},
+{
+    "idx": 8,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a single, broad/rounded rise peaking around the early\u2013mid segment (~200\u2013300), followed by a gradual decline into a wide trough in the middle (~500\u2013650) and a smooth slow recovery toward the end. There are no narrow, high\u2011amplitude spikes (rules out class 1) and only minimal high\u2011frequency ripples (unlike class 2). These characteristics match the smooth, low\u2011frequency single\u2011hump shape of class 0."
+},
+{
+    "idx": 9,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series shows one smooth, low\u2011frequency broad cycle: an early steady rise to a rounded peak (~+1\u20131.6 around t\u2248200\u2013300), a gentle mid decline through zero to a broad negative trough (~\u22121 to \u22121.5 around t\u2248450\u2013600), and a slow late recovery toward zero. There are no narrow, high\u2011amplitude spikes (so it is not class 1) and there is very little small\u2011scale/irregular ripple (unlike class 2). These characteristics match the smooth single\u2011cycle pattern of class 0."
+},
+{
+    "idx": 10,
+    "label": 0,
+    "predicted": 2,
+    "conversation": "- **True Label**: 2\n- **Confidence**: 0.90\n- **Reason**: The trace shows the same slow single-cycle morphology seen in classes 0/2 (early broad positive hump \u2192 mid decline into a negative trough \u2192 late recovery) rather than the narrow, high-amplitude spike(s) that characterize class 1. Compared with class 0, this series has noticeable short-timescale wiggles and local bumps superimposed on the low-frequency trend (higher-frequency texture), which matches the defining texture of class 2. There are no sharp, narrow spikes (so not class 1) and the waveform is less smooth than class 0, so class 2 is the best match."
+},
+{
+    "idx": 11,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a single broad, smooth rise in the early segment (peak ~200\u2013300), a gradual decline into a broad trough in the middle (~500\u2013700), and a slow smooth recovery late \u2014 with very little high\u2011frequency wiggle or any narrow, high\u2011amplitude spikes. These characteristics match the low\u2011frequency, smooth shape of class 0 (versus class 1 which has sharp narrow spikes and class 2 which shows persistent small oscillations)."
+},
+{
+    "idx": 12,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series shows a smooth, broad rise in the early segment (peak \u2248 +1\u20131.5 around ~250), followed by a smooth, low\u2011frequency decline into a broad trough (\u2248 \u22122) and then a gradual recovery in the late segment. There are no very narrow, high\u2011amplitude spikes (ruling out class 1) and there is little of the persistent mid/high\u2011frequency wiggle that characterizes class 2. The overall single broad peak\u2192trough\u2192recovery shape and low high\u2011frequency content match class 0."
+},
+{
+    "idx": 13,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series matches the class\u20110 pattern: a smooth, low\u2011frequency rise in the early segment to a broad maximum (~t\u2248200\u2013300), followed by a gradual/broad decline into a wide trough in the middle/late part and a slow recovery. There are no narrow, high\u2011amplitude transient spikes (class 1) and there is little high\u2011frequency jitter (class 2), so it best fits the smooth broad peak/trough morphology of class 0."
+},
+{
+    "idx": 14,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: 0\n- **Confidence**: 0.92\n- **Reason**: The series shows a smooth, low\u2011frequency shape: a slow rise to a broad early positive maximum (~+1 to +1.5), a gradual descent into a broad negative trough in the middle (~-1.5 to -1.8), and a smooth late recovery. There are no narrow, high\u2011amplitude spikes (ruling out class 1) and there is very little short\u2011scale jitter or persistent small bumps (distinguishing it from the noisier class 2). The overall slow, symmetric hump\u2192trough\u2192recovery pattern matches the class\u20110 examples."
+},
+{
+    "idx": 15,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a single, smooth low\u2011frequency waveform: a gradual rise to a broad moderate peak in the early segment (~0\u2013300), a slow decline to a broad negative trough in the middle (~300\u2013700), and a smooth recovery in the late segment (~700\u2013end). It lacks the narrow, high\u2011amplitude transient spikes that define class 1 and does not exhibit the higher\u2011frequency, jagged wiggles characteristic of class 2. Amplitude and smoothness closely match the class 0 examples, so class 0 is the best match."
+},
+{
+    "idx": 16,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows one broad, smooth rise to a rounded maximum in the early segment (~0\u2013300), a gradual decline into a broad trough in the middle (~300\u2013700) and a slow recovery in the late segment (~700\u20131023). There are no narrow, high\u2011amplitude spikes (rules out class 1) and the signal lacks the persistent small-scale oscillatory jitter characteristic of class 2. These low-frequency, smooth single-bump / single-trough features match class 0."
+},
+{
+    "idx": 17,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows a smooth, low-frequency single-wave: a gradual rise to a rounded peak near t\u2248250, a broad slow decline into a negative trough around t\u2248450\u2013520, and a slow recovery toward zero in the late segment. It lacks the narrow, high-amplitude transients that define class 1 and also lacks the pronounced higher-frequency ripples/noisy oscillations characteristic of class 2. The timing and shape match the class 0 examples (smooth, broad peak/trough over hundreds of samples)."
+},
+{
+    "idx": 18,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series shows a single, smooth low\u2011frequency cycle: an early monotonic rise to a broad peak (~t=200\u2013300), a wide gradual decline through the middle segment (~t=300\u2013600) into a negative trough (~\u22121 to \u22121.5), and a slow smooth recovery in the late segment (~t>700). There are no narrow, high\u2011amplitude spikes (rules out Class 1) and only very minor small\u2011scale wiggles (less than seen in Class 2). These characteristics match the \u201csmooth single\u2011cycle\u201d pattern I associated with Class 0."
+},
+{
+    "idx": 19,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a single, broad low\u2011frequency envelope: a smooth rise to a moderate positive peak in the early segment (~0\u2013300), a gradual wide descent into a broad negative trough in the middle (~300\u2013700) and a slow recovery in the late segment. There are no narrow, high\u2011amplitude transients (rules out class 1) and there is very little high\u2011frequency \u201cwiggle\u201d superimposed on the slow envelope (distinguishes it from class 2). These characteristics match the smooth single\u2011bump / single\u2011trough pattern seen in class 0."
+},
+{
+    "idx": 20,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows a single broad, smooth positive hump in the early segment (peak ~ +1 to +1.5 around 200\u2013300), a gradual smooth decline through the middle into a broad negative trough (~\u22121 to \u22121.5 around 450\u2013600), and a slow recovery in the late segment. There are no narrow, high\u2011amplitude spikes (rules out class 1) and very little mid/high\u2011frequency jitter (distinguishes it from the noisier class 2). The low\u2011frequency, smooth shape matches the class 0 prototypes."
+},
+{
+    "idx": 21,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a single smooth low-frequency envelope: a gradual rise to a rounded peak in the early segment (~+1 to +1.5), a smooth decline to a mid/late trough (~-1.5) and a gradual recovery toward zero at the end. There are no narrow, high-amplitude spikes (rules out class 1) and only minimal small-scale jitter (unlike class 2 which has noticeable higher-frequency wiggles). The overall shape and amplitudes match the class 0 examples."
+},
+{
+    "idx": 22,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a single, smooth low\u2011frequency modulation: an early gradual rise to a broad peak (~+1 to +1.4 around t\u2248200\u2013300), a smooth middle decline through zero into a broad trough (~\u22121 to \u22121.5 around t\u2248650\u2013750), and a slow late recovery toward zero. There are no narrow, high\u2011amplitude transients (rules out class 1) and there is very little short\u2011scale/high\u2011frequency ripple or many local wiggles (distinguishes it from class 2). Those characteristics match the class\u20110 prototypes (broad, smooth peak\u2192trough with low short\u2011term variance)."
+},
+{
+    "idx": 23,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a smooth, low\u2011frequency shape with a single broad/rounded maximum in the early segment (~150\u2013400), a gradual decline through the middle, and a wide trough around ~650\u2013800 followed by a slow recovery. There are no narrow, high\u2011amplitude spikes (class 1) and no pronounced high\u2011frequency/multi\u2011peak rippling (class 2). These characteristics match the class 0 pattern (smooth broad peak then broad trough)."
+},
+{
+    "idx": 100,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.95\n- Reason: The series shows two narrow, high\u2011amplitude positive spikes (around time \u2248250 and \u2248770) on an otherwise flat/low\u2011amplitude baseline. This spike\u2011dominated pattern matches Class 1 examples (one or two sharp transients reaching ~3\u20134) and differs from Class 0 and 2, which exhibit a single broad smooth hump and trough (Class 0) or the same broad trend but with many small irregular wiggles (Class 2). The narrow width and large peak heights are the strongest discriminators in favor of Class 1."
+},
+{
+    "idx": 101,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series displays the hallmark class\u20111 pattern: a very large, narrow, early positive spike (~time step ~240\u2013260) followed by return to a near\u2011baseline with only small wiggles and a smaller secondary narrow peak later (~700\u2013800). This matches the sparse, impulsive-event morphology of class 1 (high peak amplitude, narrow width, one or two sharp transients). It differs from class 0 (which shows a single broad, smooth hump and slow curvature) and from class 2 (which shows multiple smaller bumps and generally higher high\u2011frequency content)."
+},
+{
+    "idx": 102,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.95\n- Reason: The series shows the hallmark class\u20111 morphology: a very narrow, high\u2011amplitude positive transient centered in the early/mid segment (~point 250) and a much smaller, localized bump later (~~775) on an otherwise near\u2011flat baseline with low broad trend. This contrasts with class 0 (single broad, smooth rise-and-fall) and class 2 (broad wave with persistent small oscillatory wiggles). The sharpness (short temporal width) and large amplitude of the early spike match the class\u20111 examples, so class 1 is the best match."
+},
+{
+    "idx": 103,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.94\n- Reason: The series is dominated by one or two narrow, high\u2011amplitude positive transients (sharp spikes near ~250 and ~820) sitting on a near\u2011zero baseline with only small ripples elsewhere. This matches the characteristic pattern for class 1 (isolated, tall, narrow pulses). It contrasts with class 0 (a single smooth low\u2011frequency wave: broad rise \u2192 broad trough \u2192 smooth recovery) and class 2 (moderate amplitude with persistent small\u2011scale oscillations), so class 1 is the best fit."
+},
+{
+    "idx": 104,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: 1\n- **Confidence**: 0.92\n- **Reason**: The series shows two narrow, high\u2011amplitude, transient spikes (one near t\u2248240 and a second near t\u2248750) on an otherwise flat/near\u2011zero baseline with only small wiggles. This is the defining pattern of class 1 from the examples (sharp, localized peaks at the same phase locations). It does not match class 0 (smooth single broad hump then trough) nor class 2 (slow trend with many small high\u2011frequency ripples). The clear, narrow transients make the classification unambiguous, hence high confidence."
+},
+{
+    "idx": 105,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows a very narrow, high-amplitude spike in the early segment (~200\u2013300) and a smaller, localized bump later (~750\u2013800) on an otherwise near-flat baseline. This matches the defining pattern of class 1 (one or two sharp, tall pulses on a quiet baseline). It differs from class 0 (broad, smooth single-wave low-frequency shape) and from class 2 (broad trend with many small irregular wiggles). The peak sharpness, high amplitude and low baseline variance make class 1 a clear fit."
+},
+{
+    "idx": 106,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.95\n- Reason: The series shows the distinctive narrow, very high\u2011amplitude positive transient centered in the early segment (~200\u2013300) with peak \u2248 +3\u20133.5, and a smaller, secondary narrow bump in the late segment (~700\u2013800). Outside these brief events the trace sits on a low/slightly negative baseline with only small oscillations. These features match class 1 (one or two sharp, high\u2011amplitude spikes on an otherwise flat baseline) and differ from class 0 (single broad, low\u2011frequency peak/trough with smooth shape) and class 2 (no large narrow spikes, more moderate amplitude plus persistent small ripples). Hence class 1 is the best match."
+},
+{
+    "idx": 107,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series is dominated by a very sharp, high\u2011amplitude positive pulse centered \u2248250 and a much smaller narrow bump near \u2248750, with an otherwise near\u2011flat baseline and only small ripples. This pattern matches the class\u20111 examples (one large narrow transient, sometimes with a weaker second pulse). It contrasts with class\u20110 (smooth, low\u2011frequency single broad hump/trough) and class\u20112 (broad trend with many superimposed small oscillations), so class 1 is the best match."
+},
+{
+    "idx": 108,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.96\n- Reason: The series is dominated by one very narrow, very high-amplitude positive pulse in the early segment (~250) and a smaller but still narrow secondary pulse in the late segment (~900), while the remainder of the trace sits near a low baseline with only small ripples. This pattern matches the class\u20111 examples (localized, high-amplitude impulsive spikes) and does not match class\u20110 (single smooth low\u2011frequency cycle) or class\u20112 (broad trend with medium-frequency ripples). The time-localized, high\u2011frequency energy of the spikes is the deciding feature."
+},
+{
+    "idx": 109,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows the hallmark pattern of class 1: one strong, narrow high-amplitude positive pulse in the early segment (~200\u2013300) and a second similar narrow pulse in the late segment (~700\u2013800), with rapid rise/fall around each pulse and a near\u2011zero baseline with only small oscillations elsewhere. This matches the spike-like, short-duration high peaks that distinguish class 1. It lacks the long, smooth broad positive hump \u2192 broad negative trough \u2192 slow recovery of class 0, and it does not show the persistent small-scale ripples superimposed on a broad trend that characterizes class 2."
+},
+{
+    "idx": 110,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1\n- Confidence: 0.92\n- Reason: The series is dominated by one very narrow, high\u2011amplitude flare (~+3.5) around index \u2248250 and a second narrower high peak (~+2.8) near \u2248750 on an otherwise near\u2011flat baseline with small ripples. This matches the Class 1 signature (one or two sharp, short\u2011duration, large spikes) and differs from Class 0 (single broad smooth cycle) and Class 2 (broad cycle with higher\u2011frequency but low\u2011amplitude wiggles). The peak amplitude, narrow width, and rapid return to baseline make Class 1 the best match."
+},
+{
+    "idx": 111,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.93\n- Reason: The series is dominated by one very narrow, high\u2011amplitude positive pulse around t\u2248240\u2013270 and a second similar narrow pulse around t\u2248760\u2013780, with a near\u2011flat slightly negative baseline and only small oscillations elsewhere. This matches the class\u20111 examples (isolated sharp transients, 1\u20132 spikes on a quiet baseline). It differs from class\u20110 (broad, low\u2011frequency single hump then trough) and class\u20112 (broad trend with many small irregular bumps) by the spikes\u2019 sharpness, high peak amplitude and short width, so class 1 is the best fit."
+},
+{
+    "idx": 112,
+    "label": 1,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.80\n- Reason: The series shows a smooth, low-frequency morphology: an extended/gradual rise to a broad peak in the early\u2013middle segment (~100\u2013300), a broad decline to a trough in the middle (~400\u2013600), and a slow, smooth recovery/secondary broad bump in the late segment (~700\u2013800). It lacks the very narrow, high\u2011amplitude transients that characterize class 1 and it does not exhibit the persistent higher\u2011frequency ripples/jitter that mark class 2. These features match the broad single\u2011wave, low\u2011frequency shape seen in class 0 examples."
+},
+{
+    "idx": 113,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series is dominated by two narrow, high\u2011amplitude positive transients (one centered ~250, another ~770) on an otherwise near\u2011zero baseline with small wiggles. This matches the defining signature of class 1 (one or two sharp, short\u2011duration spikes with amplitudes ~+3 to +4). It does not match class 0 (broad, smooth single peak then broad trough) or class 2 (smooth low\u2011frequency trend with small ripples but no narrow, large spikes), so class 1 is the best fit."
+},
+{
+    "idx": 114,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.95\n- Reason: The series is dominated by two narrow, high-amplitude positive transients (one near t\u2248250 and a second near t\u2248760) on an otherwise low-amplitude baseline. This matches the defining pattern for Class 1 (sharp, short-duration spikes with low-energy background). It does not show the broad, smooth single peak and wide trough of Class 0 nor the continuous small-scale oscillatory noise superposed on a slow trend seen in Class 2. The spike timing, narrow width and pronounced positive amplitude make Class 1 the best match."
+},
+{
+    "idx": 115,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows sparse, narrow, high\u2011amplitude pulses (a very sharp large spike near the early/mid phase ~250 and a second narrower spike around ~750) on an otherwise slightly negative/flat baseline. This matches the class\u20111 examples (single or double narrow transients with large instantaneous amplitude). It differs from class 0 (broad, smooth low\u2011frequency rise then broad trough) and from class 2 (similar low\u2011frequency trend but with many small oscillations/jitter rather than isolated high spikes)."
+},
+{
+    "idx": 116,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.95\n- Reason: The series shows the characteristic narrow, high-amplitude positive pulse pattern of class 1: a very sharp large spike near the early/mid phase (~240\u2013270) reaching about +3\u20134, and a second narrower positive pulse around the late-middle phase (~760\u2013800) at a smaller amplitude (~1\u20132). The baseline between and outside these pulses is close to zero/negative with little high-frequency jitter. This matches the class\u20111 examples (distinct narrow strong peaks) and differs from class\u20110 (smooth broad single peak) and class\u20112 (broad trend with persistent small-scale wiggles)."
+},
+{
+    "idx": 117,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.93\n- Reason: The series contains a very narrow, very large positive transient centered around t\u2248240\u2013270 (peak \u2248 +4) and a smaller secondary pulse near t\u2248770. This sharp, high\u2011amplitude spike pattern (one dominant transient, sometimes a smaller later one) and otherwise low\u2011amplitude baseline with small oscillations matches the diagnostic features of class 1 from the examples. It does not resemble the single smooth broad wave of class 0 or the moderate\u2011amplitude, high\u2011frequency wiggly shape of class 2."
+},
+{
+    "idx": 118,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: 1\n- **Confidence**: 0.92\n- **Reason**: The series shows a very sharp, high\u2011amplitude narrow spike in the early/mid segment (~time 240\u2013280) plus a smaller, narrower secondary spike around ~750. The baseline between and after spikes is low\u2011amplitude and relatively flat. These characteristics (one dominant narrow tall pulse \u00b1 a smaller second pulse, fast rise/fall, low overall local variability) match the pattern seen in class 1 examples. It does not match class 0 (single broad, smooth low\u2011frequency peak/trough) or class 2 (broad trend with persistent higher\u2011frequency ripples)."
+},
+{
+    "idx": 119,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: 1\n- **Confidence**: 0.95\n- **Reason**: The series shows a very narrow, very high-amplitude positive spike in the early segment (around t\u2248240) and a smaller, localized secondary spike in the late segment \u2014 the hallmark pattern of class 1. By contrast, class 0 has a broad, smooth early hump and smooth mid trough/recovery, and class 2 shows a similar slow trend to class 0 but with persistent small-scale wiggles. The new series lacks the broad smooth hump (rules out class 0) and lacks the continuous high\u2011frequency irregularity (rules out class 2), matching class 1\u2019s isolated sharp transients."
+},
+{
+    "idx": 120,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows one very narrow, high\u2011amplitude positive spike around the early/mid region (~250) and a second similarly narrow/tall spike around the later region (~680\u2013740), with the remainder of the trace close to a low\u2011amplitude baseline with small ripples. This pattern matches Class 1 prototypes (isolated, sharp tall peaks, sometimes two) and contrasts with Class 0 (smooth, low\u2011frequency broad bump/trough) and Class 2 (moderate amplitude trend with many small irregular oscillations but no narrow tall spikes)."
+},
+{
+    "idx": 121,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: 1\n- **Confidence**: 0.90\n- **Reason**: The series shows one very narrow, high\u2011amplitude transient around time \u2248250 (peak \u2248 +4) and a second narrower, distinct transient around \u2248750 (peak \u2248 +2) on an otherwise near\u2011flat baseline with small ripples. This pattern matches the class\u20111 examples (one or two sharp, tall spikes) and differs from class\u20110 (broad, smooth low\u2011frequency rise \u2192 trough \u2192 recovery) and class\u20112 (broad envelope with many small high\u2011frequency wiggles but no tall, narrow spikes)."
+},
+{
+    "idx": 122,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows the exact hallmark of class 1: a very narrow, high\u2011amplitude transient near the early/mid segment (~230\u2013270, peak \u2248 +3.5) and a second localized pulse in the late/mid\u2011late segment (~750, peak \u2248 +1.1). The rest of the trace is low\u2011amplitude baseline with only small oscillations. This pattern (sparse, sharp high\u2011amplitude pulses on an otherwise flat background) matches the class\u20111 examples and differs clearly from class\u20110\u2019s single smooth broad hump and class\u20112\u2019s smooth trend with many small ripples. Small sample variability (pulse count/amplitude) is expected, but the narrow high peaks strongly indicate class 1."
+},
+{
+    "idx": 123,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.95\n- Reason: The series is dominated by one very narrow, high\u2011amplitude transient near time \u2248250 and a second narrower high peak near \u2248750 on an otherwise flat/low\u2011amplitude baseline. This matches the class\u20111 signature (isolated sharp spikes, occasional second event) and differs from class\u20110 (single broad, smooth low\u2011frequency rise/fall) and class\u20112 (broad trend with persistent higher\u2011frequency wiggles). Peak amplitudes, narrow widths, low baseline variance, and the small number of transient events point clearly to class 1."
+},
+{
+    "idx": 200,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.85\n- Reason: The series shows a single broad positive hump in the early segment and a broad negative trough in the middle/late segment (ruling out class 1, which has narrow, very high\u2011amplitude spikes). Compared with class 0 and class 2 prototypes, this trace has the same low\u2011frequency, single\u2011cycle shape as class 0 but also contains noticeable higher\u2011frequency ripples and small bumps superimposed throughout (especially in the late segment). Those superimposed irregular oscillations are the hallmark of class 2 in the reference examples, so the pattern best matches class 2."
+},
+{
+    "idx": 201,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- **True Label**: 0\n- **Confidence**: 0.90\n- **Reason**: The test series shows one broad, smooth rise to an early/moderate maximum (around 200\u2013300), a gradual, wide decline to a mid/late trough (around 400\u2013600) and a slow recovery toward the end. There are no narrow, high\u2011amplitude transient spikes (ruling out class 1) and the series is considerably smoother with only minor small bumps compared with the pronounced high\u2011frequency jitter seen in class 2. Those characteristics match the low\u2011frequency, single\u2011wave envelope pattern of class 0."
+},
+{
+    "idx": 202,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series shows a single broad, low\u2011frequency positive hump in the early segment (peak \u2248200\u2013300), a smooth decline into a wide negative trough in the middle (\u2248500\u2013650), and a gradual recovery in the late segment. There are only small, low\u2011amplitude ripples superimposed on this long\u2011period shape. This matches the Class 0 pattern (smooth, dominant low\u2011frequency hump\u2192trough\u2192recovery). It lacks the narrow, high\u2011amplitude spikes characteristic of Class 1 and does not exhibit the persistent irregular multi\u2011peaked/noisier variability typical of Class 2."
+},
+{
+    "idx": 203,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: class 2\n- Confidence: 0.88\n- Reason: The series shows a moderately strong early rise/peak followed by a pronounced but broad mid trough and a gradual recovery \u2014 the same large\u2011scale timing (early peak \u2192 mid trough \u2192 late recovery) seen in classes 0 and 2. However, unlike class 0 (which is very smooth and low\u2011frequency) the trace contains noticeable short\u2011scale oscillations and multiple small local bumps throughout the record. It also lacks the very narrow, very high amplitude spikes that define class 1. The combination of a mid/long\u2011scale trend plus appreciable higher\u2011frequency wiggles matches the class 2 examples, so class 2 is the best fit."
+},
+{
+    "idx": 204,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series shows a single broad positive hump in the early segment (peak near t\u2248250), a deep broad negative trough in the middle (around t\u2248400\u2013450), and a smooth gradual recovery in the late segment. There are no narrow, high\u2011amplitude transient spikes (so it is not class 1). Compared with class 2, this trace is relatively smooth with only small, low\u2011amplitude ripples superimposed; class 2 examples showed noticeably more high\u2011frequency jaggedness. Those characteristics match the smooth, slowly varying broad hump\u2013trough\u2013recovery pattern that defines class 0."
+},
+{
+    "idx": 205,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a single broad crest (early) and a single broad trough (middle) with a smooth recovery (late) \u2014 so it is not a spike/flare class (class 1). Compared with class 0, this trace has persistent small\u2011scale oscillations (\"ripples\") throughout the early and late segments (noticeable local wiggles on top of the large-scale wave). That higher local variance / higher\u2011frequency content matches the class\u20112 examples (broad low\u2011frequency wave plus superimposed short\u2011scale variability), so class 2 is the best match."
+},
+{
+    "idx": 206,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a single, broad low\u2011frequency cycle: a smooth rise to a rounded maximum in the early segment (~0\u2013300), a gradual but deep decline into a broad trough in the middle (~300\u2013500), and a slow, steady recovery in the late segment (~500\u20131024). There are no narrow, high\u2011amplitude transients (so it is not class 1) and the trace is relatively smooth with little high\u2011frequency jaggedness (unlike class 2). These characteristics match the class 0 examples."
+},
+{
+    "idx": 207,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the broad, low\u2011frequency pattern characteristic of class 0: a gradual rise in the early segment (peak \u2248 +1.0\u20131.3 around ~200\u2013300), a smooth, wide decline through the middle into a deep trough (~\u22122 around ~500\u2013600), and a slow recovery in the late segment. There are no narrow, high\u2011amplitude transient spikes (so it is not class 1) and the signal lacks the consistent short\u2011scale \u201cwiggles\u201d / higher\u2011frequency variability that distinguish class 2. These features match class 0\u2019s smooth rise\u2192fall\u2192recovery profile."
+},
+{
+    "idx": 208,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.78\n- Reason: The series shows a broad low\u2011frequency pattern (early broad rise to a peak around t\u2248200\u2013300, a smooth decline to a mid trough, then recovery late) so it is not Class 1 (which has one or more narrow, very large spikes). Compared with Class 0 (very smooth single hump\u2192trough) this example has modest, persistent small\u2011scale ripples superimposed on the slow trend (especially visible early and late) \u2014 the hallmark of Class 2 (broad cycle plus higher\u2011frequency structure). Hence Class 2 is the best match."
+},
+{
+    "idx": 209,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.88\n- Reason: The series shows the broad rise \u2192 broad fall \u2192 late recovery timing seen in classes 0/2 (peak around 200\u2013300, trough ~500\u2013700) but is clearly overlaid with many small, short-scale bumps/ripples throughout. It lacks any very narrow, very high-amplitude transient spikes (class 1). Compared with class 0 (smooth, low\u2011frequency waveform), this trace has noticeably higher short\u2011scale variability (multiple small local maxima/minima) while keeping the same overall slow trend \u2014 which matches the class 2 examples."
+},
+{
+    "idx": 210,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.93\n- Reason: The series shows a single broad, smooth positive hump in the early segment (peak \u2248 +1.2\u20131.5 around ~250\u2013300), a gradual but deep negative trough in the middle (\u2248 \u22122 around ~400\u2013450), and a slow, smooth recovery in the late segment. There are no narrow, high\u2011amplitude, short\u2011duration flares (class 1) nor the multiple modest bumps and higher small\u2011scale jitter characteristic of class 2. The waveform is low\u2011frequency and very smooth overall, matching the class\u20110 pattern."
+},
+{
+    "idx": 211,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series shows a single broad, slow cycle: a smooth early rise to a broad peak (\u2248t=200\u2013300), a gradual mid decline into a negative trough, and a slow late recovery. There are only small, low\u2011amplitude wiggles superimposed \u2014 no narrow, high\u2011amplitude spikes (which would indicate class 1) and no persistent high\u2011frequency rippling throughout (which would indicate class 2). The overall low\u2011frequency, smooth shape and amplitude match the class 0 examples."
+},
+{
+    "idx": 212,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.80\n- Reason: The series shows a single broad low\u2011frequency cycle (smooth rise to a wide positive peak around ~200\u2013300, then a gradual fall into a broad trough around ~400\u2013500 and a slow recovery). It lacks the isolated, narrow, high\u2011amplitude pulses that define class 1, and it does not exhibit the persistent, higher\u2011frequency \u201cripple\u201d/jitter seen in class 2. The overall smoothness and broad peak/trough morphology match the class 0 examples."
+},
+{
+    "idx": 213,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series shows the characteristic broad, low\u2011frequency shape of class 0: a smooth rise in the early segment (peak ~+1 to +1.2 around ~200\u2013350), a gradual decline into a wide trough (~\u22121.5 to \u22122.0 in the middle), and a slow recovery in the late segment. There are only very small short\u2011scale wiggles (not the pronounced high\u2011frequency texture seen in class 2) and no narrow, high\u2011amplitude transient spikes (which would indicate class 1). These large\u2011scale, smoothly varying features match class 0 most closely."
+},
+{
+    "idx": 214,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The test series shows a single broad positive rise in the early segment (peaking mildly around 200\u2013400), followed by a smooth, deep negative trough in the middle (~450\u2013600) and a gradual recovery in the late segment. There are no narrow, very high\u2011amplitude spikes (so it is not class 1), and the short\u2011scale wiggles are minimal compared with the clear micro\u2011variability seen in class 2. The overall low\u2011frequency, smooth hump\u2192trough\u2192recovery pattern matches the class 0 prototypes."
+},
+{
+    "idx": 215,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a broad low\u2011frequency cycle (gentle rise to an early/around-250 positive maximum, then a smooth decline to a broad negative trough in the middle and a slow recovery late) rather than isolated narrow transients. Unlike class 0, which is very smooth, this trace has noticeable small-scale oscillations and multiple small bumps superimposed on the overall trend. It also lacks the very sharp, high\u2011amplitude, narrow spikes that define class 1. The combination of a broad single-cycle shape plus clear higher\u2011frequency jitter is characteristic of class 2."
+},
+{
+    "idx": 216,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The new series shows a single broad, smooth rise in the early segment (peak \u2248 +1\u20131.7 around t\u2248250\u2013300), a slow/extended decline into a broad trough in the middle (\u2248 \u22121.5 to \u22121.8 centered \u2248400\u2013500), and a gradual smooth recovery in the late segment. There are only small, low\u2011amplitude wiggles superimposed on the low\u2011frequency envelope. This matches the class\u20110 pattern (low\u2011frequency, smooth single wave) and contrasts with class\u20111 (narrow, very large amplitude spikes) and class\u20112 (similar broad trend but with clear higher\u2011frequency irregularities). Therefore class 0 is the best match."
+},
+{
+    "idx": 217,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The test series shows the same low\u2011frequency, smooth single-wave morphology as the class\u20110 examples: a gradual rise in the early segment to a broad positive peak (~index 200\u2013300), a smooth decline through the middle into a broad negative trough (~index 400\u2013500), and a steady, gentle recovery in the late segment. It lacks the very narrow, high\u2011amplitude spikes typical of class\u20111 and also does not exhibit the persistent irregular medium/high\u2011frequency wiggles seen in class\u20112. These segment\u2011wise pattern matches (broad peak/trough, few local extrema, low short\u2011term variance) support classification as class 0."
+},
+{
+    "idx": 218,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a smooth, low-frequency shape: an early gradual rise to a broad positive hump (~t\u2248200\u2013300), a wide, smooth decline into a deep negative trough in the middle (~t\u2248350\u2013450), and a slow, smooth recovery in the late segment. There are only small low-amplitude ripples and no narrow, high-amplitude spikes (which would indicate class 1), nor the persistent higher-frequency jitter and multiple small bumps characteristic of class 2. These features match the class 0 pattern (single broad hump \u2192 broad trough \u2192 smooth recovery)."
+},
+{
+    "idx": 219,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows one broad, smooth rise in the early segment (peak around ~200\u2013300), a gradual smooth decline into a broad trough through the middle, and a slow recovery in the late segment. There are no narrow, high\u2011amplitude spikes (rules out class 1) and only very small, low\u2011amplitude wiggles rather than the multiple medium\u2011frequency bumps that characterize class 2. Overall morphology (single smooth hump then trough, low high\u2011frequency energy) matches class 0."
+},
+{
+    "idx": 220,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.86\n- Reason: The series follows the broad slow-rise \u2192 broad decline \u2192 slow recovery shape seen in classes 0/2 (peak in the early third, trough in the middle, recovery late) but contains persistent small, higher\u2011frequency wiggles superimposed on that low\u2011frequency trend. It lacks the isolated, very narrow, high\u2011amplitude pulses that define class 1, and it is noticeably less smooth than class 0 (which shows minimal local oscillation). Those characteristics most closely match class 2."
+},
+{
+    "idx": 221,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows the characteristic smooth, low\u2011frequency single\u2011hump shape of class 0: an early gradual rise to a broad maximum (~200\u2013300), a smooth decline into a wide negative trough (~400\u2013500), and a slow, steady recovery toward the end. It lacks the very narrow, high\u2011amplitude transients that define class 1 and does not exhibit the persistent small\u2011scale \u201cwiggles\u201d/higher\u2011frequency jitter typical of class 2. These shape and smoothness matches make class 0 the best fit."
+},
+{
+    "idx": 222,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.78\n- Reason: The series shows a broad rise in the early segment (~0\u2013300), a broad decline to a deep trough in the middle (~300\u2013600), and a gradual recovery in the late segment (~600\u20131024) \u2014 so it shares the low\u2011frequency single\u2011cycle trend seen in class 0. However, unlike class 0\u2019s very smooth waveform, this trace has multiple small local bumps/ripples superimposed on the trend (particularly early and late). It therefore matches class 2\u2019s characteristic: low\u2011frequency cycle plus pronounced higher\u2011frequency/local variability. It lacks the narrow, high\u2011amplitude transient(s) that define class 1, so class 1 is ruled out."
+},
+{
+    "idx": 223,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- **True Label**: 0\n- **Confidence**: 0.90\n- **Reason**: The series shows a smooth low\u2011frequency shape: an early, broad positive hump (indices ~0\u2013250), a gradual but fairly wide decline into a deep, broad negative trough in the middle (\u2248300\u2013450), and a slow, low\u2011variance recovery in the late segment. There are no narrow, high\u2011amplitude spikes (rules out class 1) and only minimal small ripples (class 2 examples had noticeably stronger high\u2011frequency modulation). These characteristics match the smooth, single\u2011cycle pattern of class 0."
+},

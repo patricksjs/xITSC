@@ -1,0 +1,11 @@
+{
+  "A very short, high-amplitude positive impulse near t≈90–95 immediately followed (within a few steps) by a large abrupt negative jump around t≈98–102 — a sharp spike then instant polarity reversal.": "common feature",
+  "A sustained negative plateau (~−2) persisting for many time steps after the drop, characterized by low-amplitude noise and then a smooth, monotonic recovery back toward the pre‑event level.": "common feature",
+  "Consistent baseline noise before and after events with similar amplitude across series; peak values reach ≈+4 while troughs stabilize near ≈−2, producing a pronounced asymmetry (brief positive spike vs long negative valley).": "common feature",
+  "Events are tightly time‑aligned across series: the positive spike and subsequent negative jump occur at nearly the same indices (~90–102) in every plot, indicating synchronized event timing rather than random occurrence.": "common feature",
+  "The recovery from the negative plateau is two‑stage: an extended near‑flat phase followed by an accelerating, concave‑up return to baseline (faster slope after ~150).": "common feature",
+  "The pre‑ and post‑event baseline is consistently biased above zero (~+0.5–0.7), not centered at zero, producing a persistent positive offset before and after the disturbance.": "common feature",
+  "A small, consistent upward ramp occurs in the few time steps immediately preceding the large positive impulse (a short pre‑spike build‑up).": "common feature",
+  "Right after the abrupt negative jump there is a brief damped oscillatory overshoot (small high‑frequency ripples over ~5–10 steps) before the long negative plateau stabilizes.": "common feature",
+  "The recovery interval (time from abrupt negative jump to near‑baseline re‑establishment) is highly consistent across all series (~120–160 steps).": "common feature"
+}

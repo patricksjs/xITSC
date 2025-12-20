@@ -1,0 +1,649 @@
+[
+{
+    "idx": 0,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.82\n- Reason: The trace shows a slow baseline drift from a small positive value to a negative plateau with only low-amplitude, irregular noise and no clear repeating cycles. It lacks the steady, rhythmic high-frequency oscillations of sawing (class 3) and running (class 2) and also lacks the clear low\u2011frequency, repeated steps/peaks of walking (class 1). The early\u2192middle\u2192late segmentation (early: ~0.6 steady, middle: gradual decline crossing zero, late: negative plateau with small noisy fluctuations) matches the non\u2011periodic, low\u2011amplitude, transient behavior seen in the provided class 0 examples."
+},
+{
+    "idx": 15,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.84\n- Reason: The trace is low-energy and largely aperiodic with only small, irregular spikes and no sustained rhythmic cycles. Across early/middle/late segments the series stays close to zero with low variance and occasional small transients or step-like fluctuations \u2014 exactly the pattern seen in the class\u20110 examples. It lacks the clear, regular oscillations and higher amplitude characteristic of WALKING (class 1), the very high-frequency large excursions of RUNNING (class 2), and the steady medium-frequency rhythm (often with a positive offset) of SAWING (class 3)."
+},
+{
+    "idx": 14,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.85\n- Reason: The series shows a low-energy, aperiodic/irregular early segment (small, noisy oscillations with no clear, narrow-band rhythm) followed by a sudden step up into a sustained low\u2011amplitude plateau. This two\u2011phase, non\u2011periodic pattern (early noisy drift + late plateau) matches the seizure\u2011mimicking examples (class 0) from the reference set. It does not show the sustained, regular high-amplitude oscillations characteristic of running (class 2) or saw-like steady sinusoidal motion of sawing (class 3), nor the repeatedly varying step\u2011like periodicity typical of walking (class 1)."
+},
+{
+    "idx": 30,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.82\n- Reason: The series has a long, low-variance plateau in the early segment followed by a clear onset (mid-series) of fairly regular, moderate\u2011frequency oscillations with roughly uniform peak-to-peak amplitude (~\u00b11). This pattern matches the sawing examples (steady sinusoidal-like cycles that start/stop) rather than:\n  - class 2 (RUNNING): which shows much higher cadence with sharper, larger-magnitude spikes/troughs, or\n  - class 1 (WALKING): which is more irregular in cycle spacing and amplitude, or\n  - class 0 (SEIZURE MIMICKING): which is low-amplitude, noisy and non-periodic.\nThe mid/late-period regularity and moderate amplitude are the strongest cues for SAWING."
+},
+{
+    "idx": 29,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.78\n- Reason: The series shows a steady, highly regular oscillatory pattern for most of the recording: consistent cycle-to-cycle timing (high periodicity), low-to-moderate amplitude and smooth sinusoid\u2011like peaks rather than sharp impulsive spikes or broad slow humps. This matches the sawing examples (class 3) which exhibit a narrow spectral peak and strong autocorrelation. It does not resemble running (class 2) which has large, sharp troughs/peaks, walking (class 1) which is slower with broader humps, or seizure\u2011mimicking (class 0) which is irregular and aperiodic. The small transient rise near the end is a minor deviation and does not negate the dominant regular sawing pattern."
+},
+{
+    "idx": 32,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.75\n- Reason: The series lacks the strong, narrow-band periodicity and large peak-to-peak amplitude seen in RUNNING (class 2) and the steady, regular sinusoid-like cycles typical of SAWING (class 3). It also does not show the clearer, repeated gait cycles and larger asymmetric swings often present in WALKING (class 1). Instead the trace shows low-to-moderate amplitude, slow/irregular baseline shifts with intermittent small bumps and no sustained rhythmic cadence \u2014 characteristics that match the seizure-mimicking examples (class 0). Key discriminators used: low dominant frequency / weak spectral peak, modest peak-to-peak range, high spectral entropy/low autocorrelation (irregularity), and non-stationary baseline changes."
+},
+{
+    "idx": 31,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series is low-energy and non\u2011periodic, with small jitter in the early segment, an abrupt positive level step around t\u224880\u201390, a low-amplitude steady mid segment, and a gradual decline late. This piecewise, noisy/drifting pattern matches the shown class\u20110 examples (seizure\u2011mimicking / seated after seizure). It lacks the sustained, regular sinusoidal cycles of sawing (class\u20113), the clear step\u2011to\u2011step gait peaks of walking (class\u20111), and the high\u2011amplitude, high\u2011frequency impulsive spikes of running (class\u20112), so class 0 is the best fit."
+},
+{
+    "idx": 27,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: class 0 (SEIZURE MIMICKING)\n- Confidence: 0.82\n- Reason: The series shows low overall amplitude and noisy/irregular oscillations around a small negative baseline with no sustained, regular cycles or large, sharp peaks. It lacks the clear, high-frequency sharp impacts of running (class 2), and it does not exhibit the steady, sinusoidal, constant-frequency pattern of sawing (class 3) nor the larger, slower, step-like swings and baseline jumps typical of walking (class 1). These characteristics match the small-amplitude, irregular patterns seen in the class 0 examples."
+},
+{
+    "idx": 2,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.78\n- Reason: The series is dominated by low\u2011to\u2011moderate, irregular/noisy oscillations with no clear steady, high\u2011amplitude periodicity (unlike running or sawing). The cadence is relatively fast but very low amplitude and aperiodic (unlike the regular, large peaks of class 2 or the steady sinusoid of class 3) and it lacks the clearer step/cycle structure of walking (class 1). Importantly, there is a late abrupt upward level change and then a settling to a near\u2011constant baseline \u2014 a pattern seen in the seizure\u2011mimicking examples (brief bursts/noise and baseline shifts, then settling). These cues make class 0 the best match."
+},
+{
+    "idx": 7,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.85\n- Reason: The series lacks sustained, regular oscillations and high peak\u2011to\u2011peak amplitude that characterize RUNNING (class 2) or SAWING (class 3). It shows an early transient with a few dips and then a mid/late segment that settles to a low\u2011amplitude, near\u2011constant baseline with only small, irregular fluctuations \u2014 the same step/change + low\u2011amplitude noisy pattern seen in the class 0 examples. WALKING (class 1) examples exhibit clearer, medium\u2011frequency step-like cycles and larger variability in repeating peaks, which are not present here. These features (no narrowband periodicity, small amplitude, baseline shift/plateau) point to class 0."
+},
+{
+    "idx": 22,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.80\n- Reason: The trace is low\u2011amplitude, largely non\u2011periodic and quasi\u2011stationary with only small slow drifts and a brief baseline dip around the middle/late segment. It lacks the clear, high-frequency, large-amplitude rhythmic oscillations seen in running (class 2) or the consistent repeated cycles of sawing (class 3). It also does not show the moderate, asymmetric stepping-like cycles characteristic of walking (class 1). These features \u2014 low variance, absence of a dominant frequency, and small transient baseline shifts \u2014 match the seizure\u2011mimicking / seated patterns (class 0) from the example set, so I classify it as class 0."
+},
+{
+    "idx": 9,
+    "label": 0,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.85\n- Reason: The series shows a long quiet/steady beginning (small values) followed by a clear, abrupt onset of fast, high-amplitude, rhythmic oscillations in the middle/late portion. This pattern (quiet \u2192 sudden, regular, relatively high-frequency pulses with pronounced troughs/peaks and some asymmetry) matches the running examples: running often begins abruptly and produces faster, larger, spiky periodic cycles. It differs from class 3 (sawing), which is usually steady, smooth, sinusoidal-like throughout, from class 1 (walking), which is slower and more irregular/step-like, and from class 0, which is low-amplitude and non-periodic. These contrasts make running the best match."
+},
+{
+    "idx": 6,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: 1 (WALKING)\n- Confidence: 0.86\n- Reason: The series shows three clear segments (early steady baseline ~0.9, a middle negative/low valley with small irregular oscillations, then a late moderate-amplitude, irregular/step\u2011like recovery). This pattern matches the walking examples that often begin with a steady wrist position, undergo a slow/low\u2011frequency change (steps or shifts) and then continue with quasi\u2011periodic, variable-amplitude cycles. It lacks the strong, high\u2011frequency, high\u2011energy regular spikes of RUNNING (class 2) or the very steady sine\u2011like repetition of SAWING (class 3), and it is smoother and more structured than the noisy, aperiodic SEIZURE\u2011MIMICKING samples (class 0). These waveform and frequency/regularity cues point to class 1."
+},
+{
+    "idx": 13,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.78\n- Reason: The series lacks sustained periodic structure and high energy that characterize RUNNING (class 2) and SAWING (class 3). Instead it shows: (early) low\u2011amplitude noisy baseline, (middle) a clear step up to a fairly steady, low\u2011variance plateau (~t\u224850\u2013120), and (late) a gradual decline/drift with small fluctuations. Those baseline shifts/plateau behavior and absence of regular step/stride cycles match the seizure\u2011mimicking examples (class 0) from the provided samples rather than the quasi\u2011periodic walking patterns (class 1) or the strong rhythmic signatures of running/sawing."
+},
+{
+    "idx": 20,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: SEIZURE MIMICKING (class 0)\n- Confidence: 0.78\n- Reason: The series is low\u2011amplitude, largely stationary and noisy with only small, irregular jitter around a slightly negative baseline and no clear sustained periodic cycles or sharp rhythmic spikes. This contrasts with running (class 2) and sawing (class 3), which show strong, regular high\u2011frequency oscillations, and with walking (class 1), which shows slower, more obvious step\u2011like periodic cycles. The flat, low\u2011variance profile (consistent early/middle/late behavior) matches the \u201cseated/after event\u201d seizure\u2011mimicking examples (irregular, non\u2011periodic, low energy) from the training samples."
+},
+{
+    "idx": 28,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: class 1 (WALKING)\n- Confidence: 0.86\n- Reason: The series shows slow, irregular oscillations and piecewise baseline/level changes (early positive baseline \u2192 slow downward drift \u2192 mid increase \u2192 late small irregular bursts) rather than a steady high-frequency rhythm. It lacks the very fast, high-amplitude repetitive spikes of RUNNING (class 2) and the steady, highly regular cyclic pattern of SAWING (class 3). It is also more structured and rhythm-like than the noisy, largely aperiodic SEIZURE\u2011MIMICKING examples (class 0). These features match the walking examples (moderate amplitude, variable period and transient level shifts), so walking (class 1) is the best fit."
+},
+{
+    "idx": 3,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: SEIZURE MIMICKING (class 0)\n- Confidence: 0.85\n- Reason: The test trace is dominated by slow baseline changes and low\u2011amplitude, irregular fluctuations with no clear repeating cycles. Breaking it into segments: early portion slowly drifts slightly negative, the middle shows a smooth rise to a low-amplitude plateau (~0.4\u20130.7), and the late portion has a small transient bump and returns toward zero. This low-frequency, non\u2011periodic behavior with small noisy variability matches the class 0 examples (irregular, low-amplitude, high-entropy patterns) from the training plots. It lacks the regular, narrow-band oscillations of sawing (class 3) and the dense, high-rate cycles of running (class 2); it also does not show the repeated step-like, mid-frequency peaks typical of walking (class 1). Hence class 0 is the best match."
+},
+{
+    "idx": 1,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.75\n- Reason: The test trace lacks the clear, repeated high\u2011frequency cycles of RUNNING (class 2) and the steady mid\u2011frequency sinusoidal pattern of SAWING (class 3). It also does not show the consistent step/stride oscillations typical of WALKING (class 1). Instead it is low\u2011to\u2011moderate amplitude, largely aperiodic with slow baseline shifts and a couple of transient step changes (early spike, mid trace bump, then slow decline) \u2014 the same low\u2011variance, irregular pattern seen in the SEIZURE\u2011MIMICKING examples. Those time\u2011domain characteristics drive the classification."
+},
+{
+    "idx": 21,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: class 3 (SAWING)\n- Confidence: 0.80\n- Reason: The trace is strongly periodic and highly regular across the entire sequence (consistent cycle spacing and amplitude), which matches the steady, repetitive motion signature seen in the sawing examples. It is noticeably more regular and stationary than the noisy/aperiodic seizure-mimic traces (class 0) and the variable, slower cadence walking traces (class 1). It also lacks the very large, sharp troughs/peaks and abrupt changes often seen in the running samples (class 2). These factors (stable frequency, narrow-band rhythm, low cycle-to-cycle jitter) point to class 3."
+},
+{
+    "idx": 26,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.90\n- Reason: The trace is low\u2011amplitude and largely aperiodic/noisy with jittery small fluctuations and only a small late positive plateau \u2014 it lacks the clear, regular cycles and high-frequency large peaks seen in RUNNING (class 2) or the steady moderate-frequency oscillations of SAWING (class 3). It also does not show the more consistent step-like quasi-periodic structure of WALKING (class 1). Those characteristics match the seizure\u2011mimicking examples (class 0)."
+},
+{
+    "idx": 23,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.81\n- Reason: The series is low-to-moderate amplitude, largely aperiodic and positive-offset, with small transient variability early and a steady, low-variance plateau from roughly the middle to the end. It lacks the clear, regular sinusoidal cycles of SAWING (class 3), the high-rate sharp oscillations and large peak\u2011to\u2011peak swings of RUNNING (class 2), and the pronounced step-like periodicity and negative excursions typical of WALKING (class 1). These characteristics match the irregular/low-frequency, post-event sitting patterns seen in the SEIZURE\u2011MIMICKING examples."
+},
+{
+    "idx": 8,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: 1 (WALKING)\n- Confidence: 0.87\n- Reason: The trace shows a long early segment with a near-constant positive baseline (~0.8\u20131.1) with modest, irregular undulations, then an abrupt drop into slower, irregular negative excursions in the middle/late segments and a return toward near-zero at the end. This \u201csteady/plateau \u2192 baseline shift \u2192 irregular low\u2011frequency oscillation\u201d pattern matches the walking examples (class 1) shown earlier. It lacks the high-frequency, large-amplitude, very regular cycles of RUNNING (class 2) or the highly sinusoidal steady motor-like pattern of SAWING (class 3), and it has larger, more structured motion than the low\u2011amplitude noisy spikes of SEIZURE MIMICKING (class 0)."
+},
+{
+    "idx": 24,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING / seated afterwards)\n- Confidence: 0.85\n- Reason: The series is low-amplitude and largely a steady baseline with only small, irregular jitter and occasional small dips \u2014 there is no sustained, high-frequency periodic oscillation or large, repeating peaks. That matches the class\u20110 examples which show low variance, noisy/irregular fluctuations and slow baseline shifts. It does not show the clear rhythmic cycles of SAWING (class 3) or RUNNING (class 2), nor the more obvious step-like, moderate-amplitude undulations typical of WALKING (class 1)."
+},
+{
+    "idx": 25,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: WALKING (class 1)\n- Confidence: 0.80\n- Reason: The series shows a short quiet/baseline segment (early), then a sustained but only moderately regular oscillatory pattern (middle) that decays into lower-amplitude, irregular oscillations (late). Amplitude and energy are higher than the seizure-mimic examples but much less regular and less sharply peaked than the running/sawing examples. There is no clear, narrow high-frequency spectral peak or the very sharp asymmetric spikes typical of running (class 2), nor the near-sinusoidal, highly regular cycles of sawing (class 3). The waveform\u2019s moderate, variable cadence and irregular cycle shapes match the walking patterns described for class 1."
+},
+{
+    "idx": 19,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.85\n- Reason: The trace is low-amplitude and aperiodic with many small, irregular bursts around a near-zero baseline rather than a sustained, narrowband oscillation. It lacks the clear, regular sinusoidal cycles of sawing (class 3), the high-frequency large-magnitude sharp pulses of running (class 2), and the quasi-regular step-like cycles with variable envelope typical of walking (class 1). Those characteristics match the irregular, bursty, low-amplitude pattern seen in the provided seizure-mimicking examples."
+},
+{
+    "idx": 18,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.80\n- Reason: The trace lacks the sustained, high-rate periodic oscillations seen in running (class 2) and the very regular narrow-band cycles of sawing (class 3). It also does not show the repeated step-like pulses present in walking (class 1). Instead it is low-to-moderate amplitude and irregular, with a clear low-frequency baseline/level shift (quiet early segment, rise into a modest plateau then slow decay) \u2014 a pattern matching the seizure-mimicking examples (class 0) which tend to be noisier, nonstationary and burst/shift-prone rather than strongly periodic."
+},
+{
+    "idx": 16,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.70\n- Reason: The test trace shows a continuous, fairly steady and regular oscillation over the whole series with only small cycle-to-cycle variation and no large abrupt baseline shifts or intermittent bursts. That pattern matches the sawing examples which were characterized by persistent, smooth, roughly sinusoidal cycles. It differs from running (class 2), which had much larger, asymmetric sharp spikes and a higher dynamic range, and from walking (class 1) and seizure-mimicking (class 0), which showed more irregular timing, larger step-to-step variability or abrupt baseline changes. Because amplitude here is somewhat small but the regularity and waveform shape align best with the sawing class, I assign class 3 with moderate confidence."
+},
+{
+    "idx": 60,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.78\n- Reason: The series shows a sustained, highly regular, narrow-band oscillation across most of the recording with low jitter in the inter-peak intervals and fairly consistent amplitude \u2014 traits that match the sawing class. It is more periodic and steadier than the slower, more irregular waveforms in WALKING (class 1) and unlike the low\u2011amplitude, aperiodic/noisy SEIZURE-MIMICKING examples (class 0). It also lacks the large, sharp troughs and larger amplitude bursts that appear in many RUNNING (class 2) examples. These frequency/regularity and amplitude characteristics drive the classification."
+},
+{
+    "idx": 42,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1 (WALKING)\n- Confidence: 0.82\n- Reason: The series breaks into a clear early/middle/late pattern: an initial near\u2011constant plateau around +1 for the first ~50\u201370 samples, then a sudden drop into a train of moderate\u2011amplitude oscillations (roughly \u22121 to +0.5) that continue with some variability. This matches the class\u20111 examples (walking) that showed a stable initial segment followed by semi\u2011periodic, irregular step\u2011like oscillations. It does not match class\u20112 (running) because the oscillations are neither as large nor as spiky/high\u2011frequency as running, and it is not as smooth and highly regular as class\u20113 (sawing). It is also more periodic and structured than the low\u2011amplitude, irregular/noisy patterns of class\u20110 (seizure mimic)."
+},
+{
+    "idx": 39,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.88\n- Reason: The series shows a steady, highly regular oscillation with a modest, consistent amplitude and a positive baseline offset (~+1) for the entire record. These characteristics match the SAWING examples: sustained, sinusoid\u2011like periodicity and stationarity across early/middle/late segments. It differs from RUNNING (class 2), which shows larger, more extreme troughs/peaks and often a clear onset from quiet to very high-frequency spikes; from WALKING (class 1), which is more variable in period and amplitude; and from SEIZURE MIMICKING (class 0), which is irregular and non\u2011periodic."
+},
+{
+    "idx": 35,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: class 3 (SAWING)\n- Confidence: 0.87\n- Reason: The series shows a very regular, sustained oscillation across early, middle and late segments (consistent period and amplitude), which matches the steady sinusoidal pattern seen in the sawing examples. It is more periodic and more waveform\u2011stable than walking (class 1), less noisy/aperiodic than seizure mimicking (class 0), and has considerably smaller, smoother peaks/troughs than the large, sharp, high\u2011amplitude spikes characteristic of running (class 2). These properties (high regularity, narrowband rhythmicity, stable amplitude/offset) point to class 3."
+},
+{
+    "idx": 43,
+    "label": 1,
+    "predicted": 0,
+    "conversation": "- True Label: SEIZURE MIMICKING (class 0)\n- Confidence: 0.85\n- Reason: The series is dominated by low-to-moderate amplitude, irregular fluctuations around a negative baseline with a single transient/gradual burst in the middle and a brief downward spike later. It lacks the sustained, high-frequency, large-impact periodicity of RUNNING (class 2) and the steady sinusoidal/regular oscillations of SAWING (class 3). It also does not show the consistent step-like rhythmic pattern of WALKING (class 1). The intermittent, nonstationary bursty behavior matches the seizure\u2011mimicking examples (class 0)."
+},
+{
+    "idx": 63,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.88\n- Reason: The series shows a clear, steady, and fairly regular rhythmic oscillation around a stable baseline (~1.0) with relatively small, symmetric peaks \u2014 a smooth periodic waveform. This matches the sawing examples (class 3) which are periodic and sinusoidal-like, unlike running (class 2) which is faster/sharper and has large troughs, walking (class 1) which is lower-frequency and more variable, or seizure-mimicking (class 0) which is irregular and bursty."
+},
+{
+    "idx": 52,
+    "label": 1,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (SEIZURE MIMICKING)\n- Confidence: 0.82\n- Reason: The series is dominated by a low-energy, low\u2011amplitude baseline of small, irregular oscillations for most of the record, with a single pronounced transient/level change (a sudden positive burst around the late segment) before returning to the low-amplitude regime. This pattern (low overall variance + isolated transient/step-like event) matches the seizure\u2011mimicking examples, which show irregular/nonperiodic behavior and transient bursts or plateaus. It does not show the sustained, strong, regular periodicity and large-amplitude cycles typical of running (class 2) or sawing (class 3), nor the sustained moderate-amplitude, more continuous gait-like periodicity seen in walking (class 1)."
+},
+{
+    "idx": 68,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.85\n- Reason: The series shows a very regular, steady oscillation throughout (consistent period and amplitude across early/middle/late segments) with relatively low variance and no large transient spikes or baseline drifts. This matches the sawing examples (class 3) which are strongly periodic and stationary for long stretches. It lacks the higher amplitude, sharp repetitive peaks of running (class 2), the irregular/aperiodic baseline shifts of seizure\u2011mimicking (class 0), and the variable, quasi\u2011periodic pattern of walking (class 1)."
+},
+{
+    "idx": 66,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.85\n- Reason: The test trace is strongly periodic and stationary across the whole recording: cycle-to-cycle spacing and amplitude remain consistent with a smooth, sinusoidal-like oscillation. This matches the sawing examples which show a steady, regular rhythm with little baseline drift. It does not match class 2 (running) because running examples show larger, sharper, high-energy impulses and deeper troughs; it does not match class 1 (walking) because walking is more quasi-periodic with variable amplitude/cadence; and it does not match class 0 (seizure mimic) because those are aperiodic/noisy with transient bursts and baseline shifts. Hence sawing is the best match."
+},
+{
+    "idx": 69,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.85\n- Reason: The new trace is characterized by a steady, sustained, fairly regular oscillation across the entire record (little transient or baseline-change), with a consistent amplitude and cadence. This matches the sawing examples which show medium\u2011frequency, stable periodic strokes. It does not look like class 2 (running) because running examples have much larger, sharper peaks and higher energy; it is not class 1 (walking) because walking is less regular and more variable in amplitude/timing; and it is not class 0 (seizure\u2011mimic) which is aperiodic/noisy with intermittent spikes. The persistent, repeatable waveform and clear dominant frequency therefore point to SAWING."
+},
+{
+    "idx": 49,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.82\n- Reason: The trace is strongly periodic and very regular over the whole 207-point sequence (no large transients or level shifts). Its cycles are relatively uniform, smooth/sinusoidal-like and moderate in amplitude (roughly ~0.5\u20131 unit), unlike class 0 which is irregular/transient or class 1 which shows slower, lower-frequency cycles and baseline changes. Class 2 (running) tends to have larger, more asymmetric/peaked excursions (deeper troughs and sharper spikes) than this sample. Those properties \u2014 high regularity, consistent frequency, smooth waveform and moderate amplitude \u2014 match the SAWING examples, so I assign class 3 with high confidence."
+},
+{
+    "idx": 57,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.78\n- Reason: The series shows a steady, continuous, fairly regular oscillation across almost the entire recording with moderate, fairly sinusoidal amplitude and consistent period. This matches the sawing examples (class 3) which are characterized by sustained, regular rhythmic motion (lower frequency and smoother peaks than running). It does not show the very high-frequency, large sharp impacts of RUNNING (class 2), the larger irregular strides and variable amplitude of WALKING (class 1), or the low-amplitude, noise-like/irregular baseline-shifts seen in the SEIZURE-MIMICKING / SITTING samples (class 0). The lack of abrupt transients and the consistent cadence throughout the series strongly point to SAWING."
+},
+{
+    "idx": 59,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.82\n- Reason: The test series shows a steady, repeated oscillatory pattern with a consistent period and nearly constant amplitude/offset across the whole record. This regular, narrow\u2011band rhythm (stable cadence) matches the sawing examples more closely than the others. It is too regular and too smooth to be the irregular, low\u2011energy seizure\u2011mimic (class 0), lacks the large negative troughs and very high-frequency sharp spikes seen in running (class 2), and is more periodic and stable than the variable-amplitude/phase walking examples (class 1). Hence sawing is the best match."
+},
+{
+    "idx": 56,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: class 3 (SAWING)\n- Confidence: 0.78\n- Reason: The test series is very regular and nearly sinusoidal across the whole record (early, middle and late segments), with a consistent cycle period and steady amplitude and no large transient bursts or baseline jumps. This matches the sawing examples which are the most stationary/periodic class. It does not show the irregular, mixed-frequency behavior of seizure mimicking (class 0), the lower-frequency, step-like variability of walking (class 1), or the larger, sharper high\u2011frequency peaks typically seen in running (class 2). The persistent, narrow-band oscillation (despite a slight negative offset) is characteristic of sawing."
+},
+{
+    "idx": 61,
+    "label": 1,
+    "predicted": 0,
+    "conversation": "- True Label: SEIZURE MIMICKING (class 0)\n- Confidence: 0.82\n- Reason: The series is dominated by low-amplitude, aperiodic/irregular fluctuations for most of the record (no sustained narrow-band oscillation or regular inter-peak spacing). That matches the seizure-mimicking examples which show low variance and irregular noise rather than a steady rhythm. The only prominent event is a short, late transient burst of larger peaks \u2014 an isolated transient feature similar to the occasional spikes/step changes seen in class 0 examples. The other classes (walking, running, sawing) all show clear sustained rhythmic structure (walking: slower periodic cycles; running: fast, sharp repeated spikes; sawing: regular sinusoidal oscillation) which are not present here, so class 0 is the best match."
+},
+{
+    "idx": 67,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.86\n- Reason: The series breaks into an early (0\u2013~70) slowly-decaying/ drifting segment and a clear middle/late segment (~70\u2013end) that is strongly rhythmic and stationary. The late portion shows smooth, fairly regular sinusoidal oscillations of moderate amplitude and a constant period \u2014 the same steady, rhythmic \u201csaw-like\u201d pattern seen in the class\u20113 examples. It lacks the very high frequency, sharp impulsive spikes and large negative troughs that characterize RUNNING (class 2), and it is more regular and sinusoidal than the irregular, variable-amplitude cycles of WALKING (class 1) or the bursty/nonstationary behavior of SEIZURE MIMICKING (class 0). These spectral/shape and stationarity cues point to SAWING."
+},
+{
+    "idx": 55,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.90\n- Reason: The test trace shows a long, stable, strongly periodic oscillation with fairly consistent amplitude and period across early/middle/late segments and a mean offset near \u22121. This matches the clean, sinusoidal-like sawing examples (class 3). It lacks the large, sharp peaks and very high energy seen in running (class 2), is much more regular than the slower/irregular walking traces (class 1), and is far from the low\u2011amplitude/noisy seizure\u2011mimic signals (class 0). The waveform shape (smooth, regular cycles), steady frequency and moderate amplitude make sawing the best match."
+},
+{
+    "idx": 40,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.89\n- Reason: The series is highly periodic and stationary across the entire record, with a consistent, near\u2011sinusoidal waveform and a steady mean \u22481.0 and moderate, uniform peak-to-peak amplitude. That matches the sawing examples which show steady, uniform oscillations. It lacks the large impulse-like troughs and higher cadence of running (class 2), the irregular step-like/variable amplitude pattern of walking (class 1), and the noisy, bursty/non\u2011periodic behaviour of seizure mimicking (class 0). Quantitatively: clear narrowband frequency content, high autocorrelation at a fixed lag, and low non\u2011stationarity all point to class 3."
+},
+{
+    "idx": 45,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1 (WALKING)\n- Confidence: 0.80\n- Reason: The series is neither a very steady, high-frequency sinusoid (class 3) nor the sustained, high-cadence sharp spikes of running (class 2). It shows an initial transient (brief positive peak then drop), then a long middle segment of low-to-moderate amplitude, quasi\u2011periodic oscillations with variable cycle amplitude, and later intermittent moderate positive peaks \u2014 exactly the pattern seen in the walking examples. Compared with class 0 (seizure\u2011mimicking), this trace has a clearer quasi\u2011rhythm/cadence and more organized cycles, so walking is the best match."
+},
+{
+    "idx": 50,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.85\n- Reason: The trace is a sustained, highly regular rhythmic oscillation with fairly smooth/sinusoidal peaks and consistent amplitude across early, middle and late segments. It lacks the very sharp, high\u2011amplitude narrow spikes characteristic of RUNNING (class 2), is more regular and continuous than the variable, broader gait cycles seen in WALKING (class 1), and is far from the low\u2011amplitude, irregular/noisy pattern of SEIZURE MIMICKING (class 0). These features match the SAWING examples."
+},
+{
+    "idx": 36,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.82\n- Reason: The test trace shows a sustained, fairly regular rhythmic oscillation with consistent period and moderate, symmetric peak-to-trough shape across the whole record (early, middle and late segments). It lacks the strong, large-amplitude asymmetric spikes typical of RUNNING (class 2), it is far more regular and periodic than the low-amplitude/noisy SEIZURE-MIMICKING examples (class 0), and it is not the slow, irregular, varying-amplitude waveform characteristic of WALKING (class 1). The stable, near-sinusoidal rhythm (despite a negative offset) is most consistent with the SAWING class."
+},
+{
+    "idx": 34,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.88\n- Reason: The test series is dominated by a steady, high-frequency, highly regular oscillation across the whole 207 steps with only small, consistent cycle-to-cycle amplitude variation and no large transient segments. This matches the SAWING examples which show near-sinusoidal, repeatable cycles (high regularity, consistent period and amplitude). It differs from RUNNING (class 2), which tends to show larger, sharper peaks and more amplitude variability, and from WALKING/SEIZURE (classes 1 and 0), which are lower-frequency, irregular and nonperiodic. The early/middle/late segments of the series are essentially the same (no onset/offset transitions), further supporting the steady repetitive sawing pattern."
+},
+{
+    "idx": 58,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: SAWING (class 3)\n- Confidence: 0.86\n- Reason: The series shows a short early transient (baseline shift up around t\u224820) followed by a sustained, very regular, moderate\u2011amplitude oscillation centered near ~1.0. That steady, sinusoid\u2011like periodicity and relatively stable amplitude matches the sawing examples (class 3) from the reference plots. It differs from walking (class 1), which is more irregular in period and amplitude and shows larger baseline jumps, from running (class 2), which has much higher frequency and much larger peak/trough excursions, and from seizure\u2011mimicking (class 0), which is lower amplitude and broadband/irregular. These contrasts make class 3 the best match."
+},
+{
+    "idx": 46,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.82\n- Reason: The series is strongly periodic and highly regular across the whole record (consistent cycle-to-cycle shape and timing) with moderate, fairly symmetric peak-to-peak amplitude and a slight negative baseline offset. This matches the saw\u2011motion examples (class 3) which show steady, repeated oscillations. It differs from running (class 2) which exhibits larger amplitude and faster/more pronounced peaks/troughs, from walking (class 1) which is more irregular and variable in cycle shape and amplitude, and from seizure\u2011mimic (class 0) which is low\u2011amplitude and noisy/transient rather than sustained periodic. These features make sawing the best match."
+},
+{
+    "idx": 51,
+    "label": 1,
+    "predicted": 0,
+    "conversation": "- **True Label**: 0 (SEIZURE MIMICKING)\n- **Confidence**: 0.75\n- **Reason**: The trace is low-to-moderate energy and lacks a sustained, regular oscillatory pattern. Breaking it into segments:\n  - Early (t\u22480\u201340): small, irregular negative excursions with no clear repeating period.\n  - Middle (t\u224840\u2013120): a modest baseline rise and small, irregular bumps rather than consistent cycles.\n  - Late (t\u2248120\u2013207): low\u2011amplitude, slowly varying fluctuations and minor transients.\nThese characteristics match the seizure\u2011mimicking class (class 0) observed earlier: relatively low amplitude, aperiodic/noisy behavior and baseline shifts. The series does not show the clear, high\u2011frequency regular periodicity of running (class 2) or sawing (class 3), nor the more consistent step\u2011like quasi\u2011periodic pattern often seen in walking (class 1)."
+},
+{
+    "idx": 65,
+    "label": 1,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.75\n- Reason: The series shows a persistent, very regular, quasi-sinusoidal oscillation across early\u2013middle\u2013late segments with small-to-moderate, symmetric peak-to-peak amplitude and a steady cadence. This matches the steady cyclic pattern seen in the sawing examples (class 3). It lacks the large, high-frequency spikes and deep troughs of running (class 2), the more variable/quasi\u2011periodic step structure of walking (class 1), and the irregular/transient low-energy behavior or step changes characteristic of the seizure\u2011mimic traces (class 0)."
+},
+{
+    "idx": 54,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: class 1 (WALKING)\n- Confidence: 0.86\n- Reason: The test trace shows moderate amplitude swings (roughly within \u00b11\u20132) with clear, relatively slow cycles that vary in amplitude and period from cycle to cycle. These characteristics match the walking examples: slower, step\u2011like oscillations with irregularity and baseline shifts. It does not show the sustained high frequency and very large peaks/troughs typical of running (class 2), nor the very regular, sinusoidal, steady rhythm seen in sawing (class 3), nor the low\u2011amplitude, noisy/aperiodic bursts and drift characteristic of seizure mimic (class 0). Estimated cycle length (~20\u201330 time steps at 16 Hz \u2192 ~0.5\u20130.8 Hz step rate) also aligns with walking, supporting the classification. Small uncertainty remains because pace/gesture variability can blur class boundaries."
+},
+{
+    "idx": 101,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The test trace is a strongly periodic, high-frequency waveform with large, sharp troughs and recurring spikes of consistent amplitude and period across the whole recording. That pattern matches the running examples (class 2): high variance, narrowband but spike\u2011like cycles and a clear sustained rhythmic onset. It does not match class 3 (sawing) which is more sinusoidal/smooth, class 1 (walking) which is less regular and more variable in amplitude/period, or class 0 (seizure\u2011mimic) which is low\u2011amplitude and irregular."
+},
+{
+    "idx": 106,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.92\n- Reason: The series is strongly periodic and stationary across the entire window with consistent cycle period and amplitude \u2014 a steady, repeated oscillation rather than irregular bursts or level changes. This matches the SAWING examples which show a sustained, sine-like rhythm. It differs from RUNNING (class 2), which in the examples shows higher, sharper and more variable peak-to-trough excursions and sometimes abrupt on/offs; from WALKING (class 1), which is slower and more irregular in amplitude/shape; and from SEIZURE MIMICKING (class 0), which is non\u2011periodic/noisy with baseline shifts. The presence of a single, stable dominant frequency and fairly uniform amplitude across early/mid/late segments strongly indicates SAWING."
+},
+{
+    "idx": 102,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.88\n- Reason: The test trace shows a clear, sustained, high-frequency oscillation with large peak-to-trough range (troughs near -3 and peaks \u2248+2) and relatively regular cycle spacing after a short quiet onset. This matches the running examples: strong periodicity, high RMS/energy and deep negative excursions. It differs from walking (which is more variable in amplitude and less regular), from sawing (which is periodic but typically lower-amplitude and more uniform/sinusoidal), and from seizure-mimicking (which is low-amplitude, irregular and nonperiodic). These spectral/amplitude/regularity cues strongly favor class 2."
+},
+{
+    "idx": 99,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.90\n- Reason: The test series shows a very regular, high\u2011cadence oscillation with large peak-to-trough swings (troughs ~ -3, peaks around +1) sustained for most of the record. This matches the running examples which exhibit the fastest, most repetitive cycles and the largest amplitude swings. It is much more periodic and higher\u2011frequency than the walking examples, and unlike the seizure\u2011mimicking traces it lacks irregular, low\u2011amplitude noise and abrupt baseline shifts. Sawing is rhythmic too but typically shows a somewhat different (slower/less extreme) amplitude/frequency signature; the sharp, frequent spikes and deep troughs here are most consistent with class 2 (running)."
+},
+{
+    "idx": 103,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: class 2 (RUNNING)\n- Confidence: 0.85\n- Reason: The new trace shows a sustained, high\u2011cadence rhythmic pattern across most of the series with large peak\u2011to\u2011peak amplitude and deep, narrow negative troughs (values down near -3) and positive peaks around +1. This matches the running examples which exhibit strong periodic bursts and large amplitude impacts. It differs from class 3 (sawing), which is typically a more symmetric/near\u2011sinusoidal oscillation centered nearer zero/one and with smaller negative excursions, and from class 1 (walking) which is lower frequency and more irregular. Class 0 (seizure\u2011mimic) is noisy and non\u2011periodic, unlike this clearly periodic signal. Therefore running is the best match."
+},
+{
+    "idx": 72,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.92\n- Reason: The trace shows an initial quiet/steady baseline followed by an abrupt onset into a sustained, high\u2011cadence oscillation with large peak-to-peak values and sharp, spiky peaks. This matches the running examples (class 2): high frequency, large amplitude, repetitive spikes. It is unlike sawing (class 3), which is more smooth/sinusoidal and more symmetric, unlike walking (class 1), which is slower and more irregular in cadence, and unlike seizure-mimicking (class 0), which is low-amplitude and bursty/irregular."
+},
+{
+    "idx": 97,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.78\n- Reason: The test series is a highly regular, stationary, rhythmic oscillation over the whole recording with consistent cycle spacing and fairly uniform amplitude \u2014 characteristics that match the sawing class. It is not irregular or drifting like the seizure-mimic examples (class 0), nor does it show the transient/step-like variability seen in walking (class 1). Although running (class 2) can also be periodic, running examples tended to show higher-frequency cycles with very large negative troughs or a sharper, more energetic waveform; the shown series is more sinusoidal and steadier in both frequency and amplitude (mid-frequency, moderate-to-large symmetric cycles around a near-constant baseline), which is most consistent with sawing."
+},
+{
+    "idx": 95,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.85\n- Reason: The test trace is highly periodic and sustained for most of the series, with a relatively high repetition rate and large peak-to-peak swings. Compared with the four classes, this matches the \u201crunning\u201d profile: fast, regular spikes with large amplitude (positive peaks around +3 and troughs near -1), low spectral entropy and a clear steady oscillatory pattern. Sawing (class 3) shows regular motion too but with smaller, more sinusoidal amplitude around ~1\u20131.8; walking (class 1) is slower and more variable; seizure-mimicking (class 0) is low-amplitude and irregular. Because of the high frequency, strong periodicity and large amplitude, running is the best match (with some caution since sawing can look similar at times)."
+},
+{
+    "idx": 90,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.85\n- Reason: The test trace is dominated by a strong, highly regular, repeated oscillation across most of the recording with relatively large peak-to-peak amplitude and sharp peaks \u2014 exactly the signature shown in the RUNNING examples. Breaking the series into early/middle/late: early\u2192middle shows sustained, fast, regular cycles (high zero-crossing/cycle rate and a strong periodic waveform); late\u2192end the amplitude tapers slightly but periodicity remains. This combination \u2014 high frequency, large amplitude and high regularity (low cycle-to-cycle variability) \u2014 is most consistent with the running class rather than the slower/irregular walking or the low\u2011amplitude/noisy seizure-mimicking patterns; sawing was more sinusoidal and lower amplitude in the examples."
+},
+{
+    "idx": 87,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.86\n- Reason: The test trace shows a strong, regular high-energy oscillation across most of the sequence with many fast, repeated cycles and pronounced positive peaks (up to \u22482.5\u20133) and smaller negative troughs (\u2248-1). That pattern matches the running examples (class 2), which were characterized by high frequency, high variance and asymmetric/sharp cycles. By contrast class 3 (SAWING) examples were more sinusoidal and symmetric around the baseline, class 1 (WALKING) had slower, wider, more irregular step-like cycles, and class 0 (SEIZURE MIMICKING) was low-amplitude and noisy \u2014 none of which fit this trace as well as class 2."
+},
+{
+    "idx": 75,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: class 2 (RUNNING)  \n- Confidence: 0.88  \n- Reason: The series shows a long, very regular high\u2011frequency oscillation with large peak-to-peak swings (peaks near +1, troughs near -2.5), strong periodicity and many evenly spaced cycles across the middle of the recording. This matches the running examples which are the most periodic and highest\u2011amplitude (sharp repeated troughs/peaks). It is noticeably different from walking (which is more irregular in period and amplitude), sawing (more sinusoidal and lower amplitude/symmetric), and seizure\u2011mimic (low amplitude, noisy, aperiodic). The pronounced, sustained middle segment of strong, regular cycles is the key discriminant pointing to RUNNING."
+},
+{
+    "idx": 82,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.90\n- Reason: The series shows a short quiet/plateau early (near -1) followed by sustained, very regular, high\u2011rate oscillations with large peak\u2011to\u2011peak amplitude and sharp negative troughs. Those characteristics \u2014 abrupt onset into fast, high\u2011amplitude, highly periodic cycles \u2014 match the running examples (class 2) much more closely than the lower\u2011amplitude/irregular seizure traces (class 0), the slower/more variable walking cycles (class 1), or the more sinusoidal, moderate\u2011amplitude sawing patterns (class 3)."
+},
+{
+    "idx": 92,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.88\n- Reason: The test series shows a sustained, high\u2011frequency, highly regular oscillation with sharp, asymmetric cycles (pronounced positive peaks and very deep negative troughs around -2 to -3). This spike-like, high-energy periodic pattern matches the class\u20112 (running) examples. It is less smooth/sinusoidal than the saw\u2011ing examples (class 3) and far more regular and higher amplitude than the walking (class 1) or the irregular/noisy seizure\u2011mimicking traces (class 0), so running is the best fit."
+},
+{
+    "idx": 105,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.80\n- Reason: The series shows a fast, highly regular cadence with relatively narrow, high-amplitude positive peaks and sharper troughs \u2014 i.e., many quick, spike-like impacts repeating through most of the trace. This matches the running examples (high-frequency, spike-dominated waveform) rather than the smoother, more sinusoidal sawing patterns or the slower/irregular walking and low-amplitude, non-periodic seizure-mimic signals."
+},
+{
+    "idx": 78,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.90\n- Reason: The test trace shows a strong, sustained, highly regular oscillation across most of the record with large peak-to-peak swings (troughs near \u22122.5 and peaks near +1). The waveform is high-frequency and stable from early through middle segments with only a small taper toward the end. This combination \u2014 high periodicity, high energy (large amplitude) and relatively constant cycle shape \u2014 matches the running examples (class 2) from the reference set. It differs from walking (class 1), which is lower-frequency and more irregular, from sawing (class 3) which tends to have a different symmetry/baseline pattern, and from the seizure-mimic (class 0) which is low-amplitude and bursty/nonperiodic."
+},
+{
+    "idx": 94,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.86\n- Reason: The test trace is strongly periodic with a high cadence and large, sharp peak\u2013to\u2013trough excursions \u2014 i.e., repeated, spike-like cycles rather than the smooth sinusoid of sawing (class 3) or the low-regularity, nonstationary patterns of seizure-mimicking (class 0). Walking (class 1) shows more irregular, lower-frequency cycles and smaller amplitude variability than this trace. The waveform here most closely matches the high-frequency, high-amplitude, very regular oscillations seen in the RUNNING examples (class 2), so RUNNING is the best fit."
+},
+{
+    "idx": 77,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.85\n- Reason: The series shows a clear two\u2011segment structure: an early flat/low\u2011activity baseline followed (around t\u224840\u201350) by a sustained, high\u2011frequency, large\u2011amplitude oscillation with many sharp troughs down to \u2248-3. This matches the running examples which exhibit a sudden onset of fast, regular, high\u2011energy cycles. It does not match class 0 (irregular/bursty, low amplitude), class 1 (lower-frequency, more variable/step\u2011like patterns), or class 3 (more sinusoidal/steady saw motions of more moderate amplitude). The strong periodicity, high dominant frequency and spiky waveform are most consistent with running."
+},
+{
+    "idx": 91,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.87\n- Reason: The series shows a long stretch of very regular, high-frequency, near-sinusoidal oscillations with consistent amplitude and period (especially in the early and middle segments) and a small attenuation toward the end. This pattern matches the SAWING examples (class 3). It is more regular and smoother than RUNNING (class 2), which in the examples is more jagged/asymmetric with deeper troughs and higher variance, and it is clearly more periodic than WALKING (class 1) or the irregular, low\u2011power SEIZURE\u2011MIMICKING traces (class 0)."
+},
+{
+    "idx": 89,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.88\n- Reason: The series shows a short quiet/flat early segment (~0\u201330) followed by a clear onset of fast, high\u2011amplitude, regularly repeating peaks for the remainder of the sequence. That pattern (quick onset \u2192 persistent, high\u2011frequency sharp oscillations with large peak\u2011to\u2011peak amplitude) matches the RUNNING examples. It differs from SAWING, which appears more sinusoidal and steady with lower extreme amplitudes, from WALKING which is slower and more variable cycle\u2011to\u2011cycle, and from SEIZURE\u2011MIMICKING which is aperiodic/noisy rather than strongly rhythmic."
+},
+{
+    "idx": 74,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.86\n- Reason: The test trace is strongly rhythmic with a high cycle rate and large, sharp peak\u2013trough swings rather than the low-amplitude, irregular bursts of class 0 or the slower, more variable stepping pattern of class 1. It is also less purely sinusoidal and more impact-like than the very steady, machine-like oscillation seen in class 3 (SAWING). Those features \u2014 fast, repeated cycles with pronounced asymmetric peaks/troughs and higher amplitude \u2014 match the RUNNING examples."
+},
+{
+    "idx": 84,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.85\n- Reason: The test trace is strongly periodic across the whole recording with high peak-to-peak amplitude and frequent, deep negative troughs (values down near -2.5 to -3). That matches the RUNNING examples, which showed the largest, high\u2011energy cycles and the most negative troughs. SAWING (class 3) traces are also periodic but typically smoother, more consistently sinusoidal and often offset upward; WALKING (class 1) is only quasi\u2011periodic with more variable cycle timing and lower energy; SEIZURE MIMICKING (class 0) is irregular and low\u2011energy. The deep, relatively irregular troughs and large amplitude make RUNNING the best match."
+},
+{
+    "idx": 93,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.90\n- Reason: The test series shows a long stretch of very regular, high\u2011cadence oscillations with large peak\u2011to\u2011trough magnitude (troughs near -2.5 to -3 and positive peaks \u2248 +1). This matches the running examples which have the highest frequency and largest amplitude swings and sharp repeating cycles. It is unlike class 3 (sawing), which is more symmetric/smoother with lower trough magnitude, class 1 (walking), which is less regular and more variable in timing/amplitude, or class 0 (seizure\u2011mimicking), which is low\u2011energy and irregular jitter. These frequency, amplitude and regularity cues strongly point to class 2."
+},
+{
+    "idx": 100,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: class 2 (RUNNING)\n- Confidence: 0.86\n- Reason: The series shows many tightly spaced, highly repetitive cycles across the whole record (high cadence), with relatively large peak-to-peak excursions and pronounced positive peaks \u2014 i.e. a strong, fast rhythmic pattern. This rules out class 0 (irregular, noisy, non-periodic) and class 1 (slower, lower-frequency walking waves). Class 3 (sawing) is also highly periodic but in the examples it tended to have smaller, more symmetric sinusoidal swings or a steadier offset; the large, high-amplitude, asymmetric peaks in this sample more closely match the running examples (class 2)."
+},
+{
+    "idx": 107,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.87\n- Reason: The series is dominated by a steady, narrow-band, highly regular oscillation across the entire sequence (early, middle and late) with very consistent period and amplitude \u2014 a classic \u201csinusoidal\u201d back-and-forth pattern. This matches the sawing examples (class 3) rather than the low-amplitude/noisy seizure-mimicking (class 0), the lower-frequency/irregular step-like cycles of walking (class 1), or the sharper, more impulsive peaks and larger troughs seen in running (class 2). The lack of strong transients/level shifts and the persistent, even rhythmic waveform are the main reasons for assigning sawing."
+},
+{
+    "idx": 76,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.90\n- Reason: The test trace shows a strong, consistent, nearly sinusoidal oscillation across early, middle and late segments with fairly uniform period and amplitude (~\u00b11), matching the highly regular cyclic pattern seen in the sawing examples. It lacks the low\u2011amplitude noisy/irregular profile of seizure\u2011mimic (class 0) and the irregular, step\u2011like structure of walking (class 1). It also does not show the very sharp, large amplitude, spike\u2011like peaks/troughs typical of running (class 2). The presence of a clear, stable dominant frequency and consistent waveform shape is most consistent with sawing."
+},
+{
+    "idx": 80,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (RUNNING)\n- Confidence: 0.88\n- Reason: The new series shows a very regular, high\u2011cadence oscillation with large, repeated negative troughs (down near -3) and positive peaks around +1 \u2014 i.e., large amplitude, strongly periodic cycles. This matches the running examples (class 2), which exhibit the fastest, most regular cycles and pronounced troughs. It differs from class 0 (irregular/noisy, non\u2011periodic), class 1 (slower, more variable step\u2011like cycles), and class 3 (sawing is also rhythmic but typically more symmetric/centred and with less extreme negative troughs in the shown examples). Hence running is the best match."
+},
+{
+    "idx": 81,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: class 2 (RUNNING)\n- Confidence: 0.90\n- Reason: The new series is highly regular and strongly periodic with a high cycle rate and relatively large, sharp peaks/troughs (deep negative troughs around -2 to -3 and quick positive spikes). This matches the running examples (class 2) which showed the fastest, highest\u2011frequency and sharpest oscillations. By contrast sawing (class 3) was more sinusoidal/symmetric at a moderate frequency, walking (class 1) was slower and more irregular, and seizure\u2011mimicking (class 0) was low\u2011amplitude and non\u2011periodic \u2014 none of which match the observed signal."
+},
+{
+    "idx": 116,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: class 3 (SAWING)\n- Confidence: 0.88\n- Reason: The test series is a highly regular, near\u2011sinusoidal oscillation with a consistent amplitude and cadence across early, middle and late segments. That steady narrow\u2011band periodicity and symmetry matches the SAWING examples (class 3). By contrast running (class 2) examples show larger, more asymmetric peaks/troughs and often stronger transients, walking (class 1) is slower and more irregular, and the seizure\u2011mimic (class 0) is low\u2011energy and noisy. These differences (frequency, regularity and amplitude shape) point to sawing with high confidence."
+},
+{
+    "idx": 126,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.87\n- Reason: The test trace shows a sustained, very regular, moderately\u2011sized sinusoidal oscillation after a short ramp-up. Its waveform is smooth and periodic with consistent amplitude and period across early/middle/late segments. This matches the saw\u2011type examples (class 3). It lacks the very large, sharp spike/trough pattern and higher peak\u2011to\u2011peak variance seen in running (class 2), and it is more regular and periodic than walking (class 1) or the low\u2011amplitude irregular/noisy seizure\u2011mimic examples (class 0)."
+},
+{
+    "idx": 129,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.90\n- Reason: The test series shows a very regular, high\u2011cadence, nearly sinusoidal oscillation that is steady across early, middle and late segments with consistent amplitude and symmetry. From the earlier analysis, sawing examples are characterized by smooth, sustained high\u2011frequency sinusoidal motion, whereas running exhibits sharper, spikier peaks and deeper asymmetric troughs, walking is lower\u2011frequency and more variable, and seizure\u2011mimic is aperiodic/noisy with low energy. The waveform here lacks the spiky, high\u2011kurtosis shape of running and the low\u2011frequency/irregular patterns of walking or seizure, so it best matches class 3 (sawing)."
+},
+{
+    "idx": 120,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.88\n- Reason: The series is strongly periodic and high-energy throughout (many regular cycles across the whole window), with a fairly constant amplitude and symmetric sinusoidal-like peaks/troughs and no long slow baseline swings or irregular bursts. That pattern matches the sawing examples (class 3) in the provided set. It differs from walking (class 1) which shows much slower, lower-frequency undulations and baseline shifts, and from seizure-mimicking (class 0) which is aperiodic/noisy with transient spikes. Running (class 2) is also periodic but in the examples had either sharper/asymmetric waveform and deeper negative troughs or different cycle-rate/shape; the new trace\u2019s stable, symmetric oscillation more closely matches saw/sawing."
+},
+{
+    "idx": 134,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.88\n- Reason: The test trace shows a very steady, high-regularity oscillation across the entire series with consistent cycle amplitude and period (early, middle and late segments all maintain the same sinusoidal-like pattern). This matches the sawing examples which were the most regular/periodic and fairly symmetric in waveform. It does not match class 2 (running), which tended to have larger, more asymmetric spikes and stronger negative troughs, nor class 1 (walking), which showed slower, more irregular cycles and variable amplitude, nor class 0 (seizure-mimicking), which was low-amplitude and noise-like with transient bursts. The clear persistent periodicity and stable amplitude strongly point to class 3."
+},
+{
+    "idx": 118,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.88\n- Reason: The series is a steady, highly regular oscillation across the whole record with a consistent period and uniform peak-to-trough amplitude. This matches the SAWING examples which show a persistent, sinusoidal-like rhythm. It lacks the large, sharp, high-amplitude/peaky transients and abrupt onset patterns seen in RUNNING (class 2) and it is far more regular and higher-frequency than the variable/step-like WALKING (class 1). It also has much more sustained rhythmic energy than the low-amplitude, noisy SEIZURE-MIMICKING (class 0). These characteristics (stable narrow-band periodicity, consistent amplitude and waveform shape) point to class 3."
+},
+{
+    "idx": 121,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.85\n- Reason: The series is strongly and consistently periodic from the start, with very uniform cycle-to-cycle amplitude and timing across early, middle and late segments. This matches the saw\u2011ing examples which show steady, moderate-amplitude, high-regularity oscillations. It differs from walking (class 1) which is slower and more irregular in amplitude/cadence, from running (class 2) which tends to show larger peak-to-trough excursions and/or sharper transients, and from seizure\u2011mimicking (class 0) which is low\u2011amplitude and aperiodic with transient baseline shifts."
+},
+{
+    "idx": 113,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: SAWING (class 3)\n- Confidence: 0.85\n- Reason: The series is highly regular and strongly periodic across the whole record with a steady, nearly sinusoidal shape and consistent amplitude/peak\u2011to\u2011trough spacing. It lacks the irregular spikes and baseline shifts typical of the seizure\u2011mimicking class, and it is smoother and more stationary than the running examples (which tend to show sharper, more variable peaks and onset transients). The steady cadence and waveform shape match the saw\u2011type patterns seen in class 3."
+},
+{
+    "idx": 125,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.85\n- Reason: The test trace is a long, very regular, nearly sinusoidal oscillation with consistent amplitude and period throughout the series. That matches the sawing examples which show steady, uniform strokes for the whole window. It does not match class 2 (running), which in the examples produces sharper, spike\u2011like peaks and larger troughs, nor class 1 (walking), which is lower-frequency and more variable, nor class 0 (seizure mimic), which is noisy and irregular. Key discriminators used: very high regularity (autocorrelation/periodicity), consistent amplitude, and smooth waveform shape \u2014 all characteristic of SAWING."
+},
+{
+    "idx": 127,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.85\n- Reason: The series is a long, very regular, steady sinusoidal oscillation across the entire 207\u2011point window with consistent amplitude and period (no clear transients, variable steps or isolated spikes). That pattern matches the sawing examples which show narrowband, highly regular rhythmic motion. It does not resemble class 0 (irregular low\u2011energy noise), class 1 (walking \u2014 variable cycle amplitude/spacing), or class 2 (running \u2014 stronger, sharper high\u2011impact peaks and larger amplitude variability)."
+},
+{
+    "idx": 108,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.92\n- Reason: The trace is a highly regular, sustained sinusoidal oscillation across early/middle/late segments with a narrowband periodic structure and consistent amplitude/period. That matches the sawing examples (class 3). It lacks the impulsive, high peak\u2011to\u2011peak impact spikes and large troughs typical of running (class 2), is much more periodic and smoother than walking (class 1), and is far from the low\u2011amplitude, irregular/noisy profile of seizure\u2011mimicking (class 0)."
+},
+{
+    "idx": 130,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.88\n- Reason: The series is strongly periodic and highly regular across the whole window with a narrowband, consistent cycle rate and steady amplitude \u2014 matching the sawing examples. There is no long quiet start or abrupt onset into much larger, asymmetric peaks (which would indicate running/class 2), nor is there the irregular, low\u2011amplitude, broadband/noisy pattern of seizure mimicking (class 0) or the slower, more variable step\u2011like pattern of walking (class 1). Shape (near\u2011sinusoidal cycles), uniform frequency and stable amplitude point to class 3."
+},
+{
+    "idx": 128,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: class 3 (SAWING)\n- Confidence: 0.85\n- Reason: The series is highly regular and rhythmic with fairly smooth, sinusoid\u2011like cycles at a moderate, constant frequency and moderate peak\u2011to\u2011peak amplitude. This matches the saw\u2011ing examples (class 3) which show steady, smooth oscillations. It does not match running (class 2), which in the examples shows much sharper, larger, more impulsive peaks, nor walking (class 1), which is less regular and more variable, nor seizure\u2011mimic (class 0), which is low\u2011amplitude and noisy. The dominant features (steady periodicity, waveform shape and amplitude) point to sawing."
+},
+{
+    "idx": 133,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.90\n- Reason: The trace shows a long, highly regular, near\u2011sinusoidal oscillation at a steady cadence and moderate peak-to-trough amplitude for most of the record, then a short transition to a near-constant baseline toward the end. This pattern matches the SAWING examples (consistent periodic motion, steady frequency/amplitude and a late plateau). It differs from RUNNING which typically has larger, deeper negative troughs and more asymmetric/impulsive cycles, from WALKING which is slower and more irregular, and from SEIZURE MIMICKING which is aperiodic and heterogeneous."
+},
+{
+    "idx": 122,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.90\n- Reason: The series shows a long, highly regular, narrow-band, sinusoid\u2011like oscillation with nearly constant period and amplitude across early/middle/late segments. This matches the class\u20113 (sawing) examples which are the most uniformly periodic. It lacks the sharp, asymmetric impact troughs and higher variance typical of running (class 2), and it is far more periodic and energetic than the quasi\u2011periodic walking (class 1) or the irregular/noisy seizure\u2011mimic (class 0)."
+},
+{
+    "idx": 123,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: class 3 (SAWING)\n- Confidence: 0.90\n- Reason: The series is strongly periodic and highly regular across early, middle and late segments with a consistent cycle shape and amplitude. Waves are fairly sinusoidal/symmetric and continuous for the whole recording, unlike class 0 (irregular/noisy) or class 1 (quasi\u2011periodic, variable step-like cycles). It also lacks the very large, sharp peak-to-trough excursions and more irregular amplitude seen in running (class 2). These characteristics (stable, medium\u2013high frequency sinusoidal oscillation, steady amplitude) match the sawing examples."
+},
+{
+    "idx": 114,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.87\n- Reason: The series is strongly periodic and very regular across the entire record (early, middle and late segments), with consistent narrowband oscillations and moderate, fairly symmetric peak\u2011to\u2011peak amplitude (~-1.8 to +0.7). That matches the steady, sinusoidal sawing patterns (class 3) from the examples. It lacks the slower, variable gait bumps of walking (class 1) and it does not show the very large, sharp asymmetric spikes/troughs typical of running (class 2). It is also unlike the low\u2011amplitude, irregular noisy traces of seizure\u2011mimicking (class 0)."
+},
+{
+    "idx": 124,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.90\n- Reason: The series is strongly periodic and highly regular across early, middle and late segments with a consistent cycle period and fairly smooth, sinusoidal-like waveform. Amplitude is moderate and steady (no large impulsive spikes or sharp asymmetric peaks), unlike the high\u2011amplitude, spiky pattern seen in running (class 2). It is much more regular and smooth than the variable/irregular cycles of walking (class 1) and far from the low\u2011amplitude, heterogeneous patterns of seizure mimicking (class 0). These characteristics match the sawing class."
+},
+{
+    "idx": 136,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.92\n- Reason: The test trace is a highly regular, narrow\u2011band, high\u2011frequency oscillation with nearly constant amplitude and smooth, sinusoidal-like peaks across early, middle and late segments. This matches the sawing examples (class 3) which show steady, very periodic motion. It differs from running (class 2), which exhibits sharper, more impulsive spikes and larger peak-to-peak excursions, from walking (class 1), which is lower-frequency and more variable, and from seizure-mimic (class 0), which is irregular/noisy and non\u2011periodic."
+},
+{
+    "idx": 137,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.85\n- Reason: The trace is a strongly periodic, highly regular oscillation across the entire record with fairly smooth, rounded peaks and troughs and consistent amplitude \u2014 exactly the signature seen in the sawing examples. It lacks the abrupt, impulsive/spiky peaks and higher peak-to-peak energy that characterized RUNNING (class 2), and its cycle rate is much faster and more regular than the slower, more variable WALKING (class 1). It also does not show the irregular bursts, baseline jumps or non\u2011stationary behavior of the SEIZURE\u2011MIMICKING examples (class 0). The stationarity (similar pattern early/mid/late), high periodicity (strong dominant frequency) and smooth sinusoidal shape point to SAWING."
+},
+{
+    "idx": 111,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.88\n- Reason: The test series is a strongly periodic, steady oscillation with a consistent period and fairly uniform amplitude across early, middle and late segments \u2014 it looks sinusoidal rather than impulse-like. It lacks the irregular, noisy transients and baseline drifts of the seizure-mimic class (0), is much more regular than the quasi-periodic, variable-amplitude walking traces (1), and does not show the sharp, high-amplitude spiky peaks characteristic of running (2). The waveform shape, narrowband periodicity and low cycle-to-cycle variability closely match the saw\u00ading examples (class 3)."
+},
+{
+    "idx": 112,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: class 3 (SAWING)  \n- Confidence: 0.88\n\n- Reason:\n  - The series shows a long, highly regular, nearly sinusoidal oscillation with consistent period and amplitude across the entire record \u2014 this matches the sawing examples.\n  - Amplitude is moderate and stable (peak-to-peak \u2248 1\u20132), and cycles are evenly spaced; there are no abrupt baseline shifts or long quiescent segments that would suggest the heterogeneous, low-regularity seizure-mimic class 0.\n  - The waveform is smoother and less \u201cspiky\u201d than the running examples (class 2), which showed sharper, higher-amplitude, higher-frequency pulses. It is also faster and more regular than the walking examples (class 1), which were slower and more variable.\n  - Therefore the dominant discriminators (regularity, waveform shape, and stable medium-frequency periodicity) point to class 3."
+},
+{
+    "idx": 115,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: class 3 (SAWING)\n- Confidence: 0.90\n- Reason: The series is strongly periodic across the entire length with a very stable, narrow-band oscillation (consistent cycle period and amplitude). Cycle-to-cycle amplitude and phase vary very little, producing a near-sinusoidal waveform \u2014 this matches the sawing examples. It is much more regular than walking (class 1), lacks the irregular/noisy spikes and baseline drift of the seizure-mimic (class 0), and does not show the larger, sharper troughs/greater amplitude variability seen in the running examples (class 2)."
+},
+{
+    "idx": 132,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.90\n- Reason: The series is highly regular and strongly periodic across the whole recording with smooth, sinusoidal-like cycles and a consistent amplitude and cadence. This matches the SAWING examples (class 3) which show sustained, uniform oscillations. It lacks the irregular, low-amplitude noisy shape of the seizure class (0), the variable/step-like slower rhythm of walking (1), and the very sharp, spike-like peaks often seen in running (2). The steady, smooth repeating waveform and stable frequency make SAWING the best match."
+},
+{
+    "idx": 109,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.85\n- Reason: The test trace is strongly rhythmic with very regular, high-cadence oscillations and a steady positive baseline (~0.8\u20131.1) and fairly consistent peak-to-peak amplitude throughout (early/mid/late segments all show the same repeating waveform). This matches the saw/sawing examples which show sustained, nearly sinusoidal cycles around a positive offset. It does not match class 0 (low\u2011amplitude, noisy/sedentary), nor class 1 (irregular, lower\u2011frequency step-like swings), and it differs from the running examples (class 2) which tend to have larger, more asymmetric troughs and higher peak-to-peak extremes. Those pattern matches support a high confidence assignment to class 3."
+},
+{
+    "idx": 117,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.90\n- Reason: The series is highly regular and narrowband with a steady, sinusoidal-like cadence and moderate, consistent amplitude across early/middle/late segments. This matches the sawing examples (class 3). It is too smooth and regular to be class 0 (noisy/non\u2011periodic) or class 1 (walking, which shows irregular amplitude/cadence), and it lacks the very large, sharp/impulsive peaks and higher energy typical of running (class 2)."
+},
+{
+    "idx": 110,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3 (SAWING)\n- Confidence: 0.90\n- Reason: The series is a highly regular, stationary, nearly sinusoidal oscillation across the entire recording \u2014 constant cadence and amplitude with no abrupt transients or baseline shifts. This matches the sawing examples (class 3) which show steady, uniform high-frequency oscillations. It differs from running (class 2), which shows larger, less symmetric peak\u2011to\u2011peak excursions and more amplitude variability, and from walking/seizure (classes 1/0), which are much less periodic and more irregular."
+},

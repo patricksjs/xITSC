@@ -1,0 +1,8 @@
+{
+  "The waveform exhibits two dominant, symmetric lobes peaking near time steps ≈50 and ≈200 with equal maximal amplitudes around 1.5, forming a clear bimodal structure.": "common feature",
+  "The beginning (0–50) and ending (200–250) segments both show nearly linear descent into deep troughs (~–2), indicating sharp edge transitions on either side.": "partial-sample feature",
+  "All three series display a small inflections between the two main lobes around time steps 120–130, each peak about 0.1–0.2 amplitude.": "common feature",
+  "The central negative troughs near time steps 90–100 and again around 150 form extended flat plateaus (≈8–12 steps) at roughly –1.0 amplitude rather than sharp, narrow minima.": "delete feature",
+  "Around time steps 75–80, all series show a minor secondary bump (≈0.4–0.8 amplitude) immediately before the plunge into the first negative trough.": "delete feature",
+  "The apex of each main lobe (near t≈50 and t≈200) holds its maximum over 3–6 consecutive steps, producing a flat-top plateau.": "delete feature"
+}

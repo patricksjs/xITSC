@@ -1,0 +1,11 @@
+{
+  "Distinct stepwise shift: each series shows a stable low baseline that rises smoothly (sigmoid-like) into a higher stable plateau, with the transition concentrated around ~70–110s.": "common feature",
+  "Consistent localized biphasic disturbance: a short, sharp positive spike immediately followed by a negative valley appears later (~170–210s) before the signal returns to the plateau.": "common feature",
+  "Low-amplitude high-frequency jitter on both pre- and post-step plateaus; the main step amplitude (~~2 units) is much larger than the transient spike/dip (~0.4–0.6 units).": "common feature",
+  "Post-step plateau exhibits a slightly larger high-frequency variance (noticeably noisier) than the pre-step baseline.": "common feature",
+  "The biphasic transient is temporally asymmetric: the positive spike is very narrow while the negative valley is wider and recovers more slowly.": "common feature",
+  "The biphasic disturbance consistently appears at a roughly constant delay after the main step (about 60–100s offset).": "common feature",
+  "Small damped overshoot/settling right after the main step: the plateau onset often shows a brief upward bump and quickly decays into the steady plateau (~100–120s).": "common feature",
+  "The pre-biphasic plateau frequently has a slight negative drift immediately before the spike, so the plateau is not perfectly flat leading into the disturbance.": "common feature",
+  "The high‑frequency jitter is visually smooth and correlated (band‑limited), showing small quasi‑sinusoidal micro‑oscillations rather than pure white noise.": "common feature"
+}

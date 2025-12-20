@@ -1,0 +1,13 @@
+{
+  "A consistent abrupt negative step occurs near time step ~95–105 in all series, producing an immediate drop of around 2.5–3 units within one or two samples.": "partial-sample feature",
+  "A sustained wide valley follows the step: values cluster around −2 with only small high‑frequency jitter for many tens of time steps.": "common feature",
+  "Recovery is a smooth, nearly linear upward ramp spanning ~100+ time steps back to the original baseline, creating a fast-drop/slow-rise asymmetric transient.": "common feature",
+  "All series share a stable positive pre-fault baseline (~0.6–0.8) with very small, high‑frequency jitter and no large low‑frequency drift before the step.": "common feature",
+  "High‑frequency noise amplitude drops noticeably during the valley and then gradually increases again through recovery toward the baseline.": "common feature",
+  "The recovery ramp is mildly nonlinear (concave-up): a slow initial rise that accelerates mid‑recovery before flattening into the final plateau.": "common feature",
+  "The abrupt negative step in these images consistently occurs earlier, around time steps ~70–80, not ~95–105.": "partial-sample feature",
+  "Immediately after the sharp drop there is a tiny positive rebound spike (1–3 samples) before the signal settles into the wide valley.": "delete feature",
+  "The valley contains slow, low‑frequency undulations (quasi‑periodic waves with period ≈20–40 time steps) superimposed on the −2 baseline.": "delete feature",
+  "The valley’s slow quasi‑periodic undulations are phase‑aligned across series — peaks and troughs occur at the same time steps in every plot.": "delete feature",
+  "The recovery’s acceleration (mid‑recovery curvature increase/inflection) consistently occurs around time steps ~140–155 in all series.": "common feature"
+}

@@ -1,0 +1,11 @@
+{
+  "Smooth, monotonic upward step (sigmoid-like transition) from a low baseline to a higher level rather than oscillatory or spiky change.": "common feature",
+  "Clearly defined low-variance plateaus before and after the transition (stable baseline then stable elevated value with only small high‑frequency noise).": "common feature",
+  "Transition consistently occurs in the mid-segment (~t=50–100) with a large amplitude shift (≈2.5–3 units) between baseline and plateau.": "common feature",
+  "Pre‑transition baseline is tightly clustered near −2.0 across all series, showing a consistent starting offset before the rise.": "common feature",
+  "The rise is followed by a small damped overshoot/settling (brief hump and micro‑oscillations) and a transient increase in short‑term variance around the transition.": "common feature",
+  "Transition steepness and exact onset vary between examples: some traces show a sharper, shorter rise while others have a more gradual sigmoidal slope within the mid window.": "common feature",
+  "Single, isolated step: each trace contains one one‑time upward step and no additional stepwise reversals or repeated transitions across the full series.": "common feature",
+  "Slightly elevated steady noise after the rise: the post‑transition plateau retains a small but persistent increase in high‑frequency variability versus the pre‑rise baseline.": "common feature",
+  "No low‑frequency cycles: traces lack periodic or oscillatory components — variability is dominated by short‑term noise superimposed on the step.": "common feature"
+}

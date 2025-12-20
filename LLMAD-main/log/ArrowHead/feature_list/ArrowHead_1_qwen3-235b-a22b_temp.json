@@ -1,0 +1,14 @@
+{
+  "The time series exhibit a distinct double-peak structure, with the second peak consistently occurring later and being slightly lower than the first, separated by a pronounced central trough.": "common feature",
+  "A sharp, steep descent follows each major peak, creating a consistent \"cliff-like\" drop in amplitude that is more abrupt than the preceding ascent.": "common feature",
+  "A localized, shallow oscillation or \"wobble\" is consistently present in the trough region between the two main peaks, adding a unique micro-pattern to the otherwise smooth curves.": "common feature",
+  "The initial ascent to the first peak is consistently gradual and smooth, lacking any sharp spikes or sudden jumps in amplitude from the baseline.": "common feature",
+  "A distinct plateau-like region appears at the very end of the series, where the amplitude stabilizes near its lowest point before termination.": "delete feature",
+  "The overall time series exhibits a clear asymmetry, with the descent after the second peak being longer and more drawn out than the ascent to the first peak.": "partial-sample feature",
+  "The ascent to the second peak consistently shows a minor, brief plateau or flattening just before the peak, distinct from the smoother rise of the first peak.": "partial-sample feature",
+  "The descent after the second peak exhibits a characteristic \"kink\" or slight inflection point around time step 210, before resuming its steep decline.": "delete feature",
+  "A subtle, high-frequency ripple is present along the entire rising slope of the first peak, giving it a slightly serrated texture not seen elsewhere.": "delete feature",
+  "The trough between the two main peaks consistently dips below -1.0, with its lowest point occurring reliably around time step 120, forming a deep, standardized valley.": "common feature",
+  "A subtle, secondary rise emerges just before the final descent begins, creating a small, consistent \"bump\" near time step 200 that precedes the terminal plateau.": "partial-sample feature",
+  "The initial segment from time step 0 to 25 exhibits a highly consistent, steep linear ascent, establishing a uniform starting slope across all series.": "common feature"
+}

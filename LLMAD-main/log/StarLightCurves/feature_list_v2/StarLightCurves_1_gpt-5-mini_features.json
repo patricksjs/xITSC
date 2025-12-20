@@ -1,0 +1,8 @@
+{
+  "Two pulses per cycle with stable phase separation ≈0.5 cycle (~512 steps), indicating consistent double-wave periodicity across series.": "common feature",
+  "Primary pulse (≈phase 2.55) is tall, narrow, and left‑skewed (fast rise, slower decay); secondary pulse (≈phase 7.65) is broader and lower; amplitude ratio roughly 2–3:1.": "common feature",
+  "A single broad trough centered ≈phase 5.2 reaches the cycle’s minimum (~−0.8 to −1.0); baseline stays slightly negative and relatively flat between pulses (low noise).": "common feature",
+  "Pre-primary segment drifts upward: from ~−0.7 toward ~0 by phase ~2.2, forming a gentle ramp before the rapid rise.": "common feature",
+  "Primary decay is biphasic: a swift drop to near 0 by phase ~3.3, then a long, shallow decline into the trough near phase ~5.2.": "common feature",
+  "Secondary peak is mildly right-skewed: slow pre-rise from ~6.7 to peak, followed by a steeper post-peak fall returning below 0 by ~8.2.": "common feature"
+}

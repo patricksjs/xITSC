@@ -1,0 +1,8 @@
+{
+  "Stable cyclic oscillation: period ~8–10 samples (~0.5–0.6 s at 16 Hz), largely constant across the series with minor drift.": "common feature",
+  "Positive bias and asymmetry: oscillations centered above zero (~0.4–0.6) with taller positive peaks than negative troughs.": "common feature",
+  "Late-phase departure: final segment shows increased amplitude or upward level shift compared to earlier steady cycles.": "common feature",
+  "Brief early settling: initial 20–40 samples show a transient or ramp-up before cycles stabilize.": "common feature",
+  "Waveform shape asymmetry: peaks are sharper/narrower, while troughs are broader/rounded.": "common feature",
+  "Upper amplitude ceiling: positive peaks consistently cap around ~1.1–1.2, suggesting mild top-end limiting.": "common feature"
+}

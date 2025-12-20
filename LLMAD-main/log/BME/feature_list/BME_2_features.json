@@ -1,0 +1,8 @@
+{
+  "Gradual decline to a sustained plateau observed between the 30th and 90th time steps.": "common feature",
+  "Noticeable positive peak marked by a smooth rise and fall around the 110th to 130th time steps.": "common feature",
+  "Smooth oscillations occur during the initial phase, between the 0th and 30th time steps.": "common feature",
+  "Brief dip observed between the 30th and 50th time steps, leading to a sustained low plateau.": "common feature",
+  "Initial stable amplitude with minor fluctuations between the 0th and 20th time steps.": "common feature",
+  "Sudden downward spike just before the positive peak, noticeable between the 100th and 110th time steps.": "common feature"
+}

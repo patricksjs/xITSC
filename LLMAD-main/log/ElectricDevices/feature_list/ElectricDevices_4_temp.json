@@ -1,0 +1,8 @@
+{
+  "Late-stage abrupt surge: all series show a sudden rise around time steps 78–82, peaking at 3–4, then return to baseline near zero by the end.": "common feature",
+  "Peak region is jagged: during the surge, the trace forms an oscillating plateau with small fluctuations rather than a smooth top.": "common feature",
+  "Long zero baseline with sparse early spikes: the initial ~75 time steps stay at zero, with infrequent tiny spikes before the surge.": "common feature",
+  "Post-surge negative tail: after the peak, the trace briefly dips below zero before stabilizing near the baseline.": "partial-sample feature",
+  "Sharp-onset, slow-decay pattern: the rise into the surge is nearly vertical, while the return to baseline is more gradual, creating a visibly asymmetric spike.": "partial-sample feature",
+  "Brief zero-baseline jitter after surge: once near zero, small fluctuations persist for a few time steps before settling.": "common feature"
+}

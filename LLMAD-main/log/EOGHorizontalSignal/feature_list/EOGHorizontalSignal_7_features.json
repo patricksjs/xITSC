@@ -1,0 +1,13 @@
+{
+  "Consistent trough-then-peak sequence: a clear negative trough precedes a sharp positive peak, with rapid rise and fall, and this order is a defining characteristic across most series.": "common feature",
+  "Tight clustering of event timing: trough and peak occur within a narrow window after onset, with synchronized response and a short trough-to-peak interval, typically within a few hundred time steps.": "common feature",
+  "Pronounced cusp-shaped peak with a steeper descent after the peak than before it, indicating an asymmetric rise–fall around the maximum in most traces.": "common feature",
+  "Extended quiescent pre-event interval where the signal stays near zero with minimal variance before the trough occurs, consistent across images.": "common feature",
+  "Flat-topped spike: The main peak often includes a brief plateau at the maximum value, producing a top-flat shape in many traces rather than a sharp cusp.": "common feature",
+  "Amplitude ranges: trough amplitudes typically between -100 to -180 microvolts, and peak amplitudes between +150 to +300 microvolts, with some cross-subject variability.": "common feature",
+  "Post-event behavior: after the peak, the signal typically returns toward the baseline near zero with minimal persistent offset or drift in most series.": "common feature",
+  "Post-event negative baseline shift: in some series, after the peak, the signal settles at roughly -150 to -170 microvolts with small fluctuations, rather than returning fully to zero.": "partial-sample feature",
+  "Post-peak baseline hosts low-frequency, quasi-periodic oscillations around a negative offset, visible as small ripples on the -150 to -170 range in certain traces.": "partial-sample feature",
+  "Post-peak baseline may show a slow monotonic drift downward across the remainder of each trace, rather than staying constant at the initial negative offset.": "partial-sample feature",
+  "Regular post-peak micro-oscillations: after the main event, small, evenly spaced ripples persist on the negative baseline in some cases, indicating a synchronized oscillatory component accompanying the peak decay.": "partial-sample feature"
+}

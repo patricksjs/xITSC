@@ -1,0 +1,16 @@
+{
+  "Ultra-narrow spike width: peaks are almost vertical with negligible duration, indicating very short-lived events.": "common feature",
+  "Consistent spike amplitudes across bursts: peak heights remain roughly uniform across all detected spikes within a series.": "common feature",
+  "Bursts contain internal micro-peaks: within each main burst, 1–3 closely spaced sub-peaks create a mini-burst pattern.": "common feature",
+  "Micro-peak spacing within bursts can be irregular or tight, producing non-uniform or uniform mini-burst rhythms.": "common feature",
+  "In most series, bursts appear as one or two main clusters; when two bursts are present, the second often exhibits more sub-peaks and sharper maxima, showing burst-morphology heterogeneity.": "common feature",
+  "Burst location is not confined to the end of the series and can occur at any position, including mid-sequence, distinguishing it from end-clustered patterns in other classes.": "common feature",
+  "Clear bimodal bursting pattern: two distinct time windows with a long low baseline between them.": "partial-sample feature",
+  "Inter-burst timing is broadly regular across series, suggesting a quasi-periodic rhythm with a consistent gap of ~35–40 time steps.": "partial-sample feature",
+  "Bursts show a right-skewed envelope within each cluster: very sharp rise to the peak followed by a longer, gradual return to baseline.": "partial-sample feature",
+  "Low-amplitude pre-burst hum: a tiny baseline bump preceding the main burst in several series, not part of the spikes.": "partial-sample feature",
+  "Variable inter-burst spacing: gaps between the two bursts show noticeable variation across series, not consistently ~40 steps.": "partial-sample feature",
+  "In some series, bursts contain four or more closely spaced sub-peaks within a single main burst, forming a dense microburst beyond the stated 1–3 micro-peaks.": "partial-sample feature",
+  "A small pre-burst precursor wave is visible before the main spikes, creating a two-stage rise rather than a single abrupt onset.": "partial-sample feature",
+  "In some series, the decay tail includes a secondary small bump after the main peak, producing a late re-peak within a burst.": "partial-sample feature"
+}

@@ -1,0 +1,6 @@
+{
+  "Bimodal peak structure: Two distinct major peaks separated by a mid-range valley, occurring around time steps 50 and 190, with the second peak slightly higher than the first.": "common feature",
+  "Asymmetric oscillation in middle segment: Between time steps 100-150, reduced amplitude oscillations with irregular valley patterns, creating a transitional zone between the two main peaks.": "common feature",
+  "Symmetric bell-shaped envelope: All three series exhibit a smooth, symmetric overall amplitude envelope that rises from near-zero at start/end, peaks mid-series, then decays symmetrically, creating a Gaussian-like profile across the entire 250 time steps.": "common feature",
+  "Consistent low-amplitude oscillatory baseline: Between the two major peaks (time steps 150-175), a stable baseline with small-amplitude ripples (±0.5 amplitude range) appears consistently across all samples, distinct from the higher-amplitude middle segment oscillations.": "common feature"
+}

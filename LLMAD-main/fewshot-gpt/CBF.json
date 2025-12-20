@@ -1,0 +1,541 @@
+[
+{
+    "idx": 0,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.88\n- Reason: The series shows the diagnostic three-part pattern I used earlier: a low/noisy early baseline (t\u22480\u201320), a clear upward ramp through the middle that reaches a high peak (largest values \u2248 +2.5\u20133 around t\u224855\u201365), then an abrupt drop back to the low baseline for the remainder of the sequence. This rising-middle-then-late-abrupt-return behavior matches class 1 (class 0 has a relatively flat high plateau in the middle, and class 2 has an early high peak followed by a gradual decline), so the sample is best matched to class 1. The confidence reflects the close match of the middle-segment slope, peak timing/amplitude, and sharp return to baseline."
+},
+{
+    "idx": 1,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows a low/noisy start, then a smooth, sustained upward ramp through the middle reaching its largest values late in the sequence (\u2248 +1.5\u20132.0) and finally a sharp return to the negative baseline around index ~100. This \"gradual ramp-up with a late abrupt drop\" pattern matches the class\u20111 examples from the provided set. It does not show the early high spike+decay characteristic of class\u20112 nor the long, early flat positive plateau with an earlier drop typical of class\u20110."
+},
+{
+    "idx": 3,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series starts on a negative baseline, then shows a steady, continuous upward ramp through the middle and into the late region, reaching its largest values near time steps ~100\u2013110, and only drops back to a negative baseline very late (around 115\u2013120). This timing and shape \u2014 a long-lasting/gradual rise (high slope across middle/late) with the abrupt downward transition occurring at the very end \u2014 match the class 1 pattern. It lacks class 2\u2019s early high-amplitude peak and lacks class 0\u2019s relatively flat mid-sequence plateau and earlier drop, so class 1 is the best fit."
+},
+{
+    "idx": 4,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows the early negative baseline (~-1) like all classes, then a gradual upward ramp through the middle that reaches its largest values late (peaks ~+2 around time steps ~95\u2013105) and finally an abrupt drop very near the end (~115\u2013125). This timing and shape (slow rising ramp with a late peak and a very-late sudden return to baseline) match the class 1 pattern. It differs from class 0 (which exhibits a mid-series flat plateau and an earlier drop) and from class 2 (which has an early sharp peak followed by a decline)."
+},
+{
+    "idx": 8,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.88\n- Reason: The series shows a low noisy baseline early, then a clear gradual upward ramp through the middle reaching its highest values near time steps ~80\u201395, followed by a sharp drop back to the low baseline late in the sequence. This temporal pattern (middle-to-late rising trend with a late abrupt drop) matches class 1 examples. It differs from class 0 (which has an early/mid sustained plateau and a mid/early\u2011late drop) and class 2 (which has an early abrupt jump and subsequent decay)."
+},
+{
+    "idx": 10,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The series shows the characteristic negative early baseline, then a gradual, monotonic rise through the middle segment into positive values (peaking near +2) rather than a flat mid\u2011plateau or an early high spike. A large abrupt drop occurs late in the sequence and the trace returns to the negative/noise baseline \u2014 this matches the ramp\u2011up + very\u2011late drop signature of class 1 and not the early spike of class 2 or the mid sustained plateau of class 0."
+},
+{
+    "idx": 13,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows a negative early baseline, a clear upward/ramping middle segment that reaches its largest positive values late in the middle (~indices 60\u201385), and then an abrupt fall back to a negative baseline near the end. This rising/late-peak + late abrupt drop pattern matches class 1 (class 0 shows a flatter/sustained middle plateau with an earlier drop, class 2 shows an early peak followed by decay), so the sample is best assigned to class 1."
+},
+{
+    "idx": 14,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1  \n- Confidence: 0.90  \n- Reason: The series shows a negative baseline early, then a steady/continuous upward ramp through the middle that reaches its largest positive values late (around t \u2248 100\u2013110), followed by a pronounced abrupt drop back to negative near t \u2248 115\u2013120. That timing and shape (gradual late rise + late sudden fall) match the Class 1 pattern; it does not match Class 0 (middle plateau) or Class 2 (an early large peak followed by decay)."
+},
+{
+    "idx": 17,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The series begins on a negative/noisy baseline, then shows a clear rising trend (a gradual ramp) through the middle portion that reaches a large positive peak (~+2.5\u20133) around time steps ~60\u201370, followed by an abrupt drop back to the negative/noisy baseline for the late segment. This timing and shape \u2014 a mid/late ramp to a high-amplitude peak and a sharp fall afterward \u2014 match the class\u20111 examples. It differs from class 0 (which shows a relatively flat, moderate-amplitude middle plateau) and from class 2 (which has an earlier, very-early spike followed by decline)."
+},
+{
+    "idx": 18,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows a noisy negative baseline early, then a steady upward ramp through the middle reaching its largest positive values late (around time steps ~80\u2013105), followed by a sharp abrupt drop back to a negative level near the very end. This timing and shape (late rising ramp + end drop) match the characteristic pattern of class 1 and differ from class 0 (mid sustained plateau then earlier drop) and class 2 (early spike then decline)."
+},
+{
+    "idx": 20,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The series starts at the common low baseline, then shows a clear, steady upward trend through the middle into the late portion (values progressively increase rather than forming a flat plateau). The bright state reaches a high just past the middle and then falls sharply back to baseline. This \"gradual rise / late sharp drop\" signature matches the class 1 examples. It differs from class 0 (which shows an abrupt jump to a relatively flat middle plateau) and from class 2 (which exhibits an early/sharp peak followed by a decay)."
+},
+{
+    "idx": 21,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows a negative noisy baseline early, then a steady upward trend through the middle that reaches its largest values late (around time steps ~80\u2013100) followed by a sharp drop near the end back to negative \u2014 exactly the \u201cramp to a late peak then abrupt end drop\u201d pattern I identified for class 1. This differs from class 0 (which has an earlier/mid sustained plateau) and class 2 (which has an early/mid sharp peak followed by decay), so the timing and shape of the positive excursion point to class 1."
+},
+{
+    "idx": 22,
+    "label": 1,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series shows a clear mid-series positive excursion that is sustained through the middle and ends with a sharp downward step at ~t=80 followed by a negative/noisy late segment. That timing \u2014 a mid-period rise/plateau and an abrupt decline around 80 \u2014 matches the characteristic pattern of class 0. It does not match class 2 (which has the main positive excursion much earlier) nor class 1 (which generally has a later-rising trend and a very-late drop near the end)."
+},
+{
+    "idx": 24,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.88\n- Reason: The series shows a negative/noisy early baseline, then a steady upward trend through the middle that reaches the highest values near the end, followed by a sharp drop at the very end. This timing and shape (gradual rise \u2192 late high plateau \u2192 abrupt final drop) match the characteristic pattern of class 1 from the examples (class 0 has a mid-series plateau with an earlier mid\u2011late drop, class 2 shows an early spike and subsequent decay)."
+},
+{
+    "idx": 30,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows a clear gradual upward ramp through the middle of the sequence with its main peak occurring late (around time-steps ~80\u2013100) followed by a sharp drop near the very end (~110\u2013120). This temporal pattern \u2014 slow/continuous rise to a late peak and a late abrupt fall \u2014 matches the class\u20111 signature from the examples. It does not match class\u20110 (which has an early/mid abrupt step to a sustained plateau and an earlier mid-series drop) nor class\u20112 (which has an early sharp spike followed by a decay)."
+},
+{
+    "idx": 31,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: 1\n- **Confidence**: 0.85\n- **Reason**: The series shows the characteristic negative noisy baseline early, a steady positive ramp through the middle that reaches a large peak (around time step ~65\u201375), then an abrupt drop back to the negative baseline. This timing and shape \u2014 a gradual rising slope to a late middle/early-late peak followed by a sudden fall \u2014 matches the class\u20111 pattern (class\u20110 shows a flat middle plateau; class\u20112 has the main peak much earlier)."
+},
+{
+    "idx": 34,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The series shows a noisy negative baseline early, then a steady upward/ramping trend through the middle that reaches its largest positive values late in the sequence, followed by a sharp drop back to negative values near the end. That temporal pattern (gradual rise peaking late + end abrupt drop) matches the Class 1 examples. It does not match Class 0 (which shows a stable mid-segment plateau and an earlier mid\u2192late drop) nor Class 2 (which has an early large peak followed by decay)."
+},
+{
+    "idx": 40,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows the same early noisy negative baseline as other classes, but the middle segment has a clear, sustained upward trend that climbs to high values (peaks \u2248 +2.5\u20133) before a sharp return to the negative baseline. That combination \u2014 a rising/sloping middle reaching large positive amplitude and then an abrupt drop \u2014 matches the class\u20111 pattern (rising middle and late high peak with an end/late drop) rather than class\u20110 (flat/plateau middle) or class\u20112 (early large peak followed by gradual decay)."
+},
+{
+    "idx": 41,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.92\n- Reason: The series shows the hallmark class\u20111 pattern from the prior analysis: a noisy negative baseline early, a clear gradual upward ramp through the middle that reaches the largest positive values late in the sequence (peaks \u2248 +1.5\u20132.5 around t\u224880\u2013110), and then an abrupt drop back to the negative baseline near the very end. This timing (late peak), rising slope through the middle, and end-of-series abrupt return match class 1 and differ from class 0 (flat mid plateau) and class 2 (early high spike with decay)."
+},
+{
+    "idx": 42,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The series shows a noisy negative baseline early, then a clear upward trend through the middle that reaches its largest positive values just before a sudden drop to a negative baseline for the remainder of the sequence. This pattern matches the \"rising ramp then end/near\u2011end collapse\" signature I associated with class 1. It differs from class 0 (which is a relatively flat positive plateau in the middle bounded by level shifts) and from class 2 (which has an early, large spike followed by a slow decay). The timing (middle\u2192late peak) and the ramp shape point to class 1."
+},
+{
+    "idx": 43,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows a low/noisy baseline in the early segment, then a clear, steady upward ramp through the middle that reaches its largest values in the later middle/late portion, followed by a sharp drop back to baseline near the very end. This matches the class\u20111 signature (positive ramp / late peak with a late abrupt fall). It differs from class\u20110 (which has a flat, sustained plateau in the middle with earlier drop) and class\u20112 (which has an early sharp spike followed by gradual decay)."
+},
+{
+    "idx": 44,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows a negative baseline with small noise in the early segment, then a gradual, continuous upward ramp through the middle into the late portion where the largest positive values occur (peaks \u2248 +2 to +2.3 around t\u2248100\u2013115), followed by a sharp drop only at the very end (near t\u2248120). This ramp-to-late-peak-and-final-drop pattern matches the class\u20111 signature from the examples (class 0 is a mid-sequence step/plateau with earlier step-down; class 2 has an early impulsive peak followed by decline), so the sample is best classified as class 1."
+},
+{
+    "idx": 46,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.88\n- Reason: The series shows the same three-part skeleton as the training examples (slightly negative early baseline, a pronounced positive middle excursion, then a noisy negative late baseline), but the shape and timing of the middle excursion match class 1. Specifically, the middle segment is a rising ramp/trend (values steadily increase from ~t=25 onward) that reaches a large peak (~+3) in the mid\u2013late window (around t\u224860\u201370) and is followed by a very abrupt drop back to negative values. That ramp-to-late-peak followed by a late sharp collapse is the defining pattern of class 1 (as opposed to class 0\u2019s steady plateau or class 2\u2019s early front-loaded spike and gradual decay)."
+},
+{
+    "idx": 49,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows the same three-part layout (noisy negative early baseline, a pronounced positive middle interval, then a return to a negative baseline) used to distinguish classes. Key discriminators match class 1:\n  - Middle-segment trend: clear gradual upward ramp across the middle (values steadily increase from ~20 to ~60), unlike class 0\u2019s flat plateau or class 2\u2019s early peak followed by decline.\n  - Peak timing and amplitude: the largest positive peak appears late in the middle segment (~t\u224855\u201365) and reaches high values (~2\u20132.5), consistent with class 1 examples that peak later and can reach larger amplitudes.\n  - Final drop: a sharp fall back to the noisy negative baseline after the late peak, as seen in class 1 samples.\nSmall sample-to-sample timing jitter is possible, but the strong positive slope through the middle and the late peak make class 1 the best match."
+},
+{
+    "idx": 54,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The series shows a low/negative early baseline, a clear gradual upward trend through the middle and a large positive peak in the middle-to-late interval (around t\u224860\u201372), followed by a sudden drop back to a negative/noisy baseline. This pattern matches the class-1 signature (a ramp/rising middle with a late high peak and an abrupt fall) and differs from class-0 (middle flat plateau) and class-2 (an early high spike followed by decay). The short-scale noise is consistent across classes, but the timing and shape of the main excursion best fit class 1."
+},
+{
+    "idx": 60,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows the characteristic steady upward ramp through the middle and into the late segment with its maximum occurring late (around time steps ~100\u2013120) followed by an abrupt fall only at the very end. This matches the class\u20111 pattern (gradual rise to a late peak then a terminal drop). It does not match class\u20110 (which has a mid\u2011segment plateau and an earlier return to baseline around t\u224880\u201390) nor class\u20112 (which peaks early in the middle and then declines). Key discriminators used: positive middle/late slope, timing of the main peak (late), and the end\u2011of\u2011series abrupt drop."
+},
+{
+    "idx": 68,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows the characteristic gradual upward ramp through the middle and into the late segment (values slowly move from negative toward and above zero, reaching ~+1\u2013+2 around t\u224890\u2013115) rather than a flat mid-plateau (class 0) or an early high peak followed by decay (class 2). The large abrupt downward step occurs very late (just before the series end), matching the late sharp drop pattern seen in class 1. Overall timing (slow rise) and shape (ramp + late drop) strongly match class 1."
+},
+{
+    "idx": 70,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows a low early baseline, then a sustained monotonic rise through the middle segment reaching its largest values near time \u2248100\u2013110, and finally a sudden sharp drop concentrated very near the end (\u2248115\u2013120). This pattern (rising middle + abrupt end-of-sequence plunge) matches the characteristic behavior of class 1 from the reference examples. It does not match class 0 (which has a relatively flat positive plateau and an earlier mid/late drop around 80\u201390) nor class 2 (which shows a large early/mid peak followed by a slow decay)."
+},
+{
+    "idx": 74,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The series starts at a negative baseline, then shows a clear, roughly monotonic rise through the middle portion (a ramp-up in brightness from ~30 to ~70) reaching a high-amplitude peak, followed by a sharp fall back to the low/noisy baseline immediately after the peak. This \"rising middle then abrupt drop\" pattern matches class 1 from the examples (class 0 shows a flat mid plateau between two level shifts, class 2 shows an early peak followed by a decay). The timing and ramp shape of the increase (rather than a sustained flat plateau or an early peak) make class 1 the best match."
+},
+{
+    "idx": 75,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.90\n- Reason: The series shows the same pattern I identified for class 1 \u2014 a noisy negative baseline early, a gradual upward ramp through the middle into the late segment, reaching its largest positive values near the end (\u2248 +2 to +2.5), followed by a sudden drop back toward the negative baseline at the very end. This timing and \u201cramp \u2192 late peak \u2192 end drop\u201d shape differs from class 0\u2019s middle plateau and class 2\u2019s early sharp peak, so class 1 is the best match."
+},
+{
+    "idx": 2,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series shows a clear, abrupt step-up from a negative baseline to a sustained positive plateau in the early\u2192middle segment (~t \u2248 25\u201365), followed by a sharp step-down back to negative values in the late segment. That \u201cstep up \u2192 middle plateau \u2192 step down\u201d temporal pattern and moderate positive amplitude in the middle match the characteristic signature I identified for class 0 (as opposed to class 1\u2019s gradual ramp-to-late-peak or class 2\u2019s early peak followed by a long decay). The short-term noise level is similar across classes and not discriminative here, while the timing and abruptness of the transitions strongly indicate class 0."
+},
+{
+    "idx": 6,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a clear abrupt rise from a negative early baseline into a sustained, relatively flat positive plateau through the middle portion (approx. indices 25\u201390), followed by a sudden down-step into the negative late baseline. These timing and shape characteristics (middle flat/high plateau + mid/late abrupt drop) match the class\u20110 pattern described earlier and differ from class\u20111's gradual late ramp/very\u2011end drop and class\u20112's early peak followed by a descending middle."
+},
+{
+    "idx": 11,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a clear low baseline in the early segment, a sudden step up around time ~20 into a relatively steady plateau near +1 that persists through the middle, and a sharp drop back to the low baseline in the mid-late segment (~75\u201380). Those features (early abrupt rise \u2192 flat middle plateau \u2192 mid-late abrupt fall) match the characteristic pattern of class 0 and differ from class 1's gradual middle ramp and class 2's large early peak followed by a downward ramp."
+},
+{
+    "idx": 19,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series shows a clear abrupt step-up from a negative noisy baseline around t\u224825 into a sustained positive plateau (\u2248+0.5 to +1.3) that persists through the middle segment, followed by a relatively sharp drop back to a negative baseline near t\u2248100. This timing and shape (sudden mid-step to a steady plateau, then a mid/late abrupt fall) matches the class\u20110 pattern. It does not show the gradual ramp-up that characterizes class\u20111 nor the early high spike followed by decay seen in class\u20112."
+},
+{
+    "idx": 23,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows a sudden step-up around t\u224820 into a fairly flat, positive plateau (\u2248+1 to +1.8) that persists across the central segment, followed by a sharp drop back to a noisy negative baseline in the late segment. This timing (middle-centered), shape (rectangular/flat plateau) and moderate peak amplitude match the class\u20110 examples and do not fit the late ramp of class\u20111 or the early spike+decay pattern of class\u20112."
+},
+{
+    "idx": 28,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the signature three-segment pattern I used to distinguish classes: an early slightly negative baseline, a clear and sustained positive plateau in the middle (~30\u201365) with modest jitter (mean around +1 to +1.8), and a relatively early sharp descent back to a persistent negative/noisy late level (drop around ~65\u201390). That flat, sustained mid-elevation followed by an earlier return to negative values matches the class 0 examples (class 1 tends to ramp upward later and drop much closer to the end; class 2 typically peaks earlier and then trends down through the middle rather than holding a flat plateau). Hence class 0 is the best match."
+},
+{
+    "idx": 32,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the clear three-segment pattern that I associated with class 0: (1) an early negative baseline (t\u22480\u201320), (2) an abrupt step up at ~20 to a relatively flat, sustained positive plateau (t\u224820\u201380) with only small fluctuations, and (3) a pronounced downward step in the mid\u2013late portion (around t\u224880\u201395) into a negative level that is then maintained with noise. This timing (early step-up to a plateau and a mid\u2013late drop) and the plateau shape match class 0 much more closely than the ramp-to-late-peak of class 1 or the early spike-and-decline pattern of class 2."
+},
+{
+    "idx": 36,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series shows a negative noisy early baseline (~0\u201320), a sharp step-up around t\u224822 into a sustained moderate positive plateau (~0.5\u20131.0) that persists through the middle, and a clear step-down at the end. This step\u2011up/flat\u2011middle/step\u2011down pattern matches the class 0 prototype. It differs from class 1 (which shows a gradual rising ramp through the middle) and from class 2 (which has a very large early spike followed by a downward trend), so class 0 is the best match."
+},
+{
+    "idx": 45,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series shows an abrupt step-up from a negative early baseline (around t\u224815\u201320) into a sustained, relatively flat positive plateau that persists through the middle portion, followed by a sharp step-down back to the negative baseline in the late segment. That \u201cstep-up \u2192 long flat high plateau \u2192 abrupt step-down\u201d pattern matches the class\u20110 examples. It does not match class\u20111 (which shows a gradual/ramped rise rather than an immediate step) or class\u20112 (which shows a high early peak followed by a steady decay across the middle)."
+},
+{
+    "idx": 48,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a clear three\u2011segment pattern that matches the class\u20110 fingerprint: an early slightly negative baseline, an abrupt step\u2011up around time ~20 into a sustained positive plateau (~+1 to +1.5) that persists through the middle portion, and then a fairly sharp downward jump back to a noisy negative baseline in the late segment. This timing and shape (middle plateau bookended by low values) is the distinguishing pattern for class 0 and differs from class 1 (gradual rising ramp) and class 2 (an early sharp peak followed by decay)."
+},
+{
+    "idx": 51,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows the class-0 signature: an early modest negative baseline, a clear sudden step up into a fairly flat positive plateau through the middle (\u2248 +1 to +1.5), then an abrupt mid\u2192late drop back to a noisy negative baseline around steps ~75\u201385. This timing and shape (middle plateau + pronounced mid-to-late drop) match class 0 and differ from class 1 (gradual rise peaking late with a very-late collapse) and class 2 (early sharp spike followed by steady decay)."
+},
+{
+    "idx": 53,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.88\n- Reason: The series shows an abrupt step up from a noisy negative baseline into a sustained positive plateau starting around time step ~25\u201335 and remaining relatively steady (with modest noise) through the middle and most of the late portion, then a sharp return to the negative baseline right at the end. This \u201cjump up \u2192 long, steady high level \u2192 sharp drop back down\u201d pattern matches the class 0 examples (distinct from class 2\u2019s narrow early spike and class 1\u2019s gradual/late ramp-to-peak)."
+},
+{
+    "idx": 55,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: [0]\n- **Confidence**: [0.90]\n- **Reason**: The series shows a clear step-up from a slightly negative early baseline into a sustained positive plateau starting around t\u224825\u201330, remaining fairly flat through the middle, and then a distinct sharp drop to a negative noisy late plateau around t\u2248100\u2013110. That \u201cearly-to-mid step \u2192 sustained mid plateau \u2192 mid/late sharp fall \u2192 late negative plateau\u201d pattern matches the class\u20110 signature from the examples. It differs from class\u20111 (which exhibits a gradual ramp to a late peak) and from class\u20112 (which has a pronounced early peak followed by a gradual decay), so class 0 is the best fit."
+},
+{
+    "idx": 61,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the hallmark \"step\u2011like\" pattern of class 0: an early negative baseline, a sharp step up into a sustained positive plateau through the middle portion, then an abrupt drop back to a negative level for the late segment. This timing and shape (early low \u2192 middle plateau \u2192 abrupt mid/late drop) matches the class 0 examples much more closely than the class 1 ramp-to-late-peak pattern or the class 2 early spike + long decay."
+},
+{
+    "idx": 63,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.85\n- Reason: The series shows the canonical three-segment structure (low noisy early baseline, a long elevated middle, then a sudden fall). The elevated portion begins around t\u224825 and persists through most of the middle/late window with a modest upward tendency rather than a single short peak or a long perfectly flat plateau. The abrupt drop occurs very near the end (\u2248t120\u2013125). That timing and shape (sustained rise/late maximum followed by a final end drop) match the class\u20111 examples more closely than class\u20110 (which has its sharp fall earlier in the late window) or class\u20112 (which peaks early and then decays)."
+},
+{
+    "idx": 65,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.75\n- Reason: The series shows the characteristic early low/noisy baseline and a sharp step-up around t\u224820 common to all classes, then a long middle segment of sustained positive values rather than a large early peak. Crucially, the major downward jump occurs very late (around t\u2248120) rather than mid-series \u2014 this late, abrupt drop is the most distinctive cue of class 1 in the provided examples. The peak amplitudes are moderate (not as large as class 2) and there is no strong, steady upward ramp through the entire middle, but the timing of the final sharp drop outweighs that, so the pattern best matches class 1."
+},
+{
+    "idx": 66,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the distinctive class\u20110 signature: a negative noisy baseline early (t\u22480\u201315), a sharp step up around t\u224818\u201325 into a fairly flat, moderately elevated plateau (values \u2248+0.5\u2013+1.2) that persists through the middle, and then an abrupt drop back to a low/noisy late level (around t\u224895\u2013105). This step\u2011up/plateau followed by a mid/late sudden down\u2011step matches the class 0 examples much more closely than the gradual ramp of class 1 or the early high spike + downward trend of class 2."
+},
+{
+    "idx": 69,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the hallmark class\u20110 pattern: an initial near\u2011baseline (~\u22121) segment, a sharp jump around step ~20\u201330 to a sustained positive plateau (~+1 to +1.8) through the middle, then an abrupt return to the negative/noisy baseline around ~75\u201380. It lacks the progressive upward ramp of class\u20111 and the early high peak followed by a steady decay of class\u20112, so it best matches class\u20110."
+},
+{
+    "idx": 73,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the distinctive class-0 pattern: an initial noisy negative baseline, a sudden rise around t\u224822\u201330 into a fairly stable positive plateau (~+1 to +1.5) that persists through the middle segment, and then an abrupt return to the negative baseline around t\u224880\u201390. This flat mid\u2011plateau (moderate amplitude) and the early-to-mid jump followed by an earlier drop (compared with class 1\u2019s later ramp/peak and class 2\u2019s much larger early peak+decay) match the class 0 examples."
+},
+{
+    "idx": 80,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the characteristic class\u20110 pattern: an early noisy negative baseline (t\u22480\u201320), a sharp step up at \u224820\u201330 to a moderate positive level (~+1 to +1.5) that remains a fairly flat, sustained plateau through the middle portion, and then an abrupt drop back to the negative baseline in the late segment (around t\u224890\u2013100). This matches the step/plateau + early return behavior of class 0 and not the gradual rising ramp of class 1 or the large early spike followed by a decline typical of class 2."
+},
+{
+    "idx": 81,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the signature three-part pattern I associated with class 0: an early negative baseline (~\u22121), a fairly sudden jump in the early middle (around t\u224815\u201325) to a moderate, stable plateau near +0.8\u2013+1.2 (middle segment) with only small jitter, and then an abrupt downward step back to the negative baseline around t\u224880\u201395. This flat moderate middle plateau and the mid/early-late timing of the downward step match class 0 and differ from class 1 (which has a gradual rising ramp and a very late drop) and class 2 (which has a higher early peak followed by a decline)."
+},
+{
+    "idx": 82,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the hallmark class\u20110 pattern from the earlier analysis: an abrupt step up from a slightly negative early baseline to a sustained positive plateau in the middle (step occurs around t\u224820\u201330 and the plateau persists through roughly t\u224820\u2013100), followed by a fairly sharp drop back to a negative level in the late segment. This clear early step \u2192 stable middle plateau \u2192 mid/late abrupt drop sequence matches class 0 and differs from class 1 (which shows a gradual ramp) and class 2 (which shows an early high peak followed by a continuous decline). The only small uncertainty is that the final drop is a bit later than in some class\u20110 examples, so confidence is high but not absolute."
+},
+{
+    "idx": 83,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the clear \"step-up \u2192 sustained positive plateau \u2192 abrupt late step-down\" pattern that defines class 0 in the reference samples. Concretely: early (0\u2013~20) values sit around a negative baseline, there is a sharp up-step at ~20 into a stable positive plateau that persists through the middle (~20\u2013~100), and then a pronounced drop back to a negative baseline in the late segment (~100+). This matches class 0 (mid-window plateau with a late down-step) much more closely than class 1 (gradual ramp to a late peak) or class 2 (early peak followed by steady decay)."
+},
+{
+    "idx": 87,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: 0\n- **Confidence**: 0.92\n- **Reason**: The series shows a clear two\u2011step pattern: an early negative baseline (t\u22480\u201318), a sudden upward step to a sustained positive plateau across the middle (t\u224818\u201395) with only small fluctuations, and then a fairly abrupt downward step back to a negative baseline in the late segment (t\u224895\u2013end). This matches the Class 0 signature (mid positive plateau with up\u2011then\u2011down steps). It does not match Class 1 (which has a smooth, gradual ramp to late highs and an end drop) nor Class 2 (which has an early sharp pulse followed by a gradual decay)."
+},
+{
+    "idx": 89,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: 0\n- **Confidence**: 0.90\n- **Reason**: The series shows a noisy negative baseline early (0\u2013~20), a clear step up into a relatively steady positive plateau (~+1 to +1.5) through the middle (~25\u201380), and then an abrupt fall back to a negative baseline around time \u224880. This timing and shape (mid-window flat/steady plateau with a mid\u2011late drop) match the Class 0 pattern described earlier and differs from Class 1 (gradual rising ramp peaking late) and Class 2 (an early large spike followed by slow decay)."
+},
+{
+    "idx": 91,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series has the characteristic three-part structure seen in class 0: a negative/quieter early baseline, a long, fairly flat positive plateau through the middle (roughly t\u224818\u201395) with modest jitter and moderate amplitude (~+0.5\u2013+1.2), and then a relatively sudden drop back to the negative late baseline near t\u224895\u2013100. It lacks the steady upward ramp of class 1 and does not show an early middle spike followed by a gradual decline as in class 2, so it best matches class 0."
+},
+{
+    "idx": 94,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The series shows the textbook \"low \u2192 abrupt rise \u2192 sustained high\" pattern. Early (t\u22480\u201325) it sits on a noisy negative baseline. Around t\u224825\u201335 there is a fairly abrupt jump into a sustained positive plateau (values ~0.5\u20131.2) that persists through the middle and most of the late segment. Finally there is a sharp fall back toward negative near the very end. This abrupt early-to-middle jump plus a long, relatively flat positive plateau is the defining signature of class 0 (as opposed to class 1's gradual ramp or class 2's early sharp peak+decay). The end-time drop is a timing shift versus the training examples but does not change the overall class-0 pattern."
+},
+{
+    "idx": 98,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows the characteristic step\u2011up \u2192 sustained positive plateau \u2192 abrupt step\u2011down back to the low baseline pattern. Specifically it stays near \u22121 in the early segment, jumps up to ~+0.5\u2013+1.5 around t\u224825\u201330 and remains on a fairly flat positive plateau through the middle, then drops sharply back to the negative baseline near t\u2248100 and stays noisy low afterward. This matches the class\u20110 shape (mid plateau with a later return to baseline) and differs from class\u20111 (gradual ramp to late peak with an end\u2011only drop) and class\u20112 (an early sharp peak followed by gradual decay)."
+},
+{
+    "idx": 102,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.87\n- Reason: The series shows a clear abrupt step-up from a negative baseline around t\u224822\u201330 into a fairly flat, sustained positive plateau (\u2248 +1 to +1.6) through the middle, followed by an abrupt drop back to a noisy negative baseline in the late\u2013middle segment (\u224865\u201375). This timing and shape \u2014 an abrupt rise into a level plateau and a mid/late abrupt return to baseline \u2014 matches the class 0 pattern. It does not show the gradual upward ramp that characterizes class 1 nor the very early sharp peak followed by a slow decay typical of class 2, so class 0 is the best match."
+},
+{
+    "idx": 108,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows a clear, sudden step up around t\u224825 into a sustained positive plateau (~+1 to +1.7) through the middle segment, followed by an abrupt drop back to a negative baseline in the late segment. This two-step (low \u2192 sustained high \u2192 low) pattern, with a flat/high middle plateau, matches the fingerprint I associated with class 0 and contrasts with class 1 (gradual ramp) and class 2 (early peak followed by a decay)."
+},
+{
+    "idx": 5,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.87\n- Reason: The series shows a clear, large positive excursion beginning early (\u2248t=20\u201335) reaching the highest amplitudes, followed by a gradual decline through the middle and a low/noisy late segment. This pattern (an early sharp peak and subsequent decay) matches the class\u20112 prototypes. It does not show the sustained mid\u2011series plateau of class 0 nor the slow middle\u2011to\u2011late ramp and very\u2011late drop characteristic of class 1."
+},
+{
+    "idx": 7,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.88\n- Reason: The series shows a clear, relatively early brightening (around t\u224818\u201325) to the largest instantaneous amplitudes in the sample, followed by a gradual decline through the middle segment back toward baseline and then noisy low values in the late segment. That early sharp/peaked high-amplitude event followed by a decaying trend matches the consistent pattern I identified for class 2 (early peak + decay), and does not match class 0 (stable mid-plateau) or class 1 (gradual ramp to a late peak)."
+},
+{
+    "idx": 9,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.85\n- Reason: Segmenting the series into early (0\u2013\u224822), middle (\u224822\u201380) and late (\u224880\u2013128) shows the diagnostic pattern of class 2: an early sharp jump to the largest positive peak (~+2 to +2.5) shortly after the early segment, followed by a gradual downward trend through the middle and a return toward zero/negative with noisy fluctuations in the late segment. This differs from class 0 (a relatively flat, sustained middle plateau ~+1 and an earlier abrupt fall) and from class 1 (a slower, late-rising trend that peaks later). The timing (early middle peak) and higher amplitude match class 2."
+},
+{
+    "idx": 12,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a clear, early sharp upward jump around t\u224820\u201330 to the largest positive amplitudes (~+2 to +3), followed by a roughly monotonic, gradual decline through the middle and low noisy values in the late segment. This matches the class\u20112 pattern (early large spike then slow decay). It does not match class\u20110 (which has a middle flat plateau with two abrupt steps) or class\u20111 (which shows a late ramp-up and a final abrupt drop)."
+},
+{
+    "idx": 15,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.88\n- Reason: The series starts from the same negative baseline, then shows a sharp, large positive spike very early in the middle (peak \u2248 +2.5\u20133 around t\u224830\u201335) followed by a gradual decline through the remainder of the middle segment back toward zero/negative well before the very end. This early, highest-amplitude peak + subsequent downward drift is the defining pattern of class 2 (vs. class 0\u2019s moderate positive plateau and class 1\u2019s slowly rising ramp with a late peak), so the sample best matches class 2."
+},
+{
+    "idx": 16,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a clear early, sharp positive jump (around time steps ~20\u201330) to the largest amplitudes, followed by a monotonic decay through the middle and then a return to a near\u2011baseline noisy/negative late segment. This timing and shape (early spike + gradual decline) match the class\u20112 pattern from the examples and differ from class\u20110 (mid plateau) and class\u20111 (gradual late ramp)."
+},
+{
+    "idx": 25,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a low/negative baseline in the early segment, a very rapid/abrupt rise around t\u224820\u201330 to a large positive excursion (~+2 to +2.5), and then a gradual decline through the middle back toward baseline with small negative noise in the late segment. This timing (early sharp spike), shape (fast jump then monotonic decay) and relatively large amplitude match the class\u20112 pattern and contrast with class\u20110 (middle sustained plateau) and class\u20111 (slow ramp to a later peak)."
+},
+{
+    "idx": 26,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a clear, large positive excursion very early (around time steps ~20\u201330) followed by a gradual decay through the middle and a return to a near-zero / slightly negative baseline in the late segment. This matches the class\u20112 signature (early sharp peak + monotonic decay). It does not match class\u20110 (which has a sustained mid-sequence plateau) nor class\u20111 (which shows a gradual/ramp rise with a late peak)."
+},
+{
+    "idx": 27,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a pronounced positive excursion very early (around time steps ~20\u201335) reaching values ~2\u20133, followed by a gradual decline through the middle and leveling off near baseline in the late segment. This matches the class\u20112 signature (early sharp peak then slow decay). It does not show the middle sustained plateau of class 0 nor the steady upward ramp and late peak/drop characteristic of class 1."
+},
+{
+    "idx": 29,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.85\n- Reason: The series shows the distinctive \"early middle\" behavior I associated with class 2: after a negative baseline for the first ~20 time steps there is a fairly rapid rise to a high peak around t\u224825\u201340, followed by a gradual decay through the remainder of the middle segment back toward negative values in the late segment. This contrasts with class 0 (a stable mid plateau) and class 1 (a steady rising trend that peaks later). The timing (early peak) and the subsequent downward slope match the class\u20112 pattern."
+},
+{
+    "idx": 33,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.86\n- Reason: The series shows a pronounced, early positive excursion (sharp rise just after ~20\u201330) reaching the largest amplitudes in the first half, then a gradual decline through the remainder of the middle segment into a moderate, noisy negative tail. This matches the class\u20112 pattern (early high peak followed by gradual decay). It does not show the sustained mid plateau with a clear abrupt drop (class 0) nor the steady mid/late ramp with a very late sudden fall (class 1)."
+},
+{
+    "idx": 35,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows the diagnostic three-segment structure: an early slightly negative baseline, a sharp step-up around t\u224820\u201330 to a relatively large positive amplitude (~+2 to +2.5), then a clear gradual decline through the middle toward near-zero/negative in the late segment. It lacks the long flat plateau with a mid/late abrupt drop typical of class 0 and it lacks the steady mid-to-late upward ramp and a very late abrupt drop seen in class 1. The early high peak followed by a smooth downward trend matches the class 2 signature."
+},
+{
+    "idx": 37,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a clear, relatively early (around t\u224825\u201335) sharp positive jump to large values followed by a gradual decline through the middle segment back toward baseline. This early spike + decaying excursion is the hallmark of class 2 in the provided examples. It does not match class 0 (which shows a mid-segment step into a sustained flat plateau) nor class 1 (which exhibits a gradual ramp upward peaking later and a very late abrupt drop). The timing and shape (early sharp peak then decay) therefore strongly indicate class 2."
+},
+{
+    "idx": 38,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.85\n- Reason: The series shows a clear, abrupt rise very early (around t\u224820\u201330) to the largest amplitudes (~+1.5\u20132.5) followed by a gradual decline through the middle back toward the noisy baseline in the late segment. This matches the class-2 signature (early strong step/spike then decay). It does not match class-0 (mid sustained plateau with a mid/late abrupt drop) nor class-1 (a slowly rising ramp peaking late with the drop occurring near the very end)."
+},
+{
+    "idx": 39,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.85\n- Reason: The series shows a clear, early sharp positive jump (around t\u224825\u201340) reaching the largest amplitudes (~2\u20132.8) and then a gradual decline through the middle toward baseline in the late segment. This matches the class\u20112 pattern (early high spike then decay). It does not match class\u20110 (which has a more moderate, sustained middle plateau) nor class\u20111 (which exhibits a gradual ramp peaking much later and often a very late abrupt drop). The timing (early), shape (sharp spike \u2192 decay) and high amplitude strongly indicate class 2."
+},
+{
+    "idx": 47,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- **True Label**: 2\n- **Confidence**: 0.90\n- **Reason**: The series shows a pronounced, early positive excursion (around time steps ~20\u201330) reaching the largest amplitudes (~+2 to +2.5), followed by a gradual decline across the middle segment and a late segment that returns toward baseline/negative noise. This timing (earliest peak), large peak amplitude, and subsequent decaying trend match the class\u20112 pattern (early large spike + decay) and differ from class\u20110 (mid plateau then sharp late drop) and class\u20111 (gradual rise peaking much later)."
+},
+{
+    "idx": 50,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.88\n- Reason: The series shows the characteristic early, relatively large-amplitude positive spike/peak beginning just after t\u224820 (values up to ~2\u20132.5), followed by a gradual decline through the middle segment and then a return to near-zero / mildly negative noisy values in the late segment. This matches the class\u20112 pattern (early sharp/high peak and subsequent downward trend) and does not match class\u20110 (a sustained mid-window plateau with an abrupt drop around t\u224880\u201390) or class\u20111 (a gradual ramp rising later with a very late abrupt drop)."
+},
+{
+    "idx": 52,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows an early, abrupt large positive excursion (peak \u2248 +2 to +3 around t\u224830\u201340) followed by a steady decline through the middle and then noisy near-zero/slightly negative values in the late segment. This pattern (early high spike \u2192 decaying middle \u2192 noisy late baseline) matches the class\u20112 examples. It does not show the sustained mid plateau of class 0 nor the slow ramp-to-late-peak and very-late drop characteristic of class 1."
+},
+{
+    "idx": 56,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a clear, early sharp step-up (around time steps ~20\u201330) to a relatively large positive amplitude (\u2248 +2 to +2.5) followed by a steady decline through the middle and into a noisy, near\u2011baseline late segment. This timing (very early high peak) and shape (early jump \u2192 gradual monotonic decline) match the characteristic fingerprint of class 2 from the provided examples and differs from class 0 (moderate middle plateau then a mid/late sudden drop) and class 1 (gradual ramp rising toward a late peak)."
+},
+{
+    "idx": 57,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a clear early, abrupt positive jump around time step ~20 to values near +2 followed by a gradual decline through the middle back toward zero and slightly negative/noisy behavior in the late segment. This timing and shape \u2014 large early peak then decay \u2014 matches the class\u20112 pattern from the examples (class\u20110 has a middle plateau and a later drop; class\u20111 shows a later, gradual rise), so class 2 is the best fit."
+},
+{
+    "idx": 58,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series shows a clear, abrupt up-step early (around t\u224818\u201322) to the largest peak (~+2 to +2.5) followed by a monotonic decline through the middle into a near\u2011zero/noisy late segment. This matches the class\u20112 pattern (early sharp rise to the highest amplitude then gradual fall). It does not match class\u20110 (mid plateau after the rise) or class\u20111 (a long gradual middle ramp rising to a late peak)."
+},
+{
+    "idx": 59,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.85\n- Reason: The series shows a negative/low early baseline, a pronounced positive rise beginning around time step ~25\u201335, and then a steady decay back toward baseline through the rest of the record. There is no late abrupt crash near the very end (which would indicate class 1) and no long, sustained mid\u2011plateau followed by a sudden mid\u2011late drop (which would indicate class 0). The timing (early/mid positive excursion) and the subsequent gradual downward trend match the class\u20112 pattern."
+},
+{
+    "idx": 62,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series shows a clear, large positive jump very early (~t\u224818\u201325) reaching the largest amplitude (~2.5\u20133), followed by a gradual decay through the middle and a low/noisy late segment without a late sustained rise or an end abrupt drop. This timing/shape (early strong peak + downward middle trend + quiet late) matches the class\u20112 pattern from the examples."
+},
+{
+    "idx": 64,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows the characteristic early negative baseline, a pronounced abrupt upward step around time \u2248 22\u201326 reaching a large peak (~+2.5\u20133.0), then a clear downward trend through the middle that returns toward the negative/near\u2011zero baseline in the late segment. That pattern (early sharp jump + subsequent decline) matches class 2. It differs from class 0 (which has an early jump but a stable high plateau through the middle) and from class 1 (which shows a gradual, sustained rise rather than an abrupt early jump), so class 2 is the best fit."
+},
+{
+    "idx": 67,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.85\n- Reason: The series shows a low/noisy baseline early, then a rapid/large positive jump around the start of the middle segment (~25\u201335) to ~2\u20132.5, followed by a gradual decline through the middle and a return to low/negative noisy values in the late segment. This timing (an early/early-middle peak) and the steady downward trend thereafter match the characteristic pattern of class 2 (early peak + falling middle), and differs from class 0 (middle flat plateau then abrupt mid\u2011late drop) and class 1 (slow ramp through middle with a late-end sharp drop)."
+},
+{
+    "idx": 71,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.86\n- Reason: The series shows a clear, abrupt large jump from a negative early baseline at t\u224820\u201330 to a high positive peak (\u2248+2 to +2.5), followed by a gradual monotonic decay through the middle into a low/noisy late baseline. That timing (early strong peak) and shape (early high amplitude then decay) match the class\u20112 prototypes. It differs from class\u20110 which has a more moderate plateau (~+1) during the middle and a more discrete early/early\u2011middle plateau, and from class\u20111 which shows a slow, continuous rise peaking much later. The early high amplitude and subsequent decay make class\u20112 the best match."
+},
+{
+    "idx": 72,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.88\n- Reason: The series shows the characteristic early negative baseline, then a sudden large positive excursion right around the start of the middle segment (\u2248 time step 20) reaching about +2, followed by a steady decline through the middle and into the late segment back toward baseline/negative values. That pattern (an early/mid high spike followed by monotonic decay) matches the class\u20112 prototypes. It differs from class\u20110 (which has a sustained mid plateau) and from class\u20111 (which shows a gradual upward ramp peaking late with a terminal sharp fall)."
+},
+{
+    "idx": 78,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows the hallmark of class 2: a pronounced early brightening (large peak ~+3\u2013+3.5 around t\u224830) followed by a gradual decline through the middle segment toward near-zero/negative values in the late segment. It does not form the sustained mid\u2011plateau typical of class 0 nor the later, steady ramp-up and very-late abrupt drop characteristic of class 1. The timing (early high peak) and the monotonic decay through the middle match class 2 examples."
+},
+{
+    "idx": 84,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a sharp, large positive jump early (around t\u224825\u201330) to the highest amplitude (~+2.5) followed by a clear, monotonic decline through the middle segment and then a return to a slightly negative noisy baseline in the late segment. This exactly matches the class\u20112 signature (early sharp peak + steady downward slope), and differs from class\u20110 (early step to a flat plateau) and class\u20111 (gradual ramp/increase across the middle)."
+},
+{
+    "idx": 85,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.90\n- Reason: The series shows a clear, sharp rise very early (around t\u224820\u201330) to the largest positive amplitudes, then a gradual, monotonic decline through the middle and into a noisy/negative late segment. That temporal pattern \u2014 an early high-amplitude peak followed by a steady decay \u2014 matches the class\u20112 examples. It differs from class\u20110 (which has a sustained mid/central plateau) and class\u20111 (which shows a later, gradual rise peaking much later)."
+},

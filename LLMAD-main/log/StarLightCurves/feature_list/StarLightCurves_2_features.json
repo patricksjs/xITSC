@@ -1,0 +1,8 @@
+{
+  "Pre-trough micro-oscillations: in most series, the region around steps 180–260 shows small repeated oscillations creating a jagged ascent preceding the trough, with prominence varying across samples.": "common feature",
+  "Persistent multi-scale fluctuations: high-frequency components observable throughout the entire series (from start to end) in most samples, with varying regional prominence but consistently present across the timeline.": "common feature",
+  "Irregular post-trough dynamics: in most series, the recovery after the trough exhibits interruptions through damped ripples, plateaus, or discrete rises rather than purely smooth recovery, with timing and intensity of irregularities varying across samples.": "common feature",
+  "Post-trough damped ripple: present in some series, where low-amplitude quasi-periodic oscillations accompany recovery immediately after the trough.": "partial-sample feature",
+  "Late-stage stepped recovery: in some series, after approximately 800 steps, upward trends exhibit small plateaus or discrete rises during recovery phases.": "partial-sample feature",
+  "Segmented smooth recovery: some series show limited irregularities in portions of post-trough recovery, though these smoother segments are typically interrupted by fluctuations elsewhere in the series.": "partial-sample feature"
+}

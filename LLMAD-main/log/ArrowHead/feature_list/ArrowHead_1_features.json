@@ -1,0 +1,7 @@
+{
+  "Peaks around time step 50 and 200 show minor oscillations rather than a smooth curve.": "common feature",
+  "Dip between peaks at 100-125 shows a pronounced valley with gentle inclines, giving it a U-shape contour.": "common feature",
+  "Consistent symmetry between the peaks at time steps 50 and 200, with near-identical rise and fall shapes.": "common feature",
+  "Gradual oscillation plateau at time steps 75-100 that remains stable in amplitude before descending.": "common feature",
+  "The peaks at time steps 50 have an additional minor spike just before increasing amplitude, showing slight upward pull.": "common feature"
+}

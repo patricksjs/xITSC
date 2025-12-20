@@ -1,0 +1,7 @@
+{
+  "Pronounced upward step change: a clear, abrupt rise from a negative baseline to a positive plateau occurring roughly between 70–100s in all series.": "common feature",
+  "Two-regime stationarity: long stable low baseline before the jump and a long stable higher plateau after, with both regimes showing low variance.": "common feature",
+  "Smooth, monotonic transition segment: the rise is a smooth sigmoid-like climb lasting ~15–30s, without oscillatory reversals during the change.": "common feature",
+  "Variability noticeably increases during the rising segment versus the plateaus, producing a transient bump in local variance.": "common feature",
+  "The post-step plateau shows a very slight long-run positive drift (tiny upward slope) compared with the pre-step baseline.": "partial-sample feature"
+}

@@ -1,0 +1,13 @@
+{
+  "Consistent fragmented QRS morphology: multiple small notches and slurring on the R‑ and S‑wave limbs across beats, suggesting intraventricular conduction delay or myocardial scarring.": "delete feature",
+  "Prominent, broad terminal negativity: deep, wide Q/terminal S waves with large peak‑to‑trough QRS amplitude, indicative of pathological Q‑waves from transmural injury.": "partial-sample feature",
+  "Long, stable single‑beat period: uniform cycle length (~0.9 s) with low frequency and repeatable morphology, implying a steady, relatively slow heart rate.": "delete feature",
+  "Consistent, pronounced ST‑segment depression: a sustained horizontal/down‑sloping ST trough following the QRS that persists into the early repolarization interval across beats, consistent with ischemic ST depression.": "common feature",
+  "Broad/widened QRS complexes with slow slopes: QRS complexes appear prolonged with blunted rise and fall, indicating delayed ventricular depolarization beyond a sharp spike.": "delete feature",
+  "Low‑amplitude, late or biphasic T‑wave morphology: T waves are attenuated, sometimes biphasic or flattened and shifted late in the cycle (around 0.6–0.9 s), showing reduced peak‑to‑baseline excursion.": "common feature",
+  "Prominent initial narrow positive deflection (early tall R′) at ~0.03–0.05 s that consistently precedes the deep negative complex, producing a sharp early spike distinct from the broader QRS envelope.": "common feature",
+  "Asymmetric negative-complex morphology: a relatively slow, gradual descent into the Q/S trough with a more abrupt, steeper recovery (skewed trough-to-peak kinetics).": "common feature",
+  "Persistent low‑amplitude, higher‑frequency serrations and rhythmic micro‑oscillations on the late ST/T baseline (≈0.6–0.9 s), suggestive of superimposed late potentials or baseline tremor.": "common feature",
+  "Consistently very large early R′ versus subsequent T amplitude (high R/T amplitude ratio), i.e., the initial spike far exceeds the later repolarization peak across traces.": "common feature",
+  "P‑wave is routinely low‑amplitude or not discernible (P‑wave attenuation/merging with the PR segment), suggesting atrial signal blunting or overlap with the QRS onset.": "common feature"
+}

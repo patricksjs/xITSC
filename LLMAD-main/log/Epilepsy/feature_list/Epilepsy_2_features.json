@@ -1,0 +1,11 @@
+{
+  "Two-time-scale pattern: rapid oscillations in the 2–3 Hz range embedded in a slow-varying, often weak envelope (0.1–0.5 Hz), producing a subtle beat-like modulation across the sequence in most series.": "common feature",
+  "Brief quiescent intervals: short, transient flattenings where oscillations nearly cease for a few samples before resuming in many instances.": "common feature",
+  "Time-varying amplitude envelope: oscillation peak amplitudes grow or decay over time, showing nonuniform energy distribution beyond the fast beat pattern.": "common feature",
+  "Phase jitter: irregular peak-to-peak intervals across the window, indicating a non-strictly periodic rhythm and serving as a key distinguishing factor from slower cadence classes.": "common feature",
+  "Gradual chirp-like frequency drift across the 13 s window, with cycle spacing slowly tightening or loosening over time in most RUNNING traces, though not necessarily monotonic.": "common feature",
+  "Localized energy fluctuations: beat-like modulation without pronounced blockwise segmentation, often appearing as diffuse envelope variations rather than distinct alternating segments.": "common feature",
+  "Fast base cadence: prominent oscillations in the 2–3 Hz range (cycle length ~4–7 samples) that differentiate from slower rhythms, with continuous, non-symmetric waveforms due to phase jitter.": "common feature",
+  "Asymmetric cycles: crest shapes with steeper rise than fall, producing skewed, non-symmetric waveforms in some series.": "partial-sample feature",
+  "Weak to moderate slow envelope: energy modulates across the window but typically lacks strong, long flat segments or sharp mean shifts in certain instances.": "partial-sample feature"
+}

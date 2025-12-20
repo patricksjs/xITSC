@@ -1,0 +1,8 @@
+{
+  "After a short onset transient (~first 20–40 samples), cycles stabilize with near-constant period ≈10–12 samples (≈0.6–0.75 s at 16 Hz); cadence sustained across the segment.": "common feature",
+  "Cycle shape is asymmetric: rapid, narrow negative troughs (~-1) followed by broader positive phase often showing a small shoulder/secondary crest—a double-hump on the positive side.": "common feature",
+  "Positive DC offset: baseline sits above zero (~0.6–0.9). Troughs stay capped near -1 while crest heights vary (~1.2–1.7), yielding slow amplitude modulation with stronger positive excursions.": "common feature",
+  "Beat-to-beat alternation of positive crest heights (odd–even alternans) persists across long stretches.": "common feature",
+  "A consistent small ledge/notch appears on the post-crest falling edge around ~0.6–1.0, at a nearly fixed absolute level despite changing peak amplitudes.": "common feature",
+  "Post-onset, no net trend is observed; the baseline remains stable without noticeable drift.": "common feature"
+}

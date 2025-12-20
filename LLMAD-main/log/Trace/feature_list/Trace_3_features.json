@@ -1,0 +1,6 @@
+{
+  "Clear sigmoid transition common across images: a sharp inflection zone rises from about -2 to above 0.": "common feature",
+  "Post-transition, the signal maintains a steady plateau around 0.6–0.8 with small high-frequency noise, showing reduced variance after the transition.": "common feature",
+  "Emergence of gentle, low-frequency oscillations on the plateau with a period of ~25–30 time steps across all samples.": "delete feature",
+  "Cross-image variation in plateau level: means cluster around 0.6–0.8 but are not identical, showing run-to-run offset.": "partial-sample feature"
+}

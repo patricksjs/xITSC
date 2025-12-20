@@ -1,0 +1,7 @@
+{
+  "A pronounced upward level shift mid-series: the signal jumps from a negative baseline to a positive plateau rather than oscillating gradually throughout.": "common feature",
+  "The transition is a smooth S-shaped ramp spanning ~15–30 timesteps, not an instantaneous spike or single-sample jump.": "common feature",
+  "Two long, low-variance plateaus (pre- and post-change) with only small high-frequency noise around their means.": "common feature",
+  "The abrupt rise consistently occurs in a narrow window around time steps ~60–90 across all examples.": "common feature",
+  "Large amplitude change between plateaus (roughly a 2.0–2.5 unit increase from baseline to steady level).": "partial-sample feature"
+}

@@ -1,0 +1,10 @@
+{
+  "A very sharp, abrupt downward step occurs at roughly the same mid-portion of each series, producing a steep negative transition from the initial baseline.": "common feature",
+  "After the drop there is a sustained deep valley/plateau (persisting for many time steps) centered near the lowest values before recovery begins.": "common feature",
+  "Recovery is slow, smooth and monotonic (convex upward), returning the signal to a stable, low‑variance pre-event baseline — showing strong asymmetry: fast fall, slow rise.": "common feature",
+  "The step magnitude is highly consistent across series: peak-to-valley amplitude is roughly the same (~1.8–2.2 units) in every trace, indicating repeatable event severity.": "common feature",
+  "A faint, high-frequency jitter (small-amplitude noise) is present throughout baseline, valley and recovery, visible as fine ripples superimposed on the smooth curves.": "common feature",
+  "Each series shows a single, isolated failure event with no preceding or following large spikes or oscillatory bursts — one dominant anomaly only.": "common feature",
+  "Event timing jitter: the sudden drop and the subsequent recovery onset vary across traces (drop occurs roughly 25–40% into the series), producing noticeable inter-series variation in anomaly location and recovery duration.": "common feature",
+  "Non‑flat valley baseline: the deep plateau exhibits a slight residual slope (a slow upward tilt) before the main recovery acceleration begins.": "common feature"
+}

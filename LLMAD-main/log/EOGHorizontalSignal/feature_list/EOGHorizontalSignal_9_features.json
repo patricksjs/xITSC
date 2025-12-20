@@ -1,0 +1,11 @@
+{
+  "Synchronized two-stage regime change: all series show a sharp rise followed soon after by a pronounced drop, happening in similar time windows, indicating a common event-like structure.": "common feature",
+  "Stable negative baseline after the transition: the latter portion settles into a low, near-constant region around -200 with small fluctuations.": "common feature",
+  "Post-trough intermediate plateau around -160 to -170 lasting a noticeable window before settling toward -200.": "common feature",
+  "Late-stage drift in the final third of the series, with a gentle downward trend toward -210.": "common feature",
+  "Increased high-frequency micro-oscillations on the post-event baseline, especially during the plateau and early recovery.": "common feature",
+  "Late-stage partial rebound plateau at a higher (less negative) baseline (around -100 to -80) lasting a distinct window before the final drift.": "common feature",
+  "Emergent low-frequency recovery oscillations: smooth, wave-like patterns in the post-event region with a period of roughly 120–180 time steps.": "common feature",
+  "Sequential oscillation layering: an initial dense high-frequency fluctuation during the post-event plateau, followed by a slower, wave-like recovery with a ~120–180 time-step period across all series.": "common feature",
+  "Asymmetric event edges: the rise to the peak is noticeably steeper than the subsequent fall into the trough, indicating rapid onset with slower decay.": "common feature"
+}

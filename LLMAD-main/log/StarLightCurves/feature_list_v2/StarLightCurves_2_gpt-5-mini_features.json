@@ -1,0 +1,8 @@
+{
+  "Strongly asymmetric single-cycle: gradual rise to a rounded max (~20–30% phase), rapid drop to a broad, flat-bottomed trough (~45–60%), then slow recovery.": "common feature",
+  "Consistent phase timing across series: maxima around 200–280 steps; minima around 450–520, indicating a stable period of ~1 cycle per 1024 steps.": "common feature",
+  "Post-minimum recovery shows low-amplitude, damped ripples (secondary humps) between ~600–900 steps, whereas the pre-minimum rise is smoother.": "common feature",
+  "Pre-maximum shoulder: 1–2 small subpeaks on the rising branch create a brief plateau before the apex across series.": "common feature",
+  "First zero-crossing after the minimum occurs late (>75% of the cycle), extending the negative segment before recovery.": "common feature",
+  "Peak-to-trough amplitude is tightly clustered (~3.2–3.6 units) with low high-frequency noise, yielding smooth traces.": "common feature"
+}

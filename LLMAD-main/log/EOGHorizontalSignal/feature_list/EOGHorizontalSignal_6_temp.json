@@ -1,0 +1,11 @@
+{
+  "Common two-stage transient: a rapid rise to ~200-210, followed within a short window by a sharp drop to ~-180, then quick recovery to the elevated baseline.": "common feature",
+  "Extended post-event plateau: after the transient, series stabilizes around 200–210 with low variability for many time steps.": "common feature",
+  "Late-stage drift in the post-event plateau: mean value climbs from ~210 toward ~240–250 over time, indicating a non-stationary baseline after the transient.": "common feature",
+  "Increased high-frequency jitter during the plateau: small amplitude oscillations persist throughout the elevated region, more pronounced in some sequences.": "partial-sample feature",
+  "Synchronized rebound timing across series: the sharp recovery back toward the elevated baseline occurs within a tight time window (roughly steps 520–600) in all images.": "partial-sample feature",
+  "Tri-phasic transient structure: three distinct regime shifts—rise, drop, then rapid recovery—occur in quick succession before settling into the high, relatively stable plateau.": "common feature",
+  "Slow, monotonic downward drift in the post-event plateau, with the elevated baseline gradually decreasing over time.": "common feature",
+  "Quasi-periodic micro-oscillations embedded in the plateau, showing a regular cadence beyond random jitter.": "common feature",
+  "A small mid-plateau re-energization bump where the signal briefly rises toward the earlier plateau level before resuming drift.": "common feature"
+}

@@ -1,0 +1,12 @@
+{
+  "Prolonged, near-constant baseline for the majority of the series, followed by concentrated activity in the final ~10–15% of time steps (roughly t=80–92).": "delete feature",
+  "Active segments consist of very short, sharp pulses with rapid rise and fall, often appearing as multi-peak clusters separated by small troughs (pulse widths ~1–5 timesteps).": "common feature",
+  "Burst amplitudes vary within and across series: one prominent tall spike (≈5–8) frequently co-occurs with smaller neighboring peaks (≈0.5–5), producing asymmetric, right-skewed energy concentration.": "common feature",
+  "Persistent slight negative baseline offset (~ -0.15 to -0.25) across series instead of centering at zero, visible before and after all activity bursts.": "delete feature",
+  "Short precursor ramp or tiny bump 1–3 timesteps immediately before the main peaks, producing a stepped onset rather than an instantaneous single-sample jump.": "delete feature",
+  "Dominant tall peaks often occur as a pair with a consistent inter-peak gap of about 2–5 timesteps, forming regularly spaced twin large spikes.": "common feature",
+  "Brief multi-stage escalation: activity often shows an early cluster of small-to-moderate peaks, then later a solitary, much larger spike that terminates the active window (small peaks precede and smaller in amplitude than the final extreme).": "partial-sample feature",
+  "Exact-zero dropouts between pulses: some inter-peak troughs fall to exactly zero for one timestep, producing complete momentary shutdowns (not merely small negative dips) between otherwise rapid pulses.": "common feature",
+  "Twin large peaks show a consistent ordering: the second peak is noticeably taller than the first in each twin.": "common feature",
+  "Active burst windows are consistently narrow — the entire clustered activity spans about 4–8 consecutive timesteps across series, not long trailing tails.": "common feature"
+}

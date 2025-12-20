@@ -1,0 +1,10 @@
+{
+  "Consistent late spike timing: The main peak occurs around time steps 75–82 in all series, indicating a uniform late-event impulse across images.": "common feature",
+  "Prolonged quiescent baseline: Baseline remains effectively zero for most of the series, with the spike as a single isolated event.": "common feature",
+  "Uniform high-contrast impulse: Spikes are sharp and of similar height, with rapid rise and fall, creating a pronounced, narrow peak.": "common feature",
+  "Emergence of a bimodal impulse: each series shows two sharp peaks in close proximity instead of a single spike.": "partial-sample feature",
+  "Consistent short inter-peak interval: time gap between the two spikes is roughly the same across samples (about 2–6 steps).": "partial-sample feature",
+  "Brief trough between spikes: a small valley occurs between the two peaks before returning to baseline.": "partial-sample feature",
+  "Occasional precursor micro-peak around time steps 55–60 preceding the main spike, creating a two-stage onset in some samples (e.g., index 164).": "partial-sample feature",
+  "Brief pre-spike shoulder between ~70–76 steps before the abrupt rise, indicating a small ramp prior to the large impulse.": "partial-sample feature"
+}

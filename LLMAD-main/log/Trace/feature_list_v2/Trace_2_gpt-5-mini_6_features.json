@@ -1,0 +1,11 @@
+{
+  "Long two-level structure: a prolonged low baseline followed by a sustained higher plateau (step-like level shift around t≈80–100).": "common feature",
+  "Brief asymmetric transient near t≈180–205: a sharp upward spike immediately followed by a deeper short valley, then recovery to plateau.": "common feature",
+  "Both pre- and post-change segments are low-variance, stationary-looking plateaus with small high-frequency jitter.": "partial-sample feature",
+  "The up-transition is a smooth, steep ramp (sigmoidal shape) over many samples rather than an instantaneous jump.": "common feature",
+  "Event timing is consistent across instances: the ramp-up and the spike–dip occur at nearly the same time in all series.": "common feature",
+  "Pre- and post-event mean levels are consistent: pre-plateau ≈ -1.4 to -1.6, post-plateau ≈ +0.6 to +0.8, yielding a step magnitude ≈ 2.2–2.4 units across series.": "common feature",
+  "The spike and immediate valley have consistent amplitudes relative to the plateau (spike ≈ +0.3–0.5, valley ≈ -0.4–0.6) and short duration (~5–12 samples).": "common feature",
+  "Small damped under/overshoot oscillations occur right after the ramp and after the spike–dip, settling back to the plateau within a few samples.": "common feature",
+  "Post-step plateau shows slightly larger high‑frequency jitter amplitude than the pre-step plateau (visible small increase in noise level).": "common feature"
+}

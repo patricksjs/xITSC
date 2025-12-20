@@ -1,0 +1,9 @@
+{
+  "The time series exhibits two prominent, similarly shaped positive peaks around time steps 40 and 210, suggesting a recurring structural motif in the arrowhead outline.": "common feature",
+  "A distinct, deep negative valley occurs consistently near time step 100 across multiple segments, indicating a common concave feature in the shape profile.": "common feature",
+  "A pronounced, sharp positive spike consistently appears near time step 80 in all three series, distinct from the broader peaks at 40 and 210.": "delete feature",
+  "The final segment (after time step 220) shows a steep, near-linear downward trend to a low amplitude, creating a consistent terminal plunge across all samples.": "common feature",
+  "The initial segment (0-25) shows a consistent, steep upward ramp from a low baseline, forming a sharp incline before the first major peak.": "common feature",
+  "Between time steps 130 and 170, all series exhibit a relatively flat, low-amplitude plateau, creating a stable trough region before the second ascent.": "delete feature",
+  "A subtle, secondary positive hump is visible around time step 60 in all three series, nestled on the descending slope after the first main peak.": "delete feature"
+}

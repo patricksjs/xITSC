@@ -1,0 +1,10 @@
+{
+  "Synchronized two-phase transient: in most series, a sharp positive peak (e.g., +210 to +270) followed quickly by a deep negative trough (e.g., -170 to -190), occurring within a narrow time window (e.g., ~350-430 time steps) across traces, and often phase-locked around similar indices.": "common feature",
+  "Phase-locked event window: the transient consistently centers around approximately the same time indices for most series, suggesting a common external trigger or artifact.": "common feature",
+  "Brief post-event recovery hump: in many series, a small rebound of about +20 to +50 that forms a short plateau before being overshadowed by the subsequent negative drift; it does not restore the baseline.": "common feature",
+  "Post-event mean shift: after the trough, the baseline settles at a new negative level (e.g., around -60 to -100) and gradually drifts downward over time, not returning to zero.": "common feature",
+  "Post-event low-variance fluctuations: following the trough, the signal exhibits near-continuous, low-variance fluctuations in the negative regime for a substantial interval, with a gradual downward trend rather than a flat plateau.": "common feature",
+  "Transient window volatility spike: increased short-term fluctuations around the peak and trough, indicating elevated local variability during the event.": "common feature",
+  "Absence of sustained oscillatory recovery: the post-event region does not exhibit damped multi-peaked oscillations, instead showing a monotonic drift with fluctuations.": "common feature",
+  "Asymmetric transient morphology: in some series, the positive peak rises quickly, while the following trough unfolds more gradually, creating a skewed two-lobed shape.": "partial-sample feature"
+}

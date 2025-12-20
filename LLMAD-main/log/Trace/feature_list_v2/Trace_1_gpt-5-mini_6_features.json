@@ -1,0 +1,12 @@
+{
+  "Consistent initial steady baseline around 0.7–0.9 with very low amplitude noise before the disturbance.": "common feature",
+  "A near-instantaneous, large negative step/drop occurring consistently at ~70–80s across traces.": "common feature",
+  "A deep, flat negative plateau near −2 that persists for tens of seconds immediately after the drop.": "common feature",
+  "A slow, smooth, monotonic recovery back toward the original baseline over ~100–150s, much slower than the fall.": "common feature",
+  "No recurring cycles or repeated peaks—the series show a single transient event rather than ongoing oscillations.": "common feature",
+  "Recovery curve is nonlinear (S-shaped): slow initial rise that accelerates mid-recovery then decelerates approaching baseline, rather than a constant linear slope.": "common feature",
+  "Post-drop segments (plateau and recovery) show higher short-term variability / micro‑jitter than the pre‑event baseline.": "common feature",
+  "No overshoot: traces return to the original baseline level without exceeding it at recovery end.": "common feature",
+  "Valley/plateau depth is tightly consistent across traces (around −2.0 with minimal spread).": "common feature",
+  "The sharp step-down transition has a very clean vertical edge with minimal pre‑transition precursor or ramp.": "common feature"
+}

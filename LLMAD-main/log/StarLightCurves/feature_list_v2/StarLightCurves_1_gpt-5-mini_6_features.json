@@ -1,0 +1,10 @@
+{
+  "Two consistent positive pulses: a dominant early peak (~200–300 steps) and a secondary peak (~700–800 steps) appear in all series.": "common feature",
+  "The first pulse is consistently higher and narrower, while the second is lower amplitude and broader.": "common feature",
+  "A sustained negative mid‑segment trough (baseline dip) separates the two pulses.": "common feature",
+  "Smooth, low‑frequency bell‑shaped waves with steeper rise than decay (asymmetric slopes) and minimal high‑frequency noise; occasional small ripples near troughs.": "common feature",
+  "Gradual upward baseline trend leading into the first pulse: the series start slightly negative and steadily rises toward zero before the main early peak.": "common feature",
+  "Consistent inter‑peak spacing: the two positive pulses are separated by a stable interval of roughly 500 time steps across series.": "common feature",
+  "Greater variability in the second peak amplitude and sharpness across instances, while the first peak height and width remain stable.": "delete feature",
+  "Small precursor bumps or shoulders just before the dominant early peak appear in several series, creating minor inflection points on the rising edge.": "common feature"
+}

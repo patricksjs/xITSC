@@ -1,0 +1,12 @@
+{
+  "Long, quiet pre‑event baseline with small high‑frequency noise around a stable value (~0.5–0.7).": "common feature",
+  "A very short, sharp positive spike immediately followed by a deep negative valley — a concentrated bipolar transient early in the series.": "common feature",
+  "Large peak-to-trough amplitude (roughly +3.5–4 down to −2), producing a pronounced abrupt swing relative to baseline.": "common feature",
+  "Strong asymmetry: extremely steep rise and fall during the transient, then a slow, smooth monotonic recovery over a long interval.": "common feature",
+  "Post-event settles to a steady baseline close to the original with low-amplitude noise and no visible periodic cycles.": "common feature",
+  "Transients consistently occur early, roughly in the first third of the trace (around 70–95s), not distributed later in the series.": "common feature",
+  "The negative trough often exhibits a short, nearly flat bottom (a brief plateau at the nadir) before the slow recovery begins.": "common feature",
+  "Recovery is two‑phased: an initially very shallow rise, a mid‑segment acceleration, then a deceleration as it approaches baseline (sigmoidal curvature).": "common feature",
+  "Small‑scale noise amplitude is visibly higher during the recovery segment than during the pre‑event baseline.": "common feature",
+  "Peak timing shows small but consistent variation across examples (peak fractional positions ~0.74–0.87), indicating slight event-timing jitter.": "common feature"
+}

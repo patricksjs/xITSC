@@ -1,0 +1,6 @@
+{
+  "Regime-switch pattern: an abrupt transient peak is followed by a persistent negative drift, indicating a two-regime behavior with a new baseline after the event.": "common feature",
+  "Post-event linear drift: after the transient, the baseline decreases in a near-linear fashion with small oscillations, showing non-stationary downward drift.": "partial-sample feature",
+  "The transient spike occurs in a tightly aligned time window (roughly steps 350–390) across all images, indicating a synchronized event timing.": "common feature",
+  "After the spike, the baseline shows low-amplitude, slow oscillations (quasi-periodic modulation) atop the downward drift, rather than a clean monotone decline.": "partial-sample feature"
+}

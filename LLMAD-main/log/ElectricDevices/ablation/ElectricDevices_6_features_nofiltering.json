@@ -1,0 +1,14 @@
+{
+  "In most series, the baseline is distinctly negative (typically ≈ -1.0 to -0.4) with low baseline variance outside active windows (standard deviation typically < 0.20), persisting for many steps—a key discriminator from class 2 which centers near 0. Baseline mean < -0.3 (measured over long quiet stretches excluding segments > baseline_mean + 0.5) strongly favors class-6. Sharp, step-like regime changes occur at active-window boundaries.": "common feature",
+  "Active windows form sustained plateaus lasting ≥8 consecutive time steps (up to 25 steps). Isolated events ≤3 steps are class-2 signatures; 4–7 step events require texture verification. Plateaus show dense small oscillations—contiguous elevated regions with stable mean (≈0.5–1.5)—where ≥40% of points deviate from local mean by >0.2 (±0.2–0.6). Each plateau typically contains 1–4 short negative troughs (1–4 step drops below mean), creating textured patterns atypical in class-2.": "common feature",
+  "Occasional short transients (≤2.5, rarely ≤3.0) appear within plateaus, generally lower than class-2 spikes (>3.0). Transients >3.0 don't imply class-2 if embedded in sustained plateaus (≥8 steps) with typical texture. Onsets often include 1–3 step overshoot spikes followed by immediate plateau settling—absence of sustained elevation after overshoot favors class-2.": "common feature",
+  "The textured plateau pattern (oscillations + embedded troughs) remains a key discriminator from class-2's isolated pulses.": "common feature",
+  "Exact start/end times jitter by several steps across series. Morning activations sometimes begin with multi-step ramps (2–4 incremental rises).": "common feature",
+  "Morning periods are typically jagged with higher variance, while evening plateaus are longer/smoother, often showing ripples (period ≈1–2 steps), stepwise drops, or slow decay.": "common feature",
+  "Many series end with a sustained negative undershoot (≥3 consecutive steps below baseline mean) after evening drop—a high-weight class-6 indicator that substantially increases probability. A variability burst often precedes evening step-down.": "common feature",
+  "Small pre-evening shoulders (elevations at t≈58–68) and baseline micro-spikes (1–5 steps pre-activation) commonly occur.": "common feature",
+  "Onset/offset shapes are typically abrupt step-like or short multi-step ramps (2–4 steps), contrasting class-2's single-step symmetric pulses.": "common feature",
+  "Activity occurs in similar time windows (≈25–80) as class-2; rely on combined features (baseline level, plateau length, texture, undershoot) rather than temporal position alone.": "common feature",
+  "For ambiguity resolution: baseline mean < -0.3 + ≥1 plateau ≥8 steps with texture + evening undershoot indicates class-6 even with single spike >3.0. Baseline mean ≥ -0.3 + isolated narrow spikes (≤3 steps) + low oscillation density favors class-2.": "common feature",
+  "None": "partial-sample feature"
+}

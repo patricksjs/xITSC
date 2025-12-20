@@ -1,0 +1,9 @@
+{
+  "Quasi-periodic oscillation with consistent cycle length (~9–12 time steps) and low period jitter, producing regular repeated pulses across the series.": "common feature",
+  "Asymmetric pulses: narrow, sharp positive peaks with larger magnitude and shorter duration than the wider, smoother negative troughs (positive skew).": "common feature",
+  "Positive baseline offset: oscillations are centered above zero, giving a sustained positive DC bias across the time series.": "common feature",
+  "Repeated small pre-peaks or shoulder bumps immediately before the main positive pulse, producing a consistently multi-modal peak shape within each cycle.": "common feature",
+  "A beat-like alternation in cycle amplitudes — successive peaks show a pattern of larger then slightly smaller magnitudes across many cycles.": "common feature",
+  "Occasional isolated deep negative transients (outlier troughs) that are much deeper than typical troughs and momentarily break the regular pattern.": "partial-sample feature",
+  "Noticeable rise in high-frequency jitter/noise and loss of clear periodicity toward the final segment of the series.": "partial-sample feature"
+}

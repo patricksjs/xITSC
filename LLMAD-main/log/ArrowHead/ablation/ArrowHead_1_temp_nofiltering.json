@@ -1,0 +1,13 @@
+{
+  "Two consistent dominant positive lobes: a first peak near time steps 50–70 and a second near 180–200, both reaching ≈+1.3–1.5 in amplitude.": "common feature",
+  "A pronounced central trough between ~100–140 that falls to ≈-1.0 to -1.2 and contains a small secondary bump around 120–130.": "common feature",
+  "Broad, smooth sinusoidal-like envelope with gradual rise/fall slopes and low-amplitude high-frequency jitter superimposed (no abrupt spikes).": "common feature",
+  "Inter-peak spacing consistent: the two main peaks recur with a stable separation of ~120–140 time steps (≈130), indicating a regular quasi-periodic cycle.": "common feature",
+  "Peak crests are broad/flattened: each dominant lobe shows a short, nearly flat summit spanning several time steps rather than a single sharp apex.": "common feature",
+  "Extreme negative excursions at series ends: amplitudes near the left/right endpoints drop to ≈-1.6 to -1.9, consistently lower than the central trough.": "common feature",
+  "The right (second) dominant lobe is consistently marginally taller than the left by ~0.1–0.2 amplitude units, producing a subtle cycle-to-cycle amplitude asymmetry.": "common feature",
+  "The central trough often shows a double-dip morphology: two distinct local minima separated by a narrow positive spike (small central sub-peak).": "common feature",
+  "The waveform crosses the baseline at highly repeatable phases (~just before/after the trough, near ~100 and ~150), producing consistent zero-crossing alignment across series.": "common feature",
+  "A reproducible shoulder/inflection on the rising limb of the second dominant lobe around time steps ~150–165: a brief flattening/slowdown precedes the final climb to the right peak.": "common feature",
+  "High-frequency jitter is phase-dependent: micro-oscillation amplitude is visibly larger on the flattened peak plateaus than within the central trough, producing more pronounced ripple at maxima.": "common feature"
+}

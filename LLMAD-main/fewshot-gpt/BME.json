@@ -1,0 +1,541 @@
+[
+{
+    "idx": 0,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.93\n- Reason: The series shows a clear narrow positive bell in the early segment (\u2248t=8\u201315) which is the primary discriminant for Class 0. The middle segment (\u2248t=35\u201385) is a sustained negative plateau (~\u22121), matching Class 0 examples, and there is no pronounced positive bell at the end. The combination \u2014 early positive peak + negative central plateau + no late peak \u2014 matches the \u201cBegin\u201d pattern rather than the Middle (central positive plateau) or End (late bell) classes."
+},
+{
+    "idx": 1,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.90\n- Reason: The series shows a distinct small positive bell in the early segment (peak around t\u22488\u201312) followed by a negative central plateau (roughly t\u224840\u201380) and then a return toward zero in the late segment. This pattern (early localized positive pulse + negative middle plateau, no late pulse) matches the Class 0 examples. It does not match Class 1 (which has a sustained positive middle plateau) or Class 2 (which has a late positive bell around t\u2248110\u2013120)."
+},
+{
+    "idx": 2,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.92\n- Reason: The series shows a clear small positive Gaussian-like bump in the early segment (around t\u22488\u201312), a sustained negative central plateau (\u2248\u22121) through the middle, and no positive bump near the end. This pattern matches the Class 0 (Begin) examples: early transient + negative middle plateau and no late bell. The timing and amplitudes of the features closely match the Class 0 prototypes, so the classification is made with high confidence."
+},
+{
+    "idx": 3,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: Class 0 (Begin)\n- **Confidence**: 0.92\n- **Reason**: The series shows a clear small positive Gaussian-like bell in the early segment (around time steps ~8\u201314), which is the defining discriminant of the \"Begin\" class. Although there is a prominent positive central plateau (middle segment), the presence and timing of the early bell match Class 0 rather than Class 1 (which lacks early/end bells) or Class 2 (which has an end bell). Noise levels and plateau sign do not contradict this decision."
+},
+{
+    "idx": 4,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.92\n- Reason: The series shows a clear positive bell in the early segment (around t\u22488\u201316) of amplitude \u22480.8\u20131.0, a pronounced negative central plateau (\u2248 \u22121) through the middle, and no late/end positive bell (the tail returns toward zero). This pattern matches the Begin class examples (early peak + negative center) and differs from Class 1 (positive middle plateau) and Class 2 (positive late bell)."
+},
+{
+    "idx": 5,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: Class 0 (Begin)\n- **Confidence**: 0.93\n- **Reason**: The series shows the characteristic small positive Gaussian-like bell in the early segment (around time steps ~8\u201315, amplitude \u22480.8\u20131.0), a pronounced negative central plateau thereafter (\u2248 \u22121.0 across the middle segment), and no late-end positive bell. This pattern matches the Class 0 examples (early bell + negative central plateau + no end bell) and differs from Class 1 (broad positive middle plateau) and Class 2 (late positive bell). The timing and amplitudes closely match the supplied Class 0 samples, supporting high confidence."
+},
+{
+    "idx": 6,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.90\n- Reason: The series shows a clear, narrow positive bell in the early segment (~t\u22488\u201312), which is the defining discriminant for the \"Begin\" class. There is a broad positive central plateau in the middle, but that alone corresponds to the middle-class pattern only when no localized bell is present. There is no late/ending bell, so it is not Class 2. The presence and timing of the early localized peak make Class 0 the correct label."
+},
+{
+    "idx": 7,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.90\n- Reason: The series shows a clear localized positive bell early (around t\u224810\u201316) and no localized positive bell at the end (t\u2248110\u2013120). According to the BME pattern rules the early localized positive peak is the defining feature of the Begin class. The middle positive plateau is present but plateau sign is known to vary across samples and is not the primary discriminant here; the timing/location of the small bell (early) is the strongest cue, so the series is best classified as Class 0."
+},
+{
+    "idx": 8,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0 (Begin)\n- Confidence: 0.95\n- Reason: The series shows a clear short, narrow positive bell in the early segment (~t \u2248 8\u201315) and no corresponding late bell. The long central plateau (middle segment) is present and positive but that plateau appears in all classes and is not the discriminant. Per the earlier analysis the presence/location of a short positive bump is the robust feature: early \u2192 class 0, late \u2192 class 2, absent \u2192 class 1."
+},
+{
+    "idx": 9,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0\n- Confidence: 0.92\n- Reason: The series shows a distinct small positive bell early in the sequence (around t\u22488\u201316, peak \u2248 +0.8\u20131.0) and then a negative central plateau (~\u22121) with no comparable late positive peak. The presence of the early Gaussian\u2011like peak (and absence of a late peak or a positive middle plateau) matches the \"Begin\" (Class 0) pattern observed in the examples."
+},
+{
+    "idx": 10,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.85\n- Reason: The series shows a clear localized positive bell in the early segment (~t \u2248 8\u201315), which is the defining discriminative feature of the Begin class. The large positive central plateau (middle segment ~40\u201385) is present but the sign/level of the central plate is not tied to class in this dataset and therefore is not decisive. There is no late/terminal positive bell (which would indicate End / Class 2), and a Middle-class series would lack the early localized bell. Because the early localized positive bump is unambiguous, the sample is best classified as Class 0."
+},
+{
+    "idx": 11,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.90\n- Reason: The series shows a clear, narrow positive bell in the early segment (~t\u22488\u201315, amplitude \u22480.7\u20130.9) which is the defining feature of the \"Begin\" class. The middle segment has a negative central plateau and the late segment returns to baseline without a late narrow peak \u2014 so it does not show the wide central plateau of Class 1 nor the late narrow bell of Class 2. Small noise is present but does not obscure the early bell, so the classification is high confidence."
+},
+{
+    "idx": 12,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: Class 0 (Begin)\n- **Confidence**: 0.95\n- **Reason**: The series shows a clear, narrow positive bell in the early segment (~time 8\u201316), a negative central plateau through the middle (~40\u201390), and no late positive hump. This matches the Begin class signature (early localized positive peak). It lacks the long elevated middle plateau of Class 1 and the late-end bell of Class 2. Small noise and the sign of the central plateau do not affect this decisive early hump."
+},
+{
+    "idx": 13,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: Class 0 (Begin)\n- **Confidence**: 0.95\n- **Reason**: The series shows a clear small positive Gaussian-like bell in the early segment (around t\u22488\u201315, amplitude \u22481.0\u20131.1), a long negative central plateau in the middle (\u2248t=35\u201390, \u2248\u22121), and no comparable positive peak in the late segment (t\u224895\u2013127). Per the earlier analysis the primary discriminator is the timing of the small positive bell (early \u2192 Class 0, middle \u2192 Class 1, late \u2192 Class 2). The presence of the early bell and absence of a late bell make Class 0 the best match; the negative central plateau is consistent with other Class 0 examples but is a secondary cue."
+},
+{
+    "idx": 14,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.90\n- Reason: The series shows a clear positive bell/peak in the early segment (around t\u22488\u201316), a negative central plateau (\u2248\u22121) through the middle, and no late positive bell near the end. That early positive bump is the defining feature of the Begin class, matching the Class 0 examples; Class 1 would show a sustained positive middle plateau and Class 2 a late positive bell, neither of which appear here."
+},
+{
+    "idx": 15,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.86\n- Reason: The series shows a pronounced sustained positive plateau in the middle (~t \u2248 40\u201385) with values \u2248 +1, which is the defining feature of the Middle class. Although there is a smaller early bell around t \u2248 8\u201315, that alone is not decisive here because class\u20110 examples that have an early bell also show a negative central plate (\u2248 \u22121) in the middle \u2014 which this sample does not. There is no late positive bell, so it is not Class 2. Quantitatively: the middle window has the highest mean and maximum compared with early and late windows, so the pattern best matches the Middle class."
+},
+{
+    "idx": 16,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.94\n- Reason: The series shows a clear short positive bell in the early segment (around t\u22488\u201316) with amplitude \u22480.8\u20131.0, a negative central plateau through the middle (\u2248t\u224840\u201385) and no late positive bell. According to the earlier analysis the defining discriminant is the presence/location of a short positive bell: early \u2192 Class 0, middle \u2192 Class 1, late \u2192 Class 2. This sample unambiguously matches the \"Begin\" pattern."
+},
+{
+    "idx": 17,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.85\n- Reason: The series shows a prominent, broad positive plateau centered in the middle segment (~t\u224840\u201380) with amplitude \u2248+1.0 \u2014 this is the defining feature of the Middle class. There is a smaller, narrow early bump (~t\u22488\u201315) but it is much narrower and weaker than the middle plateau; in the BME examples the middle plateau is the dominant discriminant. Because the long, strong middle positive plateau outweighs the small early bell (which could be a minor additive component), the sample is best classified as Middle."
+},
+{
+    "idx": 18,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.88\n- Reason: The sequence contains a broad, sustained positive plateau in the middle portion of the 128\u2011point series (roughly indices ~40\u201380) with amplitude \u22480.9 \u2014 the defining feature of the \u201cMiddle\u201d class. Although there is a smaller early transient bell (begin region), that is secondary; the dominant, long\u2011duration positive feature is the middle plateau, which matches Class 1 rather than Begin (early transient) or End (late transient)."
+},
+{
+    "idx": 19,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.82\n- Reason: The series shows a sustained, high-valued positive plateau through the middle segment (roughly t\u224840\u201390) which is the defining feature of the Middle class. Although there is a small early positive bell (t\u22488\u201312), the dominant and most discriminative pattern here is the long middle plateau (amplitude \u2248 +1). Begin series are characterized by an early bell plus a non\u2011positive middle plate in the provided examples, and End series by a late bell \u2014 neither matches this strong middle plateau. Therefore the sample is best classified as Class 1."
+},
+{
+    "idx": 20,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series contains a clear small positive bell in the early segment (around t\u22488\u201315, amplitude \u22480.8\u20131.0) and there is no positive bell in the late segment. According to the dataset discriminant, an early/initial positive peak indicates the \"Begin\" class. The central plateau is positive here, but central-plate sign is variable across classes and is not the primary discriminator \u2014 the presence/absence and timing of the localized positive peak is. Therefore this sample is best classified as Class 0 (Begin)."
+},
+{
+    "idx": 21,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0  \n- Confidence: 0.90  \n- Reason: The series shows a clear small positive bell in the early segment (around t\u22488\u201315), a pronounced negative plateau in the middle (\u2248 \u22121 from ~40\u201395), and it returns to baseline at the end with no late positive peak. This matches the Begin (Class 0) pattern (early bell + middle negative plateau) and differs from Class 1 (central positive plateau) and Class 2 (late bell)."
+},
+{
+    "idx": 22,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0\n- Confidence: 0.85\n- Reason: The series shows a clear, localized positive bell in the early segment (~t = 10\u201315) and no isolated positive bell at the end. The middle segment contains a long plateau (positive), which is more typical of Class 1, but the primary discriminant defined for BME is the timing of a localized positive bell. Because an early (begin) bell is present and there is no end bell, the sample is best classified as Begin (Class 0)."
+},
+{
+    "idx": 23,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.95\n- Reason: The series shows a distinct small positive bell early (around time steps ~8\u201315) and no corresponding positive bell at the end. The middle contains the long central plateau common to all classes (here positive), but plateau sign is not a class discriminant. The defining discriminative feature (an early positive transient) matches Class 0 (Begin), so I am highly confident in this label."
+},
+{
+    "idx": 24,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.85\n- Reason: I split the series into Early (t\u22480\u201330), Middle (t\u224830\u201390) and Late (t\u224890\u2013127). While there is a short narrow positive bell in the Early region, the dominant and most discriminative feature is a long, sustained positive plateau spanning the Middle region (\u2248t40\u201380). That long middle plateau is the defining pattern of the \"Middle\" class; the brief early bell is secondary/ambiguous noise. Hence the sample is best labeled Class 1 with fairly high confidence."
+},
+{
+    "idx": 25,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: Class 0 (Begin)\n- **Confidence**: 0.92\n- **Reason**: The series shows a clear narrow positive bell in the early segment (around t\u22488\u201315, amplitude \u22480.8\u20131.0) and no comparable localized positive peak in the late segment. The middle segment is a broad negative plateau (\u2248\u22121) which is present in multiple classes and is not diagnostic here. The early localized bell is the defining feature of the \"Begin\" class, so the sample matches Class 0."
+},
+{
+    "idx": 26,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.90\n- Reason: The series shows a clear narrow positive bell in the early segment (\u2248 t 8\u201315) which is the defining discriminant of the \"Begin\" class. There is no corresponding narrow positive peak at the end. The middle segment is a positive central plateau but the dataset description allows the central plate to be positive or negative independently of the bell location \u2014 the key feature is the presence of the early bell. Hence this sample matches Class 0 (Begin)."
+},
+{
+    "idx": 27,
+    "label": 0,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1\n- Confidence: 0.80\n- Reason: The series contains a long, sustained positive plateau across the middle segment (~t\u224840\u201385) which is the defining signature of the \"Middle\" class. There is a narrow early bump as well, but it is brief compared with the dominant middle plateau. No distinct late/end bell is present. Given the plateau\u2019s duration and amplitude match the Class 1 pattern, I classify it as Middle."
+},
+{
+    "idx": 28,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: Class 0 (Begin)\n- Confidence: 0.86\n- Reason: The series shows a clear small positive bell in the early segment (around time steps \u22488\u201315) \u2014 the hallmark of the \"Begin\" class. The late segment has no end bell, and although the central region is elevated (a positive plateau), the defining discriminant for these classes is the presence/location of a positive peak at the beginning vs. the end vs. none. Because an early positive peak is present and there is no end peak, the sample is best classified as Begin. The confidence is slightly reduced from maximum because the middle plateau is more typical of the Middle class, but the early bell is the stronger, more diagnostic feature here."
+},
+{
+    "idx": 29,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- **True Label**: Class 0 (Begin)  \n- **Confidence**: 0.92  \n- **Reason**: The series shows a clear localized positive \u201cbell\u201d in the early segment (\u2248 t 10\u201316) with amplitude near +1, which is the defining pattern of Class 0. The middle segment is a negative central plateau (\u2248 \u22121) and the late segment returns to baseline with no late positive peak, so it does not match Class 1 (mid plateau positive) or Class 2 (end bell). Timing and shape of the early bump closely match the Begin class in the provided examples."
+},
+{
+    "idx": 50,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1\n- Confidence: 0.95\n- Reason: The series shows a sustained positive plateau in the middle portion (roughly t\u224835\u201375) at about +1 with baseline\u22480 before and after, and no localized early or late narrow positive bell. This pattern matches the Middle class (positive central plateau) and differs clearly from the Begin (early narrow bell + negative middle) and End (late narrow bell + negative middle) classes."
+},
+{
+    "idx": 51,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.94\n- Reason: The series shows a sustained positive plateau in the middle segment (roughly t \u2248 40\u201385) with amplitude \u2248 +1, while the early (t \u2248 0\u201340) and late (t \u2248 85\u2013128) segments remain near a small noisy zero baseline. There is no early narrow positive bell or late localized peak, which matches the Class 1 (Middle) pattern from the training examples."
+},
+{
+    "idx": 52,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: Class 1\n- **Confidence**: 0.95\n- **Reason**: The series shows a clear sustained positive plateau in the middle (~t\u224840\u201390) with baseline/noise before and after and no small positive bell at the beginning or end. That middle positive plateau is the defining pattern of Class 1 (Middle) in the BME dataset, and the transition timings and sign match the examples for Class 1."
+},
+{
+    "idx": 53,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.92\n- Reason: The series shows a flat near\u2011zero early segment, a clear broad positive plateau (\u2248 +0.8\u20131.1) spanning the middle (roughly t\u224840\u201385), and returns to baseline with no distinct early or late Gaussian\u2011like bell. This pattern matches the Middle class (positive central plateau, no begin/end bell)."
+},
+{
+    "idx": 54,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: Class 1\n- **Confidence**: 0.95\n- **Reason**: The series shows a sustained positive plateau in the middle segment (roughly t \u2248 40\u201385) at about +1, while the early (t \u2248 0\u201330) and late (t \u2248 90\u2013128) windows remain near zero and do not contain narrow positive bells. According to the discriminants from the training examples, a strong middle plateau with no early or late narrow peak is characteristic of Class 1 (Middle). Small amplitude jitter is present but does not affect the clear middle plateau signal."
+},
+{
+    "idx": 55,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.95\n- Reason: The series has no short positive bell in the early window (0\u201330) and no bell in the late window (90\u2013127). Instead it shows a sustained positive plateau (\u2248 +0.8\u20131.0) in the middle segment (\u2248 35\u201380) with sharp transitions into and out of that plateau. This pattern exactly matches the \u201cMiddle\u201d class signature (positive middle plateau, no early/late bells) from the prior analysis."
+},
+{
+    "idx": 56,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: Class 1 (Middle)\n- **Confidence**: 0.95\n- **Reason**: The series shows a sustained positive plateau in the middle portion (~indices ~40\u201395) with amplitude \u2248 +1 and near-zero baseline before and after. There is no early positive bell at the start and no late bell at the end\u2014this pattern matches the Middle class (positive central plateau) from the provided examples. Small noise is present but does not change the main middle-plateau signature."
+},
+{
+    "idx": 57,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: Class 1 (Middle)  \n- **Confidence**: 0.95  \n- **Reason**: The series shows a clear, sustained positive plateau (~+1) occupying the central segment (roughly t\u224835\u201375) with near-zero values before and after. There is no localized positive bell in the early or late segments. These characteristics match the Class 1 (Middle) pattern from the BME dataset."
+},
+{
+    "idx": 58,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: Class 1 (Middle)\n- **Confidence**: 0.93\n- **Reason**: The series shows a clear, sustained positive plateau centered in the middle time window (~t \u2248 38\u201376) with early and late segments at baseline/noise. There is no short, localized positive bell at the beginning or end. These characteristics match the Middle class (long-duration mid-series positive region) and differ clearly from the brief early (Begin) or late (End) spikes."
+},
+{
+    "idx": 59,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1\n- Confidence: 0.95\n- Reason: The series shows a clear, sustained positive plateau in the middle portion (roughly t\u224840\u201385) with smooth step-up and step-down transitions and small high\u2011frequency noise elsewhere. There is no localized early Gaussian-like peak (begin) nor a late localized bell (end). This matches the Middle-class signature from the analysis."
+},
+{
+    "idx": 60,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.95\n- Reason: The series shows a sustained positive plateau in the middle (roughly t\u224840\u201385) with step-like transitions into and out of that plateau and otherwise near\u2011zero baseline and low noise at the beginning and end. There is no small positive bell at the start or the end. These characteristics match the \"Middle\" class pattern (central positive plateau, no early/late bell)."
+},
+{
+    "idx": 61,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.95\n- Reason: The series shows a clear sustained positive plateau in the middle window (~t \u2248 40\u201390) with near-zero baseline before and after, and there is no short positive \u201cbell\u201d at the beginning or the end. These are the defining features of the \"Middle\" class (Class 1) from the earlier analysis, so the match is strong and unambiguous."
+},
+{
+    "idx": 62,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: Class 1 (Middle)\n- **Confidence**: 0.95\n- **Reason**: The series shows a near-zero baseline in the early segment (~0\u201335), a sustained positive plateau (~+0.9\u20131.1) throughout the middle segment (~40\u201385), and a return to baseline in the late segment (~90\u2013128). There is no localized early or late positive bell. These characteristics match the Class 1 (Middle) prototype: positive central plateau and absence of early/late bells. Small noise only; timing and sign of the middle plateau make the class assignment clear."
+},
+{
+    "idx": 63,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: Class 1 (Middle)  \n- **Confidence**: 0.95  \n- **Reason**: The series shows a sustained, elevated positive plateau in the middle segment (roughly t\u224840\u201385) with near\u2011zero baseline before and after. There is no short positive bell in the early or late segments, which matches the defining pattern for the Middle class and differs clearly from the Begin (early bell) and End (late bell) patterns."
+},
+{
+    "idx": 64,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.95\n- Reason: The series shows a sustained positive plateau in the middle (~t\u224835\u201380, amplitude \u2248+0.7\u20130.8) with no clear short positive bell at the beginning or at the end. According to the earlier analysis the primary discriminant is the location of a short positive \u201cbell\u201d: early \u2192 Class 0, late \u2192 Class 2, absent (with a central plateau) \u2192 Class 1. Small noise and slight timing jitter are present but do not obscure the clear middle plateau, so the Middle class assignment is highly likely."
+},
+{
+    "idx": 65,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.92\n- Reason: The series shows a sustained positive plateau in the middle segment (roughly t\u224840\u201385) with amplitude \u2248+0.9 and near-zero baseline before and after. There is no early positive bell and no late transient peak. These characteristics match the Middle-class pattern (middle positive plateau) observed in the reference examples."
+},
+{
+    "idx": 66,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.95\n- Reason: The series shows a sustained positive plateau centered in the middle segment (~t\u224840\u201390) with near-zero baseline before and after. There is no localized positive bell in the early (t\u22480\u201330) or late (t\u224890\u2013127) segments. This timing pattern (no begin/end bell, prominent middle plateau) matches the Middle class profile described in the analysis."
+},
+{
+    "idx": 67,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.95\n- Reason: The series shows near\u2011zero baseline in the early and late segments and a clear, sustained positive plateau (~+1) spanning the middle time steps (roughly t\u224840\u201390). There is no early short positive bell (ruling out Class 0) and no late short positive bell (ruling out Class 2). The timing and shape match the characteristic Middle class pattern."
+},
+{
+    "idx": 68,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1\n- Confidence: 0.95\n- Reason: The series shows no early positive bell (early window ~0\u201330 is near baseline), a sustained positive plateau (~+1) across the middle (~t\u224840\u201390), and then returns to baseline in the late segment with no end bell. These characteristics match the Middle class pattern (Class 1) from the provided examples: a central positive plateau is the defining discriminant."
+},
+{
+    "idx": 69,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: Class 1 (Middle)\n- **Confidence**: 0.95\n- **Reason**: The series shows a near\u2011zero baseline in the early segment, a broad sustained positive plateau (\u2248 +0.8\u20131.0) spanning roughly the middle time steps (~40\u201380) with smooth step transitions into/out of it, and no narrow positive bell at the beginning or the end. That pattern matches the \"Middle\" class (positive middle plateau, no begin/end bell)."
+},
+{
+    "idx": 70,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.95\n- Reason: The series shows no early positive bell and no late/end bell; instead it has a clear sustained positive plateau in the middle (roughly t\u224840\u201385) of amplitude \u2248+0.8\u20131.0, with baseline near zero before and after and only small jitter. This pattern matches the Middle class definition (central positive plateau, no begin/end bell)."
+},
+{
+    "idx": 71,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1\n- Confidence: 0.95\n- Reason: The series shows a near-zero baseline in the early segment, a clear sustained positive plateau (~+1) across the middle time window (roughly t\u224840\u201390), and then returns to near-zero in the late segment. This pattern matches the \"Middle\" class (broad middle positive plateau) and lacks the early or late localized positive bells that characterize Class 0 or Class 2. Small noise is present but does not obscure the strong middle plateau."
+},
+{
+    "idx": 72,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.95\n- Reason: The series shows a sustained positive plateau (~+1) in the middle segment (approximately t\u224840\u201380) with near-zero baseline and only small noise in the early and late segments. There is no localized positive bell at the beginning or at the end. These characteristics match the Class 1/Middle pattern (central positive plateau) from the training examples."
+},
+{
+    "idx": 73,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1\n- Confidence: 0.98\n- Reason: The series shows a near-zero early segment, a long sustained positive plateau from roughly t\u224840\u201385 (amplitude \u2248 +1), then returns to baseline \u2014 exactly the middle-peak pattern identified for Class 1. There is no narrow positive \u201cbell\u201d at the beginning or the end, so it does not match Class 0 or Class 2. The timing and shape of the wide central plateau match the Class 1 examples."
+},
+{
+    "idx": 74,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1\n- Confidence: 0.95\n- Reason: The series shows a broad, sustained positive plateau in the middle (roughly t \u2248 38\u201382) with baseline near zero both early and late and no narrow positive bell at the beginning or the end. This pattern (positive central plateau, no begin/end peak) matches the defining characteristics of Class 1 (Middle) from the prior analysis."
+},
+{
+    "idx": 75,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.95\n- Reason: The series shows a pronounced, wide positive plateau centered in the middle of the record (roughly steps ~35\u201395) with near\u2011zero baseline before and after. There is no narrow early bell (Begin) and no narrow late bell (End). This matches the defining middle\u2011class pattern (broad positive middle plateau) from the dataset."
+},
+{
+    "idx": 76,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: 1 (Middle)\n- Confidence: 0.92\n- Reason: The series shows a broad, sustained positive plateau centered in the middle (~t \u2248 40\u2013100) with step-like transitions into and out of that plateau and baseline noise elsewhere. There is no narrow positive bell at the beginning or the end. These characteristics match the Class 1 (Middle) pattern."
+},
+{
+    "idx": 77,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- **True Label**: 1\n- **Confidence**: 0.93\n- **Reason**: The series shows a sustained positive plateau during the middle segment (roughly t\u224840\u201380) with amplitude \u2248+1 and smooth transitions into/out of that plateau. There is no localized early bell in the initial segment nor a late localized bell at the end\u2014patterns that would indicate Class 0 or Class 2 respectively. This middle-centered plateau is the defining feature of Class 1, so the match is strong."
+},
+{
+    "idx": 78,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.96\n- Reason: The series shows baseline/noise in the early segment (t \u2248 0\u201340), a clear sustained positive plateau centered in the middle (t \u2248 40\u201395) with amplitude \u2248 +1, and returns to baseline in the late segment (t \u2248 95\u2013127). There is no localized positive bell at the beginning or end, so it matches the Middle-class signature (central positive plateau) from the provided examples."
+},
+{
+    "idx": 79,
+    "label": 1,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.95\n- Reason: The series shows no early positive bell and no late positive bell. Instead it has a pronounced, sustained positive plateau centered in the middle of the sequence (rise around t\u224835\u201340, maintained roughly t\u224840\u201385, then returns to baseline). This middle-located broad positive feature matches the defining pattern of Class 1 from the analysis."
+},
+{
+    "idx": 100,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.95\n- Reason: The series has no early positive bump, shows a negative central plateau (~ -1) through the middle, and a clear localized positive \u201cbell\u201d near the end (around t\u2248108\u2013116). That pattern (end-located positive bell) matches the defining signature of the End class. The middle plateau sign alone is ambiguous across samples, but the presence and timing of the late positive peak is the decisive feature."
+},
+{
+    "idx": 101,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.90\n- Reason: Broken into three segments (early \u22480\u201340, middle \u224840\u201390, late \u224890\u2013128): the series shows a clear positive plateau in the middle (\u2248t 40\u201390) but also a distinct positive bell in the late segment (\u2248t 110\u2013120). According to the BME definitions the \u201cEnd\u201d class is characterized by a late positive bell (regardless of the central plate sign), so the presence of that late peak is the decisive feature."
+},
+{
+    "idx": 102,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.90\n- Reason: The series has a narrow, clearly visible positive bell near the end of the sequence (around t\u2248108\u2013116) while the early segment is baseline and the middle shows a negative central plateau. This pattern (no early bell, no wide middle positive plateau, but a short late positive peak) matches the \"End\" class examples. The signal-to-noise is good and the timing/shape of the late bump is the key discriminant."
+},
+{
+    "idx": 103,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- **True Label**: 2\n- **Confidence**: 0.92\n- **Reason**: The series has no early positive bell (early segment ~0\u201330 is flat), shows a negative central plateau through the middle (~40\u201380), and exhibits a clear short positive \u201cbell\u201d near the end (~110\u2013118). That late Gaussian-like peak matches the End (class 2) pattern from the BME analysis; the timing of the positive bell is the primary discriminant."
+},
+{
+    "idx": 104,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.90\n- Reason: The series shows a clear positive plateau in the middle (\u2248 t=40\u201385) but, critically, also exhibits a distinct short positive \u201cbell\u201d near the end (\u2248 t=110\u2013120). According to the pattern definitions, the presence of a late localized positive transient is the defining feature of the End class. Early-bell features for Class 0 are absent, and while the middle plateau is typical of Class 1, Class 1 lacks a late bell. Because the late positive transient is present and is the strongest class indicator, I assign Class 2."
+},
+{
+    "idx": 105,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.90\n- Reason: Breaking the series into early (0\u201340), middle (40\u201395) and late (95\u2013127) segments shows:\n  - Early: near-zero baseline (no early bell).\n  - Middle: a broad sustained positive plateau (~+0.9) consistent with \u201cmiddle\u201d behavior.\n  - Late: a clear, narrow positive Gaussian-like peak around t\u2248110\u2013118 (amplitude \u2248 +1.0).\n  \n  The defining feature for the BME classes is the location of the narrow positive bell. Because this sample contains a distinct positive bell in the final segment, it matches the \u201cEnd\u201d class despite also having a positive middle plateau. Hence Class 2 is the best fit. The confidence is high but not absolute because the middle plateau resembles Class 1, so mixed features slightly reduce certainty."
+},
+{
+    "idx": 106,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.90\n- Reason: The series shows a near-zero early segment, a broad positive central plateau (middle third) and \u2014 critically \u2014 a distinct localized positive bell near the end (~t=110\u2013120). According to the earlier pattern analysis the presence of a late narrow positive bell is the defining feature of the End class; the central plateau is shared by Middle and End examples, so the late bell is the decisive cue here."
+},
+{
+    "idx": 107,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (End)\n- Confidence: 0.90\n- Reason: The series has a sustained positive plateau in the middle (t \u2248 40\u201385) but \u2014 crucially \u2014 also shows a distinct narrow positive bell in the late segment (t \u2248 105\u2013115). According to the BME pattern definitions the late narrow positive peak is the defining feature of the \"End\" class; the presence of that late bell outweighs the middle plateau (which alone would indicate Class 1). The timing and Gaussian-like shape of the late peak match the End-class examples, so I classify it as Class 2 with high confidence."
+},
+{
+    "idx": 108,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (End)\n- Confidence: 0.85\n- Reason: The series breaks into three clear segments: early (~0\u201335) is near zero (no early bell), middle (~40\u201385) shows a wide, sustained positive plateau, and late (~105\u2013115) contains a distinct narrow positive bell. The defining discriminant for these classes is the presence and location of a localized positive bell: class 0 has an early bell, class 1 has no localized bell, and class 2 has a late bell. Because this sample exhibits a clear localized positive peak at the end (despite the positive middle plateau), it matches the End class."
+},
+{
+    "idx": 109,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.92\n- Reason: The series shows no early positive bell, has a sustained negative central plate through the middle, and a clear narrow positive bell near the final segment (~110\u2013120). According to the BME patterns, a late/end localized positive peak is diagnostic of Class 2, so this sample matches the End class."
+},
+{
+    "idx": 110,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.88\n- Reason: The series shows three clear segments: early \u22480 baseline (t\u22480\u201340), a broad sustained positive middle plateau (t\u224840\u201390) and \u2014 critically \u2014 a narrow, transient positive \u201cbell\u201d near the end (around t\u2248110\u2013116). In the BME dataset the primary discriminator is the presence and timing of a narrow positive bump: a late bump indicates the End class. Although a central positive plateau is characteristic of the Middle class, the presence of the late narrow peak matches the End pattern (Class 2), so I classify it as End."
+},
+{
+    "idx": 111,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.85\n- Reason: Breaking the series into early (0\u201340), middle (\u224840\u201390) and late (\u224890\u2013128) segments shows: no early localized positive bell (so not Class 0), a clear sustained positive central plateau in the middle (a Class 1\u2013like feature) and \u2014 critically \u2014 a distinct short positive bell in the late segment (\u2248110\u2013120). According to the dataset definition the discriminant is the presence/location of a short positive bell (begin, none, or end). Because a late positive bell is present (and there is no early bell), the sample matches the End class despite the positive middle plateau. Hence Class 2 is the best label."
+},
+{
+    "idx": 112,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- **True Label**: Class 2 (End)\n- **Confidence**: 0.95\n- **Reason**: The series shows no early positive bell (early segment \u2248 0), a sustained central plate that is negative (~ \u22121) through the middle, and a clear localized positive Gaussian\u2011shaped peak in the late segment (~t\u2248105\u2013115). That late localized positive bell is the defining signature of the \"End\" class."
+},
+{
+    "idx": 113,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.85\n- Reason: The series shows three clear segments: early (0\u201340) near baseline, a sustained positive middle plateau (~+1 from \u224840\u201385), and a distinct localized positive bell in the late segment (\u2248110\u2013118). The late localized positive peak is the primary discriminant for the \"End\" class. Although there is a middle positive plateau (a feature typical of Class 1), the presence of the late bell strongly indicates Class 2 (End)."
+},
+{
+    "idx": 114,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- **True Label**: Class 2 (End)  \n- **Confidence**: 0.95  \n- **Reason**: The series shows no early positive bell (early segment \u22480), a sustained negative central plateau (~\u22121) through the middle, and a clear localized positive bell near the end (around t\u2248110\u2013120). This pattern matches the \"End\" class (late bell + negative mid-plateau) and differs from Class 0 (early bell) and Class 1 (positive middle plateau)."
+},
+{
+    "idx": 115,
+    "label": 2,
+    "predicted": 1,
+    "conversation": "- True Label: 1 (Middle)\n- Confidence: 0.85\n- Reason: The series shows a long, sustained positive plateau in the middle segment (roughly t\u224842\u201390) with amplitude \u22480.8\u20130.9 \u2014 the hallmark of the Middle class. The early part is near zero (no begin bump). There is a later narrow positive bump near the end, but it is small and localized compared with the dominant middle plateau; the central positive plate is the strongest, most diagnostic feature, so the sample should be classified as Middle."
+},
+{
+    "idx": 116,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.92\n- Reason: The series shows the common middle plateau (roughly time steps ~40\u201395) and no early positive bump in the 0\u201330 window, but it clearly contains a short, localized positive bell near the end (~105\u2013115). Per the BME pattern rules, a late positive bell indicates the \"End\" class. The plateau sign is not diagnostic, so the late bump is the decisive feature."
+},
+{
+    "idx": 117,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.95\n- Reason: The series shows a short, Gaussian\u2011shaped positive bell late in the sequence (around time steps ~110\u2013115) while the early region is flat/noisy and the middle region is a negative plateau (~\u22121). The timing and short bell shape at the end match the End class signature; there is no early bell (Class 0) nor an extended positive middle plateau (Class 1)."
+},
+{
+    "idx": 118,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.90\n- Reason: The series shows no early/beginning peak (early window ~0\u201330 is flat) but it does contain a narrow positive bell in the late window (~105\u2013120). The presence of that late narrow positive peak is the defining feature of the \"End\" class. The central (middle) plateau is positive here, but plateau sign varies across samples and is not the primary discriminant \u2014 the late small bell is. Hence this matches Class 2."
+},
+{
+    "idx": 119,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.95\n- Reason: The series shows (1) no early positive bump (early segment \u22480), (2) a pronounced negative central plateau (\u2248 \u22121 over the middle), and (3) a narrow positive bell near the end (around t\u2248110\u2013120) with amplitude \u22480.8\u20131.0. That pattern (negative central plate + late narrow positive bump) matches the End class and contradicts Begin (would have an early bump) and Middle (would have a broad positive mid plateau)."
+},
+{
+    "idx": 120,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2\n- Confidence: 0.95\n- Reason: The series shows no early positive bump (early segment ~0\u201330 is near zero), a negative central plateau through the middle (~35\u201390), and a distinct localized positive bell in the late segment (~110\u2013120) with peak ~0.6\u20130.8. This temporal location of a late positive bell matches the End (Class 2) pattern from the BME dataset."
+},
+{
+    "idx": 121,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.90\n- Reason: The series shows baseline early values, a clear positive central plateau (~t=40\u201380) and \u2014 critically \u2014 a distinct narrow positive bell in the late segment (~t=110\u2013120). According to the earlier pattern analysis the late narrow positive bell is the defining feature of the \"End\" class. There is no early bell (so not Begin/Class 0) and the presence of the late peak rules out Middle/Class 1 (which has a central plateau but no beginning/end bell)."
+},
+{
+    "idx": 122,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.90\n- Reason: The series has three clear temporal regions: near\u2011zero early, a sustained positive plateau in the middle (~t\u224840\u201390), and a distinct localized positive bell near the end (~t\u2248110\u2013120). In the BME problem the decisive feature is the presence/location of a positive bell at the ends \u2014 a late positive bell denotes the \"End\" class. Because this sample shows a clear end bell (even though the middle is elevated), it best matches Class 2."
+},
+{
+    "idx": 123,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)  \n- Confidence: 0.90  \n- Reason: The series has no early positive bell (early window ~0\u201330 is flat) and shows a broad middle plate (~40\u201385) but \u2014 crucially \u2014 a distinct short positive Gaussian\u2011shaped bump near the end (~110\u2013120). Per the earlier analysis the presence of a late edge bell is the diagnostic feature of the \"End\" class, so this sample is best classified as Class 2."
+},
+{
+    "idx": 124,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.92\n- Reason: The series shows no early positive bell, a sustained negative central plateau (~\u20131) through the middle, and a distinct positive bell in the late segment (~110\u2013120). This pattern matches the \"End\" class (Class 2) from the analysis: negative middle plateau plus a late positive bell."
+},
+{
+    "idx": 125,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: Class 2 (End)\n- Confidence: 0.90\n- Reason: Segmented inspection (early 0\u201330, middle 31\u201390, late 91\u2013127) shows a sustained positive central plateau in the middle (\u2248 +1.0) but \u2014 crucially \u2014 a clear localized positive Gaussian-like bump near the end (~110\u2013120). The defining discriminant for the BME problem is the presence and timing of a positive bell: an end-located bell indicates the End class. Although the middle plateau resembles Class 1, the late localized peak matches the End pattern, so the series is best classified as Class 2."
+},
+{
+    "idx": 126,
+    "label": 2,
+    "predicted": 1,
+    "conversation": "- True Label: Class 1 (Middle)\n- Confidence: 0.88\n- Reason: The series shows a strong, sustained positive plateau through the middle (~steps ~40\u201390) with amplitude ~+1.0\u20131.4, which is the primary signature of the Middle class. The small positive bump near the end is secondary; the dominant, long-duration middle elevation matches the Class 1 pattern (Begin would show an early short bell, End would show only a late short bell). Hence the middle plateau determines the class."
+},
+{
+    "idx": 127,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- **True Label**: 2\n- **Confidence**: 0.92\n- **Reason**: The series shows no early positive bell, a sustained negative central plate (\u2248 -1) through the middle, and a short localized positive peak near the end (around t\u2248110\u2013120). This pattern (negative center + late short positive bell) matches the End class examples."
+},
+{
+    "idx": 128,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2 (End)\n- Confidence: 0.92\n- Reason: The series shows no early positive transient (early segment \u22480), a broad central plateau around \u22121 in the middle, and a distinct short positive bell near the end of the sequence. The presence and timing of that late positive bell match the End class pattern (Class 2). The central plateau sign varies across examples and is not discriminatory here, so the late localized positive peak is the decisive feature."
+},
+{
+    "idx": 129,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.94\n- Reason: The series shows no early positive bell (early \u2248 0), a sustained negative central plate through the middle (\u2248 \u22121), and a distinct narrow positive bell near the end (around t \u2248 105\u2013115) \u2014 the exact pattern that defines the \"End\" class. This timing/shape (late localized positive peak + negative middle plate) matches class 2 and differs from class 0 (beginning bell) and class 1 (broad positive middle plateau)."
+},

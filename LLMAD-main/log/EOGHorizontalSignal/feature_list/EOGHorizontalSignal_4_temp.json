@@ -1,0 +1,14 @@
+{
+  "Synchronized abrupt biphasic transient: a near-simultaneous rise to about +200 followed by an immediate drop to around -150 within a narrow window (~t=350–420) across all plots.": "partial-sample feature",
+  "Post-event negative baseline with gradual drift: after the transient, values settle around -165 to -180 with a slow downward trend.": "common feature",
+  "Pre-event quiescent period: initial ~340 steps show low-variance values near zero before the transient window.": "common feature",
+  "Brief plateau at peak: the +200 rise is followed by a short, near-flat top before the abrupt drop, consistently across all plots.": "partial-sample feature",
+  "Low-frequency oscillations in the negative baseline after the transient: small amplitude undulations (~±5–10) with loose periodicity from ~500–1100 steps.": "common feature",
+  "End-phase convergence toward a less negative mean: final segment drifts upward toward around -150, indicating a common partial recovery.": "common feature",
+  "Tightly aligned transient peak: all series reach their peak within ~350–420 steps with nearly identical amplitude around +260, indicating strong cross-series synchronization.": "delete feature",
+  "Extended post-event plateau: after the drop, values linger around -115 to -120 for a broad window (~450–1000 steps) with minimal variance before drift resumes.": "common feature",
+  "Superimposed higher-frequency fluctuations: fast, small-amplitude oscillations ride on the post-transient baseline, suggesting a multi-scale component beyond the low-frequency oscillations.": "delete feature",
+  "Cross-series phase-locked high-frequency jitter in the recovery phase: the post-transient micro-oscillations occur with nearly identical timing across all plots.": "delete feature",
+  "Asymmetric transient edges: the +peak is reached almost instantly, while the return to negative baseline is noticeably more gradual.": "common feature",
+  "Mid-recovery micro-plateaus: brief, repeating plateaus around -105 to -110 during 450–600 steps before the drift resumes.": "common feature"
+}

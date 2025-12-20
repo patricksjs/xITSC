@@ -1,0 +1,7 @@
+{
+  "The time series shows a sharp initial upward spike (steep rise), followed by moderate amplitude oscillations, and concludes with a sharp downward drop, forming a distinct three-segment contour.": "common feature",
+  "The second peak (around time 200) is higher than the first peak (around time 50).": "common feature",
+  "The time series is symmetric around time step 125, with peaks at 50 and 200 (75 steps from 125).": "common feature",
+  "The first and second peaks (around 50 and 200) have flat, plateau-like tops with minimal amplitude variation at their peak time steps.": "common feature",
+  "The central trough at time step 125 is a short, flat segment with minimal amplitude variation.": "common feature"
+}

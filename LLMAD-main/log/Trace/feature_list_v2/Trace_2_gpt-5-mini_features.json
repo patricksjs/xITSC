@@ -1,0 +1,7 @@
+{
+  "Abrupt step-like level change mid-sequence: a rapid rise from a negative baseline to a higher positive plateau around time steps ~60–100.": "common feature",
+  "Long, stable plateau after the step: the series remains near the new mean with only small fluctuations for the majority of the remainder.": "common feature",
+  "Late, localized biphasic transient: a narrow sharp positive spike followed quickly by a pronounced negative dip around time steps ~170–200.": "common feature",
+  "Low-amplitude high-frequency noise superimposed on both baseline and plateau, producing small jitter but preserving clear level segments.": "common feature",
+  "Consistent timing of events across examples: the step-up and the later spike-dip occur in similar time windows in every series.": "partial-sample feature"
+}

@@ -1,0 +1,15 @@
+{
+  "Amplitude envelope modulation: rapid 16 Hz cycles are embedded in a slow-moving envelope, making crest heights rise then fall over the sequence (breathing-like pattern).": "common feature",
+  "Cycle asymmetry: individual cycles show steeper rising edges and gentler falling edges, producing a slight skew from perfect symmetry.": "common feature",
+  "Clear two-phase progression: persistent high-frequency oscillations followed by an abrupt transition to a near-flat baseline (~1.0) in all images, indicating cessation of activity.": "partial-sample feature",
+  "Within active segments, crest heights exhibit progressive damping over time, showing a decaying peak amplitude before the plateau.": "partial-sample feature",
+  "Noticeable cycle-to-cycle frequency drift: inter-peak intervals vary over time, indicating a non-stationary 16 Hz rhythm rather than perfectly periodic cycles.": "common feature",
+  "Emergent low-frequency envelope modulation (~0.5–1 Hz): slow waxing and waning of the high-frequency bursts beyond the fast 16 Hz cycles.": "common feature",
+  "Occasional brief amplitude spikes: transient outliers outside the main crest range, suggesting momentary artifacts or abrupt gestures.": "delete feature",
+  "Slow baseline drift: a monotonic shift in the mean value over the 13 s, indicating a changing DC offset (e.g., from negative toward zero) beyond the envelope dynamics.": "delete feature",
+  "Tight short-term periodicity: inter-peak intervals stay nearly constant within each image, showing very stable 16 Hz cycles with minimal intra-burst frequency modulation.": "common feature",
+  "Nested slow envelope: a secondary, slower modulation (~0.2–0.3 Hz) modulates the 16 Hz bursts, creating a two-tier amplitude pattern across the 13 s in all images.": "partial-sample feature",
+  "Intra-sequence tempo non-monotonicity: inter-peak intervals show alternating acceleration and deceleration within the burst train, not a single drift.": "common feature",
+  "End-phase amplitude uplift: crest heights progressively increase toward the end of the 13 s window, opposite to the previously observed damping trend.": "delete feature",
+  "Positive-biased baseline: the waveform remains predominantly positive with no negative troughs, indicating a consistent positive offset across all three images.": "delete feature"
+}

@@ -1,0 +1,9 @@
+{
+  "An almost identical, time-aligned abrupt event appears in all series: a sharp drop to -300 to -400 followed by a damped rebound to -100 to -150 within ~100 time steps.": "common feature",
+  "After the rebound, the series gradually settles into a low-variance, downward-biased baseline around -200 to -210 with small fluctuations.": "common feature",
+  "An extended initial quasi-stationary phase near 0 with minimal variance lasts until roughly the 300th step before the event.": "common feature",
+  "A secondary rebound peak appears after the initial damped recovery, forming a brief up-tick around time steps 410–460 across all series.": "common feature",
+  "A persistent low-frequency oscillation emerges in the post-recovery plateau, with small cycles (~8–12 steps) around -195 to -210.": "common feature",
+  "Late-stage upward drift in the post-event plateau: mean value increases over time, reducing the strong downward bias and moving from ~-210 toward less negative values by the end.": "common feature",
+  "Superimposed higher-frequency jitter on the low-frequency oscillation: rapid fluctuations ride atop the 8–12 step cycles within the plateau, creating subtle ripple patterns.": "delete feature"
+}

@@ -1,0 +1,10 @@
+{
+  "A sharp, brief positive spike immediately followed by a steep negative dip , forming a pronounced V-shaped transient across all images.": "common feature",
+  "Post-event recovery shows slow, concave-up mean reversion toward baseline, with a steady rise from the trough back toward near-zero by the end.": "common feature",
+  "Persistent positive offset at the end: series do not return to zero; end values remain elevated (≈0.5–0.7) across images.": "common feature",
+  "Small, quasi-periodic micro-oscillations riding on the recovery trajectory, indicating damped regular fluctuations atop the upward trend.": "common feature",
+  "Mid-recovery inflection around t ~100–120: slope changes, creating a visible shoulder before the main upward recovery.": "common feature",
+  "Late-stage plateau around end values: after ~200–230 time steps, the series enters a low-variance plateau near 0.5–0.7.": "common feature",
+  "Subtle pre-event baseline drift: the initial segment (t < 60) shows a slow, monotonic increase in the mean level before the spike, rather than a perfectly flat baseline.": "common feature",
+  "Recovery zero-crossing synchronization: the time where the trajectory crosses zero during recovery is tightly aligned across images, around t ≈ 140–150.": "partial-sample feature"
+}

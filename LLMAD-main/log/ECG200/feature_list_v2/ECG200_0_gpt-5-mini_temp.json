@@ -1,0 +1,13 @@
+{
+  "Consistently sharp, tall R‑wave early in the beat (narrow, high‑amplitude positive R‑peak around 0.04–0.06 s) with steep upstroke and rapid downstroke, indicating a dominant, high‑frequency QRS component.": "common feature",
+  "Pronounced deep, broad negative deflection (large S/Q trough and negative plateau) centered ~0.25–0.42 s, with amplitudes near −1.5 to −2.2 and a prolonged recovery.": "common feature",
+  "Regular single‑beat morphology with period ≈0.9–1.0 s (~60–67 bpm), stable R–R timing and a delayed, low‑amplitude, rounded T‑wave peaking ~0.6–0.8 s.": "common feature",
+  "Small low‑amplitude P‑wave/atrial deflection consistently precedes the QRS (early positive hump at ~0.00–0.03 s), indicating preserved atrial depolarization before the sharp R‑peak.": "common feature",
+  "A reproducible small positive J‑point/inflection between the R‑peak and the deep S‑trough (~0.15–0.22 s), creating a transient mid‑ST notch before the prolonged ST depression.": "delete feature",
+  "Low‑amplitude, high‑frequency rippling on the late T‑wave/diastolic isoelectric interval (~0.75–0.95 s) — multiple small peaks superimposed on the rounded T‑wave plateau.": "partial-sample feature",
+  "Consistent mid‑repolarization broad positive hump centered ~0.32–0.38 s — a distinct early‑T/secondary repolarization component separate from the later rounded T‑wave.": "delete feature",
+  "Asymmetric S‑wave profile: very steep descent into the negative nadir with a markedly shallower, long‑tailed upslope (left‑skewed trough), indicating delayed terminal kinetics.": "common feature",
+  "Stable isoelectric baseline between beats with minimal low‑frequency wander; post‑T segment returns near 0 with only low‑amplitude jitter (<±0.3 mV), enabling highly reproducible beat morphology.": "partial-sample feature",
+  "Consistent subtle QRS fragmentation/notching: multiple small high‑frequency sub-peaks on the steep R‑wave upstroke and/or early downstroke (fragmented QRS appearance), suggesting intraventricular conduction heterogeneity.": "delete feature",
+  "Small late positive U‑wave–like deflection after the rounded T‑wave (~0.70–0.85 s), distinct from the high‑frequency T‑ripples, appearing as a low‑amplitude, discrete post‑T elevation.": "delete feature"
+}

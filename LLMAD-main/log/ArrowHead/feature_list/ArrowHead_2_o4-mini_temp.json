@@ -1,0 +1,8 @@
+{
+  "Double-humped global contour: two broad maxima near t≈40 and t≈205 separated by a deep central trough around t≈120–140.": "common feature",
+  "Abrupt terminal downturn: a rapid fall from about +1.3 to –2 between t≈220–250, creating a sharp, high-magnitude negative spike.": "delete feature",
+  "Each hump crest exhibits a subtle plateau or “shoulder” of 5–10 time steps where the curve flattens slightly before reversing slope.": "common feature",
+  "The second global maximum is consistently 0.1–0.2 amplitude units higher than the first across all series, introducing a mild peak‐height asymmetry.": "delete feature",
+  "Plateau length asymmetry: the shoulder on the second global hump spans about 8–12 time steps, whereas the first hump’s plateau is shorter (5–8 steps), making the right‐hand plateau consistently broader.": "delete feature",
+  "Hump‐flank slope inversion: the first peak ascends more steeply than it descends, while the second peak shows a sharper descent than its ascent.": "common feature"
+}

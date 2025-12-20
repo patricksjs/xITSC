@@ -1,0 +1,11 @@
+{
+  "In most series, a persistent regime shift occurs after the transient, with the baseline settling around -100 and exhibiting small fluctuations, indicating a long-lasting non-stationary level change that is more sustained than in class 5.": "common feature",
+  "The transient is asymmetric, often with a gradual upward spike and a sharper downward swing, forming an uneven V shape across series, and it lacks the clean, phase-locked two-phase peak-trough pattern characteristic of class 5.": "common feature",
+  "Post-event damped oscillations are present, with the baseline settling around a negative mean and showing low-frequency, small-amplitude fluctuations that are damped over time, leading to a gradual drift back toward baseline rather than rapid re-normalization.": "common feature",
+  "In some instances, a pre-event downward drift appears as a subtle negative trend before the main transient, slightly lowering the baseline ahead of the spike.": "common feature",
+  "After the trough, post-event quasi-periodic wiggles often occur, featuring low-frequency, somewhat regular oscillations with a discernible period before settling, but these are less pronounced and not phase-locked compared to class 5.": "common feature",
+  "A mid-recovery plateau is noticeable, with a brief flat segment around -100 after the trough before gradual drift resumes, distinguishing it from the absence of such a plateau in class 5.": "common feature",
+  "The transient onset shows moderate jitter in timing across samples, not tightly phase-locked, unlike the consistent onset window in class 5.": "common feature",
+  "The post-event dynamics are dominated by a sustained negative baseline with damped, low-frequency fluctuations, without a brief recovery hump or second pronounced fluctuation phase as seen in class 5.": "common feature",
+  "None": "partial-sample feature"
+}

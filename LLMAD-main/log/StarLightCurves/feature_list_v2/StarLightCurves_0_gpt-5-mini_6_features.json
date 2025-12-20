@@ -1,0 +1,10 @@
+{
+  "Pronounced biphasic shape: an initial gradual rise to a single early peak, a clear mid-series plunge to a valley, then a slow monotonic recovery toward baseline.": "common feature",
+  "Asymmetric slopes: the downward transition into the valley is noticeably steeper than the initial ascent and the subsequent recovery.": "common feature",
+  "Dominant low‑frequency, smooth waveform with minimal high‑frequency noise or sharp spikes—mostly continuous curvature and gentle local undulations.": "common feature",
+  "Consistent amplitude scale across traces: positive peak ~1–1.6, negative valley ~-1.4 to -1.8, with the deepest valley occurring near the series midpoint.": "common feature",
+  "Primary peak and valley occur at consistent relative times: peak around 20–25% of the series length, valley around 45–55%, showing a reproducible temporal layout across traces.": "common feature",
+  "A small early shoulder or minor local bump precedes the main positive peak in most traces, creating a two-step rise rather than a single smooth ascent.": "delete feature",
+  "The recovery segment shows low‑amplitude, regular micro‑ripples superimposed on the monotonic return, visible as gentle periodic undulations.": "delete feature",
+  "Traces start above zero (~0.4–0.6) and the final recovery often plateaus slightly below the initial level rather than exactly matching the starting value.": "common feature"
+}

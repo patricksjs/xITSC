@@ -1,0 +1,13 @@
+{
+  "The QRS complex consistently exhibits a narrow, high-amplitude R wave followed by a deep S wave, forming a characteristic RS morphology, indicating rapid ventricular depolarization.": "partial-sample feature",
+  "The PR segment, preceding the QRS complex, consistently maintains an isoelectric and stable baseline, indicating normal atrial depolarization and AV nodal conduction.": "delete feature",
+  "The QT interval, encompassing ventricular depolarization and repolarization, consistently spans approximately 0.8 to 0.9 seconds, reflecting a normal duration of ventricular electrical activity.": "delete feature",
+  "The T wave consistently exhibits a smooth, broad, and upright positive deflection, peaking around 0.6-0.7 seconds, reflecting normal ventricular repolarization.": "common feature",
+  "Following the deep S wave, the ST segment consistently returns to and maintains an isoelectric baseline before the onset of the T wave, indicating normal ventricular repolarization initiation.": "partial-sample feature",
+  "The segment following the T wave consistently returns to and maintains a stable isoelectric baseline, indicating complete ventricular repolarization and a stable resting potential.": "common feature",
+  "The QRS complex is characterized by abrupt, steep deflections, while the subsequent ST segment and T wave exhibit significantly more gradual and smooth changes in amplitude.": "common feature",
+  "The T wave consistently exhibits a relatively symmetrical shape, with a gradual upstroke and downstroke around its peak.": "delete feature",
+  "The T wave consistently peaks significantly earlier than 0.6 seconds, typically occurring between 0.35 and 0.40 seconds after the onset of the complex.": "delete feature",
+  "The isoelectric baseline, observed in the PR segment, ST segment, and post-T wave, consistently maintains an amplitude level around 0.0.": "partial-sample feature",
+  "The peak-to-trough amplitude of the QRS complex is consistently more than double the peak amplitude of the T wave, indicating QRS dominance.": "common feature"
+}

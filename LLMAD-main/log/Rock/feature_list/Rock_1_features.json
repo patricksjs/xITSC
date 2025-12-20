@@ -1,0 +1,12 @@
+{
+  "Clustered, sharp V-shaped troughs between ~time steps 1500–1900, with near-zero minima and quick recoveries, forming a pronounced multi-valley pattern.": "delete feature",
+  "Post-2000, the series shows higher-frequency, irregular fluctuations, indicating a shift to increased local volatility compared to earlier segments.": "delete feature",
+  "Mid-to-late segment shows a markedly denser cluster of sharp troughs with shorter recurrence intervals, producing a pronounced jagged notch pattern of rapid oscillations.": "common feature",
+  "Emergence of quasi-periodic high-frequency oscillations in the final third (roughly 2100–2600) with repeating peaks (55–75) and deep troughs (0–20).": "partial-sample feature",
+  "Asymmetrical trough morphology: downward drops are steeper and longer than recoveries, creating skewed V-shapes in the mid-range.": "delete feature",
+  "Three-stage mean transition with two abrupt regime shifts near ~1200–1300 and ~1800–1900 steps, producing a step-down pattern not captured by the prior trend description.": "partial-sample feature",
+  "Frequent short double-dip troughs in the mid-to-late segment (roughly 1300–1700 steps), where two valleys occur within a short window before a partial recovery.": "delete feature",
+  "Long early-plateau: first ~700–1000 steps stay in a tight high band (about 75–85) with minimal fluctuations before larger transitions occur.": "partial-sample feature",
+  "Mid-series spike-like troughs: abrupt, near-vertical declines with almost immediate rebounds, producing very sharp valley shapes.": "delete feature",
+  "Late-stage floor-hugging segments: intermittent deep minima near 0–5 values, separated by brief recoveries, forming recurring deep trough windows.": "partial-sample feature"
+}

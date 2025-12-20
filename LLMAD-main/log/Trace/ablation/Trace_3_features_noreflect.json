@@ -1,0 +1,12 @@
+{
+  "Two stable plateaus (negative pre-change, positive post-change) connected by a single smooth, monotonic sigmoid-like rise centered around time steps ~60–90, with the transition spanning roughly 25–40 steps.": "common feature",
+  "Small, high-frequency jitter overlays all segments (visible as fine noise); noise amplitude is low on plateaus and slightly elevated during the rising transition.": "common feature",
+  "No recurring cycles or large isolated spikes—pattern is a one-time regime shift with stationary-like behavior inside each plateau rather than oscillatory dynamics.": "common feature",
+  "Pre-change plateau level is consistently near −1.8 to −2.0 and post-change plateau near +0.5 to +0.7 across all series, indicating reproducible offset magnitudes rather than varying amplitude shifts.": "common feature",
+  "The exact change-point timing shifts slightly between examples (transition centers vary roughly between t≈70 and t≈85), showing small across-series timing variability.": "common feature",
+  "The fine jitter shows short-term temporal correlation (smooth, locally persistent micro-fluctuations) rather than purely independent white noise.": "common feature",
+  "The sigmoid rise is asymmetric — a faster initial upstroke followed by a more gradual approach to the post-change level (right-skewed S-shape).": "common feature",
+  "A small pre-transition sag (minor negative kink) appears ~5–15 steps before the main rise in each series, visible as a brief dip or slowdown just prior to the steep increase.": "delete feature",
+  "The pre-change plateau shows a consistent, very slight downward drift (small negative slope) across all series, not purely flat before the sigmoid begins.": "common feature",
+  "The sigmoid transitions cross the zero level very close to their mid-rise, producing a consistent zero-crossing timing near the steepest slope.": "common feature"
+}

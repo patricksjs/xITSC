@@ -1,0 +1,7 @@
+{
+  "Slow baseline drift: each series shows a gradual shift in mean mid-to-late segment (either upward or downward), producing a non-stationary baseline across the recording.": "partial-sample feature",
+  "Low-amplitude oscillation around zero with occasional larger excursions: most traces hover near 0 with small ripples and intermittent bigger peaks/troughs (up to ~±1).": "common feature",
+  "Transient high-frequency bursts: brief, localized segments of rapid oscillation/spikiness (notably mid-to-late in some series) superimposed on the slower waveform.": "delete feature",
+  "Clusters of closely spaced peaks/valleys early and mid segments, indicating short micro-oscillatory activity rather than evenly spaced periodic cycles.": "partial-sample feature",
+  "Negative-skewed deviations: troughs tend to be deeper and more pronounced than positive peaks, giving an overall asymmetric waveform.": "common feature"
+}

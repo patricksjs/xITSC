@@ -1,0 +1,12 @@
+{
+  "Two dominant, low-frequency lobes: the series show a clear bimodal envelope with two crests of nearly equal amplitude (peak height difference typically ≤8%) separated by a deep central trough, giving a consistent wide-period oscillation with highly regular inter-peak spacing (~125 ±5 timesteps) across examples.": "common feature",
+  "Asymmetric crest shapes: the rising edge to the first peak is noticeably steeper (approx. slope ratio rise:fall ≈ 1.2–1.5) than its descent, which is smoother and longer, producing a consistent left-leaning skew on the first crest.": "common feature",
+  "Reproducible shoulder on first peak: a small inflection or micro-plateau appears on the falling limb of the first crest, located ~10–20 samples after the local maximum, with amplitude ≤10–15% of peak height, creating a subtle discontinuity rather than a secondary peak.": "partial-sample feature",
+  "Slow baseline curvature: a broad U-shaped trend produces gentle long-period drift, with endpoints typically anchored near -1.6 to -2.0 and mid-segment lift ~0.4–0.8 units above endpoints.": "common feature",
+  "Superimposed fine ripple: when present, high-frequency wiggles show low amplitude (typically <5% of peak height), making crests and troughs noticeably smoother than class-1 counterparts.": "common feature",
+  "Single deep central trough: troughs form singular, deep minima without persistent double-dip inflections or internal bumps seen in class-1.": "common feature",
+  "Plateau characteristics: maxima form flat plateaus lasting ~20–40 samples with minimal texture and lower high-frequency variance than class-1.": "common feature",
+  "Symmetric lobe structure: both lobes exhibit similar amplitude and shape profiles, contrasting class-1's tendency toward right-peak dominance.": "common feature",
+  "A deep trough consistently appears in the range of steps 100-140 with values dropping to approximately -1.0 to -1.2, forming a valley segment that separates the two major peak regions and creates a distinctive W-shaped or double-hump global contour." : "common feature",
+  "The transitions between peaks and troughs follow smooth, gradual curves rather than abrupt changes, with consistent ascending slopes (steps 0-50 and 140-180) and descending slopes (steps 50-100 and 200-250) maintaining similar rates of change throughout." : "common feature"
+}

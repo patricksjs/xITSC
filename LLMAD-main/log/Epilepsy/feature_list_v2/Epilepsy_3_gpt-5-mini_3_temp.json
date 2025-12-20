@@ -1,0 +1,12 @@
+{
+  "Highly periodic oscillations with consistent inter-peak spacing of ~7–9 samples at 16 Hz (yielding approximately 22–28 cycles within a 204-step window)": "common feature",
+  "Smooth, nearly sinusoidal cycles without micro-jitter or intra-cycle kinks, rising cleanly to narrow peaks without preceding shoulders/doublets": "common feature",
+  "Persistent positive baseline offset remaining stable within ≈0.4–1.0 throughout, with minimal drift": "common feature",
+  "Short initial transient (~10–20 timesteps) showing reduced amplitude and mild downward drift before steady oscillation": "common feature",
+  "Slow amplitude modulation: peak magnitudes usually between +1.4 and +2.2, varying gradually without episodic bursts": "common feature",
+  "Broad, shallow troughs typically bottoming between −0.8 and −1.3, rarely exhibiting deep needle-like dips (< −1.5)": "common feature",
+  "Asymmetric waveform with sharp/narrow peaks and rounded troughs (W_peak/W_valley ≈ 0.3–0.5)": "common feature",
+  "Dominant energy concentrated in narrow band around primary cycle rate, lacking strong harmonics": "common feature",
+  "Positive maxima typically exceed negative minima by ≈20–60% in absolute magnitude (|peak| > |trough|)": "common feature",
+  "None": "partial-sample feature"
+}

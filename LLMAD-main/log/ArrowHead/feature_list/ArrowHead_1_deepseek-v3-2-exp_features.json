@@ -1,0 +1,7 @@
+{
+  "Smooth, symmetric rise-fall-rise-fall pattern with two distinct peaks (~1.5 amplitude) and one central trough (~-1 amplitude).": "common feature",
+  "All Class 1 time series start with a sharp initial trough (amplitude ~-2) at time 0, followed by a steep upward rise.": "common feature",
+  "The interval between the first and second peak is consistently ~150 time steps, indicating a stable periodic cycle.": "common feature",
+  "The time series is symmetric around the midpoint time step (125), with left and right halves mirroring each other in shape and amplitude.": "common feature",
+  "Small amplitude oscillations (minor fluctuations) are consistently present on the troughs across all Class 1 time series, adding subtle texture to the otherwise smooth pattern.": "common feature"
+}

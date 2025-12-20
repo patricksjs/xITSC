@@ -1,0 +1,15 @@
+{
+  "Regular, high-frequency pulsed events every ~4–6 time steps (period ≈5) producing consistent recurring spikes across all series.": "common feature",
+  "Spikes are narrow (1–3 time steps) and asymmetric — abrupt upward transition (steep leading edge) followed by a slower return.": "common feature",
+  "Signal shows a stable negative baseline between pulses (~−0.5 to −1), creating a clear two-level pattern; peak heights vary roughly 1–2 units.": "common feature",
+  "Occasional isolated extreme outliers: some series show rare, much larger spikes (outliers) that exceed typical peak heights and occur sporadically early or mid-sequence.": "common feature",
+  "Small, consistent timing jitter: individual pulses shift by about ±1 time step, producing non-exact periodic spacing and occasional adjacent pulses that are 4 or 6 steps apart, not perfectly regular every ~5 steps.": "common feature",
+  "Slow monotonic decay of pulse amplitude across the sequence: peak heights trend slightly downward from left to right rather than only oscillating in short clusters.": "common feature",
+  "Brief post‑spike undershoots: many pulses transiently cross below the usual baseline immediately after the return, creating short negative dips (ringing) following the main peak.": "common feature",
+  "Intermittent dropped pulses: sequences often have occasional skipped/absent pulses, producing prolonged gaps (two–three expected periods) before the regular pulsing resumes.": "common feature",
+  "Slight acceleration in pulse rate: inter‑pulse intervals subtly shorten toward the right side of sequences, increasing pulse density in later time steps.": "common feature",
+  "Peaks and troughs appear quantized: pulse maxima and baseline minima cluster at a few discrete amplitude levels rather than a continuous spread, producing repeated identical peak heights across many cycles.": "common feature",
+  "Sustained mid-sequence level shifts: the baseline jumps upward or downward for multiple consecutive pulses (step-like offset), creating two different baseline regimes within a series.": "common feature",
+  "Initial transient anomaly: the first one or two pulses routinely differ (larger amplitude or phase-shifted) from the steady repeating pattern, then the regular pulsing begins.": "common feature",
+  "Many pulses are followed by an exact two‑sample flat minimum (a reproducible “dead‑time” baseline of two consecutive low values) before the next rise, producing repeated 2‑point baseline plateaus.": "common feature"
+}

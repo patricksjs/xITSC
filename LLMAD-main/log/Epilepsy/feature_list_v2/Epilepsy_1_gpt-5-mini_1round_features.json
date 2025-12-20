@@ -1,0 +1,7 @@
+{
+  "Early segment shows a long, very low-variance plateau (stable baseline) lasting about the first 60–80 timesteps.": "common feature",
+  "A clear abrupt change-point occurs mid-sequence (~timesteps 60–85) where the signal mean shifts suddenly up or down.": "common feature",
+  "After the change-point the signal exhibits sustained, quasi-periodic oscillations with regularly spaced peaks and valleys.": "common feature",
+  "Post-shift oscillations have relatively small, stabilized amplitude (roughly within ±1) and higher-frequency alternating peaks/valleys.": "common feature",
+  "Waveforms are slightly asymmetric: troughs tend to be sharper/narrower while peaks are broader, producing a skewed oscillatory shape.": "common feature"
+}

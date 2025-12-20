@@ -1,0 +1,721 @@
+[
+{
+    "idx": 5,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.80\n- Reason: The trace shows a clear biphasic pattern in the early segment (0\u2013~250): a very large positive excursion right at the start, followed by a pronounced negative trough, and then another strong positive-like burst before the flat/padded region. This timing and polarity (positive at onset then deep negative) match the characteristic shape I associated with class 3 in the earlier analysis. Amplitude ranges overlap across classes, but the relative timing and biphasic waveform are the strongest discriminators here, making class 3 the best match."
+},
+{
+    "idx": 23,
+    "label": 0,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The record\u2019s discriminative activity is concentrated in the early window (\u22480\u2013250) and shows many alternating positive/negative deflections (high zero\u2011crossing count) and irregular, jagged oscillations \u2014 exactly the \u201cmost oscillatory/complex\u201d pattern I associated with class 5. There is also a separate, isolated large spike later (~t=400), which matches the \u201cadditional isolated strokes later\u201d noted for class 5. The trace is not a smooth sinusoid (so not class 6), nor a single compact biphasic pulse with few oscillations (so not classes 3 or 7). The timing, number of peaks and overall temporal complexity therefore best match class 5."
+},
+{
+    "idx": 8,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.70\n- Reason: The trace shows a clear two\u2011phase pattern in the early window (0\u2013~250): a pronounced early negative trough followed by a strong positive recovery with multiple peaks. This negative\u2192positive polarity reversal and the timing (deep early trough then later positive peaks confined to the early/mid segment) match the characteristic shape observed in the class\u20113 examples. Other classes either show only compact positive bursts (class 2), smoother low\u2011frequency waves (class 6), or more prolonged/multi\u2011phasic oscillations (class 5), so class 3 is the best match. Caveat: only a few example traces per class were available and there are recording/artifact lines in several plots, so the decision is qualitative."
+},
+{
+    "idx": 29,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.75\n- Reason: The test trace shows early-to-mid concentrated activity (multiple bursts before \u2248350) with strong positive plateaus up to \u2248+4 and deep negative dips near \u22123, plus a small isolated negative event around ~580. That combination \u2014 broad/plateau-like positive peaks followed by pronounced negative excursions and a late small negative burst \u2014 most closely matches the class\u20110 examples. (Note: classes 0 and 2 are similar in the dataset \u2014 the sharper, narrower peaks typical of class\u20112 are less evident here, which is why I favor class\u20110; confidence is therefore moderate rather than very high.)"
+},
+{
+    "idx": 26,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.75\n- Reason: The test trace shows a very early, strong positive-first deflection (peaks near +4) followed by a later large negative trough around the 250\u2013320 sample range and then transition to a long flat/idle region. This positive\u2192negative polarity reversal, an active window that extends into the middle segment (\u2248 up to ~300) and the abrupt transitions match the distinctive pattern seen in the class 3 examples. Other classes either start with a negative-first deflection or have a shorter/earlier active window (class 7), a smoother single hump (class 6) or many separated multi-bursts (class 5); the test sample best aligns with the class 3 temporal shape and timing."
+},
+{
+    "idx": 9,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.78\n- Reason: The trace\u2019s informative activity is concentrated early (0\u2013~250 samples) and shows a clear sign sequence: an initial high positive deflection at the start, a deep negative excursion in the early window, then a recovery back to positive \u2014 exactly the positive \u2192 negative \u2192 positive pattern that characterized the class\u20113 examples. Amplitude (~-3 to +4) and overall duration match class\u20113 (short/early active burst then flat tail/marker spikes). It differs from class\u20115 (which shows extended/multiple bursts into the mid/late window), from class\u20116 (smoother, slower oscillation), and from class\u20112 (single negative\u2011dominated burst). Therefore class 3 is the best match."
+},
+{
+    "idx": 16,
+    "label": 0,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.70\n- Reason: The test trace shows a highly oscillatory active window in the early\u2192middle portion (multiple large up/down swings between about \u22123 and +4), followed by a brief late isolated spike then a long flat tail. That combination \u2014 several rapid polarity changes across 0\u2013250 samples (high oscillatory complexity) plus an occasional later isolated pulse \u2014 matches the class\u20115 examples from the provided set. It differs from class\u20110 (which typically shows a single early negative then one pronounced mid positive), from class\u20116 (which more often shows two main positives separated by a single negative valley), and from class\u20113/7 (which have a more compact early pattern). Because intra\u2011class variability is substantial I assign a moderate confidence (0.70)."
+},
+{
+    "idx": 24,
+    "label": 0,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.70\n- Reason: The trace shows a single, early-concentrated, relatively smooth positive excursion (rise to a large positive value right at the start) with little subsequent physiological activity \u2014 i.e., one compact, smoothly-shaped burst in the early segment and then long quiet periods punctuated only by narrow vertical marker-like spikes. From the earlier sample set, class 6 examples most consistently exhibited a smooth, sinusoidal-looking early positive peak followed by quieter later windows, whereas other classes tended to show either multiple distinct bursts (class 5), sharper/jagged multi-peaked early activity (classes 0/2/7), or obvious two-phase early+mid bursts (class 3). Ignoring the likely recording markers, the timing and smooth waveform shape best match class 6. Confidence is moderate because the marker spikes and within-class variability introduce some ambiguity."
+},
+{
+    "idx": 15,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.78\n- Reason: The trace shows a clear early polarity reversal (an initial high value followed quickly by a strong negative deflection) and then a later positive excursion / second burst in the early\u2192middle window (~0\u2013300). That two\u2011burst, polarity\u2011reversal morphology (negative then later positive) matches the class\u20113 examples more closely than the other classes, which tend to be either single positive sweeps (class 0/7), single positive\u2192negative sweeps (class 2), or much more fragmented, long\u2011duration multi\u2011burst patterns (class 5). Note: there is a vertical/flat artifact near ~380 that appears in several examples and was ignored when matching temporal shape."
+},
+{
+    "idx": 13,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.70\n- Reason: The test trace shows a strong, early positive excursion (peaking near +3..+4), followed by deep negative troughs and then another positive return before the long flat/padded tail. That pattern \u2014 a large positive onset, multiple sign changes (positive \u2192 negative \u2192 positive) and several distinct sub\u2011movements concentrated in the early/middle window \u2014 matches the multi\u2011peaked, sign\u2011changing structure I associated with class 3. It is more jagged and multi\u2011phasic than the simpler single\u2011pulse shape of class 0 or the smoother two\u2011bump ramps of class 6, and while class 5 is also oscillatory, its examples tended to show more spread\u2011out multiple active windows; the temporal ordering and polarity pattern here most closely align with class 3."
+},
+{
+    "idx": 19,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.85\n- Reason: The trace shows the characteristic three-phase (\"rise \u2192 deep trough \u2192 rise again\") shape concentrated in the early window: an immediate high positive value near +4, a strong negative trough down to \u2248\u22123 in the early-to-mid segment, then a clear positive rebound (~+2) around ~180\u2013210 samples before the record goes flat. That bimodal early structure (early positive peak, mid-early negative trough, later positive spike) matches the class\u20113 examples and differs from class 0 (single sustained ramp/plateau), class 5 (many rapid oscillations across the early window), class 6 (smoother sinusoidal lobes), and class 7 (short transient spikes). The vertical straight line later appears to be an end/marker artifact and was ignored in the decision."
+},
+{
+    "idx": 21,
+    "label": 0,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.70\n- Reason: The test trace shows an extended active window (major activity from the early segment well into the middle \u2014 roughly 0\u2013300 time steps) with multiple distinct sign changes and several peaks rather than a single short transient. Concretely: an early negative start, small oscillations then a large positive ramp to ~+4 around 150\u2013180, a sharp return to a large negative trough near ~200\u2013230, and a secondary mid\u2011window pulse around 230\u2013280. This pattern (multiple peaks, several polarity reversals, and activity that persists into the middle segment) matches the examples I labeled as class 0 (longer early\u2192middle active window with multiple oscillations). Artifactual vertical lines near 340\u2013380 look like recording markers and were ignored."
+},
+{
+    "idx": 27,
+    "label": 0,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The new trace concentrates its informative content in the early window (0\u2013~250) and shows multiple short bursts/peaks and valleys (several positive swings, an abrupt deep negative trough around ~150\u2013200, then a strong positive rise toward +4). This \u201cmulti\u2011burst, jagged\u201d pattern with several concatenated strokes and high temporal variability matches the examples described for class 5 (which showed multiple peaks/valleys across the early/mid window) rather than the smoother single biphasic sweeps of classes 0, 2, 3, or 6. The large amplitude range (+4 to ~\u22123) and the repeated short oscillations are the key cues pointing to class 5."
+},
+{
+    "idx": 10,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.75\n- Reason: The test trace shows a clear pattern of an initial large positive deflection at the very start, a return into negative territory, followed by a second large positive hump in the early window (~100\u2013220) and then a distinct negative burst around ~220\u2013300 before the trace is cut by marker lines. This \u201cpositive \u2192 separated positive \u2192 later negative\u201d timing/shape matches the class-3 examples (which consistently showed an early positive event followed by a later negative burst). Other classes are less consistent with this sequence: class-6 typically shows a double-hump of positive activity without the pronounced later negative burst, class-0 and class-5 show more extended or multiple rapid bursts, and class-2/class-7 have activity concentrated earlier/shorter. Marker-like vertical spikes and the long flat late segment are artifact-like and do not affect the early-region match to class 3."
+},
+{
+    "idx": 22,
+    "label": 0,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.70\n- Reason: The test trace shows a multi-burst structure: a very large early positive excursion, then a mid-window negative deflection and noise/oscillations around baseline, followed by a distinct later positive rebound near the 300\u2013400 time-step region. That temporal distribution (energy concentrated early but with a separate middle/late burst) and the repeated polarity swings (positive \u2192 negative \u2192 positive) match the multi-burst / multi-stroke patterns I associated with class 6 in the earlier analysis. Classes described as single-stroke or compact (0, 2, 3, 7) tend to have most activity only in the early window and do not show the clear middle rebound; class 5 is also multi-burst but typically shows more frequent repeated swings extending farther into the record. Given the timing and shape, class 6 is the best match."
+},
+{
+    "idx": 11,
+    "label": 0,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The trace shows multiple alternating positive and negative lobes concentrated across the early-to-middle window (several clear cycles between ~0\u2013300 time steps), with repeated peaks up to ~+4 and troughs near \u22123 and less abrupt single isolated bursts. Those characteristics (multi\u2011cycle oscillatory pattern and extended active duration into the middle segment) match the class\u20115 examples from the provided set. There is some overlap with class 0 and 3 (similar amplitudes), so confidence is not maximal."
+},
+{
+    "idx": 28,
+    "label": 0,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The trace shows the bulk of activity in the early segment (0\u2013\u2248250) with high complexity: multiple large positive peaks and several sign reversals (many zero\u2011crossings) \u2014 exactly the multi\u2011peak, high\u2011complexity early pattern that characterized class 5 examples. In addition there is a clear secondary late event (around \u2248980) after a long flat baseline, which matches the occasional later secondary bursts seen in class 5. Other classes either show simpler early waveforms (class 7), dominant negative early troughs (class 2), a single biphasic sharp event (class 3), or two closely spaced early bursts without a strong late secondary event (class 6). Therefore class 5 is the best match."
+},
+{
+    "idx": 1,
+    "label": 0,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.70\n- Reason: The test trace shows a complex, multi-lobed early/mid waveform (strong positive peaks early, followed by negative troughs and several abrupt transitions) plus a distinct later activity/ramp around time step ~560. That combination \u2014 higher temporal complexity/oscillation in the early window together with additional non\u2011marker activity later \u2014 matches the class-5 examples (which exhibited multiple bursts across early and middle segments and occasional later activity). Other classes either show a single smooth positive\u2192negative lobe (class 6), only short early bursts then long flat segments (class 7), or earlier/sharper one\u2011off peaks (class 2), so class 5 is the closest match."
+},
+{
+    "idx": 4,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.78\n- Reason: The trace shows a strong biphasic early pattern \u2014 a very large initial positive deflection (~+4) followed by a steep drop to ~-3 in the first ~100 samples and then a pronounced rebound positive spike around the ~200 sample region. This positive \u2192 deep negative \u2192 rebound positive shape matches the characteristic class\u20113 examples (large initial positive then deep negative trough, with additional mid\u2011window activity) and differs from other classes: class\u20112 is typically a more compact single burst, class\u20115 is more continuously oscillatory/multi\u2011peaked, class\u20116 is smoother, and class\u20117 is lower amplitude. Those distinctions support class 3 as the best match."
+},
+{
+    "idx": 3,
+    "label": 0,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.70\n- Reason: The test trace contains a single, early, large-amplitude event (rapid rise to a sustained +4 level from roughly 80\u2013200 time steps) followed by an abrupt downward transition and flatline thereafter. That timing (early), the large-amplitude/abrupt-edge morphology, and the presence of a single prominent burst most closely match the class\u20113 examples which showed large positive/negative swings with abrupt transitions and occasionally sustained peaks. I assign moderate confidence because many samples show recording artifacts (flat/clipped segments) and there is within-class variability; the waveform could also be confused with a short/early burst class (e.g., class 7) if the plateau is an artifact."
+},
+{
+    "idx": 61,
+    "label": 2,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The test trace shows multiple distinct active bursts separated in time (strong early clustered activity, a mid/late burst around ~400\u2013500 and an additional very late burst near ~1100). In my prior per\u2011class analysis class 5 was the only class whose examples consistently exhibited several separate sub\u2011bursts spread into the middle/late windows (rather than a single early burst or a biphasic early pattern). Amplitude range (+~4 to \u20133) is similar across classes so peak size is not discriminative here, but the extended temporal structure and multiple activity segments match class 5 much better than classes 0,2,3,6 or 7, which tend to concentrate activity early and flatten out earlier. Uncertainty remains because of within\u2011class variability and an unusually late burst in this sample, so confidence is moderate."
+},
+{
+    "idx": 77,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.80\n- Reason: The trace shows a very strong early positive deflection (near +4) followed by pronounced negative troughs in the middle of the active window, with a clear polarity reversal (positive \u2192 negative) and a compact active epoch that ends before the long flat/rest region. These characteristics match the class\u20113 examples (distinct early high positive peak then deep negative trough) more closely than the other classes, which are either more oscillatory (class 5), start with an initial negative dip (class 0), are smoother/sinusoidal (class 6), or are shorter/earlier bursts (class 7). Confidence is not maximal because only a few example traces per class were provided and within\u2011class variability exists."
+},
+{
+    "idx": 70,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.75\n- Reason: The trace shows a pronounced negative deflection very early (down near \u22123) followed by recovery and a strong positive ramp/peak reaching \u2248+4 in the early\u2192middle window (~150\u2013300). That negative\u2192positive polarity reversal and the timing of the main burst match the class\u20113 examples more closely than the others (class\u20112 tends to show a very early positive peak, class\u20110 usually has a smaller early negative then a positive plateau, class\u20115 shows many distributed bursts, and classes 6/7 are smoother or lower amplitude). There is some within\u2011class variability and visible epoch/reset lines in the recording, so confidence is moderate rather than high."
+},
+{
+    "idx": 89,
+    "label": 2,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The test trace shows a highly multi\u2011peaked, oscillatory early active window (many rapid sub\u2011peaks and zero\u2011crossings between ~0\u2013250) with large positive swings up to ~+4 and deep negative excursions \u2014 matching the \u201ccomplex, multi\u2011burst\u201d pattern seen in class 5 examples. It is not the smooth single/dual-cycle shape of class 6, nor the short single early peak + quick rest of class 2 or the predominantly polarity\u2011inverted start of class 3. Class 0 tends to show a clearer large positive rebound after an early negative trough, which is less consistent with this sample. The long flat region after the ~300\u2013400 mark and the early-time complexity therefore point to class 5. (Note: a vertical constant line near ~420 looks like a recording/padding artifact and was ignored in the shape comparison.)"
+},
+{
+    "idx": 88,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.78\n- Reason: The trace shows a very large initial positive value (~+4) followed quickly by a deep negative swing, then multiple sign changes and a mid-window positive rebound before the series is padded/flat after ~350\u2013400. Those features (initial strong positive peak \u2192 deep negative trough \u2192 complex early/mid sign changes) match the class\u20113 examples most closely. It differs from class\u20110 (which typically begins negative then rebounds), class\u20112 (single abrupt early burst with little subsequent structure), class\u20116 (smoother, more sinusoidal cycles), and class\u20115 (longer, higher-frequency oscillations). Because there is intra-class variability I give a high but not maximal confidence."
+},
+{
+    "idx": 81,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.65\n- Reason: The trace shows a compact active window in the early/mid portion (no activity after ~300, consistent with recorded padding). Within that active window the pattern is a large initial positive value that falls quickly into a deep negative trough and then recovers to a large positive peak before the flat/padding region. This pos \u2192 deep neg \u2192 strong pos sequence (timing, amplitude range \u2248 \u22123\u2026+4, and single compact active block) most closely matches the class\u20113 examples (they show the same early large deflection, deep negative excursion and a later positive recovery). Inter\u2011sample variability and recording markers/padding reduce certainty, so confidence is moderate."
+},
+{
+    "idx": 87,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.65\n- Reason: The test trace shows a single, compact active window in the early segment (roughly 0\u2013200) with strong positive peaks followed by a steep negative decline and then a return to baseline for the remainder of the record. That temporal localization (early-only), the compactness (few distinct sub\u2011bursts) and the pronounced negative trough after the positive peak match the visual pattern I associated with class 2 in the provided examples. It does not show the multiple separated bursts or long, distributed activity typical of classes 3 or 5, nor the smoother sinusoidal shape seen in class 6, so class 2 is the closest match. Confidence is moderate because plotting artifacts (vertical/clipped lines) and inter-subject variability make an exact match uncertain."
+},
+{
+    "idx": 71,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.75\n- Reason: The test trace shows the same characteristic early, positive\u2011dominant burst pattern I associated with class 0 in the examples: a gradual rise to repeated high positive peaks (~+3 to +4) in the early window, intermittent negative dips between peaks, then a secondary brief event later in the middle window and isolated high/flat spikes around the 300\u2013400 sample region (likely event markers or saturations). This combination \u2014 strong positive plateau/peaks early, a few abrupt negative dips, and the timing/location of the later spikes \u2014 matches class 0 more closely than the other classes. (Class 2 and 5 show sharper, more spiky oscillations or many more zero\u2011crossings; class 6/7 are smoother sinusoidal\u2011like cycles.) Hence class 0 is the best match."
+},
+{
+    "idx": 64,
+    "label": 2,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.85\n- Reason: The test trace shows multiple distinct bursts (several large positive peaks and intervening deep troughs) with activity extending well into the middle of the record before an end marker \u2014 exactly the \u201cmulti-burst / longer active duration\u201d pattern I associated with class 5 in the earlier examples. By contrast class 2 is concentrated very early, class 0 shows a sustained positive plateau, and classes 3/6 tend to have 1\u20132 main lobes rather than the repeated separated peaks seen here. (Note: vertical single-sample lines and long flat tail look like markers/padding and were ignored.)"
+},
+{
+    "idx": 69,
+    "label": 2,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.80\n- Reason: The series shows a single, large positive excursion concentrated very early (start \u2192 ~150\u2013200) followed by a sharp return toward negative/quiet \u2014 matching the \u201cearly strong positive then transition to negative\u201d pattern I associated with class 2. It lacks the initial negative\u2192positive plateau of class 0, the multi-oscillatory/bursty profile of class 5, and the clear positive\u2192negative\u2192positive sequence typical of class 3. The timing (early window) and single sustained positive peak are the primary cues driving this decision."
+},
+{
+    "idx": 67,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.75\n- Reason: The test trace shows a clear early positive excursion (peaks up to \u2248+4) followed by a pronounced negative trough and continued negative oscillations in the middle window (~200\u2013300), then a long flat section after a marker. This positive \u2192 negative sequence with a distinct middle-window second burst matches the characteristic pattern seen in class 3 examples (early high positive values then a strong negative burst). It is somewhat distinct from class 2 (which tends to be higher-frequency jagged oscillations throughout the early window) and class 5 (which typically shows multiple separated bursts extending well into later time steps). Because some within-class variability and overlapping jaggedness exist, I give a moderate-high confidence (0.75)."
+},
+{
+    "idx": 78,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.78\n- Reason: The test trace shows a clear positive peak at the very start, a deep negative trough soon after, then a second pronounced positive peak in the early\u2013middle window (~150\u2013300) before returning to baseline. That positive\u2192negative\u2192positive temporal/polarity sequence (two separated positive bursts with an intervening negative excursion) matches the characteristic pattern seen in class 6 samples better than the other classes: \n  - class 2 and 7 tend to be short/early single strokes (end earlier), \n  - class 3 is typically positive\u2192negative but usually lacks the later strong positive rebound, \n  - class 0 shows a dominant mid positive plateau but not the early strong initial positive shown here, \n  - class 5 exhibits more extended/multi-segment activity into later times (>500). \nGiven the timing, number of bursts and polarity order, class 6 is the best fit (moderately high confidence due to some within-class variability across the dataset)."
+},
+{
+    "idx": 84,
+    "label": 2,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The test trace shows multiple alternating positive/negative bursts beginning in the early window (0\u2013200) and continuing into the middle window (200\u2013300) \u2014 i.e., a relatively long, multi\u2011peaked/cyclical gesture rather than a single short deflection. That temporal complexity and extended active window match the pattern I associated with class 5 (multiple oscillatory bursts and longer duration). It differs from the short/early signatures of class 7, the single early peak-and-fall of class 2, and the simpler two\u2011burst patterns of classes 3/6. Because there is still some within\u2011class variability and partial overlap between classes, I assign moderate confidence rather than certainty."
+},
+{
+    "idx": 73,
+    "label": 2,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.85\n- Reason: The trace shows multiple separated active bursts (an early multi\u2011peak activity around 0\u2013200, an isolated spike near ~400, and a late large positive then abrupt fall near ~700\u2013800) and activity extending well into the middle/late segment. This multi\u2011burst, temporally spread pattern matches the class\u20115 examples (which exhibited the most sub\u2011strokes and the longest active duration). Other classes concentrate activity early or show smoother/symmetric single lobes (classes 0,2,3,6,7), so the long multi\u2011burst structure is the strongest cue for class 5."
+},
+{
+    "idx": 80,
+    "label": 2,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.80\n- Reason: The test trace shows an early-to-middle active window (mostly 0\u2013~350) with a pronounced sustained positive peak reaching ~+4 around the 100\u2013160 ms region followed by several alternating negative/positive excursions (additional smaller peaks near ~200\u2013300). That combination \u2014 an early large positive plateau together with multiple short oscillations in the same early/mid segment \u2014 matches the class\u20110 examples (similar timing, amplitude and multi\u2011oscillatory morphology). Amplitude ranges are not discriminative here, so the timing/shape match (onset, sustained positive lobe, then multiple oscillations) drives the decision. I give moderate\u2013high confidence because intra\u2011class variability exists and some classes (e.g., 5 or 6) can show similar features with timing jitter."
+},
+{
+    "idx": 85,
+    "label": 2,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.80\n- Reason: The test trace shows a high\u2011complexity, multi\u2011peak waveform concentrated in the early\u2192middle segment (~0\u2013350 samples) with several distinct positive lobes and intervening deep negative troughs (multiple sub\u2011strokes). This matches the class\u20115 examples which were the most oscillatory/complex (many peaks and sub\u2011bursts, sometimes with mid/late activity) rather than the simpler monophasic or biphasic shapes of classes 0,2,3 or the short/compact burst of class 7 or the structured \u201cdouble\u2011hump\u201d of class 6. The active window and alternating polarity pattern therefore point to class 5."
+},
+{
+    "idx": 68,
+    "label": 2,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.67\n- Reason: The new trace shows a large positive deflection at the very start (\u2248+4), a rapid fall to a deep negative trough (\u2248-3) in the early window, then a smoother recovery into a large positive excursion again around the early\u2192middle segment (~150\u2013220). This yields a single sustained oscillatory/biphasic movement concentrated in the early-to-mid portion of the record (with later single\u2011sample vertical spikes that look like recording markers/artifacts). That temporal localization (early\u2192mid), the presence of a smooth, sustained oscillatory shape with a strong initial positive \u2192 negative \u2192 positive waveform, and the lack of a distinct later burst best match the class\u20116 examples from the provided set. Confidence is moderate because only three examples per class were shown and there is some within\u2011class variability; artifact spikes and padding also reduce certainty."
+},
+{
+    "idx": 72,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.75\n- Reason: The trace shows a clear multi-phase pattern: a strong positive deflection right at the start, a pronounced negative trough soon after, and then another large positive swing before the long quiet/flat tail. This early positive \u2192 negative \u2192 positive/negative multi-swing structure closely matches the class\u20113 examples (which consistently exhibit a large early positive followed by later negative bursts). It is less consistent with class\u20110 (which has a rising positive plateau after an initial negative), class\u20112 (early positive then a sustained negative tail), class\u20116 (smoother sinusoidal waves), or class\u20115/7 (either many separated bursts or very brief early-only activity). Hence class 3 is the best match with moderate confidence."
+},
+{
+    "idx": 79,
+    "label": 2,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.70\n- Reason: The trace shows a clear early negative deflection followed quickly by a strong sustained positive excursion reaching +4 and then a return into negative around the ~200 time step region \u2014 an overall neg \u2192 pos \u2192 neg sequence in the active (early\u2192middle) window. This polarity sequence and timing pattern matches the examples labeled class 3 (which consistently showed an initial negative dip, a pronounced positive peak in the early/mid segment, and a subsequent negative event). Peak amplitudes and the compact active window also align with class 3. The small very late positive blip appears to be a recording/artifact and was treated as non-informative. Because some classes (notably class 0 and class 6) can show superficially similar positive peaks, I assign a moderate confidence (0.70) rather than higher."
+},
+{
+    "idx": 62,
+    "label": 2,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The new trace shows a complex, highly oscillatory early active window (multiple rapid ups and downs and sign changes) followed by a distinct secondary/extended event in the middle (~400\u2013500) before long flat/idle regions. This combination \u2014 many sub\u2011movements in the early segment plus continued activity in the middle \u2014 matches the class\u20115 examples (most \u201ccomplex\u201d/oscillatory with secondary peaks). Amplitude and timing of peaks also align; vertical artifact lines are present but do not change the match."
+},
+{
+    "idx": 108,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The new trace shows a fast onset of activity and a richly oscillatory early/mid segment (multiple alternating positive and negative peaks, several zero\u2011crossings) with peak amplitude up to +4 and troughs near \u22123, and sustained activity through ~0\u2013200+ samples before the flat late region \u2014 a pattern that matches the \u201ccomplex, multi\u2011peaked, sustained early activity\u201d signature I associated with class 5. It does not match classes with a single dominant large swing (class 3) or strongly front\u2011loaded single peak (class 2), nor the simpler two\u2011cycle pattern of class 6. I assign moderate\u2013high confidence (0.78) because of visible intra\u2011class variability and some overlap between multi\u2011peaked classes."
+},
+{
+    "idx": 119,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The new trace shows a dense, multi\u2011cycle active segment in the early\u2192middle window (many rapid positive peaks up to ~+4 and intervening deep negative troughs) and activity that persists farther into the middle (onset ~0\u201350 and substantial structure through ~300+), then drops to a long flat/rest. This \u201crich, oscillatory\u201d multi\u2011burst morphology and extended active duration match the class\u20115 examples best (class\u20115 was the only shown class with multiple tightly spaced peaks and longer total active time). Other classes (0,2,3,6,7) either have fewer, more isolated pulses, simpler biphasic shapes, or earlier/shorter bursts, so they fit less well. Uncertainty remains due to within\u2011class variability and the small example set."
+},
+{
+    "idx": 94,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.78\n- Reason: The trace matches the class\u20113 signature from the examples: a very strong positive plateau at the start (near +4), followed by pronounced negative dips and multiple sign reversals, with activity continuing well into the middle segment (~0\u2013350) before becoming flat. This differs from class\u20112 (short, front\u2011loaded pulse that ends earlier), class\u20115 (multiple separated bursts including later activity), and the shorter/less\u2011reversing patterns of classes 0, 6 and 7. The timing (early + large mid swings) and morphological complexity (multiple large excursions) align best with class 3."
+},
+{
+    "idx": 111,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.80\n- Reason: The series shows a very large positive excursion at the start (\u2248+4) immediately followed by a deep negative trough, then a return to a large positive peak in the early-to-mid window and a final negative dip before flattening. This timing and morphology (a pronounced initial positive peak at t\u22480 + rapid negative trough and a secondary event later) closely matches the class\u20113 examples from the provided set. Other classes either have their main peak later (class 0/2/6), more oscillatory multi\u2011burst structure (class 5), or much smaller early amplitudes (class 7), so class 3 is the best fit. Caveat: long flat/padded tail and small sample size introduce some uncertainty."
+},
+{
+    "idx": 91,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.85\n- Reason: The trace shows the hallmark multi\u2011peaked, high\u2011oscillation pattern in the early segment (many zero\u2011crossings and repeated small peaks like class 5 examples) plus additional bursty activity that extends well into the middle/late window (~~500 time step secondary burst). This combination of (1) high within\u2011burst complexity/oscillations and (2) extended/multi\u2011burst timing matches the class 5 examples from the provided set. Other classes (e.g., 3 or 6) tend to have smoother, single polarity reversals, and class 7/0/2 are more compact or differently phased \u2014 so they are less consistent with the shown waveform."
+},
+{
+    "idx": 117,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The test trace shows multiple alternating positive/negative lobes and several distinct peaks within the early\u2192middle window (active up to ~200\u2013250 samples) rather than a single big swing. Amplitude range (about \u00b13\u20134), fragmented/multi\u2011pulse structure and extended activity match the class\u20115 examples (class 5 was the one exhibiting multi\u2011peak, higher local frequency and longer-duration pulses). Other classes show either a single dominant swing (0,3), smoother single oscillation (6), shorter/contained strokes (7) or stronger isolated negative-dominated spikes (2), so the multi-lobe pattern most closely fits class 5."
+},
+{
+    "idx": 116,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.72\n- Reason: The new trace shows multiple distinct oscillatory episodes concentrated in the early-to-mid window (several separated peaks/troughs within ~0\u2013300 samples) plus a later isolated high/flat marker \u2014 a multi\u2011episodic temporal structure. This matches the characteristic pattern I observed for class 5 (rich temporal structure with multiple separated bursts) much more closely than the single\u2011wave/smoother shapes of class 6 or the earlier\u2011finishing, compact bursts of classes 2/7. The abrupt polarity flips and repeated bursts differ from the single sustained plateau pattern seen in class 0. Therefore class 5 is the best match, with moderate confidence because of within\u2011class variability and recording artifacts (vertical spikes) that make exact discrimination less certain."
+},
+{
+    "idx": 109,
+    "label": 3,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.65\n- Reason: The test trace shows concentrated activity only in the early region (roughly 0\u2013200), with a very large positive deflection at the start, a sharp negative trough shortly after, and a secondary positive rebound near ~150\u2013200 before the series becomes flat. This \u201cearly positive \u2192 negative \u2192 secondary early positive\u201d pattern (two early sub-bursts with a negative valley between) most closely matches the class-6 examples from the provided set (class-6 was described as having early activity with a characteristic early positive peak and a secondary irregular burst around the 100\u2013300 ms window). It differs from class-5 (which had multi-stage activity extending into the middle/late segments) and from class-7 (which tended to be a single short asymmetric burst). Because the visual match is good but classes have within-class variability and some ambiguity, confidence is moderate."
+},
+{
+    "idx": 107,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.70\n- Reason: The test trace shows concentrated activity in the early window (~0\u2013350) with many rapid zero\u2011crossings and multiple distinct bursts/peaks (several positive peaks up to \u2248+3.5..+3.8 and deep negative troughs \u2248\u20132.5..\u20133.0). That \u201cbursty/oscillatory\u201d multi\u2011peak early pattern matches the examples and description I associated with class 5 (many short oscillations and multiple early bursts). Other classes (e.g., 6 or 3) can show bipolar swings or two-hump shapes that are somewhat similar, so there is some ambiguity \u2014 hence a moderate confidence rather than very high."
+},
+{
+    "idx": 99,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.78\n- Reason: The new trace shows a clear multi\u2011phased early waveform: an initial positive hump (~0\u201340 ms), a pronounced negative trough in the early\u2013middle window (~80\u2013160), then a strong return to a large positive peak around ~200\u2013250 before the long flat/marker region. From the visual class summaries, class 3 examples are characterized by exactly this positive \u2192 negative \u2192 positive sequence (multi\u2011lobe polarity reversals) concentrated in the early segment. Other classes either show simpler biphasic shapes (classes 2 and 6), lower amplitude/smoother early waves (class 7), or longer/prolonged multi\u2011peak activity that extends farther in time (class 5). Because timing and polarity order match class 3 most closely, I assign class 3 with moderate\u2013high confidence, noting that intra\u2011class variability and recording artifacts (vertical marker lines) limit absolute certainty."
+},
+{
+    "idx": 101,
+    "label": 3,
+    "predicted": 7,
+    "conversation": "- True Label: 7\n- Confidence: 0.78\n- Reason: The trace shows a short negative deflection at the very start followed quickly by one dominant positive burst/plateau concentrated in the early segment (\u22480\u2013200 time steps), then a return toward zero and a long flat tail. That negative-first \u2192 strong early positive recovery with a single main stroke and little middle/late activity matches the class-7 examples (negative-first pattern, activity limited to the early window) more closely than the other classes, which either show multiple distributed sub-strokes (class 5), later/more complex mid-strokes (class 0/3), or very sharp transient steps (class 2)."
+},
+{
+    "idx": 98,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.75\n- Reason: The series shows a clear bi\u2011phasic early pattern \u2014 a very early/large positive deflection, a deep negative trough shortly after, and a second strong positive excursion by ~150\u2013220 samples \u2014 which matches the characteristic shape seen in class 3 examples (initial positive \u2192 negative \u2192 later positive). The later isolated rise around ~700 samples could be an extra/shifted sub\u2011burst or an artifact (many traces contain marker spikes and long flat tails), but the dominant discriminative content is the early bi\u2011phasic waveform. This pattern differs from class\u20115 (which has many distributed oscillatory sub\u2011bursts), class\u20112 (which is more extremely time\u2011localized and returns to baseline faster), and class\u20116 (which tends to show two main pulses closer together). Given the visual match in polarity sequence and timing, class 3 is the best fit."
+},
+{
+    "idx": 97,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.80\n- Reason: The new trace shows the same three-phase pattern that best matches the class\u20113 examples: (1) an immediate, large early negative deflection right after the start, (2) a recovery/large positive plateau in the mid (roughly 80\u2013160\u2013200 time steps), and (3) a secondary negative return later, followed by a flat baseline and isolated marker spikes. The timing of the first deep trough (very early), the polarity reversal to a sustained positive mid segment, and the amplitude profile (deep trough \u2248 -3 then peak \u2248 +3\u20134) closely mirror the class\u20113 samples. Other classes either lack the very early deep negative or have a more oscillatory/multi\u2011peaked early window (e.g., class 5 or 6), so class 3 is the best match."
+},
+{
+    "idx": 118,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.78\n- Reason: The trace shows a very early, large positive deflection right at the start followed by a deep negative swing and then a secondary positive/negative burst in the early\u2013middle window, after which the series returns to a long flat baseline. This timing and polarity sequence (strong positive at onset \u2192 negative \u2192 second burst) matches the characteristic pattern I observed in class 3 examples (very early large positive then negative, sometimes two separated active bursts). It is less consistent with class 6 (smoother sinusoid) or class 5 (longer, more sustained oscillatory activity extending later), so class 3 is the best match."
+},
+{
+    "idx": 93,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The test trace shows a multi-burst, oscillatory active period in the early segment (0\u2013~250) with large positive peaks (~+4) and negative dips (~\u22123), followed by a long quiescent tail and then a distinct, narrow secondary event centered near ~500. During my earlier per-class review, class 5 was the one that consistently exhibited strong early oscillatory activity plus additional later bursts in the middle/late window (an example had a late burst around 500\u2013800). Other classes either concentrate activity only early (class 2, 7), have different timing of second bursts (class 3/6 tend to show mid rather than late secondary activity), or show different waveform shapes. The presence and timing of the late isolated event together with the early multi-burst morphology therefore best match class 5. Caveat: there are plotting/artifact-like vertical lines and only a few examples per class, so the label is probabilistic."
+},
+{
+    "idx": 92,
+    "label": 3,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.78\n- Reason: The trace shows a clear, large-amplitude positive hump in the early window (\u224820\u2013150) followed by a negative trough around \u2248200\u2013300 and then only small subsequent activity \u2014 exactly the single-cycle shape (positive then negative) that I identified as characteristic of class 6 in the earlier analysis. Other classes either concentrate energy even earlier and decay faster (class 2), start with a pronounced negative trough (class 3), show long sustained positive plateaus (class 0), or multiple distributed bursts (class 5). The late isolated vertical spikes and long flat regions look like padding/artifacts and do not change the primary early positive\u2192negative pattern that matches class 6."
+},
+{
+    "idx": 112,
+    "label": 3,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.75\n- Reason: The test trace shows a large positive deflection very early (peaks near +3 to +4), followed within the early-to-middle window (~100\u2013250 samples) by a transition into negative excursions and then an abrupt end/flat tail. This \u201cpositive\u2011then\u2011negative\u201d short, concentrated burst with little late activity matches the class\u20112 examples (strong early positive peak followed by damped negative oscillation and early termination). It differs from class\u20110 (which typically begins with a large negative trough then a later positive), from class\u20115 (which shows long/extended oscillatory activity), and from classes with smaller or later peaks, so class 2 is the best fit."
+},
+{
+    "idx": 103,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.85\n- Reason: The trace shows a clear negative-first large deflection in the early segment followed by a strong positive peak in the middle and then another negative excursion before the long flat/padded region \u2014 i.e., a negative \u2192 positive \u2192 negative sequence concentrated in the early/mid window. This pattern (timing, polarity sequence and amplitude) matches the class\u20113 examples from the training samples. It differs from class\u20110 (sustained mid positive plateau), class\u20115 (high-frequency/continuous oscillations), class\u20116 (smoother two-peaked sinusoidal shape), and the lower-energy/short events of class\u20117, so class 3 is the best match."
+},
+{
+    "idx": 95,
+    "label": 3,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.85\n- Reason: The new trace shows a strong positive deflection immediately at the start, followed by a pronounced negative trough and then a positive recovery within the early segment (0\u2013250). This clear pos \u2192 neg \u2192 pos bipolar sequence with steep slopes and most energy concentrated early closely matches the characteristic pattern I observed for class 3 examples. There is little to no meaningful middle/late activity (likely padding), which also aligns with class 3 behavior. Caveat: plotting artifacts (vertical lines/flat regions) and intra\u2011class variability reduce absolute certainty, hence a high but not perfect confidence."
+},
+{
+    "idx": 96,
+    "label": 3,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The test trace shows multiple distinct active bursts spread across time: a multi\u2011lobe oscillatory transient in the early window (0\u2013300) with positive and negative lobes, followed by a large, isolated late burst around ~900\u20131000. From the examples examined, class 5 is the one characterized by several separated bursts and activity spread into the mid/late portion of the recording (rather than a single compact early transient or only early two\u2011lobe shapes). Amplitude range (\u2248 \u22123 to +4) and the repeated peak/valley structure also match class 5 examples. I assign moderate confidence because the labeled examples were few and inter\u2011sample variability is high, so the decision could change with more data."
+},
+{
+    "idx": 174,
+    "label": 5,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.82\n- Reason: The trace shows a clear early two-lobe structure (positive excursion at the very start \u2192 deep negative trough \u2192 second positive peak around ~200), with the main energy concentrated in the early segment and little meaningful activity in the middle/late windows (aside from plotting/event markers). This positive\u2192negative\u2192positive pattern and timing closely matches the characteristic two-peaked early waveform described for class 6 and is less consistent with the single biphasic spike of class 2 or the prolonged/multi-burst pattern of class 5. The long flat tail and vertical discontinuities appear to be non-informative artefacts, which I ignored in the decision."
+},
+{
+    "idx": 176,
+    "label": 5,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.70\n- Reason: The test trace shows a concentrated, relatively long early active window (roughly 0\u2013~250) with multiple reversals and several strong positive peaks up to about +4 followed by negative troughs \u2014 the same pattern noted for class 0 examples (long early burst, several oscillations, sustained positive maxima). It does not show the pronounced early negative\u2011first polarity that characterized class 3, nor the clearly separated multi\u2011burst / extended mid\u2011later activity typical of class 5. Amplitude ranges are similar across classes, so the deciding cues were timing (early concentrated activity), internal structure (many reversals inside the early burst) and the sustained positive peaks, which best match class 0. (Confidence is moderate because only a few example traces per class were available and there is per\u2011trial variability.)"
+},
+{
+    "idx": 161,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.70\n- Reason: The shown trace has an early, highly active window (\u22480\u2013250) with many rapid, multi\u2011peaked oscillations and repeated tall positive spikes up to \u2248+4, followed by a sharp downward excursion near 200 and then long flat padding/marker later. That \u201chigh intra\u2011sample complexity / multi\u2011peaked early activity\u201d pattern matches the class 5 examples best. It is not a smooth single-arc (so not class 6), it lacks the clear two distinct separated bursts that characterize class 3, and it looks denser and more complex than the relatively compact bursts seen in classes 0/7 \u2014 hence class 5 is the closest match. Confidence is moderate because several classes (notably class 2) show similar dense early oscillations, so there is some ambiguity."
+},
+{
+    "idx": 177,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.70\n- Reason: The test trace shows most activity early (within the first ~200 time steps) with multiple discrete bursts that switch polarity rapidly (several sharp positive excursions interleaved with deep negative dips) and then a final strong rise toward +4 \u2014 i.e., a segmented, multi-lobe early pattern. This matches the characteristic description of class 2 (several rapid positive excursions with interleaved negative dips and little late activity). I give moderate confidence because several classes share similar amplitude range and early activity timing, so overlap/within-class variability could still cause confusion."
+},
+{
+    "idx": 168,
+    "label": 5,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.70\n- Reason: The new trace shows a strong initial positive deflection followed by a deep negative trough and then another prominent positive excursion within the early window (~0\u2013250 samples), plus mid-sequence narrow marker-like spikes around ~450\u2013600. This pattern (bimodal early positive peaks separated by negative troughs and mid-window markers) best matches the examples shown for class 6. Amplitude ranges are similar across classes so the decision is driven by the timing/order of peaks and troughs; there is some within-class variability, so confidence is moderate rather than high."
+},
+{
+    "idx": 166,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.80\n- Reason: The test trace shows sustained, complex activity spread across the early-to-middle window (roughly 0\u2013350 time steps) with multiple distinct peaks and valleys and a late rising positive excursion around 300\u2013350. This long, multi\u2011peaked pattern closely matches the behaviour I identified for class 5 (the longest-duration, most multi-modal traces) and contrasts with the shorter, briefer bursts of classes 2 and 7, the single main peak of class 0, or the two\u2011lobe patterns of class 6. I give moderate\u2011high confidence because only a few examples per class were available and recording artifacts/padding spikes are present, but the temporal extent and multiplicity of peaks make class 5 the best match."
+},
+{
+    "idx": 155,
+    "label": 5,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.78\n- Reason: The test trace shows a clear multi\u2011phasic early stroke: a strong positive deflection at the start, a deep negative trough shortly after, and a subsequent positive phase in the early\u2192middle window \u2014 i.e. a pos \u2192 neg \u2192 pos sequence. This timing and polarity sequence, together with the amplitude range (~ \u22123 \u2026 +4) and the signal becoming mostly quiet/segmented after the early/mid region (with a couple of sharp/reset spikes later), most closely matches the class\u20113 examples examined earlier. Other classes (e.g., 0 or 6) can show large early swings but they tended to be less distinctly multi\u2011phasic in the same temporal order; class\u20115 showed more continuous oscillatory bursts extending further into the middle/late window. Given those matches and the remaining uncertainty from inter\u2011sample variability and apparent segmentation artifacts, I assign class 3 with moderate confidence."
+},
+{
+    "idx": 159,
+    "label": 5,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.85\n- Reason: The test trace shows the same key temporal pattern I identified for class 0: an early positive deflection, a pronounced negative valley in the early segment (~50\u2013150), followed by a strong positive rebound in the middle (~200\u2013300), and then a rapid transition to a long flat/rest region (>~350\u2013400). This \u201cnegative-first then positive rebound\u201d timing/shape signature (two oppositely signed bursts with activity confined to early+middle and a flat late segment) matches the class\u20110 examples much better than the other classes (which are either more strongly oscillatory/prolonged, concentrated only in the very early window, or have different peak polarity sequences). There is some within-class variability and some overlap with classes that show multiple early peaks (e.g., 6), but the alignment of the negative trough followed by a single large positive rebound and early end of activity strongly favors class 0."
+},
+{
+    "idx": 157,
+    "label": 5,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.72\n- Reason: The trace shows two distinct positive lobes separated by negative deflections concentrated in the early-to-middle window (large positive peak near ~100\u2013160 samples, negative troughs before and after), matching the double-peak / pos\u2192neg\u2192pos shape described for class 6. It is less noisy and less multi-peaked than class 5, and the initial positive is smaller (so it doesn\u2019t match the strong immediate positive signature of class 3 or class 0). These timing, polarity-sequence and peak-amplitude features make class 6 the best match."
+},
+{
+    "idx": 162,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.80\n- Reason: \n  - Segmenting the trace: early (0\u2013250) + middle (250\u2013500) + late (>500). Most discriminative activity here is in early and late/middle windows.\n  - The series shows multiple alternating positive and negative bursts in the early window (several cycles rather than a single sharp deflection), a period with a vertical/flat marker around ~400, then a large negative deflection near ~600 followed by further positive/negative bursts around 700\u2013800. In other words the movement is temporally extended and multi\u2011phasic.\n  - This temporal extent (activity continuing into the middle/late region) and the presence of multiple alternating peaks matches the pattern I identified for class 5 (longer span, several alternating bursts) much more than the other classes: class 2 and 7 are short/compact early bursts, class 3 shows biphasic but less repeated cycles, and class 6 is smoother/fewer broad peaks.\n  - Given the visual similarity to the multi\u2011burst, extended examples labeled class 5 and the clear multi\u2011phase structure here, class 5 is the best match. Confidence is moderate (0.80) because only a few examples per class were available and intra\u2011subject variability may exist."
+},
+{
+    "idx": 156,
+    "label": 5,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.72\n- Reason: The test trace shows its main energy in the early segment (first ~250 samples) with two large, relatively smooth bipolar oscillations (positive peaks near +3..+4 and corresponding negative troughs) rather than many small jagged spikes or widely separated multi-part bursts. That timing, smooth sinusoidal-like shape and limited temporal spread match the examples labeled class 6 (which appeared smoother and more periodic) more closely than the jagged/multi-peaked profiles of classes 0 or 5 or the short, very abrupt strokes seen in class 2 or 7. There are plotting/event-artifact spikes at later indices (likely non-physiological) but they do not change the early waveform pattern used for this decision."
+},
+{
+    "idx": 158,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The presented trace shows repeated positive/negative alternations across the early and middle segments (many local extrema and no single dominant sustained plateau), with activity spread over a broader time window and additional isolated marker-like pulses later on. Those characteristics match the multi\u2011peaked, temporally\u2011spread pattern I associated with class 5 in the analysis. It does not match class 0 (which shows a clearer upward sweep/plateau), class 3 (which has a very sharp early positive followed by a large polarity reversal), or class 7 (which has milder, smaller oscillations). I give moderate confidence because only a few examples per class were available and there are recording artifacts (flat regions/vertical pulses) that add uncertainty."
+},
+{
+    "idx": 175,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.80\n- Reason: The new trace shows two clearly separated active segments: a complex, oscillatory early burst (large positive peaks and deep negative valleys inside ~0\u2013250) followed by a second distinct positive ramp/plateau much later (~~680\u2013740). Among the class examples, class 5 was the one that consistently displayed multiple separated bursts and extended mid/late activity (longer active duration and higher temporal complexity). Other classes either had a single early burst or only early multi\u2011cycle activity (e.g., 0, 2, 3, 6, 7), so the two-burst, long-duration pattern best matches class 5. Note: this judgment is based on a small set of visual examples and on plots that include padding/artifact lines, so confidence is moderate rather than certain."
+},
+{
+    "idx": 170,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.65\n- Reason: The new series is not a single compact early stroke \u2014 it shows multiple distinct active epochs (an early sequence of alternating +/\u2212 excursions, a long near\u2011flat middle, then a strong late positive burst around time steps ~1000\u20131200). That \u201cmulti\u2011burst\u201d temporal structure with activity extended into the later portion is most similar to the examples from class 5, which exhibited several separated strokes and mid/late activity in the provided samples. Amplitude alone is non\u2011discriminative (all classes reach similar \u00b13\u20134 ranges), so the timing and number of separated bursts were used as the primary cue. Because only a few example traces per class were available this judgment is somewhat uncertain, hence a moderate confidence."
+},
+{
+    "idx": 153,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The trace shows multiple rapid ups and downs in the early window (several peaks and troughs rather than a single dominant deflection), plus additional isolated bursts later (vertical-like events around ~400 and ~600). This multi-burst, irregular/oscillatory pattern with activity that can extend into the middle/late segments matches the characteristic shape of class 5 from the examples (class 5 was the most consistently multi-peaked and longer-duration among the provided classes). It differs from class 0 (single large positive peak), class 3 (single biphasic positive\u2192negative), class 6 (smoother sinusoidal cycles), and class 7 (very short sharp spikes), so class 5 is the best match."
+},
+{
+    "idx": 172,
+    "label": 5,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.75\n- Reason: The trace shows a very large positive deflection at the start (early window), followed by a pronounced negative trough and then a later positive recovery around the middle \u2014 exactly the bipolar early\u2192negative\u2192rebound pattern that I associated with class 3 in the earlier analysis. Amplitude range matches the other classes, and the late flat segments / vertical step artifacts appear to be recording/epoch boundaries rather than signal content, so timing and polarity of the early/mid bursts are the primary discriminators pointing to class 3."
+},
+{
+    "idx": 167,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The new trace shows a prolonged, highly oscillatory active period in the early segment (roughly 0\u2013350), with multiple positive peaks and intervening deep negative troughs before the long flat/padded tail. In my earlier per\u2011class analysis class 5 was characterized by several sub\u2011movements/peaks and greater temporal complexity (multiple oscillations and longer active windows) compared with the other classes (which were typically more biphasic, single\u2011excursion, or shorter/compact). The number, timing and repeated peak/trough structure in this sample therefore best match class 5. Confidence is moderate-to-high because the visual sample set is small and there is some intra\u2011class variability, but the oscillatory signature is a strong cue for class 5."
+},
+{
+    "idx": 154,
+    "label": 5,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.72\n- Reason: The test trace shows a clear early positive excursion that builds to about +3\u2026+4 and then transitions into a pronounced negative trough around the 150\u2013220 time\u2011step range, with a small secondary event in the middle and flat/idle values later. From the earlier per\u2011class review, that combination \u2014 positive\u2011first polarity, extended early positive plateau, then a large negative deflection and some mid\u2011window activity \u2014 most closely matches the class\u20110 examples. Class 3 traces tended to switch polarity much earlier (very sharp early change), and class 5/6 showed more rapid multi\u2011burst oscillations; class 7 had simpler/lower amplitude bursts. Caveats: within\u2011class variability and the long flat tail reduce certainty, so I give a moderate (not maximal) confidence."
+},
+{
+    "idx": 173,
+    "label": 5,
+    "predicted": 2,
+    "conversation": "- True Label: 2\n- Confidence: 0.75\n- Reason: The trace shows a single, early concentrated biphasic sweep \u2014 a strong sustained positive plateau followed by a rapid fall into a deep negative trough \u2014 with few intermediate oscillations and little extended activity in the middle/late segments (the late vertical lines look like recording markers). That waveform pattern (one prominent early positive deflection immediately followed by a steep negative trough, without multiple small peaks or sinusoidal oscillation) most closely matches the examples shown for class 2."
+},
+{
+    "idx": 178,
+    "label": 5,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The test trace shows a complex, multi-peaked active gesture in the early window (0\u2013~250) with several alternating positive and negative swings reaching roughly +3..+4 and \u22123, followed by a clear secondary burst in the middle window (~700\u2013800) and small late activity (~1150\u20131250). From the earlier per-class analysis, class 5 examples were characterized by multiple alternating peaks in the early/mid region and by additional mid/late activity \u2014 this matches the new sample more closely than classes that show a single dominant swing (e.g., 3 or 6) or only an early concentrated burst (e.g., 2). I assign moderate-high confidence because the match on multi-peak structure plus the mid-window secondary burst is distinctive, but there is some within-class variability and a small chance of overlap with classes that sometimes show multi-peaked patterns."
+},
+{
+    "idx": 183,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.75\n- Reason: The new trace shows the distinctive positive\u2192deep-negative early motif followed by a recovery to positive/oscillatory activity in the early-to-middle window and then long flat stretches with isolated vertical markers later. This polarity sequence (strong positive at the very start, rapid drop to large negative, then recovery) and the concentrated early activity closely matches the class\u20113 examples more than the other classes (which either show multi-burst oscillatory patterns (class\u20115), earlier negative-dominated bursts (class\u20112), or milder/shifted timing of peaks (classes 0, 6, 7)). Hence class 3 is the best match; confidence is moderate due to variability across samples and presence of marker spikes."
+},
+{
+    "idx": 202,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.70\n- Reason: The test trace shows multiple, temporally separated activity bursts (strong early positive excursions, a short negative trough around ~200, and additional isolated spikes in the mid region ~450\u2013600) rather than a single short early burst or a smooth biphasic waveform. In my earlier per-class analysis class 5 was the one characterized by multiple distinct bursts spread across early and mid/late segments; the amplitude range and discontinuous active windows in the new sample match that pattern. There is some ambiguity from subject variability and abrupt vertical artifacts, so confidence is moderate."
+},
+{
+    "idx": 206,
+    "label": 6,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.70\n- Reason: The trace shows a clear early\u2013middle active pattern with two prominent positive lobes separated by a deep negative trough: (1) several positive peaks in the early window (~t = 50\u2013180), (2) a pronounced negative deflection around ~t = 200\u2013230, and (3) a strong positive recovery/ramp to ~+4 in the next segment (~t = 250\u2013300), then an abrupt flattening later. This positive\u2013negative\u2013positive, two\u2011lobe structure matches the characteristic shape seen in the class\u20116 examples (distinct separated positive lobes with intervening negative troughs). Other classes either show a single dominant ramp (class 0), early positive then decay (class 2), or more prolonged/highly oscillatory multi\u2011peak activity (class 5), so class 6 is the best match."
+},
+{
+    "idx": 187,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.72\n- Reason: The test trace shows a rich, multi\u2011peaked oscillatory burst concentrated in the early segment (roughly 0\u2013300) with several rapid positive and negative excursions before the series flattens. From the class examples, class 5 was characterized by longer, more complex early oscillations and multiple sub\u2011peaks (higher temporal complexity) compared with the shorter/compact bursts of classes 2 or 7, the single dominant positive onset of class 0, or the simpler two\u2011peak patterns of class 6. The waveform\u2019s jagged, multi\u2011cycle structure and extended duration match the class\u20115 examples most closely. (Note: classification is qualitative and based on a few reference examples \u2014 moderate confidence due to within\u2011class variability and small sample set.)"
+},
+{
+    "idx": 199,
+    "label": 6,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.80\n- Reason: The test trace shows an early-to-mid (\u22480\u2013300) broad, smooth positive\u2192negative\u2192positive swing with large but slowly varying amplitude (roughly \u22123 to +4) and relatively few high\u2011frequency oscillations. This matches the class\u20116 examples which showed smooth, sinusoid\u2011like early/mid swings and occasional weaker secondary activity. It differs from class\u20115 (which has multiple jagged/high\u2011frequency bursts), class\u20112/class\u20117 (shorter single events), and class\u20110 (single dominant early rise into sustained positive peaks). Note: flat segments/vertical jumps (likely segmentation/missing\u2011data artifacts) reduce usable length and introduce uncertainty, so confidence is moderate."
+},
+{
+    "idx": 190,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The sample shows dense, high\u2011variance oscillatory activity concentrated in the early\u2192middle window (~0\u2013300 time steps) with multiple positive/negative peaks and frequent polarity reversals. That pattern (multi\u2011cycle, jagged waveform with several peaks/troughs) matches the typical class\u20115 examples. It differs from class\u20116 (cleaner, smoother biphasic shape), class\u20113 (single very large initial positive then strong negative), class\u20112 (shorter, more abrupt positive\u2192negative), and class\u20117 (lower amplitude, briefer activity), so class 5 is the best match."
+},
+{
+    "idx": 188,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.80\n- Reason: The trace shows a long, complex active segment (many alternating positive and negative deflections) that extends from the early region well into the middle of the window (~0\u2013300 samples). It has multiple distinct peaks and troughs (high oscillation count and sustained non\u2011flat duration), which matches the class-5 examples that were the most oscillatory and longest-lasting among the provided classes. Other classes tend to have simpler single/smaller peaks or earlier/shorter activity (e.g., classes 0,3,7) or different first-deflection polarity/timing (e.g., 3/6), so the pattern best aligns with class 5. Uncertainty remains because of within-class variability and because only a few example traces were available."
+},
+{
+    "idx": 184,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.80\n- Reason: \n  - Segmented view: the trace contains (1) an early positive excursion, (2) a pronounced negative trough in the middle, and (3) a distinct second large positive lobe around ~200\u2013230 time steps \u2014 then quiet/marker artifacts later.  \n  - This two-lobe pattern (strong early positive, clear negative trough, then separate middle positive) is the defining signature I associated with class 3 in the earlier analysis.  \n  - It is different from class 5 (which shows many short oscillations / higher-frequency alternations) and from class 6 (which tends to be smoother and lower-frequency). The timing and polarity of the two main lobes match class 3 prototypes best.  \n  - I ignored late vertical spikes (likely non-physiological markers) when making the decision."
+},
+{
+    "idx": 186,
+    "label": 6,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.78\n- Reason: The test trace shows its main burst in the early window (0\u2013~250 samples) with an initial positive region, intervening negative troughs, then a dominant positive rise that reaches \u2248+4 just before the trace flattens \u2014 a temporal pattern and polarity sequence that closely matches the class\u20110 examples. The activity also ends (flat/padded region) at about the same mid/late index seen for class 0. Other classes (e.g., class 5) tend to be more prolonged and oscillatory or have different polarity timing (class 2/3/6 show sharper or differently timed biphasic shapes), so the timing, final dominant positive excursion and subsequent flat tail make class 0 the best match. Confidence is moderate because within\u2011class timing variability and recording/padding artifacts can cause ambiguity."
+},
+{
+    "idx": 209,
+    "label": 6,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.70\n- Reason: The test trace shows a clear three\u2011phase pattern that matches the class\u20110 examples: an early positive deflection, a pronounced negative trough in the early\u2013middle window, then a strong sustained positive rebound/plateau in the middle segment before the long flat/rest period. This \u201cpositive \u2192 negative \u2192 larger positive (sustained)\u201d morphology and timing is the most consistent with the class\u20110 samples (other classes either begin with a dominant negative deflection (class 3), show more fragmented/multi\u2011peaked activity (class 5) or a distinct double\u2011hump with different timing (class 6)). Vertical jump/artifact markers present in the recording are consistent with the dataset-wide plotting artifacts and were ignored in the decision."
+},
+{
+    "idx": 203,
+    "label": 6,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.70\n- Reason: The record shows a clear bi\u2011phasic early pattern: a large smooth positive excursion (rising to \u2248+4) in the early window followed by a pronounced negative trough around ~200 samples, and then a long flat tail. This positive\u2011then\u2011negative two\u2011lobe shape (smooth transitions, single main positive lobe followed by a single main negative lobe, little later activity) best matches the class\u20116 examples described earlier. It does not show the multi\u2011oscillatory / many zero\u2011crossing pattern of class\u20115 nor the sharp spiky polarity flips of class\u20112, and it lacks the extra later positive rebound often seen in class\u20113, so class\u20116 is the closest match."
+},
+{
+    "idx": 210,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The test trace shows a strong early positive peak followed by multiple positive/negative oscillations in the early-to-middle window and then a clearly separated secondary active patch around ~550\u2013600. In my earlier per-class analysis class 5 was the one exhibiting more distributed/multi-window activity and a higher count of oscillations (multiple separated active segments, including examples with activity around 500\u2013800). Amplitude and polarity fall in the same overall range as the training examples. Given the small sample set and possible segmentation/plotting artefacts I assign a moderately high confidence rather than near-certain."
+},
+{
+    "idx": 200,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.72\n- Reason: The test trace shows a long early-to-middle active window (activity from \u22480 up to \u2248300\u2013350) with many alternating positive and negative deflections, high temporal complexity (numerous peaks/zero-crossings) and amplitudes reaching \u2248+4/\u22123. This sustained, irregular multi-burst/oscillatory pattern matches the examples described for class 5 (prolonged, high-density oscillations) much more closely than the shorter single-burst patterns of class 2/7, the biphasic signature of class 3, or the simpler/moderate oscillations of class 0/6. Caveat: only a few examples per class were shown, so confidence is moderate."
+},
+{
+    "idx": 189,
+    "label": 6,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.80\n- Reason: The trace shows a clear initial high positive value (\u2248+4) at the start, a rapid fall into negative excursions early, a pronounced secondary positive peak in the ~150\u2013250 sample range, and then a deep negative trough before the series goes flat after ~350. This positive\u2192negative\u2192positive\u2192negative sequence and the timing of the main active window closely match the class\u20113 examples (initial high start followed by a deep negative valley and a mid positive return) more than the other classes."
+},
+{
+    "idx": 204,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.70\n- Reason: The new trace shows a multi\u2011peaked, oscillatory active epoch (large positive excursion very early, abrupt deep negative trough soon after, a secondary negative sub\u2011stroke around ~140\u2013180 and then another large positive by ~200) rather than a single ramp or a single biphasic deflection. It also contains additional isolated activity/spikes later (visible at ~400\u2013550), i.e. the active portion is more complex and spread into the middle segment. Those characteristics \u2014 multiple sub\u2011peaks, higher stroke count and longer/extended active duration \u2014 match the examples I associated with class 5 and contrast with the smoother/one\u2011shot strokes of class 6, the strong initial negative of class 3, or the short early bursts of class 7. Hence class 5 is the best match (moderate confidence given only visual/qualitative comparison)."
+},
+{
+    "idx": 192,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The new trace shows many short positive/negative oscillations concentrated in the early window (0\u2013~250) with several distinct peaks rather than a single sustained plateau or two clearly separated bursts. This \u201cdistributed, multi\u2011peak\u201d early activity pattern matches the examples I associated with class 5 (many short high\u2011frequency swings and temporally spread energy). It lacks the compact single early burst of class 7, the clear biphasic two\u2011burst structure of class 3, and the simple positive\u2011then\u2011negative two\u2011lobe shape of class 6 or the steady plateau often seen in class 0. Class 2 has very early isolated large peaks followed by a pronounced negative dip \u2014 here the activity is more continuous and multi\u2011peaked, so class 5 is the best match."
+},
+{
+    "idx": 201,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.82\n- Reason: The test trace shows multiple alternating positive and negative bursts concentrated in the early-to-middle window (peaks near ~50\u2013150, negative excursions ~200\u2013260, then another positive around ~280\u2013320) and is relatively jagged with several distinct local extrema. That matches the \u201cmulti-stroke\u201d pattern I assigned to class 5 (several alternating bursts spread across early and middle segments). It is less consistent with class 6 (which I characterized as smoother, more sinusoidal-looking oscillations) and with class 0/2 (which have a single dominant upward or earlier sharp peak). Because the visual match is strong but the sample set per class is small and amplitude ranges overlap, I assign a high but not maximal confidence."
+},
+{
+    "idx": 205,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.78\n- Reason: The sample shows an early active window (\u22480\u2013300) with multiple large positive and negative swings and several zero-crossings (big positive peak \u2248+4, deep negative troughs \u2248\u22123, then additional pos/neg swings). This multi\u2011phasic, oscillatory structure matches the class-5 examples (notably higher temporal complexity and multiple peaks) more closely than the simpler biphasic patterns of class 0 or 7, the single very-early positive of class 3, or the cleaner two-stroke shape described for class 6. (Note: the vertical step/reset artifacts around 400/580 are non-physiological markers and were ignored.)"
+},
+{
+    "idx": 197,
+    "label": 6,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.78\n- Reason: The trace shows a pronounced early double\u2011positive structure separated by a negative trough: an initial positive rise/peak near the start, a deep negative excursion around the mid\u2011early window (~100\u2013180), then a strong return to positive values (~200\u2013250). This \u201ctwo positive lobes with an intervening trough\u201d pattern matches the characteristic shape I observed for class 6. The remainder of the record is flat/padded, consistent with the other class examples. There is some within\u2011class variability (and some overlap with the more oscillatory class 5 and the positive-leading class 0), so I assign a moderately high confidence rather than near\u2011certain."
+},
+{
+    "idx": 182,
+    "label": 6,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.68\n- Reason: The test series shows two distinct properties that match class 5 in the reference plots: (1) multiple jagged/spiky bursts in the early window (0\u2013~250) and (2) a pronounced additional burst/ramp in the middle-late region (~500\u2013600). Other classes (0,2,3,6,7) concentrate their substantive activity almost entirely in the early segment and are flat afterward (or show only single marker-like vertical lines). Class 5 was the only class in the examples with activity that is temporally spread and includes significant mid/late events \u2014 the pattern seen here \u2014 so class 5 is the best match. Confidence is moderate because only a few example traces per class were available and there are repeated marker/artifact lines that can confuse timing-based decisions."
+},
+{
+    "idx": 228,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.72\n- Reason: The trace shows several distinct high-amplitude bursts concentrated in the early\u2192middle portion (multiple positive peaks near +3\u20134 and negative troughs near \u22123) with repeated oscillatory/sudden transitions \u2014 i.e., a multi\u2011burst, spiky pattern. From the earlier per\u2011class analysis this multi\u2011burst, temporally extended but early-centered structure most closely matches class 5 (which consistently exhibited multiple distinct peaks/bursts and higher temporal complexity). Other classes (e.g., 3: single strong pos\u2192neg sweep; 6: smoother one\u2011 or two\u2011swing pattern; 7: more compact single burst) do not match the repeated multi\u2011peaked shape as well. Confidence is moderate\u2013high but not certain because only a few example traces per class were available and inter\u2011subject variability / padding can overlap between classes."
+},
+{
+    "idx": 233,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The test trace shows multiple distinct stroke cycles concentrated in the early-to-middle window (many zero\u2011crossings and repeated positive/negative peaks), relatively long active duration before the flat tail, and large amplitude swings (positive peaks near +4 and negatives near \u22123). These characteristics match the multi\u2011stroke, extended\u2011duration pattern observed in the class 5 examples (as opposed to the single\u2011or\u2011double stroke patterns and different polarity orders seen in classes 0, 2, 3, 6, or 7). Confidence is limited by the small sample set and possible plotting artifacts (vertical resets/padding), but the multi\u2011cycle signature strongly supports class 5."
+},
+{
+    "idx": 222,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.80\n- Reason: The test trace shows multiple distinct active bursts concentrated in the early segment (0\u2013250) with several zero-crossings and repeated oscillations (pos/neg/pos patterns) rather than a single broad plateau or a single biphasic swing. This \u201cmultiple separated strokes / repeated bursts\u201d pattern closely matches the examples labeled class 5 in the reference set, which also exhibited several short high-amplitude bursts early in the trial (and occasional additional bursts later). Amplitude range and timing of peaks are consistent with class 5. (Caveat: classification is based on a few example traces and visible plotting artifacts/flat padding; confidence is moderate.)"
+},
+{
+    "idx": 235,
+    "label": 7,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.78\n- Reason: The trace shows a pronounced initial positive excursion (up to \u2248+4) very early, followed by deep negative dips and then a second, smaller oscillatory/active block in the middle (roughly 150\u2013300). After that the series goes quiet. This \u201cstrong initial positive peak + middle re\u2011activation + then flat late tail\u201d pattern matches the description and examples for class 6 best. It differs from class 2/7 (which are short, very early bursts only) and from class 5 (which shows more prolonged, multi\u2011phase activity extending much later). There is some similarity to class 0 (sustained early\u2192middle activity with large positive peaks), so there is moderate uncertainty, but the distinct initial large positive peak followed by a clear middle re\u2011activation favors class 6."
+},
+{
+    "idx": 224,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The active energy for this trace is concentrated in the early/mid window (\u22480\u2013230) and shows multiple rapid up/down swings (several positive peaks up to \u2248+4 and negative troughs down toward \u22123) rather than a single smooth ramp or a single biphasic excursion. This high temporal complexity / multi\u2011peaked oscillatory pattern matches the characteristic behavior I attributed to class 5 (multi\u2011peaked, more oscillatory) and differs from class 0 (smooth sustained positive ramp), class 2 (very short early peak), class 3/6 (more pronounced single biphasic large swing), and class 7 (lower amplitude, simpler waveform). Late flatline and isolated vertical markers appear to be padding/artifacts and do not change the early/mid morphology used for the decision."
+},
+{
+    "idx": 216,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.80\n- Reason: The trace shows multiple alternating positive and negative saccade\u2011like bursts concentrated in the early\u2192middle window (0\u2013~300) with several high positive peaks (~+4) and deep negative troughs (~-3), and activity that is more complex and temporally extended than a single early pulse. This multilobed, oscillatory pattern with extended mid\u2011window activity matches the class\u20115 examples (class 5 was characterized by multi\u2011burst, longer\u2011span activity), and differs from class 0/2/3 which show more single dominant rises or early single peaks, and from class 6/7 which are smoother or shorter. I assign moderate\u2011high confidence because only a few exemplars were available and intra\u2011class variability exists."
+},
+{
+    "idx": 212,
+    "label": 7,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.72\n- Reason: The test trace shows its meaningful activity concentrated in the early segment (roughly 0\u2013~250 samples) and contains multiple distinct sub-events there \u2014 a positive excursion early, strong negative/oscillatory swings, then another positive rise around ~200\u2013220. That \u201ctwo (or multi) early sub-event\u201d pattern matches the characteristic shape seen in class 3 examples more closely than the other classes: class 0/2 tend to show one dominant excursion (class 2 with narrower peaks), class 6 is typically smoother/sinusoidal, and class 5 has activity more widely spread into the middle/late windows. The presence of isolated vertical spikes later in the sequence appears to be an artifact/marker common to many classes and is not used for discrimination. Based on timing, number of early bursts, and waveform shape, class 3 is the best match."
+},
+{
+    "idx": 231,
+    "label": 7,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.75\n- Reason: The trace shows a clear biphasic shape in the early\u2192middle window: an initial positive region, a pronounced negative trough, then a strong positive rebound/peak before the trace ends. This positive\u2192negative\u2192positive polarity reversal with two large deflections and concentrated activity in the early/middle segment matches the characteristic pattern seen in class 3 (multi\u2011phase/biphasic strokes). Amplitude band overlaps other classes, so the timing and polarity sequence (not absolute magnitude) drive this decision."
+},
+{
+    "idx": 221,
+    "label": 7,
+    "predicted": 3,
+    "conversation": "- True Label: 3\n- Confidence: 0.78\n- Reason: The trace begins with a very large positive value at the start (\u2248+4) followed by a rapid drop into large negative values and multiple oscillatory bursts concentrated in the early\u2192middle window (0\u2013300\u2009ms), then it becomes flat after \u2248400\u2013500. That initial high-positive \u2192 strong negative excursion plus multi-burst early activity is the distinctive pattern I observed for class 3 in the examples (whereas class 0 had a negative\u2192positive rise, class 2 was more irregular/burst-only, class 5 extended activity later, and classes 6/7 showed smoother or smaller early cycles). Given the good match on initial polarity, timing of peaks, burstiness and late flat segment, class 3 is the best fit (moderate-high confidence due to limited samples and within-class variability)."
+},
+{
+    "idx": 229,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The trace shows several temporally separated stroke events: strong multi-lobed activity in the early window (0\u2013~250), a long flat mid region with recording/stitch artifacts, and a distinct late positive burst near ~950\u20131000. This \"spread-out, multiple separate bursts\" pattern (early complex oscillations plus additional later isolated stroke) matches the class-5 examples from the provided set. Other classes tended to concentrate activity early (classes 0,2,7) or show more symmetric/repetitive early\u2013mid oscillations (class 6) or extended mid-only complexity (class 3), so class 5 is the best fit given the shown temporal structure. Confidence reduced slightly for possible inter-subject variability and the visible recording artifacts."
+},
+{
+    "idx": 236,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The new trace shows many alternating positive and negative peaks concentrated in the early window (0\u2013~300) \u2014 several distinct positive lobes (including very large spikes up to \u2248+4) interleaved with deep negative troughs. That multi\u2011peaked, oscillatory early pattern matches the examples I associated with class 5 (multiple alternating peaks / \u201cmulti\u2011stroke\u201d behaviour) much better than the single broad swing of class 0, the single early polarity flip of class 3, the mainly bimodal positive shape of class 6, or the generally smaller/less negative oscillations noted for class 7. I assign moderate confidence because there is some sample\u2011to\u2011sample timing variability in this dataset and only visual plots were available rather than raw numbers."
+},
+{
+    "idx": 238,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.75\n- Reason: The test trace shows many temporally separated positive bursts in the early window (multiple distinct peaks at ~20\u2013300 steps) rather than a single dominant ramp or a simple bipolar oscillation. This \u201cmultiple separated-bursts\u201d pattern and activity that extends later into the early/mid region matches the characteristic pattern I observed for class 5 examples. Amplitude and polarity (peaks up to +4 and negative dips to ~\u22123) are consistent with the other classes, so the main discriminative cue is timing/number of bursts \u2014 which points to class 5. I assign moderate confidence because only a few examples per class were available and there is within\u2011class variability and some timing jitter across samples."
+},
+{
+    "idx": 219,
+    "label": 7,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.78\n- Reason: The test trace shows the same distinctive early/mid timing and biphasic shape seen in the class\u20110 examples: small initial fluctuations, a pronounced negative trough in the early\u2013middle segment (~100\u2013160), followed by a strong positive rise/plateau around ~200\u2013300 that reaches about +4, then a long flat/padded region afterward. That timing (negative then large positive in the main segment), the waveform morphology (two-stage burst with several oscillations during the active window) and the late flat/padding match the class\u20110 patterns more closely than the other classes (which either have single isolated troughs, different polarity order, or more prolonged/more evenly spaced multi\u2011burst oscillations)."
+},
+{
+    "idx": 217,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.60\n- Reason: The test trace shows a complex, multi\u2011burst pattern: strong multi\u2011peaked activity in the early segment (~0\u2013250) followed by a distinct secondary burst in the middle (~420\u2013500), and then long quiet/flat tail. This temporal structure \u2014 several separated sub\u2011movements (early dense oscillations plus an appreciable mid\u2011window return) \u2014 matches the class 5 examples, which consistently displayed multiple distinct bursts spread across the early and middle windows. Other candidate classes (0 or 6) also show multi\u2011peak behavior, but class 0 tended to be concentrated in the very early window with only occasional small later activity, and class 6 usually shows two clearer, simpler cycles; the complexity and spacing here are more like class 5. There are recording delimiters/flat tails in the trace (dataset artifact) that I ignored when matching shape and timing. Because the examples are few and classes overlap in appearance, confidence is moderate."
+},
+{
+    "idx": 227,
+    "label": 7,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.75\n- Reason: The test series shows a dense, multi\u2011peaked oscillatory burst concentrated in the early window (~0\u2013250) with many polarity reversals (large positive peaks near the start and repeated crossings to deep negatives). This matches the fingerprint I associated with class 6 (dense oscillatory early waveform). It does not look like the compact single-stroke of class 2, the simple/short bursts of class 7, nor the clear early-positive-then-late-negative progression of class 3. There is also no sustained separate mid-window burst that would point strongly to class 5. Given within-class variability in the examples, I assign moderate confidence."
+},
+{
+    "idx": 226,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.62\n- Reason: The test trace shows a rich, oscillatory early/mid active window with multiple positive peaks and several deep negative troughs (many polarity reversals) concentrated before ~300 samples and then a flat late segment. That multi\u2011lobed, highly oscillatory shape (several sub\u2011strokes in the early/middle region and overall higher temporal complexity) best matches the examples described for class 5. The decision is moderate confidence because some class 3 examples also show multiple reversals and amplitudes similar to this sample, and there is noticeable inter\u2011instance variability in the dataset."
+},
+{
+    "idx": 230,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.82\n- Reason: The test trace shows multiple alternating positive/negative swings concentrated in the early window (several distinct lobes rather than a single/bimodal pulse) plus additional separated stroke-like events later (~400\u2013520), matching the key signatures I associated with class 5. Classes 3 and 6 tend to be simpler two-stage patterns (positive\u2192negative\u2192positive or bimodal) and classes 0/2/7 are shorter/earlier or cleaner single strokes; the pronounced oscillatory complexity and occasional late secondary strokes strongly favor class 5."
+},
+{
+    "idx": 211,
+    "label": 7,
+    "predicted": 6,
+    "conversation": "- True Label: 6\n- Confidence: 0.78\n- Reason: The trace shows a short positive onset followed by a deep negative trough and then smooth, sinusoid\u2011like positive lobes concentrated in the early/mid window (multiple broad peaks between ~50\u2013250). This smooth, structured oscillatory shape (few small jagged reversals) and the presence of two prominent positive lobes closely matches the examples described for class 6. It is unlike the high\u2011frequency/jagged patterns of class 5, the single large swing of class 2, or the brief short bursts of class 7. Caveat: only a few examples per class were available and there are marker/artifact spikes in the middle/late region, so the confidence is moderate rather than certain."
+},
+{
+    "idx": 220,
+    "label": 7,
+    "predicted": 5,
+    "conversation": "- True Label: 5\n- Confidence: 0.87\n- Reason: The test trace shows multiple distinct oscillatory events spread across the early and middle windows (several positive and negative swings from ~0 up through ~500+), including repeated zero\u2011crossings and more extended non\u2011flat activity than most other classes. In my prior per\u2011class analysis class 5 was characterized exactly by temporally complex, multi\u2011peaked activity extending into the middle segment, whereas classes 0/2/3/7 tend to have 1\u20132 concentrated early events and class 6 shows smoother, shorter sinusoidal cycles. The pattern, duration and complexity of this sample best match class 5."
+},
+{
+    "idx": 240,
+    "label": 7,
+    "predicted": 0,
+    "conversation": "- True Label: 0\n- Confidence: 0.75\n- Reason: The test trace shows a concentrated active window early (roughly 0\u2013~350 samples) and then a long flat/quiet tail, matching the general structure seen in the dataset. Within the active window there are strong positive peaks (up to \u2248+4), a deep negative trough between them, and then a second pronounced positive burst \u2014 i.e., a positive \u2192 negative \u2192 positive sequence. That timing (two main bursts in the early segment), dominant positive polarity of the main peaks, and abrupt end to activity closely match the examples for class 0. There is some ambiguity with other multi\u2011peaked classes (especially class 5), so I give a medium\u2013high confidence rather than near\u2011certain."
+},

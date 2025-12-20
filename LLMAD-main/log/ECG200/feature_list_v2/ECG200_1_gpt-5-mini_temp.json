@@ -1,0 +1,13 @@
+{
+  "Persistent, pronounced ST‑segment depression ≥0.2–0.3 mV below the PR (isoelectric) baseline, maintaining horizontal/down‑sloping morphology for at least 60–80 ms into the ST interval and showing consistency across successive beats.": "common feature",
+  "Low‑amplitude T waves with delayed peak timing (~0.60–0.90 s), often exhibiting biphasic morphology, flattening, or symmetrical inversion in necrotic phases, contrasting with earlier rounded T waves in class 0.": "common feature",
+  "Prominent initial positive deflection (early R′) with full width at half maximum <0.05–0.06 s, consistently preceding a broader deep negative complex. Note: Diagnostic significance requires co‑occurrence with ST depression and asymmetric QRS morphology.": "common feature",
+  "Asymmetric negative‑complex morphology characterized by relatively slow descent into Q/S trough (descent/recovery time ratio >1.2–1.5) followed by abrupt recovery, resulting in skewed trough‑to‑peak kinetics.": "common feature",
+  "Persistent low‑amplitude rhythmic micro‑oscillations on late ST/T baseline (≈0.6–0.9 s), considered pathologic only when amplitudes exceed baseline noise (>0.05–0.1 mV) and show beat‑to‑beat consistency.": "common feature",
+  "High R/T amplitude ratio (R<sub>peak</sub>/T<sub>peak</sub> >2.0, typically >3.0) where initial R′ peak substantially exceeds later repolarization excursions.": "common feature",
+  "P‑wave attenuation or absence (amplitude <0.1–0.2 mV) with merging into PR segment, distinguishable from class 0 where discernible P waves typically precede QRS complexes.": "common feature",
+  "Combined diagnostic reliance on persistent ST depression relative to PR baseline, abnormal T‑wave timing/morphology, and high R/T ratios rather than isolated features like early R′ spikes.": "common feature",
+  "Prominent broad terminal negativity: deep wide Q/terminal S waves with large peak‑to‑trough QRS amplitude, indicating pathological Q‑waves from transmural injury.": "partial-sample feature",
+  "ST‑segment elevation with arched‑back upward morphology in some acute presentations, measured relative to PR baseline.": "partial-sample feature",
+  "Advanced T‑wave inversion with symmetrical \"coronary T\" configuration in necrotic phases across consecutive beats.": "partial-sample feature"
+}

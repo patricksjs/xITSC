@@ -1,0 +1,8 @@
+{
+  "Single abrupt downward step-change from a positive baseline to a negative baseline in the early-to-mid series, often with a transient overshoot/undershoot around the transition.": "common feature",
+  "Post-transition oscillations show near-uniform cadence with a negative mean; waveforms are skewed with deeper, sharper troughs than peaks.": "common feature",
+  "Clear two-phase structure: initial positive-baseline plateau or gentle ripples, followed by a sustained negative-offset, quasi-periodic regime.": "common feature",
+  "Post-transition cadence shows a dominant period ~0.08–0.11 time units (~8–12 samples), remaining fairly constant across segments.": "common feature",
+  "A slow baseline wander overlays the oscillations; the centerline drifts gently over tens of samples within the oscillatory regime.": "common feature",
+  "Amplitude envelope stabilizes after a few cycles, with peak–trough spans confined to a narrow band, aside from rare transient bursts.": "common feature"
+}

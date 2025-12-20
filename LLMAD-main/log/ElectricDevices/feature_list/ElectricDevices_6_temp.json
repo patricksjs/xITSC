@@ -1,0 +1,10 @@
+{
+  "Consistent onset latency: in most series, the baseline remains flat until approximately steps 38–42 before the activity begins.": "common feature",
+  "Dense mid-episode oscillations: in most series, between steps 40 and 60, frequent local peaks create a jagged, multi-peaked segment with irregular micro-oscillations; the peaks are uneven in height and spacing, lacking a regular rhythm, and typically do not form a smooth plateau, with amplitudes ranging up to about 1–2 units.": "common feature",
+  "Irregular micro-oscillations: in most series, within the event window (roughly 40–60), peaks are high-frequency and uneven, contributing to a dense, irregular pattern rather than a regular rhythm.": "common feature",
+  "Late-stage sharp transient spikes: in some series, occur around time steps 65–75, with brief durations and amplitudes often reaching 3–5, consistently across the series.": "partial-sample feature",
+  "Pre-spike lull: in some series, a brief dip to near-zero or negative values around steps 58–63 just before the prominent late spike at 65–70.": "partial-sample feature",
+  "Asymmetric event decay: in some series, post-peak return to baseline is relatively abrupt, completing within about 10–15 steps after the maximum cluster.": "partial-sample feature",
+  "Two-phase pattern: in some series, the activity exhibits a distinct two-phase structure: Phase 1 involves the early onset and mid-episode oscillations (steps 38–60), followed by Phase 2 with a late spike (steps 65–75) preceded by a lull (58–63) and followed by rapid decay.": "partial-sample feature",
+  "Observational nuances: in some series, there are small baseline fluctuations and occasional negative dips around baseline values during event windows.": "partial-sample feature"
+}

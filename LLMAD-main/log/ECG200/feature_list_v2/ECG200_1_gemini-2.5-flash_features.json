@@ -1,0 +1,14 @@
+{
+  "The T wave consistently exhibits a broad and flattened morphology, often with a slight positive deflection, which is distinct from sharply inverted or symmetrically inverted forms.": "delete feature",
+  "The QRS complex uniformly displays a relatively narrow duration and high amplitude, serving as a prominent initial deflection in the waveform.": "common feature",
+  "A clear J-point depression is consistently present, followed by a prolonged ST segment that forms a deep trough before gradually ascending towards the baseline.": "common feature",
+  "The initial R wave consistently presents as a very sharp, narrow, and acutely peaked positive deflection.": "common feature",
+  "A deep and prominent S wave consistently follows the R wave, plunging significantly below the baseline and contributing to the marked J-point depression.": "common feature",
+  "A significantly prolonged period of negative deflection is observed, encompassing the deep S wave and the subsequent depressed ST segment, extending for a substantial portion of the cardiac cycle.": "common feature",
+  "The TP segment consistently exhibits a stable, near-isoelectric baseline following the T wave, with minimal subsequent oscillations.": "partial-sample feature",
+  "The R wave peak amplitude consistently dwarfs the T wave peak amplitude, often exceeding it by a factor of three or more, indicating a dominant initial ventricular depolarization.": "common feature",
+  "The total duration of the QRS-T complex is consistently prolonged, spanning approximately 0.45 to 0.5 seconds, reflecting an extended period of ventricular electrical activity.": "common feature",
+  "The descent from the R wave peak to the S wave nadir is consistently very steep and rapid, indicating abrupt repolarization or depolarization changes.": "common feature",
+  "The ST segment consistently exhibits a \"coved\" or \"scooped\" morphology, characterized by an initial depression followed by a concave upward curve leading into the T wave.": "common feature",
+  "The T wave peak consistently occurs in the latter half of the prolonged QRS-T complex, specifically around 0.43-0.45 seconds, after a significant period of ST segment ascent.": "partial-sample feature"
+}

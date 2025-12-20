@@ -1,0 +1,21 @@
+{
+  "Generally, absence of long intermediate plateaus; transitions are typically brief and discrete, though some series may exhibit a sustained two-level plateau in mid-series.": "common feature",
+  "Sparse, recurring rectangular bursts: one or more short high-level plateaus embedded in an otherwise near-zero baseline, often with a mid-series timing and a two-level pattern featuring an abrupt transition to a flat elevated plateau.": "common feature",
+  "The elevated plateau during the burst is notably flat with minimal within-burst fluctuations, but occasionally exhibits small, step-like sublevels, forming a subdued staircase pattern.": "common feature",
+  "Edge transitions are typically sharp and may be symmetric or near-symmetric around the burst plateau, with rise and fall edges of similar duration in most cases.": "common feature",
+  "Sharp edges with flat tops: bursts rise and fall abruptly, with a nearly constant high level during each burst.": "common feature",
+  "Early-stage oscillations may occur but are not always prolonged or high-variance; the core pattern in most series is the burst with flat top and sharp edges, rather than dense multi-scale activity.": "common feature",
+  "Sharp mid-series transition to a sustained flat regime, creating a two-level overall pattern with a clear level change around one-third to one-half of the series.": "partial-sample feature",
+  "Emergence of a three-level, multi-plateau structure: an initial high level, a substantial mid-level plateau, and a distinct late negative/low plateau, indicating two interior transitions.": "partial-sample feature",
+  "End-segment settling into a low-variance negative baseline that remains constant to the end, contrasting with earlier positive plateaus.": "partial-sample feature",
+  "Quasi-periodic timing: bursts cluster around mid-series and late-series windows, suggesting regular event-like timing.": "partial-sample feature",
+  "Multiple distinct burst windows within a single series, separated by longer quiet intervals, rather than a single contiguous burst period.": "partial-sample feature",
+  "Isolated end-of-series spikes that occur abruptly near the final time steps and do not form a sustained high plateau.": "partial-sample feature",
+  "Burst onset time is highly consistent across some series, occurring around steps 590–610 with a similar duration of 50–60 steps.": "partial-sample feature",
+  "After the burst ends, the signal shows a brief, low-amplitude jitter around zero before fully stabilizing.": "partial-sample feature",
+  "A two-phase burst, with an initial higher-frequency jitter that gradually shifts to a slightly lower-frequency ripple during the mid-burst.": "partial-sample feature",
+  "A two-stage end-phase: after the main burst, a short low-variance lull precedes the final return to baseline.": "partial-sample feature",
+  "Bursts cluster in a late-series window (roughly steps 420–520) in some series, indicating a common event timing.": "partial-sample feature",
+  "Pre-burst gradual ramp into the elevated plateau: a slow, stepwise rise starts before the main burst cluster, rather than an immediate jump to high values.": "partial-sample feature",
+  "Brief dips back toward baseline during the elevated window: short, isolated returns toward baseline values occur within the otherwise elevated period.": "partial-sample feature"
+}

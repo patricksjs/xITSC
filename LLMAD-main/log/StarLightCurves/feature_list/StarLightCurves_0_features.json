@@ -1,0 +1,9 @@
+{
+  "Late-stage low-frequency drift with a gradual, near-linear rise starting from the trough region (approximately 400–460 time steps) onward.": "common feature",
+  "Intra-trough plateau: a flat-bottom segment near the deepest point spanning roughly 400–460 time steps, where the valley minimum is typically located.": "common feature",
+  "Valley minimum commonly occurs around 400–460 time steps (not strictly 650–800), with occasional variability placing it slightly later in some series.": "common feature",
+  "Curves are very smooth with minimal high-frequency noise, indicating dominance of low-frequency fluctuations across all phases.": "common feature",
+  "Gentle, continuous recovery after the trough with limited high-frequency noise, often showing a near-linear slope punctuated by mild oscillations.": "common feature",
+  "Distinct asymmetric valley: rapid drop to a deep minimum around 400–460 time steps, with a slower rebound forming a skewed U-shape rather than symmetric valley.": "partial-sample feature",
+  "Pre-trough local peak around 180–260 time steps forming a mild double-hill before the valley minimum.": "partial-sample feature"
+}

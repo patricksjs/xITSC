@@ -1,0 +1,10 @@
+{
+  "A striking dual-lobed outline appears in every series, with two rounded peaks of ~1.4–1.5 amplitude around steps 50 and 200, forming a near-mirror symmetry across the midpoint.": "common feature",
+  "Each central trough contains a secondary inflection—a small plateau or micro-peak near step ~120 at about –0.8 amplitude interrupting the main valley.": "common feature",
+  "A remarkably consistent cycle period of ~130–135 steps between the two main lobes, yielding a stable quasi‐periodic oscillation across all series.": "common feature",
+  "Each major lobe exhibits a flattened apex lasting ~8–12 steps, creating broad, plateau‐like peak tops rather than sharp maxima.": "common feature",
+  "Each major lobe shows a slight right‐skew: the climb up to the flattened apex is steeper than the descent, giving each peak a longer trailing slope.": "common feature",
+  "The series start and end at nearly identical baseline levels (within ~0.05), consistently closing the outline contour.": "common feature",
+  "A consistent slight inter-lobe amplitude asymmetry: the second major peak is about 0.02–0.05 units higher than the first across all series.": "delete feature",
+  "The central trough region shows noticeably more fine serrations and high-frequency noise compared to the uniformly smooth ascent and descent of the main lobes.": "common feature"
+}

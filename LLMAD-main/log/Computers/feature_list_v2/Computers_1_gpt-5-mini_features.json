@@ -1,0 +1,14 @@
+{
+  "Prolonged flat baseline, then a single activation window around 6.x; otherwise no repeating daily cycle.": "common feature",
+  "Sharp step-up followed by asymmetric, stepped decay through one or two plateaus, ending with an abrupt return to baseline.": "common feature",
+  "Mid-level plateau shows brief, high-frequency serrated pulses (narrow peaks/valleys) before shut-off.": "common feature",
+  "Inactive baseline consistently sits below zero.": "common feature",
+  "Activation onset shows a brief overshoot/volatility burst before stabilizing.": "common feature",
+  "During activation, small, near-regular micro-spikes persist across the plateau rather than being confined to the shutdown phase.": "common feature",
+  "Activation consistently starts early, clustered around ~2.8–3.4 time units across series.": "common feature",
+  "Two-tier activation: brief, higher-level cap immediately after turn-on, followed by a longer, lower operating level.": "common feature",
+  "After return to baseline, delayed isolated needle-like spikes reappear later, distinct from the main activation.": "common feature",
+  "Baseline segments exhibit semi-regular trains of low-amplitude probe blips between activations, indicating rhythmic baseline activity rather than isolated post-shutdown needles.": "common feature",
+  "Across these samples, primary activation onset skews later, clustering around ~3.4–3.9 time units.": "common feature",
+  "When multiple bursts occur, later activations are shorter and lower, separated by extended negative baseline stretches with evenly spaced micro-spikes.": "common feature"
+}

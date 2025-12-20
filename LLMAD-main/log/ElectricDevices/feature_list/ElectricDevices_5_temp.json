@@ -1,0 +1,8 @@
+{
+  "In most series, a dominant spike or a cluster of 2–4 ultra-narrow spikes within a short window, occurring in mid-to-late segments (e.g., time steps 36–80), with rapid rise to high amplitudes and quick return to baseline. The cluster often exhibits multiple peaks with small inter-spike intervals, and in many cases, may appear bimodal-like with occasional brief dips between peaks, but all within a single event window.": "common feature",
+  "Post-peak behavior varies: in most series, there may be small-amplitude damped oscillations or a rapid return to baseline with little to no damping, before the series re-stabilizes near zero.": "common feature",
+  "A subtle pre-peak ramp or shoulder may precede the spike cluster in many series, but is not always present.": "common feature",
+  "Emergence of a secondary peak within the post-spike interval, creating a bimodal event in some series, though typically as part of the same cluster rather than a well-separated impulse.": "partial-sample feature",
+  "Brief undershoot below baseline immediately after the main spike cluster in some series.": "partial-sample feature",
+  "Variability in spike clustering, such as the presence of multiple tight clusters or inter-spike intervals with small troughs between peaks, may occur in some series.": "partial-sample feature"
+}

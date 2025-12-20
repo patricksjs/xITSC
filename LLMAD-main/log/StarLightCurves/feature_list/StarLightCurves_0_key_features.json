@@ -1,0 +1,10 @@
+{
+  "**Late-stage low-frequency drift with a near-linear rise from ~600–1000 steps, punctuated by small oscillations.**": "common feature",
+  "**The valley minimum is consistently right-shifted, occurring around 650–800 time steps rather than near the center.**": "common feature",
+  "**Curves are very smooth with minimal high-frequency noise, indicating dominance of low-frequency fluctuations.**": "common feature",
+  "(Class 1 has baseline oscillations; Class 2 shows early continuous high-frequency jitter.)*": "common feature",
+  "**Intra-trough plateau: a brief flat segment near the deepest point (400–460 steps).**": "common feature",
+  "(Class 1 has a plateau between peaks, not at the deepest point; Class 2 has a deep trough without a plateau.)*": "common feature",
+  "Distinct asymmetric valley in the center: rapid drop to a deep minimum around the middle, with a slower rebound, forming a skewed U-shape rather than a symmetric valley.": "partial-sample feature",
+  "Pre-trough local peak around 180–260 time steps forming a mild double-hill before the center minimum.": "partial-sample feature"
+}

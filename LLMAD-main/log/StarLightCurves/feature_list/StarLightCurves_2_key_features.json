@@ -1,0 +1,8 @@
+{
+  "**Consistent mid-sequence deep trough**: A pronounced local minimum occurs exclusively between time steps 420–460, with a standardized depth drop of 1.5–2.0 units across all series.": "common feature",
+  "**Persistent high-frequency jitter**: Continuous fine-grained fluctuations permeate the entire series (steps 0–1024), characterized by multi-scale variability that distinguishes it from the smoothness of Class 0 and the quasi-periodic baseline oscillations of Class 1.": "common feature",
+  "Post-trough damped ripple: after the trough, a low-amplitude, quasi-periodic oscillation accompanies a slow upward recovery.": "partial-sample feature",
+  "Late-stage stepped recovery after ~800 steps, showing small plateaus and discrete rises during upward trend.": "partial-sample feature",
+  "Pre-peak region shows small, repeated micro-oscillations before the main early peak, creating a jagged ascent prior to step ~180–230.": "partial-sample feature",
+  "Pronounced asymmetry around the trough: the descent into the trough is steeper and more abrupt than the pre-trough ascent, yielding a skewed valley shape across all series.": "partial-sample feature"
+}

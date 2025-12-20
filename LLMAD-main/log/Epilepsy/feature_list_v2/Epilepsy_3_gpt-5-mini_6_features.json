@@ -1,0 +1,9 @@
+{
+  "Prominent, nearly periodic high-frequency oscillation spanning the whole record — regular sinusoid-like cycles with many cycles per recording.": "common feature",
+  "Sustained positive baseline offset: the waveform oscillates around a value above zero rather than symmetric around zero.": "delete feature",
+  "Slow amplitude modulation/envelope: cycle amplitude gently varies over time with occasional local bursts (sections with larger peaks).": "delete feature",
+  "Small cycle-to-cycle timing and amplitude jitter: peak spacing and heights are consistent but show slight irregular drift, not perfectly uniform.": "common feature",
+  "A brief start-up transient: the first ~10–25 samples show lower amplitude and irregular/less-regular cycles before the oscillation settles into its steady rhythmic pattern.": "delete feature",
+  "Non-sinusoidal cycle shape: individual cycles are asymmetric — peaks are sharper and narrower while troughs are broader/rounded, indicating harmonic content beyond a pure sine.": "delete feature",
+  "Small systematic phase/frequency drift: aside from random jitter there is a gradual tightening/shift of cycle timing across the record (cycles slowly shift phase/period over time).": "partial-sample feature"
+}

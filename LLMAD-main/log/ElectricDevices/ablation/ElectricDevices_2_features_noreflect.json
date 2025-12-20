@@ -1,0 +1,13 @@
+{
+  "Sparse, high-amplitude short pulses on an otherwise near-constant (slightly negative) baseline — peaks reach several units while the baseline sits around -0.2.": "common feature",
+  "Pulses are temporally isolated and irregular, concentrated roughly between time steps ~25–75 with long silent intervals before/after each burst.": "common feature",
+  "Individual pulses are very narrow (1–3 time steps) with steep rise/fall (sharp peaks); occasional tiny adjacent micro-spikes or short shoulders occur next to main peaks.": "common feature",
+  "Most series contain a small, consistent number of major pulses (typically 3–5) rather than a single isolated event or many scattered spikes.": "common feature",
+  "Each series often features one dominant spike noticeably higher than the rest (roughly 1.5–2× larger), creating a clear primary event.": "partial-sample feature",
+  "Pulse heights cluster into two common amplitude bands (roughly ~3–4 units and ~5–7 units), producing a bimodal distribution of peak magnitudes.": "delete feature",
+  "Within the active burst window, pulses often appear at near-regular intervals — inter-spike gaps within a series are similar (quasi-periodic spacing, roughly 8–15 time steps).": "delete feature",
+  "Occasional extreme outliers exceed the bimodal bands, producing single spikes reaching ~8+ units, indicating a heavy-tailed amplitude occasional peak.": "common feature",
+  "Multiple bursts per active window: an earlier solitary pulse is often followed (after a short silent gap) by a denser cluster of pulses, producing two distinct sub-bursts within the ~25–75 active region.": "partial-sample feature",
+  "Within each burst pulses frequently form a crescendo‑then‑decrescendo ordering: amplitudes rise toward a local maximum then decline in the remaining pulses.": "partial-sample feature",
+  "Many peaks land on repeatable integer or half‑integer height levels, indicating quantized amplitude states rather than a continuous amplitude distribution.": "common feature"
+}

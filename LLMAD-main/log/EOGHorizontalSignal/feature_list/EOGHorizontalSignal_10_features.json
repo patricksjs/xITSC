@@ -1,0 +1,11 @@
+{
+  "Two abrupt regime changes create a three-level sequence: baseline near zero, a sharp dip to ~-290, then a rapid rebound to a stable high plateau around +210 after ~520 steps.": "common feature",
+  "Post-transient, the signal remains on a high-mean plateau with very low variance and small quasi-periodic fluctuations.": "common feature",
+  "A small pre-dip positive spike precedes the main downturn, forming a spike-dip-recover pattern with peak around +200, visible near steps 350–420 across all samples.": "common feature",
+  "The transient down-swing to the trough is steeper and shorter in duration than the subsequent rebound to the high plateau, indicating an asymmetric transition.": "common feature",
+  "Trough region contains persistent micro-oscillations, producing a jagged valley rather than a smooth minimum across all series.": "common feature",
+  "Rebound shows a brief near-flat segment before the steep rise, creating a two-stage recovery (initial slow rise then rapid ascent).": "common feature",
+  "Key transition timings are phase-locked across samples, with pre-dip spike, trough, and plateau onset occurring in tight index windows.": "common feature",
+  "Post-recovery exhibits two-layer oscillations: a slow, low-amplitude envelope on the high plateau overlaid with persistent high-frequency micro-oscillations across all samples.": "common feature",
+  "Late-stage mean drift: after reaching the plateau, the series show a gradual downward trend toward the end, indicating a non-stationary plateau.": "common feature"
+}

@@ -1,0 +1,7 @@
+{
+  "Late-stage abrupt spike around steps 2600–2700 in both series, with a rapid subsequent decline, suggesting a shared transient event.": "partial-sample feature",
+  "Distinct mid-series trough near steps 1200–1350, followed by quick rebound, forming a V-shaped dip in both curves.": "partial-sample feature",
+  "Elevated high-frequency fluctuations emerge in the late-mid region (roughly steps 1800–2600), indicating a volatility burst prior to the final spike.": "delete feature",
+  "A subtle secondary local maximum appears just before the main end spike (around steps 2400–2550) in both series, forming a two-peak end pattern.": "delete feature",
+  "After the late spike, both series rapidly stabilize toward a low baseline with reduced variance, showing synchronized post-event settling.": "delete feature"
+}

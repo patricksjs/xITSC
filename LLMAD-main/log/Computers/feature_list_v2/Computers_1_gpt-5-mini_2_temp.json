@@ -1,0 +1,15 @@
+{
+  "Long prolonged low-level baseline (often at or near zero, or with a slight negative offset) occupying most of the series with very low variance, until a late change or an extended period of activity.": "common feature",
+  "The elevated activity can manifest as a sustained plateau with discrete micro-steps and intermittent short downward spikes (stepped plateau with transient drops), or as a prolonged sequence of regular, discrete positive spikes from the baseline, sometimes punctuated by higher-amplitude transient spikes.": "common feature",
+  "Plateau events are transient — the elevated regime is bounded and commonly ends with an abrupt drop back to the low baseline before the series finishes.": "common feature",
+  "The elevated segment is multi-phased: an initial higher-amplitude burst is frequently followed by a progressive, stepwise decline to lower plateau levels.": "common feature",
+  "Isolated secondary spikes: many series show one or more brief, standalone upward spikes, which can occur separated in time from the main elevated activity, or as higher-amplitude transient events embedded within a prolonged period of regular, lower-amplitude spiking.": "common feature",
+  "Occupation of discrete amplitude bands: values cluster around a few repeatable levels (baseline, intermediate, high), implying quantized usage states across records.": "common feature",
+  "Asymmetric transitions: the step-up onset is typically sharper/faster than the step-down or subsequent decay, producing skewed rise-versus-fall edges.": "common feature",
+  "Persistent high-frequency, small-amplitude zigzagging or regular, discrete positive pulses present on both baseline and plateau (regular pulse-like oscillations or distinct, repeated upward spikes).": "partial-sample feature",
+  "A subset of series shows a small precursor/intermediate rise just before the main jump, indicating a two-stage or prelude change rather than a single instantaneous shift.": "partial-sample feature",
+  "Post-drop rebound: a small transient upward blip often occurs immediately after the abrupt drop back to baseline.": "partial-sample feature",
+  "Recurrent multiple elevated episodes: series often contain two or more separate sustained high-amplitude segments (distinct plateaus) separated by returns to the low baseline, not just a single main plateau.": "partial-sample feature",
+  "Baseline offset: the long low-level baseline is commonly a stable negative offset (around −0.4), though a stable baseline at or near zero is also frequent.": "partial-sample feature",
+  "Onset timing clustered mid-to-late: in these examples the step-up frequently occurs earlier than the previously noted 550–650 window, clustering around ~340–420 time steps.": "partial-sample feature"
+}

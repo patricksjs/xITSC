@@ -1,0 +1,11 @@
+{
+  "Burst clusters often show multi-peaked structure: a sharp main peak with adjacent smaller precursor/sub-peaks and brief post-peak negative undershoots or oscillations lasting a few time steps.": "common feature",
+  "Very stable, near-constant baseline slightly below zero for most of the record, exhibiting minimal background variability outside the burst windows.": "common feature",
+  "When multiple bursts occur they form a short train with consistent inter-peak spacing of about 5–8 time steps within the mid-day window, rather than being randomly timed.": "delete feature",
+  "Peaks are strongly asymmetric: almost instantaneous steep onset (1 step) followed by a longer 2–6 step decay/tail, producing right-skewed peak shapes.": "common feature",
+  "Peak amplitudes are highly heterogeneous within and across series: most peaks are modest (~1–4) but occasional outliers reach ~8–9, producing a heavy‑tailed amplitude distribution.": "common feature",
+  "Event timing shows two common modes: some series have early mid‑day bursts (~30–35) while others concentrate later (~48–62), not uniformly centered.": "partial-sample feature",
+  "Two temporal scales appear: short intra‑cluster spacings of ~5–8 steps and much longer inter‑cluster gaps (~20–30 steps) separating distinct burst groups.": "common feature",
+  "Many peaks show a brief flat apex (a 1–2 time‑step plateau at maximum) rather than a single-sample spike before the longer decay begins.": "partial-sample feature",
+  "A subset of series contains an additional late-day burst cluster near time steps ~85–92, separated from the mid-day activity by a long quiet interval.": "delete feature"
+}

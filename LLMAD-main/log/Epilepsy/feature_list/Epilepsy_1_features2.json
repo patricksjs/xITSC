@@ -1,0 +1,19 @@
+{
+  "Dominant near-1 Hz rhythm with nearly constant cycle length (~14–16 samples) is evident in all three sequences.": "common feature",
+  "Within each cycle, the rise and fall appear roughly symmetric, producing balanced waveform halves.": "partial-sample feature",
+  "A persistent fine-grained high-frequency jitter overlays the main oscillation, giving a slightly jagged contour across the window.": "delete feature",
+  "Nearly fixed phase of peaks: cycle maxima occur at almost the same phase in each cycle, showing minimal phase drift over the 13-second window.": "partial-sample feature",
+  "Flat amplitude envelope: the main oscillation’s peak-to-trough amplitude stays in a tight band with no slow modulation.": "partial-sample feature",
+  "Positive bias baseline: the waveform remains above zero with a consistent offset near 1.0, suggesting sensor offset rather than zero-mean signal.": "delete feature",
+  "Consistent negative DC bias around -1.0 across all three sequences, opposite to the previously reported positive baseline.": "delete feature",
+  "Subtle cycle-level asymmetry: rises are slightly steeper than falls, yielding a skewed waveform across cycles.": "common feature",
+  "Increasing high-frequency jitter toward the end of the window, with more pronounced micro-variations in the last ~40 samples.": "common feature",
+  "No zero-crossings: the signal stays strictly negative across the entire window in all three sequences.": "delete feature",
+  "Nested micro-oscillation: a higher-frequency component consistently rides on the main ~1 Hz rhythm, creating a reproducible jaggedness within each cycle.": "delete feature",
+  "Consistent trough timing: minima occur at nearly identical sample indices across cycles, indicating strong timing regularity.": "delete feature",
+  "Two-regime non-stationarity: a sharp mean shift around sample 70 partitions the window into two distinct baseline levels with preserved rhythm in both segments.": "common feature",
+  "Early plateau phase: the first ~60 samples show a near-constant value with very low variance before oscillatory activity starts.": "common feature",
+  "Post-transition variance spike: after the mean shift, the signal exhibits higher variance and more irregular cycle shapes than the pre-transition portion.": "partial-sample feature",
+  "Frequent zero-crossings occur within the window, indicating sign changes and not a strictly negative signal across all cycles.": "common feature",
+  "Intermittent plateau segments appear within cycles, producing near-flat tops/flat-lift regions for 2–4 samples before resuming the main oscillation.": "common feature"
+}

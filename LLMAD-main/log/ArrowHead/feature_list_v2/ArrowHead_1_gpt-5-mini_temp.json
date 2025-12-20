@@ -1,0 +1,8 @@
+{
+  "Pronounced bimodal quasi-periodicity: two large lobes per record with consistent cycle length ≈125 samples and peaks recurring near ~60 and ~185 time steps.": "common feature",
+  "Broad, flattened peak regions: maxima form short plateaus rather than sharp spikes, with small high-frequency ripples superimposed on the plateau.": "common feature",
+  "Central trough shows a shallow double-dip or inflection around 110–140 samples — a small local bump within the main valley creating a subtle double-minimum.": "common feature",
+  "Left-right lobe asymmetry: the first (left) lobe rises more gradually with a broader shoulder, while the second (right) lobe reaches a slightly higher maximum and descends more steeply.": "common feature",
+  "Endpoint baseline anchoring: all traces begin and end near the same negative baseline (~-2), producing nearly identical boundary values that imply a continuous/closed profile.": "common feature",
+  "High cross-record repeatability: peak timings, amplitudes and trough depths are very consistent across the three images, showing minimal cycle-to-cycle and record-to-record variability.": "common feature"
+}

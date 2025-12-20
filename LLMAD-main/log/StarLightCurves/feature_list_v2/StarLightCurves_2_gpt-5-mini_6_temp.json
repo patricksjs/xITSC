@@ -1,0 +1,10 @@
+{
+  "A consistent large-scale biphasic shape: an early positive hump (first quarter), a pronounced mid-sequence negative trough (around 40–55% of length), then a gradual recovery toward the end.": "common feature",
+  "A prolonged negative plateau after the trough: the middle-to-late segment stays below zero with low-variation oscillations before rising.": "common feature",
+  "Predominantly smooth, low-frequency waveform with small, regular high-frequency wiggles superimposed; no sharp, isolated spikes.": "common feature",
+  "Stable peak-trough amplitude across examples: maxima ≈ +1.5–1.8 and minima ≈ −1.5 to −2.0, yielding a consistent peak-to-trough range.": "common feature",
+  "A recurring small secondary hump shortly after the main early peak (a mid-early local rebound) appears before the steep descent to the trough.": "delete feature",
+  "The fall into the negative trough is noticeably steeper and more abrupt than the subsequent, slower recovery (asymmetric slope behavior).": "common feature",
+  "Series endpoints share a positive baseline offset — both the start and end sit above zero, forming a drop-and-return envelope.": "common feature",
+  "Late recovery shows a gradual increase in small-oscillation variance—the high-frequency wiggles grow slightly in amplitude toward the end.": "delete feature"
+}

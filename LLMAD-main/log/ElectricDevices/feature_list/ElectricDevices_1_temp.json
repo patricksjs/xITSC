@@ -1,0 +1,9 @@
+{
+  "Dense, high-frequency oscillations with nearly uniform spacing, giving a consistent speckled texture across all series.": "common feature",
+  "Irregular, sharp excursions peaking around 1–1.5 units that intermittently rise above the baseline jitter.": "common feature",
+  "Triangular zigzag pattern: successive rises and falls form a regular, linear-ramplike contour between extrema, not random jitter.": "common feature",
+  "Breathing amplitude envelope: oscillation amplitude slowly grows mid-series (roughly steps 20–60) then tapers toward the end, indicating non-stationary variance.": "partial-sample feature",
+  "Extremely regular micro-cycle with a fixed period (approx 2 time steps) producing a near-perfect zigzag pattern across all series, indicating a strong rhythmic component.": "common feature",
+  "Absence of amplitude envelope: fluctuation amplitude remains constant throughout, showing no non-stationary variance.": "common feature",
+  "Symmetric distribution of peaks and troughs around zero: positive and negative excursions are nearly equal in size, implying little skew.": "common feature"
+}

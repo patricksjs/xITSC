@@ -1,0 +1,7 @@
+{
+  "The time series exhibits a \"double-peaked\" shape with two distinct high-amplitude peaks (around time steps 50 and 200) separated by a central low-amplitude oscillating segment.": "common feature",
+  "Steep initial upward slope from time 0 to ~25, rising from near -2 to ~0 amplitude.": "common feature",
+  "Steep final downward slope from ~200 to 250, dropping from ~1.8 to -2 amplitude.": "common feature",
+  "Between the two main peaks (~50 and ~200), multiple small peaks/troughs create a complex, consistent oscillating pattern.": "common feature",
+  "Both main peaks have steep rises and declines, with sharp, narrow peak contours.": "common feature"
+}

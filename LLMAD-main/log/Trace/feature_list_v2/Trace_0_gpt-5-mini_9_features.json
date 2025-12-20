@@ -1,0 +1,11 @@
+{
+  "Stable, low-variance baseline before the disturbance (flat around ~0.6) with only small high-frequency noise.": "common feature",
+  "A very sharp, narrow positive spike immediately followed by a steep negative trough — a tight peak–valley transient pair with large amplitude relative to baseline.": "common feature",
+  "Asymmetric response: the post-trough phase shows a long, smooth, monotonic recovery back toward baseline (slow ramp) much longer than the initial disturbance.": "common feature",
+  "Disturbance is temporally consistent: the peak–valley event occurs at the same early-to-mid series window (roughly indices/samples ~80–100) across all traces.": "common feature",
+  "Trough exhibits a short flat-bottom with elevated small-amplitude oscillations — variance there (and early recovery) is visibly higher than the pre‑disturbance baseline.": "common feature",
+  "Recovery is non‑linear: the ramp back shows curvature (initially very slow then slope increases mid-recovery), not a single constant-rate return.": "common feature",
+  "Disturbance onset shows near-vertical transitions — the spike rise and the spike→trough drop have the largest instantaneous slopes in the series (almost impulse‑like), much steeper than any other segment.": "common feature",
+  "Peak and trough magnitudes are highly reproducible across traces (peaks ≈ +3.8–4.0, troughs ≈ −2.0), giving a consistent peak–to–valley amplitude across examples.": "common feature",
+  "After the long recovery the series returns to the original baseline level and low-variance state, indicating no persistent offset or long-term drift following the event.": "common feature"
+}

@@ -1,0 +1,9 @@
+{
+  "Clear, regular oscillatory cycles throughout each recording (consistent, repeated peak–valley patterns) indicative of a steady walking cadence.": "common feature",
+  "A pronounced abrupt level/behavioral transition (short transient) early or mid-series that then settles into the rhythmic pattern.": "partial-sample feature",
+  "Once settled, oscillation amplitude and peak-to-trough magnitude remain relatively constant over time (quasi-stationary rhythmic segment).": "common feature",
+  "Waveform asymmetry: peaks are typically sharper/narrower while troughs are broader and often deeper, producing skewed cycle shapes.": "delete feature",
+  "Persistent stepwise baseline shifts: recordings show distinct level offsets between segments (pre/post transient oscillations centered at different means), not just a single abrupt change but sustained mean differences across the series.": "delete feature",
+  "Small high‑frequency jitter superimposed on the main gait cycles: each large oscillation contains finer ripples or micro‑peaks, producing a slightly serrated waveform within cycles.": "common feature",
+  "Cycle-to-cycle timing jitter and occasional double‑humps: period varies slightly between consecutive cycles and some cycles exhibit secondary sub‑peaks or merged peaks, creating irregular single-cycle shapes.": "partial-sample feature"
+}

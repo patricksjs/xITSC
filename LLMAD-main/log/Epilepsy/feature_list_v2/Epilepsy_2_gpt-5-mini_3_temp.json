@@ -1,0 +1,7 @@
+{
+  "Regular, high-frequency oscillations with consistent inter-peak spacing and only small timing jitter across the samples.": "common feature",
+  "Each cycle shows an asymmetric shape: a pronounced narrow positive spike often preceded by a small shoulder or sub-peak.": "common feature",
+  "The oscillations sit on a positive baseline offset (series mean noticeably above zero) throughout each trace.": "common feature",
+  "Peak-to-trough amplitude is largely stable across time but intermittently exhibits larger spikes (short episodes of amplitude modulation).": "common feature",
+  "Valleys are sharp, narrow negative deflections occurring at regular intervals, producing rapid recoveries from troughs.": "common feature"
+}

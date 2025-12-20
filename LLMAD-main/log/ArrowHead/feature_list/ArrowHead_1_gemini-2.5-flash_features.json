@@ -1,0 +1,10 @@
+{
+  "The central valley consistently exhibits a \"double dip\" or a small, distinct \"mini-W\" shape, rather than a single smooth trough.": "common feature",
+  "The time series displays approximate bilateral symmetry around its midpoint, with the first half's structure largely mirrored in the second half.": "common feature",
+  "The two primary peaks consistently reach an amplitude between 1.4 and 1.5.": "delete feature",
+  "The two main peaks consistently exhibit a broad, rounded contour rather than sharp, pointed spikes.": "common feature",
+  "The time series consistently starts and ends at an amplitude of approximately -2.0.": "common feature",
+  "The lowest point within the central \"mini-W\" valley consistently reaches an amplitude around -1.2 to -1.3.": "common feature",
+  "The rising and falling slopes of the two main peaks are consistently smooth and gradual, without abrupt changes in gradient.": "common feature",
+  "The duration of the central \"mini-W\" valley, from its initial descent to its final ascent, consistently spans approximately 50-60 time steps.": "common feature"
+}

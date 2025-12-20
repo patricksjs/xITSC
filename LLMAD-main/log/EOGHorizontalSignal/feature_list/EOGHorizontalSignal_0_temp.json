@@ -1,0 +1,11 @@
+{
+  "Regime-switch pattern: an abrupt transient peak is followed by a persistent negative offset, indicating a two-regime behavior; however, the post-event regime exhibits complex, non-monotonic dynamics with oscillatory recovery rather than a simple baseline shift.": "common feature",
+  "Post-event drift: after the transient, the baseline shows a non-stationary downward trend with small, low-variance oscillations, demonstrating nonlinear drift rather than a purely linear decrease.": "common feature",
+  "The transient spike occurs in a tightly aligned time window (roughly steps 350–390) across most series, indicating a synchronized event timing.": "common feature",
+  "After the spike, the baseline exhibits sustained, low-amplitude, slow oscillations (quasi-periodic modulation) atop the downward drift, contributing to a non-monotonic recovery.": "common feature",
+  "Recovery phase contains a damped, multi-peaked oscillation (several local maxima/minima) after the major dip, not just a smooth drift.": "common feature",
+  "A temporary quasi-stationary plateau around -170 persists for a noticeable duration before gradual recovery toward baseline.": "common feature",
+  "Asymmetric impulse: the initial positive spike magnitude (approximately +210) exceeds the magnitude of the following negative trough (approximately -180), indicating an uneven impulse response.": "common feature",
+  "Post-event fluctuations display a decaying envelope: oscillation amplitude slowly shrinks over time, forming a damped relaxation rather than sustained fluctuations.": "common feature",
+  "None": "partial-sample feature"
+}

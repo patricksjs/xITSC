@@ -1,0 +1,9 @@
+{
+  "End-clustered bursty multi-peak clusters: in most series, bursts occur within the final approximately 10 time steps and contain 2–3 sharp peaks within a tight 3–5 step window, with small valleys between peaks (bimodal crest). The peak heights can vary, and the cluster may include both symmetric and mildly asymmetric peak shapes.": "common feature",
+  "Sudden-onset bursts: baseline remains near zero and bursts rise abruptly to high values, showing no gradual ramp before the peak.": "common feature",
+  "End-clustered bursts: in some series, burst activity is strongly concentrated in the final ~10 time steps, with minimal activity earlier.": "partial-sample feature",
+  "Asymmetric dual-peak bursts: within the burst window, the first peak is often higher than the second with a narrow trough, indicating a two-phase, uneven peak structure.": "partial-sample feature",
+  "Cross-series end-aligned bursts: multiple series show bursts clustered in the final ~8–10 time steps, aligning across households.": "partial-sample feature",
+  "Symmetric double-peak within bursts: two peaks of nearly equal height with a shallow trough, occurring inside the last few time steps.": "partial-sample feature",
+  "Distinguishing cluster nature: in some cases, the presence of a tight cluster of multiple peaks within a short window helps differentiate from classes characterized by isolated bimodal impulses.": "partial-sample feature"
+}

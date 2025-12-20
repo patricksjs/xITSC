@@ -1,0 +1,8 @@
+{
+  "Two dominant, low‑frequency lobes: the series show a clear bimodal envelope (two similar positive crests) separated by a deep central trough, giving a consistent wide-period oscillation across examples.": "common feature",
+  "Asymmetric crest shapes: the rising edge to the first peak is noticeably steeper than its descent, producing skewed (left‑leaning) peaks.": "common feature",
+  "Reproducible shoulder on first peak: a small local inflection/plateau or micro‑peak appears on the falling limb of the first crest (roughly mid‑segment) before the main trough.": "common feature",
+  "Highly regular cycle length: all series share a consistent inter-peak spacing (~125 timesteps) with minimal phase jitter, indicating a very stable low-frequency period across examples.": "common feature",
+  "Slow baseline curvature: a broad U-shaped trend (start/end more negative than mid-segment) produces a gentle long‑period drift beneath the lobes.": "common feature",
+  "Superimposed fine ripple: small, high‑frequency wiggles appear on rising and falling limbs throughout, adding consistent micro‑texture to otherwise smooth crests and troughs.": "common feature"
+}

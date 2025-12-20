@@ -1,0 +1,10 @@
+{
+  "Highly periodic oscillation with fundamental period ~0.38–0.56 s (6–9 samples at 16 Hz; ~1.8–2.6 Hz), showing low inter-peak interval variation (coefficient of variation typically <10%)": "common feature",
+  "Persistent positive DC offset (mean ~0.7–1.1) with infrequent near-zero crossings (<20% of samples)": "common feature",
+  "Short initial transient (~5–15 timesteps) featuring a brief downward drift (<0.3 units) and reduced amplitude before establishing steady oscillation": "common feature",
+  "Generally high peak-to-trough amplitude (~1.6–2.2) with slow envelope modulation (variation typically <20% over tens of cycles)": "common feature",
+  "Asymmetric cycle shape: upstroke duration ~30–40% of cycle with steeper slope, while downstroke occupies ~60–70% with broader trough curvature and sharper/narrower peaks": "common feature",
+  "Energy concentrated in narrowband fundamental frequency with minor harmonics; minimal broadband noise or isolated spikes during active phase": "common feature",
+  "Distinct two-phase temporal structure: (i) sustained regular oscillation dominating the window followed by (ii) abrupt termination (often with single overshoot spike) transitioning to prolonged low-variance tail near positive baseline": "common feature",
+  "Phase-locked oscillations across axes (when using tri-axial data) exhibiting consistent periodic patterns": "common feature"
+}

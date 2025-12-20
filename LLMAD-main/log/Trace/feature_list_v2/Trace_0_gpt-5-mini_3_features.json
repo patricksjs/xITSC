@@ -1,0 +1,7 @@
+{
+  "A very sharp, narrow positive spike immediately followed by an abrupt deep negative trough (adjacent spike–trough pair) appears in every series.": "common feature",
+  "The transient is high-amplitude and short-duration: peak ≈ +3 and valley ≈ −2 occurring within only a few time steps.": "common feature",
+  "A long, smooth, monotonic recovery (gradual upward rebound) follows the trough, spanning many time steps back toward baseline.": "common feature",
+  "Stable low-noise baseline before the event and a similar steady baseline after recovery, indicating the event is isolated.": "common feature",
+  "The abrupt event timing is consistent across series, occurring around time steps ~80–100 in each plot.": "partial-sample feature"
+}

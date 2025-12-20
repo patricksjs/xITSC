@@ -1,0 +1,10 @@
+{
+  "The series exhibits a distinctive bimodal peak structure with two prominent peaks occurring around time steps 50 and 190, separated by an extended low-amplitude valley region in the middle (time steps 100-170).": "common feature",
+  "Sharp initial upward trend from approximately -2.0 to 1.5 amplitude within the first 50 time steps, followed by a symmetric sharp downward decline in the final 50 time steps, creating a characteristic rise-and-fall envelope.": "common feature",
+  "The middle segment (time steps 80-170) shows persistent low-amplitude oscillations around -0.5 to -0.7, forming a stable baseline trough between the two major peaks.": "partial-sample feature",
+  "The second peak (around time step 190-210) consistently exhibits a broader, more plateau-like structure with multiple smaller undulations on its summit, contrasting with the sharper, more singular first peak.": "common feature",
+  "A characteristic minor peak or shoulder appears in the transition zone (time steps 70-90) during the descent from the first major peak, creating a stepped decline pattern before reaching the trough.": "common feature",
+  "The series demonstrates near-perfect symmetry in its boundary conditions, starting at approximately -2.0 amplitude at time step 0 and ending at the same -2.0 amplitude at time step 251, creating a closed-loop characteristic.": "common feature",
+  "A distinct intermediate valley occurs around time steps 100-110, reaching approximately -1.0 amplitude, which acts as a local minimum separating the middle trough region into two sub-segments before the final ascent.": "common feature",
+  "The rate of amplitude change is notably asymmetric between ascent and descent phases: the initial rise (0-50) and final fall (210-251) occur at approximately 0.06-0.07 units per time step, while transitions are more gradual elsewhere.": "common feature"
+}

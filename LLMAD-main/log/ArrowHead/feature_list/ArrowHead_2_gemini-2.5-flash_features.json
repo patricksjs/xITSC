@@ -1,0 +1,9 @@
+{
+  "The time series exhibits two broad, rounded, high-amplitude peaks, one in the initial segment (around time step 40) and another in the final segment (around time step 210).": "common feature",
+  "The central portion of the series (approximately time steps 70-170) is characterized by lower overall amplitude and more frequent, sharper oscillations compared to the smooth, high-amplitude end segments.": "partial-sample feature",
+  "The overall shape of the time series resembles a sinusoidal or wave-like pattern, completing approximately one full cycle within the observed time steps.": "common feature",
+  "The time series exhibits a general symmetry around the amplitude of 0, with positive and negative excursions being roughly balanced.": "common feature",
+  "The amplitude of the two main peaks is consistently around 1.4 to 1.5, and the two main valleys are consistently around -1.0 to -1.1.": "delete feature",
+  "The central segment (approx. time steps 70-170) can be either a smooth, rounded valley or a region with lower amplitude and sharper oscillations.": "common feature",
+  "The amplitude of the main peaks and valleys shows significant variability across instances, with peaks sometimes exceeding 2.0, contradicting previous consistency.": "delete feature"
+}

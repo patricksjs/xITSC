@@ -25,7 +25,7 @@ DATASET_PROMPT_TEMPLATE = '''
 – label 1: {laptop}
 
 '''
-api_key = "sk-Aqjpx18VnGq62P86z94ZM6EiIWbaiiFWy3o3dyEUXN2LaAJU"
+api_key = ""
 OPENAI_BASE_URL = "https://api.chatanywhere.tech/v1"
 client = OpenAI(
     api_key=api_key,
@@ -1120,4 +1120,5 @@ if __name__ == "__main__":
         "--gpt_model", "gpt-5-mini",
         "--output_file", "D:/zuhui/xITSC/result.json"
     ]
+
     main()

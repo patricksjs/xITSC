@@ -1,206 +1,303 @@
 import json
-import pandas as pd
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
-import numpy as np
-import os
-
-# JSON文件路径（确保路径正确）
-json_file_path = r"C:\Users\34517\Desktop\zuhui\xITSC\result\classification_results.json"
-
-# 读取JSON文件
-try:
-    with open(json_file_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    print(f"成功读取文件: {json_file_path}")
-    print(f"数据包含 {len(data.get('results', []))} 个样本")
-except FileNotFoundError:
-    print(f"错误：找不到文件 {json_file_path}")
-    print("请检查文件路径是否正确，或文件是否存在")
-    exit(1)
-except json.JSONDecodeError:
-    print(f"错误：文件 {json_file_path} 不是有效的JSON格式")
-    exit(1)
-except Exception as e:
-    print(f"读取文件时发生错误：{str(e)}")
-    exit(1)
-
-# 验证数据结构
-if 'results' not in data or not isinstance(data['results'], list):
-    print("错误：JSON文件格式不正确，缺少'results'列表")
-    exit(1)
-
-# 从数据中提取真实标签
-true_labels = []
-for item in data['results']:
-    if 'true_label' in item:
-        true_labels.append(item['true_label'])
-    else:
-        print(f"警告：样本 {item.get('sample_id', '未知')} 缺少 'true_label' 字段")
-
-        true_labels.append(None)
-
-# 检查是否有无效的真实标签
-if any(label is None for label in true_labels):
-    print("错误：部分样本缺少真实标签，无法计算准确率")
-    exit(1)
-
-print(f"成功获取 {len(true_labels)} 个样本的真实标签")
-print(f"真实标签分布: {pd.Series(true_labels).value_counts().to_dict()}")
-
-# 提取预测结果（增加键存在性检查）
-required_keys = ['round4_r', 'round3_1', 'round3_2', 'round3_3', 'round4_m']
-for idx, item in enumerate(data['results']):
-    missing_keys = [key for key in required_keys if key not in item]
-    if missing_keys:
-        print(f"错误：样本 {item.get('sample_id', f'索引{idx}')} 缺少必要字段：{missing_keys}")
-        exit(1)
-
-round4_r_pred = [item['round4_r'] for item in data['results']]
-round3_1_pred = [item['round3_1'] for item in data['results']]
-round3_2_pred = [item['round3_2'] for item in data['results']]
-round3_3_pred = [item['round3_3'] for item in data['results']]
-round4_m_pred = [item['round4_m'] for item in data['results']]
-
-# 计算round3三个结果的投票结果（>=2/3）
-round3_vote_pred = []
-for item in data['results']:
-    votes = [item['round3_1'], item['round3_2'], item['round3_3']]
-    if sum(votes) >= 2:  # 大于等于2/3即2票或3票
-        round3_vote_pred.append(1)
-    else:
-        round3_vote_pred.append(0)
+import re
+from collections import Counter
+from typing import List, Dict, Tuple, Any, Optional
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 
-def calculate_metrics(true_labels, pred_labels, method_name):
-    """计算分类指标"""
-    accuracy = accuracy_score(true_labels, pred_labels)
-    precision = precision_score(true_labels, pred_labels, zero_division=0)
-    recall = recall_score(true_labels, pred_labels, zero_division=0)
-    f1 = f1_score(true_labels, pred_labels, zero_division=0)
-    cm = confusion_matrix(true_labels, pred_labels)
+def safe_json_parse(json_str: str) -> Optional[Any]:
+    """安全地解析JSON字符串，支持更宽松的解析"""
+    if not json_str or not isinstance(json_str, str):
+        return None
 
-    print(f"\n{method_name} 结果:")
+    # 尝试直接解析
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError:
+        # 尝试修复常见的JSON格式问题
+        try:
+            # 1. 移除额外的引号或转义字符
+            cleaned = json_str.strip()
+
+            # 2. 修复缺少逗号的问题（简单的修复尝试）
+            # 匹配类似 "label 1"]\n    "score" 的情况
+            cleaned = re.sub(r'("\s*\]\s*\n\s*")', r'"],\n"', cleaned)
+
+            # 3. 修复键值对之间缺少逗号的问题
+            lines = cleaned.split('\n')
+            fixed_lines = []
+            for i, line in enumerate(lines):
+                fixed_lines.append(line)
+                # 如果这一行以"结束，下一行以"开头但不是数组或对象结束，可能缺少逗号
+                if i < len(lines) - 1:
+                    if (line.strip().endswith('"') and
+                            lines[i + 1].strip().startswith('"') and
+                            not lines[i + 1].strip().startswith('"}')):
+                        # 在当前行末尾添加逗号
+                        fixed_lines[-1] = line.rstrip() + ','
+
+            cleaned = '\n'.join(fixed_lines)
+
+            return json.loads(cleaned)
+        except:
+            return None
+
+
+def extract_label_from_response(response_str: str) -> Optional[int]:
+    """
+    从响应字符串中提取标签，使用多种方法尝试解析
+    """
+    if not response_str:
+        return None
+
+    # 方法1: 尝试JSON解析
+    response = safe_json_parse(response_str)
+
+    if response and isinstance(response, dict):
+        # 尝试从result字段提取
+        if 'result' in response:
+            result = response['result']
+            if isinstance(result, list) and len(result) > 0:
+                label_str = str(result[0]).lower()
+                if 'label 0' in label_str or 'label0' in label_str:
+                    return 0
+                elif 'label 1' in label_str or 'label1' in label_str:
+                    return 1
+
+    # 方法2: 如果JSON解析失败，尝试正则表达式匹配
+    response_lower = response_str.lower()
+
+    # 查找 "label 0" 或 "label 1"
+    if '"label 0"' in response_lower or "'label 0'" in response_lower:
+        return 0
+    elif '"label 1"' in response_lower or "'label 1'" in response_lower:
+        return 1
+
+    # 方法3: 查找其他格式的标签声明
+    if '"result": ["label 0"' in response_lower:
+        return 0
+    elif '"result": ["label 1"' in response_lower:
+        return 1
+    if '"result": ["label0"' in response_lower:
+        return 0
+    elif '"result": ["label1"' in response_lower:
+        return 1
+
+    # 方法4: 使用更宽松的正则表达式
+    label_patterns = [
+        r'label\s*0',
+        r'label\s*1',
+        r'class\s*0',
+        r'class\s*1',
+        r'类别\s*0',
+        r'类别\s*1'
+    ]
+
+    for i, pattern in enumerate(label_patterns[:2]):  # 只检查前两个模式
+        matches = re.findall(pattern, response_lower, re.IGNORECASE)
+        if matches:
+            return i  # 0 for label 0, 1 for label 1
+
+    return None
+
+
+def calculate_metrics(y_true: List[int], y_pred: List[int], label_name: str = ""):
+    """
+    计算并打印分类指标
+    """
+    print(f"\n{label_name} 指标:")
+    print(f"样本数量: {len(y_true)}")
+    print(f"真实标签分布: {Counter(y_true)}")
+    print(f"预测标签分布: {Counter(y_pred)}")
+
+    # 检查是否有预测结果
+    if len(y_true) == 0 or len(y_pred) == 0:
+        print("错误: 样本数量为0!")
+        return None
+
+    # 计算指标
+    try:
+        accuracy = accuracy_score(y_true, y_pred)
+        precision = precision_score(y_true, y_pred, pos_label=1, zero_division=0)
+        recall = recall_score(y_true, y_pred, pos_label=1, zero_division=0)
+        f1 = f1_score(y_true, y_pred, pos_label=1, zero_division=0)
+    except Exception as e:
+        print(f"计算指标时出错: {e}")
+        return None
+
     print(f"准确率 (Accuracy): {accuracy:.4f}")
     print(f"精确率 (Precision): {precision:.4f}")
     print(f"召回率 (Recall): {recall:.4f}")
     print(f"F1分数: {f1:.4f}")
-    print(f"混淆矩阵:\n{cm}")
+
+    # 混淆矩阵
+    tp = sum((true == 1 and pred == 1) for true, pred in zip(y_true, y_pred))
+    fp = sum((true == 0 and pred == 1) for true, pred in zip(y_true, y_pred))
+    tn = sum((true == 0 and pred == 0) for true, pred in zip(y_true, y_pred))
+    fn = sum((true == 1 and pred == 0) for true, pred in zip(y_true, y_pred))
+
+    print(f"混淆矩阵:")
+    print(f"             预测")
+    print(f"            0     1")
+    print(f"真实  0  [{tn:3d}  {fp:3d}]")
+    print(f"      1  [{fn:3d}  {tp:3d}]")
 
     return {
-        'method': method_name,
         'accuracy': accuracy,
         'precision': precision,
         'recall': recall,
         'f1': f1,
-        'confusion_matrix': cm.tolist()  # 转换为列表，方便后续处理
+        'confusion_matrix': {'tp': tp, 'fp': fp, 'tn': tn, 'fn': fn}
     }
 
 
-# 计算各方法的指标
-results = []
-results.append(calculate_metrics(true_labels, round4_r_pred, "Round4_R"))
-results.append(calculate_metrics(true_labels, round3_1_pred, "Round3_1"))
-results.append(calculate_metrics(true_labels, round3_vote_pred, "Round3_Vote"))
-results.append(calculate_metrics(true_labels, round4_m_pred, "Round4_M"))
+def main():
+    # 读取JSON文件
+    file_path = r"D:\zuhui\xITSC\result_phase2.json"
 
-# 分析修正情况
-print("\n" + "=" * 50)
-print("修正效果分析 (Round4_R vs Round4_M)")
-print("=" * 50)
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"读取文件时出错: {e}")
+        return
 
-# 统计修正情况
-correction_correct = 0
-correction_wrong = 0
-no_correction_correct = 0
-no_correction_wrong = 0
+    print(f"成功加载 {len(data)} 个样本")
 
-for i, item in enumerate(data['results']):
-    round4_m = item['round4_m']
-    round4_r = item['round4_r']
-    true_label = true_labels[i]
+    # 存储结果
+    true_labels = []
+    round5_predictions = []
+    round4_first_predictions = []
+    round4_majority_predictions = []
 
-    if round4_m != round4_r:
-        # 发生了修正
-        if round4_r == true_label:
-            correction_correct += 1
+    # 跟踪无法解析的样本
+    parse_errors = {
+        'round5': 0,
+        'round4_first': 0,
+        'round4_responses': 0
+    }
+
+    # 处理每个样本
+    for idx, sample in enumerate(data):
+        # 提取真实标签
+        true_label = sample.get('true_label')
+        if true_label not in [0, 1]:
+            print(f"样本 {idx} (ID: {sample.get('sample_id', 'unknown')}) 的真实标签无效: {true_label}")
+            continue
+
+        true_labels.append(true_label)
+
+        # 1. 提取round5_response的分类结果
+        round5_response = sample.get('round5_response', '')
+        if round5_response:
+            round5_label = extract_label_from_response(round5_response)
+            if round5_label is None:
+                parse_errors['round5'] += 1
+                print(f"样本 {idx} (ID: {sample.get('sample_id', 'unknown')}) round5_response 无法解析标签")
+            round5_predictions.append(round5_label)
         else:
-            correction_wrong += 1
-    else:
-        # 未修正
-        if round4_m == true_label:
-            no_correction_correct += 1
+            print(f"样本 {idx} (ID: {sample.get('sample_id', 'unknown')}) 缺少 round5_response")
+            round5_predictions.append(None)
+
+        # 2. 提取round4_responses第一轮的分类结果
+        round4_responses = sample.get('round4_responses', [])
+        if round4_responses and len(round4_responses) > 0:
+            first_response = round4_responses[0]
+            if first_response:
+                first_label = extract_label_from_response(first_response)
+                if first_label is None:
+                    parse_errors['round4_first'] += 1
+                    print(f"样本 {idx} (ID: {sample.get('sample_id', 'unknown')}) round4_responses[0] 无法解析标签")
+                round4_first_predictions.append(first_label)
+            else:
+                round4_first_predictions.append(None)
         else:
-            no_correction_wrong += 1
+            print(f"样本 {idx} (ID: {sample.get('sample_id', 'unknown')}) 缺少或空的 round4_responses")
+            round4_first_predictions.append(None)
 
-# 计算修正比例
-total_corrections = correction_correct + correction_wrong
-if total_corrections > 0:
-    correction_accuracy = correction_correct / total_corrections
-else:
-    correction_accuracy = 0
+        # 3. 提取round4_responses三轮中的多数分类结果
+        if round4_responses and len(round4_responses) >= 3:
+            # 提取三个响应的标签
+            labels = []
+            for i in range(min(3, len(round4_responses))):
+                if i < len(round4_responses) and round4_responses[i]:
+                    label = extract_label_from_response(round4_responses[i])
+                    if label is not None:
+                        labels.append(label)
 
-print(f"\n修正情况统计:")
-print(f"发生修正的样本数: {total_corrections}")
-print(f"修正正确: {correction_correct}次")
-print(f"修正错误: {correction_wrong}次")
-print(f"修正正确率: {correction_accuracy:.4f} ({correction_accuracy*100:.2f}%)")
-print(f"未修正且正确: {no_correction_correct}次")
-print(f"未修正且错误: {no_correction_wrong}次")
-
-# 创建汇总表格
-print("\n" + "=" * 60)
-print("分类性能汇总")
-print("=" * 60)
-summary_df = pd.DataFrame(results)
-summary_df = summary_df[['method', 'accuracy', 'precision', 'recall', 'f1']]
-print(summary_df.round(4))
-
-# 添加修正准确率到汇总表格
-correction_summary = pd.DataFrame([{
-    'method': '修正准确率',
-    'accuracy': correction_accuracy,
-    'precision': '-',
-    'recall': '-',
-    'f1': '-'
-}])
-summary_df = pd.concat([summary_df, correction_summary], ignore_index=True)
-print(f"\n包含修正准确率的汇总:")
-print(summary_df.round(4))
-
-# 可选：将结果保存到Excel文件（方便后续查看）
-output_excel = r"C:\Users\34517\Desktop\zuhui\xITSC\result\classification_metrics.xlsx"
-with pd.ExcelWriter(output_excel, engine='openpyxl') as writer:
-    # 性能汇总
-    summary_df.round(4).to_excel(writer, sheet_name='性能汇总', index=False)
-
-    # 混淆矩阵
-    cm_data = []
-    for res in results:
-        cm = res['confusion_matrix']
-        # 处理不同大小的混淆矩阵（1x1或2x2）
-        if len(cm) == 1:
-            tn, fp, fn, tp = 0, 0, 0, cm[0][0]
+            if labels:
+                # 多数投票
+                counter = Counter(labels)
+                majority_label = counter.most_common(1)[0][0]
+                round4_majority_predictions.append(majority_label)
+            else:
+                parse_errors['round4_responses'] += 1
+                print(f"样本 {idx} (ID: {sample.get('sample_id', 'unknown')}) 无法从 round4_responses 解析任何标签")
+                round4_majority_predictions.append(None)
         else:
-            tn = cm[0][0] if len(cm[0]) > 0 else 0
-            fp = cm[0][1] if len(cm[0]) > 1 else 0
-            fn = cm[1][0] if len(cm) > 1 and len(cm[1]) > 0 else 0
-            tp = cm[1][1] if len(cm) > 1 and len(cm[1]) > 1 else 0
+            print(f"样本 {idx} (ID: {sample.get('sample_id', 'unknown')}) round4_responses 少于3个")
+            round4_majority_predictions.append(None)
 
-        cm_data.append({
-            'method': res['method'],
-            'True Negative (TN)': tn,
-            'False Positive (FP)': fp,
-            'False Negative (FN)': fn,
-            'True Positive (TP)': tp
-        })
-    cm_df = pd.DataFrame(cm_data)
-    cm_df.to_excel(writer, sheet_name='混淆矩阵详情', index=False)
+    print(f"\n解析错误统计:")
+    for key, count in parse_errors.items():
+        print(f"  {key}: {count}")
 
-    # 修正分析
-    correction_stats = pd.DataFrame({
-        '统计项': ['总修正次数', '修正正确', '修正错误', '修正正确率'],
-        '数值': [total_corrections, correction_correct, correction_wrong, f"{correction_accuracy:.4f}"]
-    })
-    correction_stats.to_excel(writer, sheet_name='修正统计', index=False)
+    # 过滤掉None值
+    valid_indices = []
+    for i, (t, r5, r4f, r4m) in enumerate(zip(
+            true_labels, round5_predictions, round4_first_predictions, round4_majority_predictions
+    )):
+        if t is not None and r5 is not None and r4f is not None and r4m is not None:
+            valid_indices.append(i)
 
-print(f"\n结果已保存到Excel文件: {output_excel}")
+    valid_true = [true_labels[i] for i in valid_indices]
+    valid_round5 = [round5_predictions[i] for i in valid_indices]
+    valid_round4_first = [round4_first_predictions[i] for i in valid_indices]
+    valid_round4_majority = [round4_majority_predictions[i] for i in valid_indices]
+
+    print(f"\n总样本数: {len(data)}")
+    print(f"有效样本数（所有预测均有效）: {len(valid_true)}")
+
+    if len(valid_true) == 0:
+        print("错误: 没有有效样本可用于计算指标!")
+        return
+
+    # 计算各项指标
+    results = {}
+    print("\n" + "=" * 60)
+    results['round5'] = calculate_metrics(valid_true, valid_round5, "Round5 Response")
+    print("\n" + "=" * 60)
+    results['round4_first'] = calculate_metrics(valid_true, valid_round4_first, "Round4 First Response")
+    print("\n" + "=" * 60)
+    results['round4_majority'] = calculate_metrics(valid_true, valid_round4_majority, "Round4 Majority Vote")
+
+    # 汇总比较
+    print("\n" + "=" * 60)
+    print("指标汇总比较:")
+    print("=" * 60)
+    print(f"{'方法':<25} {'准确率':<10} {'精确率':<10} {'召回率':<10} {'F1分数':<10}")
+    print("-" * 60)
+    for name, metrics in results.items():
+        if metrics:  # 确保metrics不为None
+            print(f"{name:<25} {metrics['accuracy']:.4f}    {metrics['precision']:.4f}    "
+                  f"{metrics['recall']:.4f}    {metrics['f1']:.4f}")
+
+    # 输出一些诊断信息
+    print(f"\n诊断信息:")
+    print(f"总样本数: {len(data)}")
+    print(f"有效样本数: {len(valid_true)}")
+    print(f"丢弃样本数: {len(data) - len(valid_true)}")
+
+    # 显示前几个样本的真实和预测标签
+    print(f"\n前5个样本的标签:")
+    print(f"{'样本索引':<10} {'真实标签':<10} {'Round5':<10} {'Round4第一轮':<15} {'Round4多数投票':<15}")
+    for i in range(min(5, len(valid_indices))):
+        idx = valid_indices[i]
+        print(f"{i:<10} {true_labels[idx]:<10} {round5_predictions[idx]:<10} "
+              f"{round4_first_predictions[idx]:<15} {round4_majority_predictions[idx]:<15}")
+
+    return results
+
+
+if __name__ == "__main__":
+    results = main()

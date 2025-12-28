@@ -132,7 +132,7 @@ class ResNet1d(nn.Module):
 
         if self.args.use_transformer: 
             x = self.transformer_encoder(x)
-            
+
         x = self.fc(x)
 
         return x

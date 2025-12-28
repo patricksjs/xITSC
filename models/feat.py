@@ -179,10 +179,10 @@ class TransformerModel(nn.Module):
 
         # Transformer encoder
         x = self.transformer_encoder(x)
-
         # Aggregate the computer-1-shap (e.g., mean across time dimension)
         x = x.mean(dim=0)
         feat = x
+
         # Fully connected layer
         x = self.fc(x)
 

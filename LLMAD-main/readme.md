@@ -1,79 +1,21 @@
-# LLMAD: Large Language Models can Deliver Accurate and Interpretable Time Series Anomaly Detection.
+## 数据预处理
+数据在data文件夹下，每个数据集一个文件夹
+在主函数中修改数据集名字
+运行dataloader_v2.py
+生成的图像保存至plots文件夹
 
-## Description
-This repository contains the code for the paper: ["Large Language Models can Deliver Accurate and Interpretable Time Series Anomaly Detection"](https://arxiv.org/abs/2405.15370). It demonstrates the use of Large Language Models (LLMs) to tackle the task of Time Series Anomaly Detection.
+## 生成初始描述
+运行round1_v6.py
+在开头的全局变量中修改api，数据集，类别数，领域文本等
+在主函数中修改聚类数cluster，每个聚类的样本数k，验证样本数r等
+描述文本存在log文件夹中
 
-![LLMAD](assets/method.png)
+## 迭代反思
+运行round2_v6_2.py
+在开头的全局变量中修改api，数据集，类别数，领域文本等
+在主函数中修改要迭代的类别test_class,每个类的样本数test_num
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Configuration](#configuration)
-  - [Running the Scripts](#running-the-scripts)
-    - [Yahoo Dataset](#yahoo-dataset)
-    - [WSD Dataset](#wsd-dataset)
-    - [KPI Dataset](#kpi-dataset)
-- [File Descriptions](#file-descriptions)
-
-
-## Installation
-
-To get started, clone the repository and install the necessary dependencies:
-
-```shell
-cd LLM_AD
-pip install -U openai fastdtw pandas numpy scipy
-```
-
-## Usage
-
-### Configuration
-
-Before running the scripts, set up your configuration file `config.yaml` with your OpenAI API details:
-
-```yaml
-openai:
-  api_key: "your-api-key"
-  base_url: "https://api.openai.com/v1"
-```
-
-### Running the Scripts
-
-Below are the commands to run the scripts for different datasets.
-
-#### Yahoo Dataset
-
-```shell
-bash script/yahoo.sh
-```
-
-#### WSD Dataset
-
-```shell
-bash script/wsd.sh
-```
-
-#### KPI Dataset
-
-```shell
-bash script/kpi.sh
-```
-
-## File Descriptions
-
-| File Name            | Description                        |
-|----------------------|------------------------------------|
-| `run.py`             | Program entry point                |
-| `Prompt_template.py` | Structure of the prompt            |
-| `Eval/*`             | Scripts to compute evaluation metrics|
-
-If you find this repo helpful, please cite the following papers:
-```
-@article{liu2024large,
-  title={Large Language Models can Deliver Accurate and Interpretable Time Series Anomaly Detection},
-  author={Liu, Jun and Zhang, Chaoyun and Qian, Jiaxu and Ma, Minghua and Qin, Si and Bansal, Chetan and Lin, Qingwei and Rajmohan, Saravan and Zhang, Dongmei},
-  journal={arXiv preprint arXiv:2405.15370},
-  year={2024}
-}
-```
+## 预测
+运行predict_v5_2.py（容易跑到一半连接断了）
+在开头的全局变量中修改api，数据集，类别数，领域文本等
+结果存在prediction文件夹中
